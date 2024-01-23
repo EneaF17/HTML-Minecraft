@@ -1,0 +1,24 @@
+html{
+    background-image: url(SfondoMain.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 130%;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+main{
+    background-color: rgb(213, 203, 189,0.8);
+    margin-left: 10%;
+    margin-right: auto;
+}
+
+header{
+    background-image: url(MinecraftLogoTrimmed.png), url(SfondoHeader.jpg);
+    background-size: 20% 80%, 5% 100%;
+    background-repeat: no-repeat, repeat;
+    background-position: center;
+}
+
+footer{
+    background-color: gray;
+}
