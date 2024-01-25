@@ -1,7 +1,7 @@
 html{
     background-image: url(SfondoMain.jpg);
     background-repeat: no-repeat;
-    background-size: 100% 130%;
+    background-size: cover;
     background-position: center;
     background-attachment: fixed;
 }
@@ -13,12 +13,26 @@ main{
 }
 
 header{
-    background-image: url(MinecraftLogoTrimmed.png), url(SfondoHeader.jpg);
-    background-size: 20% 80%, 5% 100%;
-    background-repeat: no-repeat, repeat;
+    background-image: url(SfondoHeader.jpg);
+    background-size:contain;
+    background-repeat:repeat;
     background-position: center;
+
+    /* border: 1px solid green; */
 }
+
+img{
+    max-width: 50%;
+    margin-top: 10px;
+    height: auto;
+}
+
+#menu{
+    text-align: center;
+}
+#menu li { display: inline; margin-right: 5%; margin-left: 5%;}
 
 footer{
     background-color: gray;
+    border: 2px solid green;
 }
