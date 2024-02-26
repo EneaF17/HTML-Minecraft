@@ -73,6 +73,10 @@ img{
     height: auto;
 }
 
+#menu{
+    text-align: center;
+}
+#menu li { display: inline; margin-right: 5%; margin-left: 5%;}
 
 footer{
     background-color: gray;
