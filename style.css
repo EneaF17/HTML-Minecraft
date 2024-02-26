@@ -1,5 +1,5 @@
 *{margin:0; padding:0}
-a{display: block; text-decoration: none;}
+a{display: inline; text-decoration: none;}
 
 body{
     font-family: "Inter", sans-serif;
@@ -19,6 +19,11 @@ h1,h2,h3,h4,h5,p{color: black; padding-bottom: 30px;}
 
 
 
+img{
+    max-width: 100%;
+    margin-top: 10px;
+    height: auto;
+}
 
 
 html{
@@ -28,20 +33,24 @@ html{
     background-position: center;
     background-attachment: fixed;
     align-items: center;
+    z-index: 0;
 }
 
-header{
+.header{
+    position: fixed;
+    border: 1px solid red;
+    top:0;
+    width: 100%;
     display:flex;
     flex-wrap: wrap;
     padding-left: 2%;
     padding-right: 5%;
-    position: relative;
     height: 20vh;
-    width: 100%;
     justify-content: space-between;
     background-image: url(SfondoHeader.jpg);
     background-size:contain;
     background-repeat:repeat;
+    z-index: 100;
 }
 
 .logo{
@@ -107,42 +116,47 @@ header{
 } */
 
 .hero{
-    height: 600px;
+    height: 100vh;
     margin-top: 20vh;
-    width: 90%;
-    left: auto;
-    right: auto;
+    width: 80vw;
+    left: 10%;
+    right: 10%;
     position: relative;
     display: flex; align-items: center;
+    /* border: 1px solid green; */
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(1,1,11,0.8799894957983193) 12%, rgba(251,250,250,0.639093137254902) 100%);
+    z-index: 3;
 }
 
 .hero__content{
     border: 1px solid red;
-    padding: 0;
-    margin:0 auto;
-    max-width: 1350px;
+    width:30%;
+    position:relative;
+    margin-left: 10%;
+    top:0;
+    z-index: 2;
 }
 
-img{
-    max-width: 100%;
-    margin-top: 10px;
-    height: auto;
-}
 
 #video-back{
     position:absolute;
     top:0;
     left:0;
+    border: 1px solid yellow;
+    width: 100%;
 
+    z-index: 1;
 }
 
+
+
+
 footer{
+    width: 100vw;
+    position: relative;
     background-color: gray;
     border: 2px solid green;
 }
-
-
-
 
 *,
 *:before,
