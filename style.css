@@ -9,7 +9,7 @@ body{
   
 h1,h2,h3,h4,h5,p{color: black; padding-bottom: 30px;}
 
-.big-text{font-size: 70px;}
+.big-text{font-size: 70px; font-weight: 900;}
 .med-text{font-size: 40px;}
 .normal-text{font-size: 20px;}
 .small-text{font-size: 14px;}
@@ -27,6 +27,7 @@ html{
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
+    align-items: center;
 }
 
 header{
@@ -34,7 +35,7 @@ header{
     flex-wrap: wrap;
     padding-left: 2%;
     padding-right: 5%;
-    position: fixed;
+    position: relative;
     height: 20vh;
     width: 100%;
     justify-content: space-between;
@@ -103,9 +104,22 @@ header{
     background: url(download.png) no-repeat center center;
 } */
 
+.hero{
+    height: 600px;
+    margin-top: 20vh;
+    width: 90%;
+    left: auto;
+    right: auto;
+    position: relative;
+    display: flex; align-items: center;
+}
 
-
-
+.hero__content{
+    border: 1px solid red;
+    padding: 0;
+    margin:0 auto;
+    max-width: 1350px;
+}
 
 img{
     max-width: 100%;
@@ -113,7 +127,12 @@ img{
     height: auto;
 }
 
+#video-back{
+    position:absolute;
+    top:0;
+    left:0;
 
+}
 
 footer{
     background-color: gray;
