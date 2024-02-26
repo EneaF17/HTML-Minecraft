@@ -1,4 +1,25 @@
 *{margin:0; padding:0}
+a{display: block; text-decoration: none;}
+
+body{
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+  
+h1,h2,h3,h4,h5,p{color: black; padding-bottom: 30px;}
+
+.big-text{font-size: 70px;}
+.med-text{font-size: 40px;}
+.normal-text{font-size: 20px;}
+.small-text{font-size: 14px;}
+
+
+.intro-text{font-size: 20px; text-transform: uppercase; font-weight: bold;}
+
+
+
+
 
 html{
     background-image: url(SfondoMain.jpg);
@@ -8,69 +29,91 @@ html{
     background-attachment: fixed;
 }
 
-.menu{
+header{
     display:flex;
     flex-wrap: wrap;
-    padding-left: 5%;
+    padding-left: 2%;
     padding-right: 5%;
     position: fixed;
-    height: 120px;
+    height: 20vh;
     width: 100%;
-    text-decoration: none;
-    justify-content: space-around;
+    justify-content: space-between;
     background-image: url(SfondoHeader.jpg);
     background-size:contain;
     background-repeat:repeat;
-    background-position: left;
-    flex-wrap: wrap;
 }
 
 .logo{
-    position: absolute;
-    display: block;
-    width: 40%;
-    height: 40%;   
+    margin-top: 30px;
+    width: 30%;
+    height: auto;   
     align-self: center;
     align-items: center;
     border: 1px solid red;
 }
 
-
-
-.collegamenti{
-    display: flex;
-    width: 40%;
-    align-self: center;
-    border: 1px solid red;
-}
-.collegamenti li {display: inline; margin-right: 5%; margin-left: 5%;}
-
-.cta{
-    width:20%;
-    height:40%;
-    border: 1px solid red;
-    align-self: center;
-}
-
-
-main{
-    background-color: rgb(213, 203, 189,0.8);
-    margin-left: 10%;
+.logo a{
+    display: block;
+    margin-left: auto;
     margin-right: auto;
 }
+.logo a img{
+    display: block;
+    height: auto;
+}
+
+
+
+
+.menu{
+    padding-left: auto;
+    padding-right: auto;
+    margin-top: 20px;
+    display: flex;
+    width: 35%;
+    height:auto;
+    align-self: center;
+    border: 1px solid red;
+    text-align: center;
+    /* align-content */
+}
+.menu li {display: inline; margin-right: 5%; margin-left: 5%;}
+.menu li img{max-width: 70%; height: auto;}
+
+.cta{
+    padding: 18px 28px;
+    /* padding-left: 50px; */
+    margin-top: 30px;
+    background: #447ff5;
+    border: 1px solid red;
+    border-radius: 10px;
+    align-self: center;
+    display: inline-block;
+}
+
+.cta a{
+    color:white;
+}
+
+/* .cta a:before{
+    content: "";
+    width: 30px;
+    height: 30px;
+    display: block;
+    background: url(download.png) no-repeat center center;
+} */
+
+
 
 
 
 img{
-    max-width: 50%;
+    max-width: 100%;
     margin-top: 10px;
     height: auto;
 }
 
-#menu{
-    text-align: center;
-}
-#menu li { display: inline; margin-right: 5%; margin-left: 5%;}
+
 
 footer{
     background-color: gray;
