@@ -26,19 +26,13 @@ html{
 }
 
 .logo{
-    display: inline;
+    position: absolute;
+    display: block;
     width: 40%;
-    height: 30%;   
+    height: 40%;   
     align-self: center;
     align-items: center;
     border: 1px solid red;
-}
-
-.logo a{
-    background-image: url(MinecraftLogoTrimmed.png);
-    background-size:contain;
-    background-repeat:repeat;
-    background-position: left;
 }
 
 
@@ -52,8 +46,8 @@ html{
 .collegamenti li {display: inline; margin-right: 5%; margin-left: 5%;}
 
 .cta{
-    width:10%;
-    height:50px;
+    width:20%;
+    height:40%;
     border: 1px solid red;
     align-self: center;
 }
