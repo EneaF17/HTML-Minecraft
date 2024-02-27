@@ -38,14 +38,14 @@ html{
 
 .header{
     position: fixed;
+    height: 20vh;
     border: 1px solid red;
     top:0;
     width: 100%;
     display:flex;
     flex-wrap: wrap;
     padding-left: 2%;
-    padding-right: 5%;
-    height: 20vh;
+    padding-right: 2%;
     justify-content: space-between;
     background-image: url(SfondoHeader.jpg);
     background-size:contain;
@@ -54,7 +54,6 @@ html{
 }
 
 .logo{
-    margin-top: 20px;
     width: 30%;
     height: auto;   
     align-self: center;
@@ -74,12 +73,9 @@ html{
 }
 
 
-
-
 .menu{
     padding-left: auto;
     padding-right: auto;
-    margin-top: 10px;
     display: flex;
     width: 35%;
     height:auto;
@@ -98,7 +94,6 @@ html{
 .cta{
     padding: 18px 28px;
     /* padding-left: 50px; */
-    margin-top: 20px;
     background: #049101;
     border: 1px solid red;
     border-radius: 10px;
@@ -141,9 +136,12 @@ html{
     background: url(download.png) no-repeat center center;
 } */
 
+
+
+
 @media (max-width: 768px) {
     .header{
-        height:auto;
+        height:35vh;
     }
     .logo{
         width: 100%;
@@ -164,14 +162,11 @@ html{
         margin-right: auto;
         margin-bottom: 15px;
     }
+
+    footer{
+        width: 100%;
+    }
 }
-
-
-
-
-
-
-
 
 .hero{
     height: 80vh;
@@ -191,11 +186,31 @@ html{
 
 .hero__content{
     /* border: 1px solid red; */
-    width:30%;
+    width:35%;
     position:absolute;
     top:10%;
     left: 15%;
     z-index: 2;
+    border: 1px solid red;
+}
+
+
+@media (max-width: 768px) {
+    .hero{
+        height: 65vh;
+        margin-top: 35vh;
+    }
+    .hero__content{
+        width: 90%;
+        left: 5%;
+        text-align: center;
+    }
+    .big-text{
+        font-size: 40px;
+    }
+    .intro-text{
+        font-size: 15px;
+    }
 }
 
 
@@ -213,8 +228,8 @@ html{
 
 
 footer{
-    width: 100vw;
-    position: relative;
+    width: 100%;
+    position: absolute;
     background-color: gray;
     border: 2px solid green;
 }
