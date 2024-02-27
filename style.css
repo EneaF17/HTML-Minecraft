@@ -145,24 +145,33 @@ html{
 
 
 
+
+
+
+
+
 .hero{
-    height: 100vh;
+    height: 80vh;
     margin-top: 20vh;
-    width: 80vw;
+    width: 80%;
     left: 10%;
     right: 10%;
     position: relative;
     display: flex; align-items: center;
-    /* border: 1px solid green; */
+    border: 1px solid green;
     z-index: 3;
+    background: linear-gradient(90deg, rgba(2,129,162,0.3393732492997199) 0%, rgba(33,132,250,0.8) 26%, rgba(2,129,162,0.33657212885154064) 79%),url(Sfondo.jpeg);
+    /* background-image: ; */
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .hero__content{
-    border: 1px solid red;
+    /* border: 1px solid red; */
     width:30%;
-    position:relative;
-    margin-left: 10%;
-    top:0;
+    position:absolute;
+    top:10%;
+    left: 15%;
     z-index: 2;
 }
 
