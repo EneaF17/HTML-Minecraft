@@ -244,13 +244,112 @@ html{
 
 
 
+
+
+.descrizioni{
+    position: relative;
+    display: flex;
+    height: 600px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    flex-wrap: wrap;
+    top: 50px;
+    border: 1px solid red;
+
+}
+
+
+.descdx, .descsx{
+    width: 80%;
+    display: flex;
+    border: 1px solid green;
+    position: relative;
+    height: 33.3%;
+    text-align: center;
+}
+
+.descdx{
+    left:20%
+}
+
+.descdx p, .descsx p{
+    height: 100%;
+    width: 85%;
+    border: 1px solid yellow;
+    background: white;
+    border-radius: 10px;
+}
+.descdx a{
+    position: absolute;
+    right: 0;
+}
+
+.descdx a, .descsx a{
+    width: 15%;
+    align-self: center;
+}
+
+
+@media (max-width: 768px) {
+    .descrizioni{
+        position: relative;
+        display: flex;
+        height: 480px;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        flex-wrap: wrap;
+        top: 20px;
+        border: 1px solid red;
+    }
+    
+    
+    .descdx, .descsx{
+        width: 100%;
+        display: flex;
+        border: 1px solid green;
+        position: relative;
+        height: 33.3%;
+        text-align: center;
+    }
+
+    .descdx{
+        left:0;
+    }
+    
+
+    .descdx p, .descsx p{
+        height: 100%;
+        width: 75%;
+        border: 1px solid yellow;
+        background: white;
+        border-radius: 10px;
+    }
+    .descdx a{
+        position: absolute;
+        right: 0;
+    }
+    
+    .descdx a, .descsx a{
+        width: 25%;
+        align-self: center;
+    }
+}
+
+
+
 footer{
     width: 100%;
-    position: absolute;
+    top: 200px;
+    position: relative;
     background-color: black;
     border: 2px solid green;
     text-align: center;
 }
+
+
+
 
 footer p{
     color: white;
