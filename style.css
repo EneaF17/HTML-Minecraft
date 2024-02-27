@@ -105,6 +105,23 @@ html{
     color:white;
 }
 
+.cta:hover{
+    animation: colorchange 5s infinite ease-in-out;
+}
+
+@keyframes colorchange{
+
+  0% {background-color: #049101; scale: 1.0;}
+  16.6% {background-color:  #47d147; scale: 1.1;}
+  33.2% {background-color: #049101; scale: 1.0;}
+  50% {background-color:  #47d147; scale: 1.1;}
+  66.7% {background-color: #049101; scale: 1.0;}
+  83.3% {background-color: #47d147; scale: 1.1;}
+  100% {background-color: #049101; scale: 1.0;}
+  
+
+}
+
 /* .cta a:before{
     content: "";
     width: 30px;
@@ -207,8 +224,13 @@ html{
 footer{
     width: 100%;
     position: absolute;
-    background-color: gray;
+    background-color: black;
     border: 2px solid green;
+    text-align: center;
+}
+
+footer p{
+    color: white;
 }
 
 *,
