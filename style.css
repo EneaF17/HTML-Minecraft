@@ -27,9 +27,9 @@ img{
 
 
 html{
-    background-image: url(SfondoMain.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-image: url(MossyStoneBricks.png);
+    background-repeat: repeat;
+    background-size: auto;
     background-position: center;
     background-attachment: fixed;
     align-items: center;
@@ -109,6 +109,29 @@ html{
 .cta a{
     color:white;
 }
+
+.pulsanteBuy{
+    padding: 18px 28px;
+    margin-top: 20px;
+    background-image: url(Coal.png);
+    background-size: contain;
+    background-repeat: repeat;
+    border: 1px solid red;
+    align-self: center;
+    display: inline-block;
+}
+
+.pulsanteBuy a{color: goldenrod;}
+
+.pulsanteBuy:hover{
+    background-image: url(Diamond.png); 
+    transition-duration: 0.5s; 
+    border: 5px solid blue;
+}
+.pulsanteBuy:hover a{color: red;}
+
+
+
 
 /* .cta a:before{
     content: "";
