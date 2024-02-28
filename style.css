@@ -23,7 +23,7 @@ body{
 
 
   
-h1,h2,h3,h4,h5,p{color: black; padding-bottom: 30px;}
+h1,h2,h3,h4,h5,p{color: black}
 
 .big-text{font-size: 70px; font-weight: 900;}
 .med-text{font-size: 40px;}
@@ -43,7 +43,7 @@ img{
 
 
 html{
-    background-image: url(MossyStoneBricks.png);
+    background: linear-gradient(180deg, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.8) 100%), url(MossyStoneBricks.png);
     background-repeat: repeat;
     background-size: auto;
     background-position: center;
@@ -66,10 +66,13 @@ html{
     background-image: url(SfondoHeader.jpg);
     background-size:contain;
     background-repeat:repeat;
+    box-shadow: 5px 5px 10px 5px #000000;
     z-index: 100;
 }
 
 .logo{
+
+    position: relative;
     width: 30%;
     height: auto;   
     align-self: center;
@@ -90,20 +93,29 @@ html{
 
 
 .menu{
+    position: relative;
     padding-left: auto;
     padding-right: auto;
     display: flex;
+    flex-direction: row;
     width: 35%;
     height:auto;
     align-self: center;
     border: 1px solid red;
     text-align: center;
-    /* align-content */
+    align-items: center;
+    justify-content: space-evenly;
+    
 }
 
 .sizeimg{ width: auto; height: auto;}
-.menu li {display: inline; margin-right: 5%; margin-left: 5%;}
-.menu li img{max-width: 70%; height: auto;}
+.menu li {display: inline; margin-right: 5%; margin-left: 5%; border: 1px solid red;}
+.menu li img{max-width: 70%; height: auto; transition: 0.5s;}
+
+
+.menu li img:hover{
+    transform: scale(1.15);
+}
 
 
 
@@ -116,31 +128,14 @@ html{
     align-self: center;
     display: inline-block;
     box-shadow: 0 0 20px 0;
+    text-align: center;
 }
 
 .cta a{
     color:white;
 }
 
-.pulsanteBuy{
-    padding: 18px 28px;
-    margin-top: 20px;
-    background-image: url(Coal.png);
-    background-size: contain;
-    background-repeat: repeat;
-    /* border: 1px solid red; */
-    align-self: center;
-    display: inline-block;
-}
 
-.pulsanteBuy a{color: goldenrod;}
-
-.pulsanteBuy:hover{
-    background-image: url(Diamond.png); 
-    transition-duration: 0.5s; 
-    border: 5px solid blue;
-}
-.pulsanteBuy:hover a{color: red;}
 
 
 
@@ -150,7 +145,6 @@ html{
 }
 
 @keyframes colorchange{
-
   0% {background-color: #049101; scale: 1.0;}
   16.6% {background-color:  #47d147; scale: 1.1;}
   33.2% {background-color: #049101; scale: 1.0;}
@@ -158,8 +152,6 @@ html{
   66.7% {background-color: #049101; scale: 1.0;}
   83.3% {background-color: #47d147; scale: 1.1;}
   100% {background-color: #049101; scale: 1.0;}
-  
-
 }
 
 /* .cta a:before{
@@ -173,34 +165,6 @@ html{
 
 
 
-@media (max-width: 768px) {
-    .header{
-        height:35vh;
-    }
-    .logo{
-        width: 100%;
-        margin-top: 30px;
-        margin-bottom: 0;
-    }
-
-    .menu{
-        width: 100%
-    }
-    .menu li img{max-width: 50%; height: auto;}
-
-    .cta{
-        width: 50%;
-        text-align: center;
-        margin:0;
-        margin-left: auto;
-        margin-right: auto;
-        margin-bottom: 15px;
-    }
-
-    footer{
-        width: 100%;
-    }
-}
 
 .hero{
     height: 80vh;
@@ -221,32 +185,58 @@ html{
 
 .hero__content{
     /* border: 1px solid red; */
-    width:35%;
-    position:absolute;
-    top:10%;
+    width:40%;
+    position:relative;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-evenly;
+    top:0;
     left: 15%;
     z-index: 2;
+    text-align: center;
+    border: 1px solid yellow;
+
     /* border: 1px solid red; */
 }
 
-
-@media (max-width: 768px) {
-    .hero{
-        height: 65vh;
-        margin-top: 35vh;
-    }
-    .hero__content{
-        width: 90%;
-        left: 5%;
-        text-align: center;
-    }
-    .big-text{
-        font-size: 40px;
-    }
-    .intro-text{
-        font-size: 15px;
-    }
+.hero__content p{
+    width: 80%;
+    align-self: center;
+    border: 1px solid red;
 }
+
+.hero__content h1{
+    width: 70%;
+    align-self: center;
+    border: 1px solid red;
+}
+
+
+.pulsanteBuy{
+    border: 1px solid red;
+    padding: 18px 28px;
+    background-image: url(Coal.png);
+    background-size: contain;
+    align-self: center;
+    background-repeat: repeat;
+    /* border: 1px solid red; */
+    display: inline-block;
+    width: 50%;
+}
+
+.pulsanteBuy a{color: goldenrod;}
+
+.pulsanteBuy:hover{
+    background-image: url(Diamond.png); 
+    transition-duration: 0.5s; 
+    border: 5px solid blue;
+}
+.pulsanteBuy:hover a{color: red;}
+
+
+
+
 
 
 #video-back{
@@ -257,6 +247,181 @@ html{
     width: 100%;
     z-index: 1;
 }
+
+@media (max-width: 768px) {
+    .header{
+        height:32vh;
+    }
+    .logo{
+        width: 100%;
+        height: min-content;
+        margin-top: 10px;
+        margin-bottom: 0;
+    }
+    .logo a img{
+        margin-top: 0;
+        height: 100%;
+        border: 1px solid red;
+    }
+
+    .menu{
+        width: 100%
+    }
+    .menu li img{max-width: 50%; height: auto;}
+
+    .cta{
+        width: 50%;
+        text-align: center;
+        margin:0;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 10px;
+    }
+
+    footer{
+        width: 100%;
+    }
+
+
+    .hero{
+        height: 68vh;
+        margin-top: 32vh;
+    }
+    .hero__content{
+        width: 90%;
+        left: 5%;
+        top: 5%;
+        text-align: center;
+    }
+    .big-text{
+        font-size: 40px;
+    }
+    .intro-text{
+        font-size: 16px;
+    }
+
+    .hero__content p{
+        width: 100%;
+    }
+    .hero__content h1{
+        width: 100%;
+    }
+
+    .pulsanteBuy{
+        padding: 18px 28px;
+        width: 60%;
+        bottom: 5%;
+        /* border: 1px solid red; */
+        position: relative;
+        align-self: center;
+        display: inline-block;
+    }
+}
+
+
+@media (max-height: 400px) {
+    .header{
+    height: 30vh;
+    border: 1px solid red;
+    top:0;
+    width: 100%;
+    display:flex;
+    flex-wrap: wrap;
+    padding-left: 2%;
+    padding-right: 2%;
+    justify-content: space-between;
+    background-image: url(SfondoHeader.jpg);
+    background-size:contain;
+    background-repeat:repeat;
+    box-shadow: 5px 5px 10px 5px #000000;
+    z-index: 100;
+    }
+
+    .logo{
+        width: 35%;
+        height: auto;   
+        align-self: center;
+        align-items: center;
+        border: 1px solid red;
+    }
+
+
+    .logo a{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .logo a img{
+        display: block;
+        height: auto;
+    }
+
+
+    .menu{
+        padding-left: auto;
+        padding-right: auto;
+        display: flex;
+        width: 35%;
+        height:auto;
+        align-self: center;
+        border: 1px solid red;
+        text-align: center;
+        /* align-content */
+    }
+
+    .sizeimg{ width: auto; height: auto;}
+    .menu li {display: inline; margin-right: 5%; margin-left: 5%;}
+    .menu li img{max-width: 70%; height: auto; transition: 0.5s;}
+
+
+    .menu li img:hover{
+        transform: scale(1.15);
+    }
+
+
+
+    .cta{
+        width: 25%;
+        padding: 18px 28px;
+        /* padding-left: 50px; */
+    }
+
+
+
+    .hero{
+        height: 80vh;
+        margin-top: 20vh;
+        width: 80%;
+        left: 10%;
+        right: 10%;
+        position: relative;
+        display: flex; align-items: center;
+        border: 1px solid green;
+        z-index: 3;
+        background: linear-gradient(90deg, rgba(2,129,162,0.3393732492997199) 0%, rgba(33,132,250,0.8) 26%, rgba(2,129,162,0.33657212885154064) 79%),url(Sfondo.jpeg);
+        box-shadow: 0 0 40px 0;
+        /* background-image: ; */
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .hero__content{
+        /* border: 1px solid red; */
+        width:80%;
+        position:absolute;
+        top:20%;
+        left: 10%;
+        z-index: 2;
+        text-align: center;
+        border: 1px solid yellow;
+        /* border: 1px solid red; */
+    }
+
+    
+    
+}
+
+
 
 
 
@@ -270,7 +435,6 @@ html{
     flex-wrap: wrap;
     top: 50px;
     border: 1px solid red;
-
 }
 
 
@@ -279,7 +443,7 @@ html{
     display: flex;
     border: 1px solid green;
     position: relative;
-    height: 33.3%;
+    height: 28%;
     text-align: center;
 }
 
@@ -293,6 +457,7 @@ html{
     border: 1px solid yellow;
     background: burlywood;
     border-radius: 10px;
+    box-shadow: 0 0 30px 0 black;
 }
 .descdx a{
     position: absolute;
@@ -324,7 +489,7 @@ html{
         display: flex;
         border: 1px solid green;
         position: relative;
-        height: 33.3%;
+        height: 30%;
         text-align: center;
     }
 
@@ -332,7 +497,6 @@ html{
         left:0;
     }
     
-
     .descdx p, .descsx p{
         height: 100%;
         width: 75%;
