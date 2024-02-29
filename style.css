@@ -228,10 +228,11 @@ html{
 .pulsanteBuy{
     border: 1px solid red;
     padding: 18px 28px;
-    background-image: url(Coal.png);
-    background-size: contain;
+    background: linear-gradient(0deg, rgba(27,27,27,1) 10%, rgba(2,75,191,1) 100%);
+    box-shadow: 0 0 40px 0;
+    margin-top: 15px;
+    border-radius: 15px;
     align-self: center;
-    background-repeat: repeat;
     /* border: 1px solid red; */
     display: inline-block;
     width: 50%;
@@ -240,12 +241,20 @@ html{
 .pulsanteBuy a{color: goldenrod;}
 
 .pulsanteBuy:hover{
-    background-image: url(Diamond.png); 
     transition-duration: 0.5s; 
-    border: 5px solid blue;
+    border: 1px solid blue;
+    animation: buttonrotation 5s infinite ease-in-out;
 }
-.pulsanteBuy:hover a{color: red;}
 
+
+@keyframes buttonrotation{
+
+  0% {transform: rotate(0deg);}
+  33% {transform: rotate(6deg);}
+  66% {transform: rotate(-6deg);}
+  100% {transform: rotate(0deg);}
+
+}
 
 
 
