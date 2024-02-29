@@ -77,14 +77,19 @@ html{
     z-index: 100;
 }
 
-.logo{
 
+.logo{
     position: relative;
     width: 30%;
     height: auto;   
     align-self: center;
     align-items: center;
     border: 1px solid red;
+    transition: 0.4s;
+}
+
+.logo:hover{
+    transform: scale(1.05);
 }
 
 
@@ -259,6 +264,10 @@ html{
     .header{
         height:32vh;
     }
+
+    .header--nocta{
+        height: 20vh;
+    }
     .logo{
         width: 100%;
         height: min-content;
@@ -343,6 +352,11 @@ html{
     box-shadow: 5px 5px 10px 5px #000000;
     z-index: 100;
     }
+
+    .header--nocta{
+        height: 20vh;
+    }
+    
 
     .logo{
         width: 35%;
@@ -471,10 +485,14 @@ html{
 .textInfo h2{padding-bottom: 10px;}
 
 
-
 @media (max-width: 768px) {
+    .Informazioni{
+        width: 90%;
+        left: 5%;
+        height: 150vh;
+    }
     .boxInfo{
-        width:90%
+        width:100%
     }
     .boxInfo a{
         width:20%;
@@ -491,12 +509,33 @@ html{
 }
 
 
+@media (max-height: 450px) {
+    .Informazioni{
+        height: 200vh;
+    }
+    .boxInfo a{
+        width:15%;
+        margin-right: 5%
+    };
+    .textInfo{
+        width: 80%;
+    }
+    .small-text{
+        font-size: 12px;
+        padding: 0;
+        margin: 0;
+    }
+
+}
+
+
 
 
 .Listone{
     position: relative;
     display: flex;
-    height: 100vh;
+    flex-wrap: wrap;
+    height: min-content;
     width: 50%;
     margin-top: 25vh;
     left: 5%;
@@ -552,6 +591,16 @@ html{
     align-self: center;    
 }
 
+@media (max-width: 768px) {
+    .Listone{
+        width: 90%;
+    }
+
+    .lista{
+        width: 100%;height: 50%;
+    }
+}
+
 footer{
     position: relative;
     width: 100%;
@@ -559,11 +608,13 @@ footer{
     border: 2px solid green;
     text-align: center;
     z-index: 100;
+    margin-top: 20px;
 }
 
 footer p{
     color: white;
 }
+
 
 *,
 *:before,
