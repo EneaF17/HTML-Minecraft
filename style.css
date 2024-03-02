@@ -697,6 +697,8 @@ html{
     border-radius: 10px;
 }
 
+.contenitoreWiki ul{list-style-position: inside;text-align: left;}
+
 .contenitoreWiki p{
     text-align: left;
     position: relative;
