@@ -239,13 +239,12 @@ html{
     z-index: 1;
 } */
 
-@media (max-width: 800px) {
+@media (max-width: 1025px) {
     .header{
         height:32vh;
     }
-
     .header--nocta{
-        height: 25vh;
+        height: 20vh;
     }
     .logo{
         width: 50%;
@@ -313,7 +312,7 @@ html{
     }
 }
 
-@media (max-height: 400px) {
+@media (max-height: 450px) {
     .header{
     height: 30vh;
     border: 1px solid red;
@@ -332,7 +331,7 @@ html{
     }
 
     .header--nocta{
-        height: 20vh;
+        height: 25vh;
     }
     
 
@@ -506,7 +505,7 @@ html{
 .contenitoreLista{
     position: relative;
     width: 50%;
-    margin-top: 30vh;
+    margin-top: 25vh;
     /* border: 1px solid red; */
     left: 5%;
 }
