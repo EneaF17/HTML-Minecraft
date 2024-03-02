@@ -645,8 +645,8 @@ html{
     
 }
 
-.pulsante__Prec{
-    /* border: solid 1px blue; */
+/* .pulsante__Prec{
+    /* border: solid 1px blue; 
     height: 100%;
     width: 20%;
     display: flex;
@@ -655,10 +655,10 @@ html{
     background-image: url(Immagini/FrecciaSx.png);
     background-repeat: no-repeat;
     background-size: 100% 100%;
-}
+} */
 
-.pulsante__Lista{
-    /* border: solid 1px blue; */
+/* .pulsante__Lista{
+    /* border: solid 1px blue; 
     height: 100%;
     width: 20%;
     display: flex;
@@ -667,10 +667,10 @@ html{
     background-image: url(Immagini/FrecciaSu.png);
     background-repeat: no-repeat;
     background-size: 100% 100%;
-}
+} */
 
-.pulsante__Succ{
-    /* border: solid 1px blue; */
+/* .pulsante__Succ{
+    /* border: solid 1px blue; 
     height: 100%;
     width: 20%;
     display: flex;
@@ -679,7 +679,7 @@ html{
     background-image: url(Immagini/FrecciaDx.png);
     background-repeat: no-repeat;
     background-size: 100% 100%;
-}
+} */
 
 .contenitoreWiki{
     margin-top: 50px;
@@ -732,11 +732,25 @@ html{
 
 .ContenitoreTabellaWiki img{width: 50%;}
 
-.TestoWiki img{
+.imgWikiCraft{
     width: 40%;
     padding-left: 5%;
     margin-right: 10px;
     float: left;
+    clear: both;
+}
+.imgWiki{
+    width: 30%;
+    margin-top:10px;
+    padding-right: 5%;
+    margin-left: 10px;
+    float: right;
+    clear: both;
+}
+
+.TestoWiki ul{
+    list-style-position: inside;
+    text-align: left;
 }
 
 table{
