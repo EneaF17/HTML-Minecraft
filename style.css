@@ -249,7 +249,7 @@ html{
         height: 22vh;
     }
     .logo{
-        width: 50%;
+        width: 80%;
         height: min-content;
         margin-top: 10px;
         margin-bottom: 0;
@@ -263,20 +263,15 @@ html{
     .menu{
         width: 100%
     }
-    .menu li img{max-width: 50%; height: auto;}
+    .menu li img{max-width: 60%; height: auto;}
 
     .cta{
         width: 50%;
-        text-align: center;
         margin:0;
-        margin-left: auto;
-        margin-right: auto;
-        margin-bottom: 10px;
+        margin-bottom: 5px;
     }
 
-    footer{
-        width: 100%;
-    }
+
 
 
     .hero{
@@ -287,13 +282,12 @@ html{
         width: 90%;
         left: 5%;
         top: 5%;
-        text-align: center;
     }
     .big-text{
-        font-size: 40px;
+        font-size: 30px;
     }
     .intro-text{
-        font-size: 16px;
+        font-size: 12px;
     }
 
     .hero__content p{
@@ -303,67 +297,35 @@ html{
         width: 100%;
     }
 
+    .pulsanteBuy a{
+        padding: 0;
+        margin: 0;
+    }
     .pulsanteBuy{
-        padding: 18px 28px;
         width: 60%;
         bottom: 5%;
-        /* border: 1px solid red; */
-        position: relative;
-        align-self: center;
-        display: inline-block;
+        text-align: center;
+        padding: 4px 6px;
+
     }
 }
 
-@media (max-height: 450px) {
+@media (max-height: 601px) {
     .header{
     height: 25vh;
-    border: 1px solid red;
-    top:0;
-    width: 100%;
-    display:flex;
-    flex-wrap: wrap;
-    padding-left: 2%;
-    padding-right: 2%;
-    justify-content: space-between;
-    background-image: url(immagini/SfondoHeader.jpg);
-    background-size:contain;
-    background-repeat:repeat;
-    box-shadow: 5px 5px 10px 5px #000000;
-    z-index: 100;
     }
-
     .header--nocta{
         height: 25vh;
     }
     .logo{
         width: 35%;
-        align-self: center;
-        align-items: center;
-        border: 1px solid red;
-    }
-
-
-    .logo a{
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    .logo a img{
-        display: block;
-        height: auto;
     }
 
 
     .menu{
-        padding-left: auto;
-        padding-right: auto;
-        display: flex;
-        width: 35%;
-        height:auto;
+        width: 40%;
         align-self: center;
-        border: 1px solid red;
         text-align: center;
-        /* align-content */
     }
 
     .sizeimg{ width: auto; height: auto;}
@@ -371,47 +333,25 @@ html{
     .menu li img{max-width: 70%; height: auto; transition: 0.5s;}
 
 
-    .menu li img:hover{
-        transform: scale(1.15);
-    }
-
-
-
     .cta{
-        width: 25%;
+        width: 20%;
         padding: 18px 28px;
-        /* padding-left: 50px; */
     }
 
 
 
     .hero{
-        height: 80vh;
-        margin-top: 20vh;
+        height: 78vh;
+        margin-top: 22vh;
         width: 80%;
         left: 10%;
         right: 10%;
-        position: relative;
-        display: flex; align-items: center;
-        border: 1px solid green;
-        z-index: 3;
-        background: linear-gradient(90deg, rgba(2,129,162,0.3393732492997199) 0%, rgba(33,132,250,0.8) 26%, rgba(2,129,162,0.33657212885154064) 79%),url(immagini/Sfondo.jpeg);
-        box-shadow: 0 0 40px 0;
-        /* background-image: ; */
-        background-repeat: no-repeat;
-        background-size: cover;
     }
 
     .hero__content{
-        /* border: 1px solid red; */
         width:80%;
-        position:absolute;
         top:20%;
         left: 10%;
-        z-index: 2;
-        text-align: center;
-        border: 1px solid yellow;
-        /* border: 1px solid red; */
     }
    
     
@@ -463,7 +403,7 @@ html{
     .Informazioni{
         width: 90%;
         left: 5%;
-        height: 150vh;
+        height: 210vh;
     }
     .boxInfo{
         width:100%
@@ -484,7 +424,7 @@ html{
 
 @media (max-height: 450px) {
     .Informazioni{
-        height: 200vh;
+        height: 270vh;
     }
     .boxInfo a{
         width:15%;
@@ -671,7 +611,7 @@ html{
         margin-top: 25vh;
     }
 
-    .PulsantiWiki li {width:35%;display: inline; border: 1px solid green}
+    .PulsantiWiki li {width:35%;display: inline;}
     .PulsantiWiki li a img{width: 70%; height: auto; transition: 0.5s;}
 }
 
@@ -679,7 +619,6 @@ html{
     .contenitorePulsanti{
         margin-top: 28vh;
     }
-
     .PulsantiWiki li {width:25%;display: inline; border: 1px solid green}
     .PulsantiWiki li a img{width: 60%; height: auto; transition: 0.5s;}
 }
@@ -730,7 +669,7 @@ html{
     float: right;
     width: 40%;
     margin-right:10%;
-    margin-left: 10%;
+    margin-left: 0;
     margin-top: 10px;
     background-color: #d2d2d2;
     border: solid 1px black;
@@ -809,12 +748,12 @@ table{
     }
 }
 
-@media (max-height: 400px) {
+@media (max-height: 450px) {
     .contenitoreWiki h1{
         font-size: 25px;
     }
     .ContenitoreTabellaWiki{
-        width: 90%;
+        width: 50%;
         left:5%;
     }
     .contenitoreWiki{
