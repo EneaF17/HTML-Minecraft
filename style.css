@@ -441,12 +441,19 @@ html{
 
 }
 
+.grid{
+    margin-top: 27vh;
+    display: flex;
+    justify-content: space-evenly;
+    position: relative;
+    width: 100%;
+    /* border: 3px solid green */
+}
+
 .contenitoreLista{
     position: relative;
     width: 50%;
-    margin-top: 25vh;
-    /* border: 1px solid red; */
-    left: 5%;
+    border: 1px solid red;
 }
 
 .titoloLista{
@@ -534,8 +541,11 @@ html{
     .titoloLista{
         font-size: 25px;
     }
+    .grid{
+        flex-wrap: wrap;
+        margin-top: 28vh;
+    }
     .contenitoreLista{
-        margin-top: 23vh;
         width: 90%;
     }
     .Listone{
@@ -558,9 +568,12 @@ html{
     .titoloLista{
         font-size: 25px;
     }
+    .grid{
+        margin-top: 30vh;
+    }
     .contenitoreLista{
-        margin-top: 28vh;
-        width: 90%;
+        order: 2;
+        width: 50%;
     }
     .Listone{
         width: 100%;
@@ -575,6 +588,25 @@ html{
         margin-top: 5px;
         margin-bottom: 5px;
     }
+    .main-carousel{
+        order: 1;
+    }
+}
+
+
+
+
+.main-carousel{
+    border: 1px solid red;
+    width: 40%;
+    height: 30vh
+}
+
+.carousel-cell{
+    height: 30vh;
+    width: 100%;
+    margin-right: 10px;
+    border: 1px solid green
 }
 
 
