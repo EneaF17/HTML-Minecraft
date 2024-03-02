@@ -691,11 +691,25 @@ html{
 
 .ContenitoreTabellaWiki img{width: 50%;}
 
-.TestoWiki img{
+.imgWikiCraft{
     width: 40%;
     padding-left: 5%;
     margin-right: 10px;
     float: left;
+    clear: both;
+}
+.imgWiki{
+    width: 30%;
+    margin-top:10px;
+    padding-right: 5%;
+    margin-left: 10px;
+    float: right;
+    clear: both;
+}
+
+.TestoWiki ul{
+    list-style-position: inside;
+    text-align: left;
 }
 
 table{
