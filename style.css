@@ -108,16 +108,30 @@ html{
     
 }
 
-.sizeimg{ width: auto; height: auto;}
-.menu li {display: inline; margin-right: 5%; margin-left: 5%; 
+.PulsantiWiki{
     /* border: 1px solid red; */
+    position: relative;
+    padding-left: auto;
+    padding-right: auto;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height:auto;
+    align-self: center;
+    text-align: center;
+    align-items: center;
+    justify-content: space-evenly;
+    
 }
+
+.sizeimg{ width: auto; height: auto;}
+.menu li {display: inline; margin-right: 5%; margin-left: 5%; }
 .menu li img{max-width: 70%; height: auto; transition: 0.5s;}
+.PulsantiWiki li {display: inline; margin-right: 5%; margin-left: 5%; }
+.PulsantiWiki li img{max-width: 70%; height: auto; transition: 0.5s;}
+.menu li img:hover{transform: scale(1.15);}
+.PulsantiWiki li img:hover{transform: scale(1.15);}
 
-
-.menu li img:hover{
-    transform: scale(1.15);
-}
 
 .cta{
     padding: 18px 28px;
@@ -619,12 +633,57 @@ html{
     }
 }
 
-.contenitoreWiki{
-    margin-top: 150px;
+.contenitorePulsanti{
+    /* border: solid 1px red; */
     position: relative;
-    /* display: flex;
-    flex-wrap: wrap;
-    align-items: stretch; */
+    width: 90%;
+    left: 5%;
+    height: 100px;
+    margin-top: 150px;
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.pulsante__Prec{
+    /* border: solid 1px blue; */
+    height: 100%;
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(Immagini/FrecciaSx.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.pulsante__Lista{
+    /* border: solid 1px blue; */
+    height: 100%;
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(Immagini/FrecciaSu.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.pulsante__Succ{
+    /* border: solid 1px blue; */
+    height: 100%;
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(Immagini/FrecciaDx.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.contenitoreWiki{
+    margin-top: 50px;
+    position: relative;
     background-color: #e6eff4;
     height: auto;
     width: 80%;
@@ -655,6 +714,7 @@ html{
     padding: 0;
     width:60%;
     left: 20%;
+    clear: both;
     border-bottom: solid 3px #73afcf;
     margin-top: 10px;
     margin-bottom: 10px;
@@ -671,6 +731,13 @@ html{
 }
 
 .ContenitoreTabellaWiki img{width: 50%;}
+
+.TestoWiki img{
+    width: 40%;
+    padding-left: 5%;
+    margin-right: 10px;
+    float: left;
+}
 
 table{
     width: 100%;
