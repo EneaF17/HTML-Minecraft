@@ -64,7 +64,7 @@ html{
 .header{
     /* border: 1px solid red; */
     position: fixed;
-    height: 80vh;
+    height: 20vh;
     top:0;
     width: 100%;
     display:flex;
@@ -575,9 +575,6 @@ html{
         margin-top: 5px;
         margin-bottom: 5px;
     }
-    .main-carousel{
-        order: 1;
-    }
 }
 
 
@@ -588,7 +585,7 @@ html{
     margin-top: 10px;
     width: 40%;
     height: 50vh;
-    
+    order: 1;
 }
 
 .carousel-cell{
@@ -597,6 +594,7 @@ html{
     width: 100%;
     margin-right: 10px;
     display: flex;
+    flex-wrap: wrap;
     background-image: url(Immagini/Pergamena.png);
     background-repeat: no-repeat;
     background-size: 100% 100%;
@@ -604,13 +602,16 @@ html{
     position: relative;
 }
 
-
-.carousel-cell a {
-    align-self: center;
-    object-fit: contain;
+.carousel-cell a{
+    font-size: 25px;
+}
+.carousel-img {
+    margin-top: 5%;
+    width: 100%;
+    height: 60%;
 }
 
-.imgCarousel{height: 50vh; padding: 20px;}
+.imgCarousel{object-fit:contain; height: 100%; padding: 20px;}
 
 
 .contenitorePulsanti{
