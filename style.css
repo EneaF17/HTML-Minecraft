@@ -305,7 +305,7 @@ html{
 
 @media (max-height: 701px) {
     .header{
-        height: 25vh;
+    height: 25vh;
     }
     .header--nocta{
         height: 25vh;
@@ -846,6 +846,50 @@ table{
     }
 }
 
+
+
+
+.contenitoreNews{
+    border: 1px solid red;
+    position: relative;
+    top: 22vh;
+    height: 50vh;
+    background: #000;
+}
+.contenitoreNews p{
+    color: #e6eff4;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 footer{
     position: relative;
     width: 100%;
@@ -853,7 +897,7 @@ footer{
     border: 2px solid green;
     text-align: center;
     z-index: 100;
-    margin-top: 20px;
+    top: 22vh;
 }
 
 footer p{
