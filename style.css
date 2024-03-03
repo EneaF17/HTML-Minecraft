@@ -38,6 +38,7 @@ h1,h2,h3,h4,h5,p{color: black}
 
 .big-text{font-size: 70px; font-weight: 900;}
 .med-text{font-size: 40px;}
+.med1-text{font-size: 30px;}
 .normal-text{font-size: 20px;}
 .small-text{font-size: 14px;}
 
@@ -163,7 +164,8 @@ html{
     left: 10%;
     right: 10%;
     position: relative;
-    display: flex; align-items: center;
+    display: flex; 
+    align-items: baseline;
     z-index: 3;
     background: linear-gradient(90deg, rgba(2,129,162,0.3393732492997199) 0%, rgba(33,132,250,0.8) 26%, rgba(2,129,162,0.33657212885154064) 79%),url(immagini/Sfondo.jpeg);
     box-shadow: 0 0 40px 0;
@@ -262,8 +264,8 @@ html{
 
 
     .hero{
-        height: 68vh;
-        margin-top: 32vh;
+        height: 40vh;
+        margin-top: 40vh;
     }
     .hero__content{
         width: 90%;
@@ -329,7 +331,7 @@ html{
 
     .hero{
         height: 78vh;
-        margin-top: 22vh;
+        margin-top: 32vh;
         width: 80%;
         left: 10%;
         right: 10%;
@@ -585,8 +587,9 @@ html{
     margin-top: 10px;
     width: 40%;
     height: 50vh;
-    order: 1;
+    order: 2;
 }
+
 
 .carousel-cell{
     /* border: 1px solid green; */
@@ -602,16 +605,13 @@ html{
     position: relative;
 }
 
-.carousel-cell a{
-    font-size: 25px;
-}
-.carousel-img {
-    margin-top: 5%;
-    width: 100%;
-    height: 60%;
+
+.carousel-cell a {
+    align-self: center;
+    object-fit: contain;
 }
 
-.imgCarousel{object-fit:contain; height: 100%; padding: 20px;}
+.imgCarousel{height: 50vh; padding: 20px;}
 
 
 .contenitorePulsanti{
@@ -636,7 +636,9 @@ html{
 }
 
 
-.PulsantiWiki li {width:16%;display: inline; border: 1px solid green}
+.PulsantiWiki li {width:16%;display: inline; 
+    /* border: 1px solid green */
+}
 .PulsantiWiki li a img{width: 60%; height: auto; transition: 0.5s;}
 .PulsantiWiki li a img:hover{transform: scale(1.10)}
 
@@ -647,14 +649,18 @@ html{
 
     .PulsantiWiki li {width:35%;display: inline;}
     .PulsantiWiki li a img{width: 70%; height: auto; transition: 0.5s;}
-    .main-carousel{width: 90%;}
+    .main-carousel{width: 90%; order: 0;}
+    .carousel-cell__home{width: 100%;}
 }
 
 @media (max-height: 450px) {
     .contenitorePulsanti{
         margin-top: 28vh;
     }
-    .PulsantiWiki li {width:25%;display: inline; border: 1px solid green}
+    .PulsantiWiki li {width:25%;display: inline; 
+        /* border: 1px solid green */
+    }
+
     .PulsantiWiki li a img{width: 60%; height: auto; transition: 0.5s;}
 }
 
