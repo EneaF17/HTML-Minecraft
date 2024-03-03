@@ -65,7 +65,7 @@ html{
 .header{
     /* border: 1px solid red; */
     position: fixed;
-    height: 80vh;
+    height: 20vh;
     top:0;
     width: 100%;
     display:flex;
@@ -176,6 +176,7 @@ html{
 
 .hero__content{
     /* border: 1px solid yellow; */
+    margin-top: 10%;
     width:50%;
     position:relative;
     display: flex;
@@ -609,6 +610,7 @@ html{
 }
 
 
+
 .carousel-cell a {
     align-self: center;
     object-fit: contain;
@@ -641,9 +643,6 @@ html{
 }
 
 .imgCarousel__home{height: 60vh; padding: 20px}
-
-
-
 .contenitorePulsanti{
     position: relative;
     width: 90%;
