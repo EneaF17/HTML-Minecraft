@@ -231,6 +231,7 @@ html{
 
 }
 
+
 @media (max-width: 1025px) {
     .header{
         height:32vh;
@@ -239,7 +240,7 @@ html{
         height: 22vh;
     }
     .logo{
-        width: 80%;
+        width: 60%;
         height: min-content;
         margin-top: 10px;
         margin-bottom: 0;
@@ -265,13 +266,14 @@ html{
 
 
     .hero{
-        height: 40vh;
-        margin-top: 40vh;
+        height: 68vh;
+        margin-top: 32vh;
     }
     .hero__content{
+        height: min-content;
         width: 90%;
         left: 5%;
-        top: 5%;
+        top: 10%;
     }
     .big-text{
         font-size: 30px;
@@ -292,7 +294,8 @@ html{
         margin: 0;
     }
     .pulsanteBuy{
-        width: 60%;
+        width: 50%;
+        height: 10%;
         bottom: 5%;
         text-align: center;
         padding: 4px 6px;
@@ -300,9 +303,9 @@ html{
     }
 }
 
-@media (max-height: 601px) {
+@media (max-height: 701px) {
     .header{
-    height: 25vh;
+        height: 25vh;
     }
     .header--nocta{
         height: 25vh;
@@ -328,24 +331,28 @@ html{
         padding: 18px 28px;
     }
 
-
-
     .hero{
-        height: 78vh;
-        margin-top: 32vh;
+        height: 75vh;
+        margin-top: 25vh;
         width: 80%;
         left: 10%;
         right: 10%;
     }
 
     .hero__content{
+        top: 10%;
+        height: min-content;
+        border: 1px solid red;
         width:80%;
-        top:20%;
         left: 10%;
     }
    
     
 }
+
+
+
+
 
 .Informazioni{
     /* border: 1px solid red; */
