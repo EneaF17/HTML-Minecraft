@@ -176,6 +176,7 @@ html{
 
 .hero__content{
     /* border: 1px solid yellow; */
+    margin-top: 10%;
     width:50%;
     position:relative;
     display: flex;
