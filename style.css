@@ -577,7 +577,7 @@ html{
         margin-top: 5px;
         margin-bottom: 5px;
     }
-    .main-carousel{
+.main-carousel{
         order: 1;
     }
 }
@@ -600,12 +600,14 @@ html{
     width: 100%;
     margin-right: 10px;
     display: flex;
+    flex-wrap: wrap;
     background-image: url(Immagini/Pergamena.png);
     background-repeat: no-repeat;
     background-size: 100% 100%;
     justify-content: center;
     position: relative;
 }
+
 
 .carousel-cell a {
     align-self: center;
