@@ -81,7 +81,7 @@ html{
 .logo{
     /* border: 1px solid red; */
     position: relative;
-    width: 30%;
+    width: 35%;
     height: auto;   
     align-self: center;
     align-items: center;
@@ -120,14 +120,13 @@ html{
 
 .cta{
     padding: 18px 28px;
-    /* padding-left: 50px; */
     background: #049101;
-    /* border: 1px solid red; */
     border-radius: 10px;
     align-self: center;
     display: inline-block;
     box-shadow: 0 0 20px 0;
     text-align: center;
+    /* border: 1px solid red; */
 }
 
 .cta a{
@@ -147,14 +146,6 @@ html{
   83.3% {background-color: #47d147; scale: 1.1;}
   100% {background-color: #049101; scale: 1.0;}
 }
-
-/* .cta a:before{
-    content: "";
-    width: 30px;
-    height: 30px;
-    display: block;
-    background: url(download.png) no-repeat center center;
-} */
 
 .hero{
     /* border: 1px solid green; */
@@ -303,7 +294,7 @@ html{
     }
 }
 
-@media (max-height: 701px) {
+@media (max-height: 666px) {
     .header{
     height: 25vh;
     }
@@ -584,9 +575,6 @@ html{
     .lista .letteralista{
         margin-top: 5px;
         margin-bottom: 5px;
-    }
-.main-carousel{
-        order: 1;
     }
 }
 
@@ -999,15 +987,13 @@ table{
     border: 1px solid red;
     position: relative;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-evenly;
-    width:80%;
-    left:10%;
-    top: 27vh;
-    height: min-content;
+    width:95%;
+    left:2.5%;
+    top: 25vh;
+    height: 75vh;
     background: white;
-}
-.contenitoreNews p{
-    color: #e6eff4;
 }
 
 .News{
@@ -1015,8 +1001,8 @@ table{
     display: flex;
     flex-wrap: wrap;
     width: 30%;
-    height:min-content;
-    margin-top:3%;
+    height:90%;
+    top:5%;
     border: 1px solid red;
     background: linear-gradient(180deg, rgba(115,175,207,1) 50%, rgba(0,111,171,1) 100%);    ;
     border-radius: 10px;
@@ -1024,19 +1010,17 @@ table{
 }
 
 .News h2{
-    height: auto;
+    border: 1px solid red;
+    height: 8%;
     width: 100%;
     position: relative;
-    top:5%;
     font-weight: bolder;
 }
 
 .descNews{
-
-    top: 5%;
     width: 90%;
     position: relative;
-    height: min-content;
+    height:92%;
     border: 1px solid red;
     left: 5%;
     border-radius: 10px;
@@ -1052,16 +1036,17 @@ table{
     position: relative;
     width: 90%;
     left: 5%;
+    font-size: 14px;
     height: min-content;
-    margin-top: 5%;
+    margin-top: 3%;
+
     
 }
 .descNews p{
     position:relative;
-    width: 90%;
-    left: 5%;
-    font-size: 14px;
-    margin-top: 5%;
+    width: 100%;
+    font-size: 11px;
+    margin-top: 3%;
     color: #000000;
 }
 
