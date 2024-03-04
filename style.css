@@ -813,7 +813,7 @@ table{
     margin-bottom: 10px;
     height: 350px;
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     justify-content: space-between;
     flex-direction: column;
 }
@@ -824,7 +824,7 @@ table{
     margin-left: 20%;
     margin-bottom: 7.5%;
     width: 60%;
-    height: 50%;
+    height: auto;
 }
 .titoloGuida{
     font-size: 20px;
@@ -836,16 +836,30 @@ table{
     font-size: 30px;
     margin-top: 5%;
     font-weight: bold;
-    width: 84%;
-    margin-left: 7%;
+    width: auto;
+    /* margin-left: 7%; */
 }
-@media (max-width:750px) {
+
+@media (max-width:1000px) {
     .guidaCell{
         width: 45%;
     }
 }
 
+@media (max-width:700px) {
+    .tipoGuida{
+        font-size: 20px;
+    }
+    
+}
+
 @media (max-width: 520px) {
+    .guidaCell{
+        width: 100%;
+    }
+    .tipoGuida{
+        font-size: 30px;
+    }
     .contenitoreWiki h1{
         font-size: 25px;
     }
@@ -863,9 +877,6 @@ table{
     }
     .tabellaWiki tr td{
         font-size: 8px;
-    }
-    .guidaCell{
-        width: 100%;
     }
 }
 
