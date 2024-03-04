@@ -803,6 +803,59 @@ table{
 .rigapari{background-color: #a8a8a8 ; width: 100%;}
 
 
+.contenitoreGuide{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 30vh;
+    /* height: 350px; */
+    width: 80%;
+    margin-left: 10%;
+
+}
+
+.guidaCell{
+    /* border: solid 1px red; */
+    background-image: url(Immagini/BlankBook.webp);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 90%;
+    width: 30%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 350px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+
+.guidaCell img{
+    /* border: solid 1px green; */
+    margin-left: 20%;
+    margin-bottom: 7.5%;
+    width: 60%;
+    height: 50%;
+}
+.titoloGuida{
+    font-size: 20px;
+    width: 84%;
+    margin-left: 7%;
+}
+
+.tipoGuida{
+    font-size: 30px;
+    margin-top: 5%;
+    font-weight: bold;
+    width: 84%;
+    margin-left: 7%;
+}
+@media (max-width:750px) {
+    .guidaCell{
+        width: 45%;
+    }
+}
 
 @media (max-width: 520px) {
     .contenitoreWiki h1{
@@ -822,6 +875,9 @@ table{
     }
     .tabellaWiki tr td{
         font-size: 8px;
+    }
+    .guidaCell{
+        width: 100%;
     }
 }
 
@@ -846,9 +902,6 @@ table{
     }
 }
 
-
-
-
 .contenitoreNews{
     border: 1px solid red;
     position: relative;
@@ -870,36 +923,6 @@ table{
     top:5%;
     border: 1px solid red;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 footer{
     position: relative;
