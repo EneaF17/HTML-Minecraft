@@ -852,12 +852,23 @@ table{
 .contenitoreNews{
     border: 1px solid red;
     position: relative;
-    top: 22vh;
-    height: 50vh;
-    background: #000;
+    display: flex;
+    width:60%;
+    left:20%;
+    top: 27vh;
+    height: 73vh;
+    background: white;
 }
 .contenitoreNews p{
     color: #e6eff4;
+}
+
+.News{
+    position:relative;
+    width: 33.3333%;
+    height:90%;
+    top:5%;
+    border: 1px solid red;
 }
 
 
@@ -897,7 +908,10 @@ footer{
     border: 2px solid green;
     text-align: center;
     z-index: 100;
-    top: 22vh;
+}
+
+.footer-down{
+    top:28vh;
 }
 
 footer p{
