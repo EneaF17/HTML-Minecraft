@@ -853,8 +853,9 @@ table{
     border: 1px solid red;
     position: relative;
     display: flex;
-    width:60%;
-    left:20%;
+    justify-content: space-evenly;
+    width:80%;
+    left:10%;
     top: 27vh;
     height: 73vh;
     background: white;
@@ -865,15 +866,37 @@ table{
 
 .News{
     position:relative;
-    width: 33.3333%;
+    width: 30%;
     height:90%;
     top:5%;
     border: 1px solid red;
+    background:#73afcf;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0;
+}
+
+.News h2{
+    height: 10%;
+    position: relative;
+    top:5%;
+    font-weight: bolder;
+}
+
+.descNews{
+    top: 5%;
+    width: 90%;
+    position: relative;
+    height: 80%;
+    border: 1px solid red;
+    left: 5%;
+    border-radius: 10px;
 }
 
 
-
-
+.desc--lastv{
+    background: url(../immagini/1.20.jpg);
+    
+}
 
 
 
