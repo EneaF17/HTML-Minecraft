@@ -581,10 +581,9 @@ html{
 
 
 
-
 .main-carousel{
     /* border: 1px solid red; */
-    margin-top: 10px;
+    margin-top:10px;
     width: 40%;
     height: 50vh;
     order: 2;
