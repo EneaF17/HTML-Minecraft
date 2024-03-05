@@ -38,7 +38,7 @@ h1,h2,h3,h4,h5,p{color: black}
 
 .big-text{font-size: 70px; font-weight: 900;}
 .med-text{font-size: 40px;}
-.med1-text{font-size: 30px;}
+.med1-text{font-size: 25px;}
 .normal-text{font-size: 20px;}
 .small-text{font-size: 14px;}
 
@@ -634,12 +634,12 @@ html{
     margin-top: 20px;
     width: 80%;
     left: 10%;
-    height: 70vh;
+    height: 50vh;
 }
 .carousel-cell__home{
     /* border: 1px solid green; */
     height: 100%;
-    width: 50%;
+    width: 33.33%;
     margin-right: 10px;
     display: flex;
     background: white;
@@ -648,12 +648,20 @@ html{
 }
 
 .carousel-cell__home a {
-    height: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    height: 50%;
+    width: 50%;
     border: 1px solid green;
     align-self: center;
+    text-align: center;
 }
 
-.imgCarousel__home{padding: 20px}
+.carousel-cell__home a p{
+    text-align: center;
+    width: 100%;
+}
+
 
 
 
