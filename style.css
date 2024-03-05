@@ -152,7 +152,7 @@ html{
     height: 80vh;
     width: 80%;
     left: 10%;
-    top:20vh;
+    top:22vh;
     right: 10%;
     position: relative;
     display: flex; 
@@ -349,7 +349,7 @@ html{
     /* border: 1px solid red; */
     position: relative;
     margin-top: 30px;
-    top: 20vh;
+    top: 22vh;
     display: flex;
     flex-wrap: wrap;
     height: 140vh;
@@ -628,7 +628,8 @@ html{
 }
 
 .main-carousel__home{
-    top:20vh;
+    border: 1px solid red;
+    top:23vh;
     position: relative;
     margin-top: 20px;
     width: 80%;
@@ -642,17 +643,23 @@ html{
     margin-right: 10px;
     display: flex;
     background: white;
-    background-size: 100% 100%;
     justify-content: center;
     position: relative;
 }
 
 .carousel-cell__home a {
+    height: 80%;
+    border: 1px solid green;
     align-self: center;
-    object-fit: contain;
 }
 
-.imgCarousel__home{height: 60vh; padding: 20px}
+.imgCarousel__home{padding: 20px}
+
+
+
+
+
+
 .contenitorePulsanti{
     position: relative;
     width: 90%;
