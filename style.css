@@ -887,25 +887,21 @@ table{
     width: 30%;
     margin-top: 10px;
     margin-bottom: 10px;
-    height: 350px;
+    height: 50vh;
     display: flex;
     flex-wrap: nowrap;
-    justify-content: space-between;
+    justify-content: left;
     flex-direction: column;
 }
 
 
 .guidaCell img{
     /* border: solid 1px green; */
-    margin-left: 20%;
-    margin-bottom: 7.5%;
-    width: 60%;
+    margin-left: 25%;
+    margin-top:5%;
+    margin-bottom:10%;
+    width: 50%;
     height: auto;
-}
-.titoloGuida{
-    font-size: 20px;
-    width: 84%;
-    margin-left: 7%;
 }
 
 .tipoGuida{
@@ -914,6 +910,13 @@ table{
     font-weight: bold;
     width: auto;
     /* margin-left: 7%; */
+}
+
+.titoloGuida{
+    font-size: 20px;
+    width: 84%;
+    margin-top: 5%;
+    margin-left: 8%;
 }
 
 .boxGuida{
@@ -1014,6 +1017,7 @@ table{
 @media (max-width: 520px) {
     .guidaCell{
         width: 100%;
+        height: min-content;
     }
     .tipoGuida{
         font-size: 30px;
