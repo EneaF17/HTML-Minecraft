@@ -638,34 +638,56 @@ html{
 }
 .carousel-cell__home{
     /* border: 1px solid green; */
+    border-radius: 20px;
     height: 100%;
     width: 33.33%;
     margin-right: 10px;
     display: flex;
+    flex-wrap: wrap;
     background: white;
     justify-content: center;
     position: relative;
 }
 
-.carousel-cell__home a {
+.carousel-cell__home h2{
+    border: 1px solid red;
+    position: relative;
+    width:100%;
+    height:min-content
+}
+
+.carousel-cell__home a{
     display: flex;
     flex-wrap: wrap;
-    height: 50%;
-    width: 50%;
+    height: 70%;
+    width: 70%;
     border: 1px solid green;
     align-self: center;
     text-align: center;
+    background:radial-gradient(circle, rgba(95,171,0,1) 50%, rgba(171,207,115,1) 80%);
+    border-radius: 100%;
 }
 
 .carousel-cell__home a p{
+    font-size: 20px;
+    position: relative;
     text-align: center;
     width: 100%;
+    top: 10%;
+    margin: 0;
+    height: min-content;
+    border: 1px solid red;
 }
 
-
-
-
-
+.carousel-cell__home a img{
+    position: relative;
+    margin: 0;
+    top:-10%;
+    width: auto;
+    height: auto;
+    left: 40%;
+    border: 1px solid red;
+}
 
 
 .contenitorePulsanti{
