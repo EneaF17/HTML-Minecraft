@@ -64,7 +64,6 @@ html{
     /* border: 1px solid red; */
     position: fixed;
     height: 20vh;
-    top:0;
     width: 100%;
     display:flex;
     flex-wrap: wrap;
@@ -176,7 +175,7 @@ html{
 }
 
 
-@media (max-height: 768px) and (orientation:landscape){
+@media (max-height: 450px) and (orientation:landscape){
     .header{
     height: 25vh;
     }
@@ -294,10 +293,11 @@ html{
         top: 32vh;
     }
     .hero__content{
+        position: relative;
         height: min-content;
         width: 90%;
         left: 5%;
-        margin-top: 20%;
+        top: 20%;
     }
     .big-text{
         font-size: 30px;
@@ -327,7 +327,7 @@ html{
     }
 }
 
-@media (max-height: 768px) and (orientation:landscape){
+@media (max-height: 450px) and (orientation:landscape){
     .hero{
         height: 75vh;
         top: 25vh;
@@ -337,11 +337,23 @@ html{
     }
 
     .hero__content{
+        margin-top: 0;
         top: 10%;
         height: min-content;
         border: 1px solid red;
         width:80%;
         left: 10%;
+    }
+
+    .hero__content p{
+        font-size: 18px;
+    }
+    .hero__content h1{
+        font-size: 50px;
+    }
+
+    .pulsanteBuy{
+        margin-top: 5px;
     }
    
     
@@ -400,7 +412,7 @@ html{
         top:32vh;
         width: 90%;
         left: 5%;
-        height: 210vh;
+        height: 160vh;
     }
     .boxInfo{
         width:100%
@@ -419,8 +431,9 @@ html{
     }
 }
 
-@media (max-height: 768px) and (orientation:landscape){
+@media (max-height: 450px) and (orientation:landscape){
     .Informazioni{
+        top: 25vh;
         height: 270vh;
     }
     .boxInfo a{
@@ -567,7 +580,7 @@ html{
 }
 
 
-@media (max-height: 768px) and (orientation:landscape){
+@media (max-height: 450px) and (orientation:landscape){
     .titoloLista{
         font-size: 25px;
     }
@@ -677,6 +690,7 @@ html{
 }
 
 .carousel-cell__home p{
+    /* border: 1px solid red; */
     width: 100%;
 }
 
@@ -689,6 +703,7 @@ html{
     align-self: center;
     text-align: center;
     background:radial-gradient(circle, rgba(95,171,0,1) 50%, rgba(171,207,115,1) 80%);
+    background-size: 100% 100%;
     border-radius: 100%;
 }
 
@@ -696,7 +711,7 @@ html{
     position: relative;
     margin: 0;
     width: 100%;
-    height: auto;
+    height: 100%;
     border: 1px solid red;
 }
 
@@ -707,6 +722,17 @@ html{
     .carousel-cell__home{width: 100%;}
 }
 
+@media (max-height: 450px) and (orientation:landscape){
+    .main-carousel__home{
+        top:25vh;
+        height: 60vh;
+    }
+
+    .carousel-cell__home p{
+        padding-top: 10px;
+    }
+}
+
 
 /* PULSANTI WIKI */
 
@@ -715,12 +741,12 @@ html{
     width: 90%;
     left: 5%;
     height: auto;
-    top: 22vh;
+    top:20vh;
     /* z-index: 100; */
 }
 
 
-.PulsantiWiki{
+.Pulsanti{    
     /* border: 1px solid red; */
     display: flex;
     flex-direction: row;
@@ -733,30 +759,30 @@ html{
 }
 
 
-.PulsantiWiki li {width:16%;display: inline; 
+.Pulsanti li {width:16%;display: inline; 
     /* border: 1px solid green */
 }
-.PulsantiWiki li a img{width: 60%; height: auto; transition: 0.5s;}
-.PulsantiWiki li a img:hover{transform: scale(1.10)}
+.Pulsanti li a img{width: 60%; height: auto; transition: 0.5s;}
+.Pulsanti li a img:hover{transform: scale(1.10)}
 
 @media (max-width: 768px) {
     .contenitorePulsanti{
         top: 22vh;
     }
 
-    .PulsantiWiki li {width:35%;display: inline;}
-    .PulsantiWiki li a img{width: 70%; height: auto; transition: 0.5s;}
+    .Pulsanti li {width:35%;display: inline;}
+    .Pulsanti li a img{width: 70%; height: auto; transition: 0.5s;}
 }
 
-@media (max-height: 768px) and (orientation:landscape){
+@media (max-height: 450px) and (orientation:landscape){
     .contenitorePulsanti{
-        margin-top: 28vh;
+        top: 2vh;
     }
-    .PulsantiWiki li {width:25%;display: inline; 
+    .Pulsanti li {width:25%;display: inline; 
         /* border: 1px solid green */
     }
 
-    .PulsantiWiki li a img{width: 60%; height: auto; transition: 0.5s;}
+    .Pulsanti li a img{width: 60%; height: auto; transition: 0.5s;}
 }
 
 
@@ -887,7 +913,7 @@ table{
     width: 30%;
     margin-top: 10px;
     margin-bottom: 10px;
-    height: 50vh;
+    height: 60vh;
     display: flex;
     flex-wrap: nowrap;
     justify-content: left;
@@ -920,9 +946,11 @@ table{
 }
 
 .boxGuida{
+    position: relative;
     border-radius: 10px;
     /* border: solid 1px red; */
     width: 90%;
+    top: 22vh;
     margin-left: 5%;
     margin-top: 20px;
     height: auto;
@@ -933,6 +961,7 @@ table{
 
 .boxTitolo{
     border-radius: 10px;
+    padding: 10px;
     border: solid 5px #73afcf;
     width: 100%;
     background-color: white;
@@ -951,7 +980,7 @@ table{
     align-items: center;
     font-size: 20px;
     position: sticky;
-    top: 25vh;
+    top: 22vh;
     margin-top: 2vh;
 }
 
@@ -1042,7 +1071,7 @@ table{
     }
 }
 
-@media (max-height: 768px) and (orientation:landscape){
+@media (max-height: 450px) and (orientation:landscape){
     .contenitoreWiki h1{
         font-size: 25px;
     }
@@ -1060,6 +1089,16 @@ table{
     }
     .tabellaWiki tr td{
         font-size: 10px;
+    }
+
+    .contenitoreGuide{
+        top: 25vh;
+    }
+    .tipoGuida{
+        font-size: 20px;
+    }
+    .titoloGuida{
+        font-size: 14px;
     }
 }
 
@@ -1090,8 +1129,8 @@ table{
 }
 
 .News h2{
-    border: 1px solid red;
-    height: 8%;
+    border: 1px solid green;
+    height: 15%;
     width: 100%;
     padding-top: 8px;
     padding-bottom: 8px;
@@ -1102,7 +1141,7 @@ table{
 .descNews{
     width: 90%;
     position: relative;
-    height:92%;
+    height:85%;
     border: 1px solid red;
     left: 5%;
     border-radius: 10px;
@@ -1193,7 +1232,7 @@ footer p{
         top:22vh
     }
     .footer-home{
-        top:30vh
+        top:32vh
     }
 }
 
