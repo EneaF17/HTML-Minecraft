@@ -776,7 +776,7 @@ html{
 
 @media (max-height: 450px) and (orientation:landscape){
     .contenitorePulsanti{
-        top: 2vh;
+        top: 25vh;
     }
     .Pulsanti li {width:25%;display: inline; 
         /* border: 1px solid green */
@@ -976,6 +976,7 @@ table{
     border-bottom: solid 5px #73afcf;
     display: flex;
     width: 100%;
+    height: 14vh;
     background-color: white;
     align-items: center;
     font-size: 20px;
@@ -988,6 +989,8 @@ table{
     margin-left: 2%;
     width: 88%;
     text-align: left;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 .boxNumeroSezione{
@@ -995,9 +998,10 @@ table{
     border-radius: 10px;
     background-color: #049101;
     text-align: center;
-    width: 10%;
+    width: min-content;
     height: 100%;
     padding: 10px;
+    padding-top: 15px;
 }
 
 .boxNumeroSezione p{ color: white;}
@@ -1034,13 +1038,16 @@ table{
     .guidaCell{
         width: 45%;
     }
+
+    .boxSezione{
+        height: 12vh;
+    }
 }
 
 @media (max-width:700px) {
     .tipoGuida{
         font-size: 20px;
     }
-    
 }
 
 @media (max-width: 520px) {
@@ -1099,6 +1106,11 @@ table{
     }
     .titoloGuida{
         font-size: 14px;
+    }
+
+    .boxSezione{
+        top:25vh;
+        height: 18vh;
     }
 }
 
