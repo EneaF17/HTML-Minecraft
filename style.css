@@ -460,6 +460,7 @@ html{
     top: 20vh;
     margin-top: 30px;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-evenly;
     position: relative;
     width: 100%;
@@ -609,16 +610,15 @@ html{
 
 /* CAROSELLO WIKI */
 
-.main-carousel{
+.main-carousel--wiki{
     /* border: 1px solid red; */
     width: 40%;
     height: 50vh;
     order: 2;
-    position: sticky;
 }
 
 
-.carousel-cell{
+.carousel-cell--home{
     border: 1px solid green;
     height: 50vh;
     width: 100%;
@@ -654,12 +654,12 @@ html{
 }
 
 @media (max-width: 768px) {
-    .main-carousel{width: 90%; order: 0}
+    .main-carousel--wiki{width: 90%; order: 0}
 }
 
 /* CAROSELLO HOME */
 
-.main-carousel__home{
+.main-carousel--home{
     border: 1px solid gold;
     top:20vh;
     position: relative;
@@ -668,7 +668,7 @@ html{
     left: 10%;
     height: 50vh;
 }
-.carousel-cell__home{
+.carousel-cell--home{
     border: 4px solid green;
     border-radius: 20px;
     height: 100%;
@@ -681,7 +681,7 @@ html{
     position: relative;
 }
 
-.carousel-cell__home h2{
+.carousel-cell--home h2{
     border: 1px solid red;
     position: relative;
     width:100%;
@@ -689,12 +689,12 @@ html{
     height:min-content
 }
 
-.carousel-cell__home p{
+.carousel-cell--home p{
     /* border: 1px solid red; */
     width: 100%;
 }
 
-.carousel-cell__home a{
+.carousel-cell--home a{
     display: flex;
     flex-wrap: wrap;
     height: 70%;
@@ -707,7 +707,7 @@ html{
     border-radius: 100%;
 }
 
-.carousel-cell__home a img{
+.carousel-cell--home a img{
     position: relative;
     margin: 0;
     width: 100%;
@@ -716,23 +716,42 @@ html{
 }
 
 @media (max-width: 768px) {
-    .main-carousel__home{
+    .main-carousel--home{
         top:32vh; height: 40vh;
     }
-    .carousel-cell__home{width: 100%;}
+    .carousel-cell--home{width: 100%;}
 }
 
 @media (max-height: 450px) and (orientation:landscape){
-    .main-carousel__home{
+    .main-carousel--home{
         top:25vh;
         height: 60vh;
     }
 
-    .carousel-cell__home p{
+    .carousel-cell--home p{
         padding-top: 10px;
     }
 }
 
+
+/* CAROSELLO NEWS */
+
+.main-carousel--news{
+    border: 1px solid red;
+    width: 80%;
+    height: 60vh;
+    margin-top: 5vh;
+    position: relative;
+}
+
+
+.carousel-cell--news{
+    border: 1px solid red;
+    width: 33.3%;
+    background: white;
+    height: 100%;
+    position: relative;
+}
 
 /* PULSANTI WIKI */
 
@@ -1116,7 +1135,6 @@ table{
 
 .contenitoreNews{
     border: 1px solid red;
-    position: relative;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
