@@ -1000,8 +1000,8 @@ table{
     text-align: center;
     width: min-content;
     height: 100%;
-    padding: 10px;
-    padding-top: 15px;
+    padding: 10px 10px;
+
 }
 
 .boxNumeroSezione p{ color: white;}
