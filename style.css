@@ -772,14 +772,14 @@ html{
 
 .contenitoreSnapshot{
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 10px;
     margin-left: 2%;
     margin-right: 2%;
 }
 .listasnapshot{
     border: 1px solid green;
-    text-align: left;
+    text-align: center;
 }
 
 
