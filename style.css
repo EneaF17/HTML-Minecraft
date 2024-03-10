@@ -772,7 +772,7 @@ html{
 
 .contenitoreSnapshot{
     display: grid;
-    gap: 10px;
+    gap: 5px;
     margin-left: 2%;
     margin-right: 2%;
 }
@@ -812,6 +812,8 @@ html{
 }
 .titolosottoversione{
     font-size: 15px;
+    margin-top: 2%;
+    margin-bottom: 2%;
     text-align: center;
 }
 
