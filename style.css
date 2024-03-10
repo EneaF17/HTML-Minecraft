@@ -870,7 +870,6 @@ html{
     text-align: center;
     align-items: center;
     justify-content: center;
-    margin-top: 25px;
 }
 
 
@@ -1066,7 +1065,7 @@ table{
     border-radius: 10px;
     /* border: solid 1px red; */
     width: 90%;
-    top: 22vh;
+    top: 15vh;
     margin-left: 5%;
     margin-top: 20px;
     height: auto;
