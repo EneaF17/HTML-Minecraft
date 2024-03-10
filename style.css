@@ -215,10 +215,10 @@ html{
 
 .hero{
     /* border: 1px solid green; */
-    height: 80vh;
+    height: 85vh;
     width: 80%;
     left: 10%;
-    top:20vh;
+    top:15vh;
     right: 10%;
     position: relative;
     display: flex; 
@@ -459,7 +459,7 @@ html{
 
 .grid{
     /* border: 3px solid green */
-    top: 20vh;
+    top: 15vh;
     margin-top: 30px;
     display: flex;
     flex-wrap: wrap;
@@ -588,7 +588,7 @@ html{
         font-size: 25px;
     }
     .grid{
-        margin-top: 30vh;
+        top: 25vh;
     }
     .contenitoreLista{
         order: 2;
@@ -693,6 +693,7 @@ html{
 
 .carousel-cell--home p{
     /* border: 1px solid red; */
+    height:min-content;
     width: 100%;
 }
 
@@ -700,13 +701,18 @@ html{
     /* border: 1px solid green; */
     display: flex;
     flex-wrap: wrap;
-    height: 70%;
-    width: 70%;
+    height: 65%;
+    width: 65%;
     align-self: center;
     text-align: center;
     background:radial-gradient(circle, rgba(95,171,0,1) 50%, rgba(171,207,115,1) 80%);
     background-size: 100% 100%;
     border-radius: 100%;
+    transition: 0.5s;
+}
+
+.carousel-cell--home a:hover{
+    transform: scale(1.10);
 }
 
 .carousel-cell--home a img{
@@ -739,7 +745,7 @@ html{
 /* CAROSELLO NEWS */
 
 .main-carousel--news{
-    border: 1px solid red;
+    /* border: 1px solid red; */
     width: 80%;
     height: 80vh;
     margin-top: 5vh;
@@ -748,10 +754,10 @@ html{
 
 
 .carousel-cell--news{
-    border: 1px solid red;
+    /* border: 1px solid red; */
     border-radius: 20px;
-    margin-right: 10px;
-    width: 33.33%;
+    margin-left: 3.34%;
+    width: 30%;
     background: white;
     height: 100%;
     position: relative;
@@ -767,7 +773,6 @@ html{
     width: 90%;
     height: 40%;
     margin: auto;
-
 }
 
 .contenitoreSnapshot{
@@ -801,7 +806,7 @@ html{
 }
 
 .listasnapshot{
-    border: 1px solid green;
+    /* border: 1px solid green; */
     text-align: center;
 }
 
@@ -817,6 +822,32 @@ html{
     text-align: center;
 }
 
+@media (max-width: 768px) {
+    .main-carousel--news{
+        height: 65vh;
+    }
+    .carousel-cell--news{
+        margin: 0;
+        width: 100%;
+    }
+
+    .imgNews{
+        height: 35%;
+    }
+}
+
+@media (max-height: 450px) and (orientation:landscape){
+    .main-carousel--news{
+        height: 110vh;
+    }
+    .carousel-cell--news{
+        margin-left: 5%;
+        width: 45%;
+    }
+}
+
+
+
 /* PULSANTI WIKI */
 
 .contenitorePulsanti{
@@ -824,7 +855,8 @@ html{
     width: 90%;
     left: 5%;
     height: auto;
-    top:17vh;
+    top:15vh;
+    margin-top: 30px;
     /* z-index: 100; */
 }
 
@@ -872,7 +904,8 @@ html{
 /* WIKI E GUIDE*/
 
 .contenitoreWiki{
-    top: 25vh;
+    top: 15vh;
+    margin-top: 30px;
     border: 3px solid green;
     position: relative;
     background-color: #e6eff4;
@@ -979,7 +1012,7 @@ table{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    top: 20vh;
+    top: 15vh;
     margin-top: 3vh;
     /* height: 350px; */
     width: 80%;
@@ -1133,7 +1166,10 @@ table{
     }
 }
 
-@media (max-width: 520px) {
+@media (max-width: 768px) {
+    .contenitoreGuide{
+        top: 22vh;
+    }
     .guidaCell{
         width: 100%;
         height: min-content;
@@ -1151,7 +1187,7 @@ table{
     .contenitoreWiki{
         width:100%;
         left:0;
-        top:10%;
+        top:22vh;
     }
     .tabellaWiki tr th{
         font-size: 10px;
@@ -1285,16 +1321,11 @@ table{
 }
 
 
-
-
-
-
-
-
-
-
-
-
+@media (max-height: 450px) and (orientation:landscape){
+    .contenitoreNews{
+        height:120vh
+    }
+}
 
 
 
@@ -1306,7 +1337,7 @@ table{
 /* FOOTER */
 
 footer{
-    top: 20vh;
+    top: 15vh;
     margin-top: 30px;
     position: relative;
     width: 100%;
@@ -1327,6 +1358,12 @@ footer p{
     }
     .footer-home{
         top:32vh
+    }
+}
+
+@media (max-height: 450px) and (orientation:landscape){
+    footer{
+        top:22vh
     }
 }
 
