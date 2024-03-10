@@ -619,7 +619,7 @@ html{
 
 
 .carousel-cell--wiki{
-    border: 1px solid green;
+    /* border: 1px solid green; */
     height: 50vh;
     width: 100%;
     margin-right: 10px;
@@ -660,7 +660,7 @@ html{
 /* CAROSELLO HOME */
 
 .main-carousel--home{
-    border: 1px solid gold;
+    /* border: 1px solid gold; */
     top:20vh;
     position: relative;
     margin-top: 20px;
@@ -669,7 +669,7 @@ html{
     height: 50vh;
 }
 .carousel-cell--home{
-    border: 4px solid green;
+    /* border: 4px solid green; */
     border-radius: 20px;
     height: 100%;
     width: 33.33%;
@@ -682,7 +682,7 @@ html{
 }
 
 .carousel-cell--home h2{
-    border: 1px solid red;
+    /* border: 1px solid red; */
     position: relative;
     width:100%;
     top: 5%;
@@ -695,11 +695,11 @@ html{
 }
 
 .carousel-cell--home a{
+    /* border: 1px solid green; */
     display: flex;
     flex-wrap: wrap;
     height: 70%;
     width: 70%;
-    border: 1px solid green;
     align-self: center;
     text-align: center;
     background:radial-gradient(circle, rgba(95,171,0,1) 50%, rgba(171,207,115,1) 80%);
@@ -708,11 +708,11 @@ html{
 }
 
 .carousel-cell--home a img{
+    /* border: 1px solid red; */
     position: relative;
-    margin: 0;
-    width: 100%;
-    height: 100%;
-    border: 1px solid red;
+    margin: auto;
+    width: 70%;
+    height: 70%;
 }
 
 @media (max-width: 768px) {
