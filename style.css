@@ -618,7 +618,7 @@ html{
 }
 
 
-.carousel-cell--home{
+.carousel-cell--wiki{
     border: 1px solid green;
     height: 50vh;
     width: 100%;
@@ -739,7 +739,7 @@ html{
 .main-carousel--news{
     border: 1px solid red;
     width: 80%;
-    height: 60vh;
+    height: 65vh;
     margin-top: 5vh;
     position: relative;
 }
@@ -747,10 +747,23 @@ html{
 
 .carousel-cell--news{
     border: 1px solid red;
-    width: 33.3%;
+    border-radius: 20px;
+    width: 33%;
     background: white;
     height: 100%;
     position: relative;
+}
+
+.titoloversione{
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.listasnapshot{
+}
+
+.listasnapshot li{
+    
 }
 
 /* PULSANTI WIKI */
