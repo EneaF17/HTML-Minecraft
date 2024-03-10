@@ -763,13 +763,17 @@ html{
 
 .imgNews{
     width: 90%;
+    height: 40%;
     margin: auto;
+
 }
 
 .contenitoreSnapshot{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
+    margin-left: 2%;
+    margin-right: 2%;
 }
 .listasnapshot{
     border: 1px solid green;
