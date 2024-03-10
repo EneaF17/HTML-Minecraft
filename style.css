@@ -748,7 +748,7 @@ html{
 .carousel-cell--news{
     border: 1px solid red;
     border-radius: 20px;
-    width: 33%;
+    width: 33.33%;
     background: white;
     height: 100%;
     position: relative;
@@ -757,13 +757,23 @@ html{
 .titoloversione{
     margin-top: 5%;
     margin-bottom: 5%;
+    font-size: 25px;
 }
 
 .listasnapshot{
+    border: 1px solid green;
+    text-align: left;
+    width: 80%;
+    margin: auto;
+}
+
+.imgNews{
+    width: 90%;
+    margin: auto;
 }
 
 .listasnapshot li{
-    
+    margin-top: 1%;
 }
 
 /* PULSANTI WIKI */
