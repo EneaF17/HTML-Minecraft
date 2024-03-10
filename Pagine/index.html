@@ -17,7 +17,24 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
-
+        <script>
+            // When the user scrolls down 50px from the top of the document, resize the header's font size
+            window.onscroll = function() {scrollFunction()};
+            
+            function scrollFunction() {
+              if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+                document.getElementById("header").style.height = "7%";
+                document.getElementById("logo").style.width = "15%";
+                document.getElementById("menu").style.width = "15%";
+                document.getElementById("cta").style.padding = "5px 10px";
+              } else {
+                document.getElementById("header").style.height = "25%";
+                document.getElementById("logo").style.width = "35%";
+                document.getElementById("menu").style.width = "35%";
+                document.getElementById("cta").style.padding = "18px 28px";
+              }
+            }
+        </script>
 
     </head>
     
@@ -28,18 +45,18 @@
             <script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/3.0.0/flickity.pkgd.min.js" integrity="sha512-achKCfKcYJg0u0J7UDJZbtrffUwtTLQMFSn28bDJ1Xl9DWkl/6VDT3LMfVTo09V51hmnjrrOTbtg4rEgg0QArA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 
-            <div class="header">
-                <div class="logo">
+            <div id="header">
+                <div id="logo">
                     <a href="index.html" class="logo-link">            
                         <img src="../immagini/logo.png" alt="">
                     </a>
                 </div>
-                <ul class="menu" style="list-style-type: none;">
-                    <li><a href="Minecraft_Guida.html"><img src="../immagini/IronPickaxe.png"alt=""></a></li>
+                <ul id="menu" style="list-style-type: none;">
+                    <li><a href="Minecraft_Guida.html"><img class="imgmenu" src="../immagini/IronPickaxe.png"alt=""></a></li>
                     <li><a href="Minecraft_Wiki.html"><img src="../immagini/Book.png"alt=""></a></li>
                     <li><a href="Minecraft_News.html"><img src="../immagini/Anvil.webp"alt=""></a></li>
                 </ul>
-                <div class="cta">
+                <div id="cta">
                     <a href="https://www.minecraft.net/it-it/login" class="intro-text">Iscriviti</a>
                 </div>
             </div>
