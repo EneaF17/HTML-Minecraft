@@ -902,10 +902,10 @@ html{
 
 /* WIKI E GUIDE*/
 
-.contenitoreWiki{
+.contenitoreWiki, .contenitorePaginaSnapshot{
     top: 15vh;
     margin-top: 30px;
-    border: 3px solid green;
+    /* border: 3px solid green; */
     position: relative;
     background-color: #e6eff4;
     height: auto;
@@ -914,16 +914,15 @@ html{
     border-radius: 10px;
 }
 
-.contenitoreWiki ul{list-style-position: inside;text-align: left;}
 
-.contenitoreWiki p{
+.contenitoreWiki p, .contenitorePaginaSnapshot p{
     text-align: left;
     position: relative;
     width: auto;
     padding-top:10px;
     padding-bottom: 10px;
 }
-.contenitoreWiki .titolo{
+.titolo{
     position: relative;
     padding: 0;
     width:80%;
@@ -933,7 +932,7 @@ html{
     border-bottom: solid 6px #73afcf;
 }
 
-.contenitoreWiki .Sezione{
+.contenitoreWiki .Sezione, .contenitorePaginaSnapshot .Sezione{
     position: relative;
     padding: 0;
     width:60%;
@@ -944,7 +943,7 @@ html{
     margin-bottom: 10px;
 }
 
-.ContenitoreTabellaWiki{
+.ContenitoreTabella{
     position: relative;
     float: right;
     width: 40%;
@@ -974,7 +973,7 @@ html{
     clear: both;
 }
 
-.TestoWiki {
+.TestoWiki, .TestoNews {
     padding-left: 5%;
     padding-right: 5%;
 }
@@ -984,19 +983,19 @@ table{
     border-collapse: collapse;
 }
 
-.tabellaWiki{
+.tabella{
     /* border: solid 1px red; */
     position: relative;
 }
 
-.tabellaWiki th{
+.tabella th{
     /* border: solid 1px blue; */
     padding-left: 2%;
     text-align: left;
     width: 60%;
 }
 
-.tabellaWiki td{
+.tabella td{
     /* border: solid 1px cyan; */
     padding-left: 2%;
     text-align: left;
@@ -1176,43 +1175,43 @@ table{
     .tipoGuida{
         font-size: 30px;
     }
-    .contenitoreWiki h1{
+    .contenitoreWiki h1, .contenitorePaginaSnapshot h1{
         font-size: 25px;
     }
-    .ContenitoreTabellaWiki{
+    .ContenitoreTabella{
         width: 90%;
         left:5%;
     }
-    .contenitoreWiki{
+    .contenitoreWiki, .contenitorePaginaSnapshot{
         width:100%;
         left:0;
         top:22vh;
     }
-    .tabellaWiki tr th{
+    .tabella tr th{
         font-size: 10px;
     }
-    .tabellaWiki tr td{
+    .tabella tr td{
         font-size: 8px;
     }
 }
 
 @media (max-height: 450px) and (orientation:landscape){
-    .contenitoreWiki h1{
+    .contenitoreWiki h1, .contenitorePaginaSnapshot h1{
         font-size: 25px;
     }
-    .ContenitoreTabellaWiki{
+    .ContenitoreTabella{
         width: 50%;
         left:5%;
     }
-    .contenitoreWiki{
+    .contenitoreWiki, .contenitorePaginaSnapshot{
         width:90%;
         left:5%;
         top:10%;
     }
-    .tabellaWiki tr th{
+    .tabella tr th{
         font-size: 14px;
     }
-    .tabellaWiki tr td{
+    .tabella tr td{
         font-size: 10px;
     }
 
@@ -1258,7 +1257,7 @@ table{
 }
 
 .News h2{
-    border: 1px solid green;
+    /* border: 1px solid green; */
     height: 15%;
     width: 100%;
     padding-top: 8px;
@@ -1327,8 +1326,7 @@ table{
 }
 
 
-
-
+/* PAGINA NEWS */
 
 
 
@@ -1337,11 +1335,12 @@ table{
 
 footer{
     top: 15vh;
+    height: 30px;
     margin-top: 30px;
     position: relative;
     width: 100%;
     background-color: black;
-    border: 2px solid green;
+    /* border: 2px solid green; */
     text-align: center;
     z-index: 100;
 }
