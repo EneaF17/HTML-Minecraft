@@ -739,7 +739,7 @@ html{
 .main-carousel--news{
     border: 1px solid red;
     width: 80%;
-    height: 65vh;
+    height: 70vh;
     margin-top: 5vh;
     position: relative;
 }
@@ -748,6 +748,7 @@ html{
 .carousel-cell--news{
     border: 1px solid red;
     border-radius: 20px;
+    margin-right: 10px;
     width: 33.33%;
     background: white;
     height: 100%;
@@ -755,16 +756,9 @@ html{
 }
 
 .titoloversione{
-    margin-top: 5%;
-    margin-bottom: 5%;
+    margin-top: 3%;
+    margin-bottom: 3%;
     font-size: 25px;
-}
-
-.listasnapshot{
-    border: 1px solid green;
-    text-align: left;
-    width: 80%;
-    margin: auto;
 }
 
 .imgNews{
@@ -772,8 +766,24 @@ html{
     margin: auto;
 }
 
+.contenitoreSnapshot{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+.listasnapshot{
+    border: 1px solid green;
+    text-align: left;
+}
+
+
 .listasnapshot li{
     margin-top: 1%;
+    font-size: 10px;
+}
+.titolosottoversione{
+    font-size: 15px;
+    text-align: center;
 }
 
 /* PULSANTI WIKI */
