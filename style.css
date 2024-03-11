@@ -943,6 +943,26 @@ html{
     margin-bottom: 10px;
 }
 
+.ContenitoreIndice{
+    position: relative;
+    float: left;
+    width: 40%;
+    margin-left:5%;
+    margin-top: 10px;
+    background-color: #d2d2d2;
+    border: solid 1px black;
+    padding: 10px;
+    text-align: left;
+    list-style-position: inside;
+}
+
+.jumptarget::before {
+    content:"";
+    display:block;
+    height:16vh;
+    margin:-16vh 0 0;
+  }
+
 .ContenitoreTabella{
     position: relative;
     float: right;
@@ -1197,6 +1217,10 @@ table{
     }
     .tabella tr td{
         font-size: 8px;
+    }
+    .ContenitoreIndice{
+        width: 100%;
+        margin-left: 0;
     }
 }
 

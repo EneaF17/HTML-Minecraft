@@ -13,8 +13,9 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
     </head>
-    <div class="contenitore">
-        <body>
+    <body>
+        
+        <div class="contenitore">
             <div class="header header--nocta">
                 <div class="logo">
                     <a href="../index.html" class="logo-link">            
@@ -27,12 +28,11 @@
                     <li><a href="../Minecraft_News.html"><img src="../../immagini/Anvil.webp"alt=""></a></li>
                 </ul>
             </div>
-
-
+            
             <div class="contenitorePulsanti">
                 <ul class="Pulsanti" style="list-style-type: none;">
                     <li><a href="Guida"><img src="../../immagini/FrecciaSx.png"alt=""></a></li>
-                    <li><a href="../Minecraft_Guida.html"><img src="../../immagini/FrecciaSu.png"alt=""></a></li>
+                    <li><a href="../Minecraft_News.html"><img src="../../immagini/FrecciaSu.png"alt=""></a></li>
                     <li><a href="Guida"><img src="../../immagini/FrecciaDx.png"alt=""></a></li>
                 </ul>
             </div>
@@ -62,8 +62,20 @@
                 </div>
                 <div class="TestoNews">
                     <p>22w11a è il primo snapshot per la Java Edition 1.19, rilasciato il 16 marzo 2022, che aggiunge le prime funzionalità del The Wild Update, i filtri per i pacchetti, i fornitori di glifi spaziati, l'audio direzionale 3D, nuovi tag e corregge dei bug.</p>
-                    <h2 class="Sezione">Aggiunte</h2>
-                    <h3>Blocchi</h3>
+                    <div class="ContenitoreIndice">
+                        <h2>Indice</h2>
+                        <ol>
+                            <h3><a href="#Agg">Aggiunte</a></h3>
+                            <li><a href="#Blocchi">Blocchi</a></li>
+                            <li><a href="#Oggetti">Oggetti</a></li>
+                            <li><a href="#Mob">Mob</a></li>
+                            <h3><a href="#Cambiamenti">Cambiamenti</a></h3>
+                            <li><a href="#Blocchi2">Blocchi</a></li>
+                            
+                        </ol>
+                    </div>
+                    <h2 class="Sezione jumptarget" id="Agg">Aggiunte</h2>
+                    <h3 class="jumptarget" id="Blocchi">Blocchi</h3>
                     <h4>Lanterana</h4>
                     <p>Aggiunte le lanterane, con 3 varianti: ocra, perlacee e verdeggianti.
                         Emettono un livello di luce di 15.
@@ -147,7 +159,7 @@
                         Può essere impregnato d'acqua.
                         Rilascia solo esperienza quando distrutto senza tocco di velluto.</p>
                     
-                    <h3>Oggetti</h3>
+                    <h3 id="Oggetti" class="jumptarget">Oggetti</h3>
                     <h4>Secchio con girino</h4>
                     <p>Può essere ottenuto catturando un girino con un secchio d'acqua.</p>
                     <h4>Barca di mangrovia</h4>
@@ -155,7 +167,7 @@
                     <h4>Uova generatrici</h4>
                     <p>Aggiunte le uova generatrici di rana e di girino.</p>
 
-                    <h3>Mob</h3>
+                    <h3 id="Mob" class="jumptarget">Mob</h3>
                     <h4>Rane</h4>
                     <p>Possono gracidare, saltare, nuotare e camminare lentamente sulla terraferma.
                         Possono saltare fino a 5 blocchi.
@@ -177,8 +189,8 @@
                         Vengono cacciati dagli axolotl.
                         Possono essere tenuti in un secchio d'acqua.</p>
 
-                    <h2 class="Sezione">Cambiamenti</h2>
-                    <h3>Blocchi</h3>
+                    <h2 id="Cambiamenti" class="Sezione jumptarget">Cambiamenti</h2>
+                    <h3 id="Blocchi2" class="jumptarget">Blocchi</h3>
                     <h4>Alambicco</h4>
                     <p>La texture è stata leggermente cambiata per far sì che le braccia siano attaccate alla base.</p>
                     <h4>Sensore di sculk</h4>
@@ -187,9 +199,9 @@
                 </div>
             </div>
 
-        </body>
-        <footer>
-            <p>Sito non ufficiale programmato al solo scopo didattico e dimostrativo</p>
-        </footer>
-    </div>
+            <footer>
+                <p>Sito non ufficiale programmato al solo scopo didattico e dimostrativo</p>
+            </footer>
+        </div>
+    </body>
 </html>
