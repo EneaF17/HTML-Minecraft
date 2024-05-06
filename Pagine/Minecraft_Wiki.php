@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE php>
+<php lang="en">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -25,28 +25,28 @@
 
             <div class="header header--nocta">
                 <div class="logo">
-                    <a href="index.html" class="logo-link">            
+                    <a href="../index.php" class="logo-link">            
                         <img src="../immagini/logo.png" alt="">
                     </a>
                 </div>
                 <ul class="menu" style="list-style-type: none;">
-                    <li><a href="Minecraft_Guida.html"><img src="../immagini/IronPickaxe.png"alt=""></a></li>
-                    <li><a href="Minecraft_Wiki.html"><img src="../immagini/Book.png"alt=""></a></li>
-                    <li><a href="Minecraft_News.html"><img src="../immagini/Anvil.webp"alt=""></a></li>
+                    <li><a href="Minecraft_Guida.php"><img src="../immagini/IronPickaxe.png"alt=""></a></li>
+                    <li><a href="Minecraft_Wiki.php"><img src="../immagini/Book.png"alt=""></a></li>
+                    <li><a href="Minecraft_News.php"><img src="../immagini/Anvil.webp"alt=""></a></li>
                 </ul>
             </div>
             <div class="grid">
                 <div class="main-carousel--wiki" data-flickity='{ "cellAlign": "left", "contain": true, "wrapAround":true, "autoPlay":2000 }'>
-                    <div class="carousel-cell--wiki"><a class="imgCarousel" href="PagineWiki/WikiArco.html"><img src="../immagini/Arco.webp" alt=""></a> <a href="PagineWiki/WikiArco.html" class="linkCarousel">Arco</a></div>
-                    <div class="carousel-cell--wiki"><a class="imgCarousel" href="PagineWiki/WikiCreeper.html"><img src="../immagini/Creeper.png" alt=""></a> <a href="PagineWiki/WikiCreeper.html" class="linkCarousel">Creeper</a></div>
-                    <div class="carousel-cell--wiki"><a class="imgCarousel" href="PagineWiki/WikiDiamante.html"><img src="../immagini/Diamond.png" alt=""></a> <a href="PagineWiki/WikiDiamante.html" class="linkCarousel">Diamante</a></div>
-                    <div class="carousel-cell--wiki"><a class="imgCarousel" href="PagineWiki/WikiEnderDragon.html"><img src="../immagini/Ender_Dragon.webp" alt=""></a> <a href="PagineWiki/WikiEnderDragon.html" class="linkCarousel">Ender Dragon</a></div>
-                    <div class="carousel-cell--wiki"><a class="imgCarousel" href="PagineWiki/WikiFornace.html"><img src="../immagini/Fornace.webp" alt=""></a> <a href="PagineWiki/WikiFornace.html" class="linkCarousel">Fornace</a></div>
-                    <div class="carousel-cell--wiki"><a class="imgCarousel" href="PagineWiki/WikiHerobrine.html"><img src="../immagini/Herobrine.webp" alt=""></a> <a href="PagineWiki/WikiHerobrine.html" class="linkCarousel">Herobrine</a></div>
-                    <div class="carousel-cell--wiki"><a class="imgCarousel" href="PagineWiki/WikiLanterna.html"><img src="../immagini/Lanterna.webp" alt=""></a> <a href="PagineWiki/WikiLanterna.html" class="linkCarousel">Lanterna</a></div>
-                    <div class="carousel-cell--wiki"><a class="imgCarousel" href="PagineWiki/WikiMelaDoro.html"><img src="../immagini/MelaOro.webp" alt=""></a> <a href="PagineWiki/WikiMelaDoro.html" class="linkCarousel">Mela d'Oro</a></div>
-                    <div class="carousel-cell--wiki"><a class="imgCarousel" href="PagineWiki/WikiPistone.html"><img src="../immagini/Pistone.webp" alt=""></a> <a href="PagineWiki/WikiPistone.html" class="linkCarousel">Pistone</a></div>
-                    <div class="carousel-cell--wiki"><a class="imgCarousel" href="PagineWiki/WikiTnt.html"><img src="../immagini/Tnt.webp" alt=""></a> <a href="PagineWiki/WikiTnt.html" class="linkCarousel">Tnt</a></div>
+                    <div class="carousel-cell--wiki"><a class="imgCarousel" href="PagineWiki/WikiArco.php"><img src="../immagini/Arco.webp" alt=""></a> <a href="PagineWiki/WikiArco.php" class="linkCarousel">Arco</a></div>
+                    <div class="carousel-cell--wiki"><a class="imgCarousel" href="PagineWiki/WikiCreeper.php"><img src="../immagini/Creeper.png" alt=""></a> <a href="PagineWiki/WikiCreeper.php" class="linkCarousel">Creeper</a></div>
+                    <div class="carousel-cell--wiki"><a class="imgCarousel" href="PagineWiki/WikiDiamante.php"><img src="../immagini/Diamond.png" alt=""></a> <a href="PagineWiki/WikiDiamante.php" class="linkCarousel">Diamante</a></div>
+                    <div class="carousel-cell--wiki"><a class="imgCarousel" href="PagineWiki/WikiEnderDragon.php"><img src="../immagini/Ender_Dragon.webp" alt=""></a> <a href="PagineWiki/WikiEnderDragon.php" class="linkCarousel">Ender Dragon</a></div>
+                    <div class="carousel-cell--wiki"><a class="imgCarousel" href="PagineWiki/WikiFornace.php"><img src="../immagini/Fornace.webp" alt=""></a> <a href="PagineWiki/WikiFornace.php" class="linkCarousel">Fornace</a></div>
+                    <div class="carousel-cell--wiki"><a class="imgCarousel" href="PagineWiki/WikiHerobrine.php"><img src="../immagini/Herobrine.webp" alt=""></a> <a href="PagineWiki/WikiHerobrine.php" class="linkCarousel">Herobrine</a></div>
+                    <div class="carousel-cell--wiki"><a class="imgCarousel" href="PagineWiki/WikiLanterna.php"><img src="../immagini/Lanterna.webp" alt=""></a> <a href="PagineWiki/WikiLanterna.php" class="linkCarousel">Lanterna</a></div>
+                    <div class="carousel-cell--wiki"><a class="imgCarousel" href="PagineWiki/WikiMelaDoro.php"><img src="../immagini/MelaOro.webp" alt=""></a> <a href="PagineWiki/WikiMelaDoro.php" class="linkCarousel">Mela d'Oro</a></div>
+                    <div class="carousel-cell--wiki"><a class="imgCarousel" href="PagineWiki/WikiPistone.php"><img src="../immagini/Pistone.webp" alt=""></a> <a href="PagineWiki/WikiPistone.php" class="linkCarousel">Pistone</a></div>
+                    <div class="carousel-cell--wiki"><a class="imgCarousel" href="PagineWiki/WikiTnt.php"><img src="../immagini/Tnt.webp" alt=""></a> <a href="PagineWiki/WikiTnt.php" class="linkCarousel">Tnt</a></div>
                 </div>
                 <div class="contenitoreLista">
                     <h2 class="titoloLista med-text"> Cosa vuoi sapere?</h2>
@@ -55,34 +55,34 @@
                             <li class="letteralista"><h2>A</h2></li>
                             <li class="elementolista"><img src="../immagini/Andesite.webp" alt=""><a href="">Andesite</a></li>
                             <li class="elementolista"><img src="../immagini/Anguria.webp" alt=""><a href="">Anguria</a></li>
-                            <li class="elementolista"><img src="../immagini/Arco.webp" alt=""><a href="PagineWiki/WikiArco.html">Arco</a></li>
+                            <li class="elementolista"><img src="../immagini/Arco.webp" alt=""><a href="PagineWiki/WikiArco.php">Arco</a></li>
                             <li class="letteralista"><h2>B</h2></li>
                             <li class="elementolista"><img src="../immagini/Beacon.webp" alt=""><a href="">Beacon</a></li>
                             <li class="letteralista"><h2>C</h2></li>
                             <li class="elementolista"><img src="../immagini/Campana.webp" alt=""><a href="">Campana</a></li>
                             <li class="elementolista"><img src="../immagini/Coal.png" alt=""><a href="">Carbone</a></li>
                             <li class="elementolista"><img src="../immagini/Corazza.webp" alt=""><a href="">Corazza</a></li>
-                            <li class="elementolista"><img src="../immagini/Creeper.png" alt=""><a href="PagineWiki/WikiCreeper.html">Creeper</a></li>
+                            <li class="elementolista"><img src="../immagini/Creeper.png" alt=""><a href="PagineWiki/WikiCreeper.php">Creeper</a></li>
                             <li class="elementolista"><img src="../immagini/calderone.webp" alt=""><a href="">Calderone</a></li>
                             <li class="letteralista"><h2>D</h2></li>
                             <li class="elementolista"><img src="../immagini/Devastatore.webp" alt=""><a href="">Devastatore</a></li>
-                            <li class="elementolista"><img src="../immagini/Diamond.png" alt=""><a href="PagineWiki/WikiDiamante.html">Diamante</a></li>
+                            <li class="elementolista"><img src="../immagini/Diamond.png" alt=""><a href="PagineWiki/WikiDiamante.php">Diamante</a></li>
                             <li class="letteralista"><h2>E</h2></li>
-                            <li class="elementolista"><img src="../immagini/Ender_Dragon.webp" alt=""><a href="PagineWiki/WikiEnderDragon.html">Ender Dragon</a></li>
+                            <li class="elementolista"><img src="../immagini/Ender_Dragon.webp" alt=""><a href="PagineWiki/WikiEnderDragon.php">Ender Dragon</a></li>
                             <li class="elementolista"><img src="../immagini/EnderPearl.webp" alt=""><a href="">Ender Pearl</a></li>
                             <li class="elementolista"><img src="../immagini/EndPortal.webp" alt=""><a href="">Ender Portal</a></li>
                             <li class="letteralista"><h2>F</h2></li>
                             <li class="elementolista"><img src="../immagini/Faló.webp" alt=""><a href="">Faló</a></li>
                             <li class="elementolista"><img src="../immagini/Fango.webp" alt=""><a href="">Fango</a></li>
                             <li class="elementolista"><img src="../immagini/Ferro.webp" alt=""><a href="">Ferro</a></li>
-                            <li class="elementolista"><img src="../immagini/Fornace.webp" alt=""><a href="PagineWiki/WikiFornace.html">Fornace</a></li>
+                            <li class="elementolista"><img src="../immagini/Fornace.webp" alt=""><a href="PagineWiki/WikiFornace.php">Fornace</a></li>
                             <li class="elementolista"><img src="../immagini/Freccia.webp" alt=""><a href="">Freccia</a></li>
                             <li class="letteralista"><h2>G</h2></li>
                             <li class="elementolista"><img src="../immagini/Gallina.webp" alt=""><a href="">Gallina</a></li>
                             <li class="elementolista"><img src="../immagini/Gambiere.webp" alt=""><a href="">Gambiere</a></li>
                             <li class="elementolista"><img src="../immagini/Giradischi.webp" alt=""><a href="">Giradischi</a></li>
                             <li class="letteralista"><h2>H</h2></li>
-                            <li class="elementolista"><img src="../immagini/Herobrine.webp" alt=""><a href="PagineWiki/WikiHerobrine.html">Herobrine</a></li>
+                            <li class="elementolista"><img src="../immagini/Herobrine.webp" alt=""><a href="PagineWiki/WikiHerobrine.php">Herobrine</a></li>
                             <li class="elementolista"><img src="../immagini/Husk.webp" alt=""><a href="">Husk</a></li>
                             <li class="letteralista"><h2>I</h2></li>
                             <li class="elementolista"><img src="../immagini/Illusore.webp" alt=""><a href="">Illusore</a></li>
@@ -92,7 +92,7 @@
                             <li class="letteralista"><h2>K</h2></li>
                             <li class="letteralista"><h2>L</h2></li>
                             <li class="elementolista"><img src="../immagini/Lana.webp" alt=""><a href="">Lana</a></li>
-                            <li class="elementolista"><img src="../immagini/Lanterna.webp" alt=""><a href="PagineWiki/WikiLanterna.html">Lanterna</a></li>
+                            <li class="elementolista"><img src="../immagini/Lanterna.webp" alt=""><a href="PagineWiki/WikiLanterna.php">Lanterna</a></li>
                             <li class="elementolista"><img src="../immagini/Lapis.webp" alt=""><a href="">Lapis</a></li>
                             
                             </ul>
@@ -100,19 +100,19 @@
                             <li class="elementolista"><img src="../immagini/Book.png" alt=""><a href="">Libro</a></li>
                             <li class="elementolista"><img src="../immagini/Lupo.webp" alt=""><a href="">Lupo</a></li>
                             <li class="letteralista"><h2>M</h2></li>
-                            <li class="elementolista"><img src="../immagini/MelaOro.webp" alt=""><a href="PagineWiki/WikiMelaDoro.html">Mela d'Oro</a></li>
+                            <li class="elementolista"><img src="../immagini/MelaOro.webp" alt=""><a href="PagineWiki/WikiMelaDoro.php">Mela d'Oro</a></li>
                             <li class="elementolista"><img src="../immagini/Micelio.webp" alt=""><a href="">Micelio</a></li>
                             <li class="letteralista"><h2>N</h2></li>
                             <li class="elementolista"><img src="../immagini/Netherrack.webp" alt=""><a href="">Netherrack</a></li>
                             <li class="elementolista"><img src="../immagini/Notch.webp" alt=""><a href="">Notch</a></li>
                             <li class="letteralista"><h2>O</h2></li>
                             <li class="elementolista"><img src="../immagini/OcchioRagno.webp" alt=""><a href="">Occhio di Ragno</a></li>
-                            <li class="elementolista"><img src="../immagini/Oro.webp" alt=""><a href="PagineWiki/WikiOro.html">Oro</a></li>
+                            <li class="elementolista"><img src="../immagini/Oro.webp" alt=""><a href="PagineWiki/WikiOro.php">Oro</a></li>
                             <li class="letteralista"><h2>P</h2></li>
                             <li class="elementolista"><img src="../immagini/Pala.webp" alt=""><a href="">Pala</a></li>
                             <li class="elementolista"><img src="../immagini/Pappagallo.webp" alt=""><a href="">Pappagallo</a></li>
                             <li class="elementolista"><img src="../immagini/IronPickaxe.png" alt=""><a href="">Piccone</a></li>
-                            <li class="elementolista"><img src="../immagini/Pistone.webp" alt=""><a href="PagineWiki/WikiPistone.html">Pistone</a></li>
+                            <li class="elementolista"><img src="../immagini/Pistone.webp" alt=""><a href="PagineWiki/WikiPistone.php">Pistone</a></li>
                             <li class="letteralista"><h2>Q</h2></li>
                             <li class="elementolista"><img src="../immagini/Quarzo.webp" alt=""><a href="">Quarzo</a></li>
                             <li class="elementolista"><img src="../immagini/Quercia.webp" alt=""><a href="">Quercia</a></li>
@@ -124,7 +124,7 @@
                             <li class="elementolista"><img src="../immagini/Spada.webp" alt=""><a href="">Spada</a></li>
                             <li class="elementolista"><img src="../immagini/Steve.png" alt=""><a href="">Steve</a></li>
                             <li class="letteralista"><h2>T</h2></li>
-                            <li class="elementolista"><img src="../immagini/Tnt.webp" alt=""><a href="PagineWiki/WikiTnt.html">Tritolo TNT</a></li>
+                            <li class="elementolista"><img src="../immagini/Tnt.webp" alt=""><a href="PagineWiki/WikiTnt.php">Tritolo TNT</a></li>
                             <li class="letteralista"><h2>U</h2></li>
                             <li class="elementolista"><img src="../immagini/Uovo.webp" alt=""><a href="">Uovo</a></li>
                             <li class="elementolista"><img src="../immagini/UovoGeneratore.webp" alt=""><a href="">Uovo Generatore</a></li>
@@ -150,4 +150,4 @@
         </footer>
     </div>
         
-</html>
+</php>

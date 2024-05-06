@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE php>
+<php lang="en">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -27,18 +27,18 @@
 
             <div class="header header--nocta">
                 <div class="logo">
-                    <a href="index.html" class="logo-link">            
+                    <a href="../index.php" class="logo-link">            
                         <img src="../immagini/logo.png" alt="">
                     </a>
                 </div>
                 <ul class="menu" style="list-style-type: none;">
-                    <li><a href="Minecraft_Guida.html"><img src="../immagini/IronPickaxe.png"alt=""></a></li>
-                    <li><a href="Minecraft_Wiki.html"><img src="../immagini/Book.png"alt=""></a></li>
-                    <li><a href="Minecraft_News.html"><img src="../immagini/Anvil.webp"alt=""></a></li>
+                    <li><a href="Minecraft_Guida.php"><img src="../immagini/IronPickaxe.png"alt=""></a></li>
+                    <li><a href="Minecraft_Wiki.php"><img src="../immagini/Book.png"alt=""></a></li>
+                    <li><a href="Minecraft_News.php"><img src="../immagini/Anvil.webp"alt=""></a></li>
                 </ul>
             </div>
             <div class="contenitoreGuide">
-                <a class="guidaCell" href="PagineGuide/GuidaTrovareDiamanti.html">
+                <a class="guidaCell" href="PagineGuide/GuidaTrovareDiamanti.php">
                     <p class="tipoGuida">GUIDA</p>
                     <p class="titoloGuida">Come trovare i diamanti</p>
                     <img src="../Immagini/Diamond.png" alt="">
@@ -53,7 +53,7 @@
                     <p class="titoloGuida">Circuiti di redstone. Come usarli?</p>
                     <img src="../Immagini/Redstone.webp" alt="">
                 </a>
-                <a class="guidaCell" href="PagineGuide/GuidaFireworks.html">
+                <a class="guidaCell" href="PagineGuide/GuidaFireworks.php">
                     <p class="tipoGuida">GUIDA</p>
                     <p class="titoloGuida">Fuochi d'artificio</p>
                     <img src="../Immagini/Firework.webp" alt="">
@@ -63,7 +63,7 @@
                     <p class="titoloGuida">Comandi in chat</p>
                     <img src="../Immagini/Book.png" alt="">
                 </a>
-                <a class="guidaCell" href="PagineGuide/GuidaCommandBlock.html">
+                <a class="guidaCell" href="PagineGuide/GuidaCommandBlock.php">
                     <p class="tipoGuida">GUIDA</p>
                     <p class="titoloGuida">Come usare i blocchi di comando</p>
                     <img src="../Immagini/CommandBlock.webp" alt="">
@@ -123,7 +123,7 @@
                     <p class="titoloGuida">le trappole piú efficaci da fare con la TNT</p>
                     <img src="../Immagini/Tnt.webp" alt="">
                 </a>
-                <a class="guidaCell" href="PagineGuide/GuidaPVP.html">
+                <a class="guidaCell" href="PagineGuide/GuidaPVP.php">
                     <p class="tipoGuida">CONSIGLI</p>
                     <p class="titoloGuida">10 modi per migliorare nel PVP</p>
                     <img src="../Immagini/Spada.webp" alt="">
@@ -137,4 +137,4 @@
         </footer>
     </div>
     
-</html>
+</php>

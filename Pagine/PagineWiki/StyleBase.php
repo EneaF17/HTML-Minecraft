@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE php>
+<php lang="en">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,14 +19,14 @@
         <body>
             <div class="header header--nocta">
                 <div class="logo">
-                    <a href="../index.html" class="logo-link">            
+                    <a href="../index.php" class="logo-link">            
                         <img src="../../immagini/logo.png" alt="">
                     </a>
                 </div>
                 <ul class="menu" style="list-style-type: none;">
-                    <li><a href="../Minecraft_Guida.html"><img src="../../immagini/IronPickaxe.png"alt=""></a></li>
-                    <li><a href="../Minecraft_Wiki.html"><img src="../../immagini/Book.png"alt=""></a></li>
-                    <li><a href="../Minecraft_News.html"><img src="../../immagini/Anvil.webp"alt=""></a></li>
+                    <li><a href="../Minecraft_Guida.php"><img src="../../immagini/IronPickaxe.png"alt=""></a></li>
+                    <li><a href="../Minecraft_Wiki.php"><img src="../../immagini/Book.png"alt=""></a></li>
+                    <li><a href="../Minecraft_News.php"><img src="../../immagini/Anvil.webp"alt=""></a></li>
                 </ul>
             </div>
 
@@ -34,8 +34,8 @@
             <div class="contenitorePulsanti">
                 <ul class="Pulsanti" style="list-style-type: none;">
                     <li><a href="Wiki"><img src="../../immagini/FrecciaSx.png"alt=""></a></li>
-                    <li><a href="../Minecraft_Wiki.html"><img src="../../immagini/FrecciaSu.png"alt=""></a></li>
-                    <li><a href="WikiArco.html"><img src="../../immagini/FrecciaDx.png"alt=""></a></li>
+                    <li><a href="../Minecraft_Wiki.php"><img src="../../immagini/FrecciaSu.png"alt=""></a></li>
+                    <li><a href="WikiArco.php"><img src="../../immagini/FrecciaDx.png"alt=""></a></li>
                 </ul>
             </div>
             <div class="contenitoreWiki">
@@ -64,4 +64,4 @@
             <p>Sito non ufficiale programmato al solo scopo didattico e dimostrativo</p>
         </footer>
     </div>
-</html>
+</php>

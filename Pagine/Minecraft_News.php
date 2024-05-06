@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE php>
+<php lang="en">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -28,14 +28,14 @@
 
             <div class="header header--nocta">
                 <div class="logo">
-                    <a href="index.html" class="logo-link">            
+                    <a href="../index.php" class="logo-link">            
                         <img src="../immagini/logo.png" alt="">
                     </a>
                 </div>
                 <ul class="menu" style="list-style-type: none;">
-                    <li><a href="Minecraft_Guida.html"><img src="../immagini/IronPickaxe.png"alt=""></a></li>
-                    <li><a href="Minecraft_Wiki.html"><img src="../immagini/Book.png"alt=""></a></li>
-                    <li><a href="Minecraft_News.html"><img src="../immagini/Anvil.webp"alt=""></a></li>
+                    <li><a href="Minecraft_Guida.php"><img src="../immagini/IronPickaxe.png"alt=""></a></li>
+                    <li><a href="Minecraft_Wiki.php"><img src="../immagini/Book.png"alt=""></a></li>
+                    <li><a href="Minecraft_News.php"><img src="../immagini/Anvil.webp"alt=""></a></li>
                 </ul>
             </div>
 
@@ -135,7 +135,7 @@
                                 <li><a href="">22w14a</a></li>
                                 <li><a href="">22w13a</a></li>
                                 <li><a href="">22w12a</a></li>
-                                <li><a style="color: red;" href="../Pagine/PagineNews/22w11a.html">22w11a</a></li>
+                                <li><a style="color: red;" href="../Pagine/PagineNews/22w11a.php">22w11a</a></li>
                             </ul>
                         </div>
                     </div>
@@ -158,9 +158,9 @@
                                 <li><a href="">21w42a</a></li>
                                 <li><a href="">21w41a</a></li>
                                 <li><a href="">21w40a</a></li>
-                                <li><a href="../Pagine/PagineNews/21w39a.html">21w39a</a></li>
+                                <li><a href="../Pagine/PagineNews/21w39a.php">21w39a</a></li>
                                 <li><a href="">21w38a</a></li>
-                                <li><a href="../Pagine/PagineNews/21w37a.html">21w37a</a></li>
+                                <li><a href="../Pagine/PagineNews/21w37a.php">21w37a</a></li>
                             </ul>
                         </div>
                     </div>
@@ -236,7 +236,7 @@
                                 <li><a href="">20w09a</a></li>
                                 <li><a href="">20w08a</a></li>
                                 <li><a href="">20w07a</a></li>
-                                <li><a href="../Pagine/PagineNews/20w06a.html">20w06a</a></li>
+                                <li><a href="../Pagine/PagineNews/20w06a.php">20w06a</a></li>
                             </ul>
                         </div>
                     </div>
@@ -320,4 +320,4 @@
             <p>Sito non ufficiale programmato al solo scopo didattico e dimostrativo</p>
         </footer>
     </div>
-</html>
+</php>

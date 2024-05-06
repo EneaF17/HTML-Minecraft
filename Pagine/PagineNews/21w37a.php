@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE php>
+<php lang="en">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,22 +18,22 @@
         <div class="contenitore">
             <div class="header header--nocta">
                 <div class="logo">
-                    <a href="../index.html" class="logo-link">            
+                    <a href="../index.php" class="logo-link">            
                         <img src="../../immagini/logo.png" alt="">
                     </a>
                 </div>
                 <ul class="menu" style="list-style-type: none;">
-                    <li><a href="../Minecraft_Guida.html"><img src="../../immagini/IronPickaxe.png"alt=""></a></li>
-                    <li><a href="../Minecraft_Wiki.html"><img src="../../immagini/Book.png"alt=""></a></li>
-                    <li><a href="../Minecraft_News.html"><img src="../../immagini/Anvil.webp"alt=""></a></li>
+                    <li><a href="../Minecraft_Guida.php"><img src="../../immagini/IronPickaxe.png"alt=""></a></li>
+                    <li><a href="../Minecraft_Wiki.php"><img src="../../immagini/Book.png"alt=""></a></li>
+                    <li><a href="../Minecraft_News.php"><img src="../../immagini/Anvil.webp"alt=""></a></li>
                 </ul>
             </div>
             
             <div class="contenitorePulsanti">
                 <ul class="Pulsanti" style="list-style-type: none;">
-                    <li><a href="20w06a.html"><img src="../../immagini/FrecciaSx.png"alt=""></a></li>
-                    <li><a href="../Minecraft_News.html"><img src="../../immagini/FrecciaSu.png"alt=""></a></li>
-                    <li><a href="21w39a.html"><img src="../../immagini/FrecciaDx.png"alt=""></a></li>
+                    <li><a href="20w06a.php"><img src="../../immagini/FrecciaSx.png"alt=""></a></li>
+                    <li><a href="../Minecraft_News.php"><img src="../../immagini/FrecciaSu.png"alt=""></a></li>
+                    <li><a href="21w39a.php"><img src="../../immagini/FrecciaDx.png"alt=""></a></li>
                 </ul>
             </div>
             
@@ -166,4 +166,4 @@
             </footer>
         </div>
     </body>
-</html>
+</php>
