@@ -401,7 +401,13 @@ html{
     margin-top: auto;
     margin-bottom: auto;
     margin-left: 40px;
+    transition: 0.5s;
 }
+
+.boxInfo a:hover{
+    transform: scale(1.10);
+}
+
 
 .textInfo{
     /* border: 1px solid red; */
