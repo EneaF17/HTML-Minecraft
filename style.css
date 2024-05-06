@@ -401,11 +401,11 @@ html{
     margin-top: auto;
     margin-bottom: auto;
     margin-left: 40px;
-    transition: 0.5s;;
+    transition: 0.5s;
 }
 
 .boxInfo a:hover{
-    transform: scale(1.1);
+    transform: scale(1.10);
 }
 
 
