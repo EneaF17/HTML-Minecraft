@@ -8,4 +8,7 @@
     if ($Connessione->connect_error) {
         die("ERRORE DI CONNESSIONE CON IL DATABASE". $connessione->connect_error);
     }
+    if (!isset($_SESSION["Username"])) { $username = "";} else {
+
+    $Username = $_SESSION["Username"]; }
 ?>
