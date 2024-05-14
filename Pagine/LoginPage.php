@@ -1,6 +1,8 @@
 <?php 
     session_start();
     require("../data/connessioneDB.php");
+
+    if (isset($_POST["Username"])) {$Username = $_POST ["Username"];} else {$Username = "";}
 ?>
 
 
@@ -41,7 +43,7 @@
             <table class="LoginTable" >
                 <tr>
                     <td>Username</td>
-                    <td><input type="text" required name="Username" ></td>
+                    <td><input type="text" required name="Username" value="<?php echo $Username?>"></td>
                 </tr>
                 <tr>
                     <td>Password</td>
@@ -57,7 +59,7 @@
                 $Username = $_POST["Username"] ;
                 $Password = $_POST["Password"] ;
 
-                $LoginQuery = "SELECT username, password FROM giocatore WHERE username='$Username' AND password='$Password' ";
+                $LoginQuery = "SELECT Username, password FROM giocatore WHERE Username='$Username' AND password='$Password' ";
                 
                 $ris = $Connessione->query($LoginQuery) or die("ERRORE NELLA QUERY". $Connessione->error);
 
@@ -65,13 +67,13 @@
                     echo "<p> Nome utente o password errati </p>";
                     $Connessione ->close(); }
                 else {
-                    $_SESSION["username"] = $Username;
+                    $_SESSION["Username"] = $Username;
                     $Connessione -> close();
+
                     header("location: ../SpazioPersonale/SP_Home.php");
-                    echo"CONNESSIONE ESEGUITA";
+                    // echo"CONNESSIONE ESEGUITA";
                 }
             }
-
 
         ?>  
     </div>
