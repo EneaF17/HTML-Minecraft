@@ -6,9 +6,9 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
         <title>Home Page - Minecraft</title>
-        <link rel="icon" type="image/x-icon" href="../Immagini/SfondoHeader.jpg">
+        <link rel="icon" type="image/x-icon" href="Immagini/SfondoHeader.jpg">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-        <link rel="stylesheet" href="../style.css">
+        <link rel="stylesheet" href="style.css">
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flickity/3.0.0/flickity.min.css" integrity="sha512-fJcFDOQo2+/Ke365m0NMCZt5uGYEWSxth3wg2i0dXu7A1jQfz9T4hdzz6nkzwmJdOdkcS8jmy2lWGaRXl+nFMQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
@@ -30,17 +30,17 @@
 
             <div class="header">
                 <div class="logo">
-                    <a href="index.html" class="logo-link">            
-                        <img src="../immagini/logo.png" alt="">
+                    <a href="" class="logo-link">            
+                        <img src="immagini/logo.png" alt="">
                     </a>
                 </div>
                 <ul class="menu" style="list-style-type: none;">
-                    <li><a href="Minecraft_Guida.html"><img src="../immagini/IronPickaxe.png"alt=""></a></li>
-                    <li><a href="Minecraft_Wiki.html"><img src="../immagini/Book.png"alt=""></a></li>
-                    <li><a href="Minecraft_News.html"><img src="../immagini/Anvil.webp"alt=""></a></li>
+                    <li><a href="Minecraft_Guida.html"><img src="immagini/IronPickaxe.png"alt=""></a></li>
+                    <li><a href="Minecraft_Wiki.html"><img src="immagini/Book.png"alt=""></a></li>
+                    <li><a href="Minecraft_News.html"><img src="immagini/Anvil.webp"alt=""></a></li>
                 </ul>
                 <div class="cta">
-                    <a href="https://www.minecraft.net/it-it/login" class="intro-text">Iscriviti</a>
+                    <a href="Pagine/LoginPage.php" class="intro-text">Iscriviti</a>
                 </div>
             </div>
             
@@ -57,25 +57,26 @@
        
             </div>
             <div class="main-carousel--home" data-flickity='{"contain": false, "wrapAround":true,  "cellAlign":"left", "autoPlay":2000}'>
-                <div class="carousel-cell--home"><h2>Wiki</h2><p>Arco</p><a href="PagineWiki/WikiArco.html"><img class="imgCarousel" src="../immagini/Arco.webp" alt=""></a></div>
-                <div class="carousel-cell--home"><h2>Wiki</h2><p>Ender Dragon</p><a href="PagineWiki/WikiEnderDragon.html"><img class="imgCarousel" src="../immagini/Ender_Dragon.webp" alt=""></a></div>
-                <div class="carousel-cell--home"><h2>Wiki</h2><p>Fornace</p><a href="PagineWiki/WikiFornace.html"><img class="imgCarousel" src="../immagini/Fornace.webp" alt=""></a></div>
-                <div class="carousel-cell--home"><h2>Wiki</h2><p>Mela D'Oro</p><a href="PagineWiki/WikiMelaDoro.html"><img class="imgCarousel" src="../immagini/MelaOro.webp" alt=""></a></div>   
-                <div class="carousel-cell--home"><h2>Wiki</h2><p>Pistone</p><a href="PagineWiki/WikiPistone.html"><img class="imgCarousel" src="../immagini/Pistone.webp" alt=""></a></div>   
-                <div class="carousel-cell--home"><h2>Wiki</h2><p>TNT</p><a href="PagineWiki/WikiTnt.html"><img class="imgCarousel" src="../immagini/Tnt.webp" alt=""></a></div>   
-                <div class="carousel-cell--home"><h2>Guida</h2><p>Trovare i diamanti</p><a href="PagineGuide/GuidaTrovareDiamanti.html"><img class="imgCarousel piccolaimg" src="../immagini/Diamond.png" alt=""></a></div>   
-                <div class="carousel-cell--home"><h2>Guida</h2><p>Fuochi d'artificio</p><a href="PagineGuide/GuidaFireworks.html"><img class="imgCarousel" src="../immagini/Firework.webp" alt=""></a></div>   
-                <div class="carousel-cell--home"><h2>Guida</h2><p>Usare i command Blocks</p><a href="PagineGuide/GuidaCommandBlock.html"><img class="imgCarousel" src="../immagini/CommandBlock.webp" alt=""></a></div>   
-                <div class="carousel-cell--home"><h2>Guida</h2><p>10 consigli per il PVP</p><a href="PagineGuide/GuidaPVP.html"><img class="imgCarousel" src="../immagini/Spada.webp" alt=""></a></div>      
-                <div class="carousel-cell--home"><h2>News</h2><p>Shapshot 21w39a</p><a href="PagineNews/21w39a.html"><img class="imgCarousel" src="../immagini/Zucca.webp" alt=""></a></div>   
-                <div class="carousel-cell--home"><h2>News</h2><p>Shapshot 20w06a</p><a href="PagineNews/20w06a.html"><img class="imgCarousel" src="../immagini/Campana.webp" alt=""></a></div>   
-                <div class="carousel-cell--home"><h2>News</h2><p>Shapshot 21w37a</p><a href="PagineNews/21w37a.html"><img class="imgCarousel" src="../immagini/Corazza.webp" alt=""></a></div>   
-                <div class="carousel-cell--home"><h2>News</h2><p>Shapshot 22w11a</p><a href="PagineNews/22w11a.html"><img class="imgCarousel" src="../immagini/Rana.webp" alt=""></a></div>   
+                <div class="carousel-cell--home"><h2>Wiki</h2><p>Arco</p><a href="Pagine/PagineWiki/WikiArco.html"><img class="imgCarousel" src="immagini/Arco.webp" alt=""></a></div>
+                <div class="carousel-cell--home"><h2>Wiki</h2><p>Ender Dragon</p><a href="Pagine/PagineWiki/WikiEnderDragon.html"><img class="imgCarousel" src="immagini/Ender_Dragon.webp" alt=""></a></div>
+                <div class="carousel-cell--home"><h2>Wiki</h2><p>Fornace</p><a href="Pagine/PagineWiki/WikiFornace.html"><img class="imgCarousel" src="immagini/Fornace.webp" alt=""></a></div>
+                <div class="carousel-cell--home"><h2>Wiki</h2><p>Mela D'Oro</p><a href="Pagine/PagineWiki/WikiMelaDoro.html"><img class="imgCarousel" src="immagini/MelaOro.webp" alt=""></a></div>   
+                <div class="carousel-cell--home"><h2>Wiki</h2><p>Pistone</p><a href="Pagine/PagineWiki/WikiPistone.html"><img class="imgCarousel" src="immagini/Pistone.webp" alt=""></a></div>   
+                <div class="carousel-cell--home"><h2>Wiki</h2><p>TNT</p><a href="Pagine/PagineWiki/WikiTnt.html"><img class="imgCarousel" src="immagini/Tnt.webp" alt=""></a></div>   
+                <div class="carousel-cell--home"><h2>Guida</h2><p>Trovare i diamanti</p><a href="Pagine/PagineGuide/GuidaTrovareDiamanti.html"><img class="imgCarousel piccolaimg" src="immagini/Diamond.png" alt=""></a></div>   
+                <div class="carousel-cell--home"><h2>Guida</h2><p>Fuochi d'artificio</p><a href="Pagine/PagineGuide/GuidaFireworks.html"><img class="imgCarousel" src="immagini/Firework.webp" alt=""></a></div>   
+                <div class="carousel-cell--home"><h2>Guida</h2><p>Usare i command Blocks</p><a href="Pagine/PagineGuide/GuidaCommandBlock.html"><img class="imgCarousel" src="immagini/CommandBlock.webp" alt=""></a></div>   
+                <div class="carousel-cell--home"><h2>Guida</h2><p>10 consigli per il PVP</p><a href="Pagine/PagineGuide/GuidaPVP.html"><img class="imgCarousel" src="immagini/Spada.webp" alt=""></a></div>      
+                <div class="carousel-cell--home"><h2>News</h2><p>Shapshot 21w39a</p><a href="Pagine/PagineNews/21w39a.html"><img class="imgCarousel" src="immagini/Zucca.webp" alt=""></a></div>   
+                <div class="carousel-cell--home"><h2>News</h2><p>Shapshot 20w06a</p><a href="Pagine/PagineNews/20w06a.html"><img class="imgCarousel" src="immagini/Campana.webp" alt=""></a></div>   
+                <div class="carousel-cell--home"><h2>News</h2><p>Shapshot 21w37a</p><a href="Pagine/PagineNews/21w37a.html"><img class="imgCarousel" src="immagini/Corazza.webp" alt=""></a></div>   
+                <div class="carousel-cell--home"><h2>News</h2><p>Shapshot 22w11a</p><a href="Pagine/PagineNews/22w11a.html"><img class="imgCarousel" src="immagini/Rana.webp" alt=""></a></div>   
             </div>
+
 
             <div class="Informazioni">
                 <div class="boxInfo">
-                    <a href="Minecraft_Guida.html"><img src="../immagini/IronPickaxe.png"alt=""></a>
+                    <a href="Pagine/Minecraft_Guida.html"><img src="immagini/IronPickaxe.png"alt=""></a>
                     <div class="textInfo">
                         <h2>GUIDA</h2>
                             <p class="small-text">Impara le basi per giocare</p>
@@ -83,6 +84,7 @@
                             <p class="small-text">Nuove sfide per rendere il gioco piú difficile</p>
                             <p class="small-text">Impara come funziona la redstone</p>
                             <p class="small-text">E molto altro ti attende tra le oltre 200 guide!</p>
+                            <a href="Pagine/paginaTEST.php">linkPaginaTEST</a>
                     </div>
                 </div>
                 <div class="boxInfo">   
@@ -95,11 +97,11 @@
                             <p class="small-text">Tutte le versioni del gioco</p>
                             <p class="small-text">Nelle oltre 1600 pagine potrai trovare tutto cio che ti serve!</p>
                     </div>
-                    <a href="Minecraft_Wiki.html"><img src="../immagini/Book.png"alt=""></a>
+                    <a href="Pagine/Minecraft_Wiki.html"><img src="immagini/Book.png"alt=""></a>
                 </div>
         
                 <div class="boxInfo">
-                    <a href="Minecraft_News.html"><img src="../immagini/Anvil.webp"alt=""></a>
+                    <a href="Pagine/Minecraft_News.html"><img src="immagini/Anvil.webp"alt=""></a>
                     <div class="textInfo">
                         <h2>NEWS</h2>
                             <p class="small-text">Tutte le notizie sul gioco</p>
