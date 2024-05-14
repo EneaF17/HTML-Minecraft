@@ -16,9 +16,10 @@
     <link rel="stylesheet" href="../style.css">
 </head>
 <body>
+    <?php require("../data/PSHeader.php");?>
+
     <main class="marginMain">
         <?php 
-            // require("../data/PSHeader.php");
 
             $DatiQuery = "SELECT Nome,Cognome FROM giocatore WHERE Username = '$Username'";
 

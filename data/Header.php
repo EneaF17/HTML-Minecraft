@@ -5,8 +5,8 @@
         </a>
     </div>
     <ul class="menu" style="list-style-type: none;">
-        <li><a href="Minecraft_Guida.html"><img src="../immagini/IronPickaxe.png"alt=""></a></li>
-        <li><a href="Minecraft_Wiki.html"><img src="../immagini/Book.png"alt=""></a></li>
-        <li><a href="Minecraft_News.html"><img src="../immagini/Anvil.webp"alt=""></a></li>
+        <li><a href="../Pagine/Minecraft_Guida.php"><img src="../immagini/IronPickaxe.png"alt=""></a></li>
+        <li><a href="../Pagine/Minecraft_Wiki.php"><img src="../immagini/Book.png"alt=""></a></li>
+        <li><a href="../Pagine/Minecraft_News.php"><img src="../immagini/Anvil.webp"alt=""></a></li>
     </ul>
 </div>
