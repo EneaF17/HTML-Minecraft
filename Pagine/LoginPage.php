@@ -28,7 +28,7 @@
 <body>
     <div class="header">
         <div class="logo">
-            <a href="" class="logo-link">            
+            <a href="../" class="logo-link">            
                 <img src="../immagini/logo.png" alt="">
            </a>
         </div>

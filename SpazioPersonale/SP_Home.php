@@ -31,9 +31,12 @@
                 }
 
             echo"<h1>Bentornato $Nome $Cognome</h1> ";
-
-
         ?>    
+
+        <div class="pulsanteBuy">
+            <a href="../data/LogOut.php" class="intro-text">LOGOUT</a>
+        </div>
+
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus quos nostrum omnis assumenda consequuntur, ex odit ipsum debitis laudantium corporis illo velit magni optio deserunt quae ad dignissimos aliquid nemo.</p>
     </main>
     

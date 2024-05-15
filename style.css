@@ -90,6 +90,13 @@ html{
     border: 1px solid red;
 }
 
+.PulsanteLogOut{
+    width: 20%;
+    height: 20px;
+    margin-left: 40%;
+    border: 1px solid red;
+}
+
 
 /* HEADER */
 .header{

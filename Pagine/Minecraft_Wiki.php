@@ -1,3 +1,8 @@
+<?php 
+    session_start();
+    require ("../data/connessioneDB.php");
+?>
+
 <!DOCTYPE php>
 <php lang="en">
     <head>
@@ -23,18 +28,10 @@
 
             <script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/3.0.0/flickity.pkgd.min.js" integrity="sha512-achKCfKcYJg0u0J7UDJZbtrffUwtTLQMFSn28bDJ1Xl9DWkl/6VDT3LMfVTo09V51hmnjrrOTbtg4rEgg0QArA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-            <div class="header header--nocta">
-                <div class="logo">
-                    <a href="../index.php" class="logo-link">            
-                        <img src="../immagini/logo.png" alt="">
-                    </a>
-                </div>
-                <ul class="menu" style="list-style-type: none;">
-                    <li><a href="Minecraft_Guida.php"><img src="../immagini/IronPickaxe.png"alt=""></a></li>
-                    <li><a href="Minecraft_Wiki.php"><img src="../immagini/Book.png"alt=""></a></li>
-                    <li><a href="Minecraft_News.php"><img src="../immagini/Anvil.webp"alt=""></a></li>
-                </ul>
-            </div>
+            <?php 
+            require("../data/HeaderPaginePrincipali.php");
+            ?>
+
             <div class="grid">
                 <div class="main-carousel--wiki" data-flickity='{ "cellAlign": "left", "contain": true, "wrapAround":true, "autoPlay":2000 }'>
                     <div class="carousel-cell--wiki"><a class="imgCarousel" href="PagineWiki/WikiArco.php"><img src="../immagini/Arco.webp" alt=""></a> <a href="PagineWiki/WikiArco.php" class="linkCarousel">Arco</a></div>

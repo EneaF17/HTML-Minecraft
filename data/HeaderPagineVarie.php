@@ -11,9 +11,13 @@
     </ul>
 
     <?php 
-        if (session_status() == PHP_SESSION_NONE) { $UserIcon ="Icona_Utente.png";} else {
+        if ((session_status() == PHP_SESSION_NONE) or(!isset($_SESSION["Username"]))) { 
+            $UserIcon ="Icona_Utente.png";
+            $Link = "Pagine/LoginPage.php";
+        } else {
             
             $Username = $_SESSION["Username"];
+            $Link = "SpazioPersonale/SP_Home.php";
 
             $queryIcona = "SELECT Icona FROM giocatore WHERE Username = '$Username'";
 
@@ -25,9 +29,8 @@
 
 
     ?>
-
     <div class="Icona" >
-        <a href="google.com"> <img class="IconaImg" src="../../Immagini/PhpImg/<?php echo $UserIcon?>" alt=""></a>
+        <a href="../../<?php echo $Link?>"> <img class="IconaImg" src="../../Immagini/PhpImg/<?php echo $UserIcon?>" alt=""></a>
     </div>
 </div>
 

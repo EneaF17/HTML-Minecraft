@@ -1,3 +1,9 @@
+<?php 
+    session_start();
+    require ("../../data/connessioneDB.php");
+?>
+
+
 <!DOCTYPE php>
 <php lang="en">
     <head>

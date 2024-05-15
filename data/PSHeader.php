@@ -1,6 +1,6 @@
 <div class="header header--nocta">
     <div class="logo">
-        <a href="../SpazioPersonale/SP_Home.php" class="logo-link">            
+        <a href="../" class="logo-link">            
             <img src="../immagini/logo.png" alt="">
         </a>
     </div>
@@ -27,7 +27,7 @@
     ?>
 
     <div class="Icona" >
-        <a href="google.com"> <img class="IconaImg" src="../Immagini/PhpImg/<?php echo $UserIcon?>" alt=""></a>
+        <a href=""> <img class="IconaImg" src="../Immagini/PhpImg/<?php echo $UserIcon?>" alt=""></a>
     </div>
 
 </div>

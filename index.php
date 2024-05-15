@@ -1,3 +1,9 @@
+<?php 
+    session_start();
+    require ("data/connessioneDB.php");
+?>
+
+
 <!DOCTYPE php>
 <php lang="en">
     <head>
@@ -27,21 +33,9 @@
             <script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/3.0.0/flickity.pkgd.min.js" integrity="sha512-achKCfKcYJg0u0J7UDJZbtrffUwtTLQMFSn28bDJ1Xl9DWkl/6VDT3LMfVTo09V51hmnjrrOTbtg4rEgg0QArA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 
-            <div class="header">
-                <div class="logo">
-                    <a href="index.php" class="logo-link">            
-                        <img src="Immagini/logo.png" alt="">
-                    </a>
-                </div>
-                <ul class="menu" style="list-style-type: none;">
-                    <li><a href="Pagine/Minecraft_Guida.php"><img src="immagini/IronPickaxe.png"alt=""></a></li>
-                    <li><a href="Pagine/Minecraft_Wiki.php"><img src="immagini/Book.png"alt=""></a></li>
-                    <li><a href="Pagine/Minecraft_News.php"><img src="immagini/Anvil.webp"alt=""></a></li>
-                </ul>
-                <div class="cta">
-                    <a href="Pagine/LoginPage.php" class="intro-text">Iscriviti</a>
-                </div>
-            </div>
+            <?php 
+            require("data/Header.php");
+            ?>
             
             
      
@@ -50,7 +44,7 @@
                     <p class="intro-text">Tutto quello che vuoi sapere sull'universo di</p>
                     <h1 class="big-text">Minecraft</h1>
                     <div class="pulsanteBuy">
-                        <a href="https://www.minecraft.net/it-it" class="intro-text">ottieni minecraft</a>
+                        <a href="Pagine/LoginPage.php" class="intro-text">ottieni minecraft</a>
                     </div>
                 </div>
        
