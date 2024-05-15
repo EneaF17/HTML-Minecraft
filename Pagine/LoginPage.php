@@ -33,7 +33,7 @@
            </a>
         </div>
         <div class="cta">
-            <a href="Pagine/LoginPage.php" class="intro-text">Registrati</a>
+            <a href="RegisterPage.php" class="intro-text">Registrati</a>
         </div>
     </div>
 
