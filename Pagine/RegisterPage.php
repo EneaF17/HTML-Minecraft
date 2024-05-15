@@ -15,7 +15,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Registrazione - Minecraft</title>
     <link rel="stylesheet" href="../style.css">
 </head>
 <body>
@@ -70,9 +70,6 @@
                 if($_POST["Password"] != $_POST["PasswordConf"]) { echo"<h2>LE PASSWORD NON COINCIDONO</h2>";}
                 else{
                     require("../data/connessioneDB.php");
-                    // $Username = $_POST["Username"] ;
-                    // $Password = $_POST["Password"] ;
-                    // $PasswordConf = $_POST["PasswordConf"] ;
 
                     $QueryReg = "SELECT username FROM giocatore WHERE username = '$Username'";
 
@@ -88,7 +85,7 @@
                         session_start();
                         $_SESSION["Username"] = $Username;
                         echo "<h2>REGISTRAZIONE COMPLETATA</h2>";
-                        header('location:../SpazioPersonale/SP_Home.php');}
+                        header('location:PaginePHP/IconaImmagine.php');}
                     else{ echo "<h2>ERRORE NELLA REGISTRAZIONE</h2>";}
 
                     }
