@@ -23,7 +23,7 @@
         </a>
         </div>
     </div>
-    <form class="box_icone" action="" method="post">
+    <!-- <form class="box_icone" action="" method="post">
         <div class="box_icona">
             <div class="InputSide">
                 <input type="radio" name="Icon" value="Icona_Creeper.png" class="Checkbox">
@@ -56,6 +56,17 @@
                 <img class="IconaImgSel" src="../../Immagini/PhpImg/Icona_Villager.png" alt="">
             </div>
         </div>
+        <input type="submit">
+    </form> -->
+    <form class="box_icone" action="" method="post" >
+        <div class="box_icona">
+            <input type="radio" name="Icon" value="Icona_Creeper.png" id="rad1" class="HideInput">
+            <label for="rad1">
+                <img class="IconaImgSel" src="../../Immagini/PhpImg/Icona_Creeper.png" alt="">
+            </label>
+        </div>
+
+
         <input type="submit">
     </form>
 <div style="" ></div>
