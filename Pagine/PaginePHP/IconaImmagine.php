@@ -28,25 +28,25 @@
     <form class="box_icone" action="" method="post" >
         <div class="box_icona">
             <input type="radio" name="Icon" value="Icona_Creeper.png" id="Icona1" class="HideInput">
-            <label for="Icona1">
+            <label class="labelIcon" for="Icona1">
                 <img class="IconaImgSel" src="../../Immagini/PhpImg/Icona_Creeper.png" alt="">
             </label>
         </div>
         <div class="box_icona">
             <input type="radio" name="Icon" value="Icona_Pecora.png" id="Icona2" class="HideInput">
-            <label for="Icona2">
+            <label class="labelIcon" for="Icona2">
                 <img class="IconaImgSel" src="../../Immagini/PhpImg/Icona_Pecora.png" alt="">
             </label>
         </div>
         <div class="box_icona">
             <input type="radio" name="Icon" value="Icona_Steve.jpg" id="Icona3" class="HideInput">
-            <label for="Icona3">
+            <label class="labelIcon" for="Icona3">
                 <img class="IconaImgSel" src="../../Immagini/PhpImg/Icona_Steve.jpg" alt="">
             </label>
         </div>
         <div class="box_icona">
             <input type="radio" name="Icon" value="Icona_Villager.png" id="Icona4" class="HideInput">
-            <label for="Icona4">
+            <label class="labelIcon" for="Icona4">
                 <img class="IconaImgSel" src="../../Immagini/PhpImg/Icona_Villager.png" alt="">
             </label>
         </div>

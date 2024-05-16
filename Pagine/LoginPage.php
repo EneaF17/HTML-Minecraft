@@ -42,12 +42,12 @@
         <form action="" method="post">
             <table class="LoginTable" >
                 <tr>
-                    <td>Username</td>
-                    <td><input type="text" required name="Username" value="<?php echo $Username?>"></td>
+                    <td> <label for="Username">Username </label></td>
+                    <td><input type="text" required name="Username" id="Username" value="<?php echo $Username?>"></td>
                 </tr>
                 <tr>
-                    <td>Password</td>
-                    <td><input type="password" required name="Password" ></td>
+                    <td> <label for="Password">Password </label></td>
+                    <td><input type="password" required name="Password" id="Password" ></td>
                 </tr>
                 <tr>
                     <td colspan="2"><input type="submit"></td>

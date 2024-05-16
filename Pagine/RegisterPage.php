@@ -2,6 +2,7 @@
     if (isset($_POST["Username"])) {$Username = $_POST ["Username"];} else {$Username = "";}
     if (isset($_POST["Password"])) {$Password = $_POST ["Password"];} else {$Password = "";}
     if (isset($_POST["PasswordConf"])) {$PasswordConf = $_POST ["PasswordConf"];} else {$PasswordConf = "";}
+    if (isset($_POST["DataN"])) {$DataN = $_POST ["DataN"];} else {$DataN = "";}
     if (isset($_POST["Nome"])) {$Nome = $_POST ["Nome"];} else {$Nome = "";}
     if (isset($_POST["Cognome"])) {$Cognome = $_POST ["Cognome"];} else {$Cognome = "";}
     if (isset($_POST["Email"])) {$Email = $_POST ["Email"];} else {$Email = "";}
@@ -33,31 +34,35 @@
             <form action="" method="post">
                 <table class="LoginTable" >
                     <tr>
-                        <td>Username</td>
+                        <td><label for="Username">Username</label></td>
                         <td><input type="text" required name="Username" id="Username" value="<?php echo $Username?>"></td>
                     </tr>
                     <tr>
-                        <td>Password</td>
+                        <td> <label for="Password">Password</label> </td>
                         <td><input type="password" required id="Password" name="Password" ></td>
                     </tr>
                     <tr>
-                        <td>Conferma Password</td>
+                        <td> <label for="PasswordConf">Conferma Password</label> </td>
                         <td><input type="password" required id="PasswordConf" name="PasswordConf" ></td>
                     </tr>
                     <tr>
-                        <td>Nome</td>
+                        <td><label for="DataN">Data di nascita</label></td>
+                        <td><input type="date" required id="DataN" name="DataN" value="<?php echo $DataN?>"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="Nome">Nome</label></td>
                         <td><input type="text" required id="Nome" name="Nome" value="<?php echo $Nome?>"></td>
                     </tr>
                     <tr>
-                        <td>Cognome</td>
+                        <td><label for="Cognome">Cognome</label></td>
                         <td><input type="text" required id="Cognome" name="Cognome" value="<?php echo $Cognome?>"></td>
                     </tr>
                     <tr>
-                        <td>Email</td>
-                        <td><input type="text" id="Email" name="Email" value="<?php echo $Email?>"></td>
+                        <td><label for="Email">Email</label></td>
+                        <td><input type="email" id="Email" name="Email" value="<?php echo $Email?>"></td>
                     </tr>
                     <tr>
-                        <td>Telefono</td>
+                        <td><label for="Telefono">Telefono</label></td>
                         <td><input type="text" id="Telefono" name="Telefono" value="<?php echo $Telefono?>"></td>
                     </tr>
                     <tr>
@@ -79,8 +84,8 @@
                         echo"<h2>USERNAME GIA' IN USO</h2>";}
                     else {
 
-                        $QueryReg2 = "INSERT INTO giocatore (Username,Password,Nome,Cognome,Email,Telefono)
-                                    VALUES ('$Username','$Password','$Nome','$Cognome','$Email','$Telefono')";
+                        $QueryReg2 = "INSERT INTO giocatore (Username,Password,Nome,Cognome,Compleanno,Email,Telefono)
+                                    VALUES ('$Username','$Password','$Nome','$Cognome','$DataN','$Email','$Telefono')";
                     if ($Connessione -> query($QueryReg2) === true) {
                         session_start();
                         $_SESSION["Username"] = $Username;

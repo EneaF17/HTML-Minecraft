@@ -1,8 +1,8 @@
 -- --------------------------------------------------------
 -- Host:                         127.0.0.1
--- Versione server:              10.4.32-MariaDB - mariadb.org binary distribution
+-- Versione server:              10.4.28-MariaDB - mariadb.org binary distribution
 -- S.O. server:                  Win64
--- HeidiSQL Versione:            12.6.0.6765
+-- HeidiSQL Versione:            12.5.0.6677
 -- --------------------------------------------------------
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
@@ -25,6 +25,7 @@ CREATE TABLE IF NOT EXISTS `giocatore` (
   `Password` char(50) DEFAULT NULL,
   `Nome` char(50) DEFAULT NULL,
   `Cognome` char(50) DEFAULT NULL,
+  `Compleanno` date DEFAULT NULL,
   `Email` char(50) DEFAULT NULL,
   `Telefono` char(50) DEFAULT NULL,
   `Icona` char(50) DEFAULT 'Icona_Utente.png',
@@ -32,12 +33,12 @@ CREATE TABLE IF NOT EXISTS `giocatore` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- Dump dei dati della tabella minecraftsito.giocatore: ~5 rows (circa)
-INSERT INTO `giocatore` (`Username`, `Password`, `Nome`, `Cognome`, `Email`, `Telefono`, `Icona`) VALUES
-	('Abdul', 'asd', 'Abdul', 'Lahllah', '', '', 'Icona_Steve.jpg'),
-	('asd', 'asd', 'Ajeje', 'Brazorf', NULL, NULL, 'Icona_Creeper.png'),
-	('Enea_il_Figo', '1234', 'Enea', 'Fascilla', 'enea.fascilla@gmail.com', '0392050503', 'Icona_Creeper.png'),
-	('Fradre69', 'asd', 'Francesco', 'Vivenzio', '', '', 'Icona_Utente.png'),
-	('qwerty', 'qwerty', 'Qwerty', 'Tarantino', NULL, NULL, 'Icona_Villager.png');
+REPLACE INTO `giocatore` (`Username`, `Password`, `Nome`, `Cognome`, `Compleanno`, `Email`, `Telefono`, `Icona`) VALUES
+	('asd', 'asd', 'Ajeje', 'Brazorf', NULL, NULL, NULL, 'Icona_Pecora.png'),
+	('asdf', 'asdf', 'giovanni', 'Muchacha', NULL, '', '', 'Icona_Creeper.png'),
+	('Enea_il_Figo', '1234', 'Enea', 'Fascilla', '2005-08-17', 'enea.fascilla@gmail.com', '0392050503', 'Icona_Creeper.png'),
+	('gigio', 'asd', 'Giggio', 'Francy', NULL, '', '', 'Icona_Creeper.png'),
+	('Qwerty', 'qwerty', 'qwertin', 'Tarantino', NULL, NULL, NULL, 'Icona_Pecora.png');
 
 /*!40103 SET TIME_ZONE=IFNULL(@OLD_TIME_ZONE, 'system') */;
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
