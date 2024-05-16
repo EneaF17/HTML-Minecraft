@@ -38,22 +38,22 @@
                 <a class="guidaCell" href="PagineGuide/GuidaTrovareDiamanti.php">
                     <p class="tipoGuida">GUIDA</p>
                     <p class="titoloGuida">Come trovare i diamanti</p>
-                    <img src="../Immagini/Diamond.png" alt="">
+                    <img src="../Immagini/ImmaginiWiki/Diamond.png" alt="">
                 </a>
                 <a class="guidaCell" href="">
                     <p class="tipoGuida">GUIDA</p>
                     <p class="titoloGuida">Come sconfiggere l'ender dragon</p>
-                    <img src="../Immagini/Ender_Dragon.webp" alt="">
+                    <img src="../Immagini/ImmaginiWiki/Ender_Dragon.webp" alt="">
                 </a>
                 <a class="guidaCell" href="">
                     <p class="tipoGuida">GUIDA</p>
                     <p class="titoloGuida">Circuiti di redstone. Come usarli?</p>
-                    <img src="../Immagini/Redstone.webp" alt="">
+                    <img src="../Immagini/ImmaginiWiki/Redstone.webp" alt="">
                 </a>
                 <a class="guidaCell" href="PagineGuide/GuidaFireworks.php">
                     <p class="tipoGuida">GUIDA</p>
                     <p class="titoloGuida">Fuochi d'artificio</p>
-                    <img src="../Immagini/Firework.webp" alt="">
+                    <img src="../Immagini/ImmaginiWiki/Firework.webp" alt="">
                 </a>
                 <a class="guidaCell" href="">
                     <p class="tipoGuida">GUIDA</p>
@@ -63,22 +63,22 @@
                 <a class="guidaCell" href="PagineGuide/GuidaCommandBlock.php">
                     <p class="tipoGuida">GUIDA</p>
                     <p class="titoloGuida">Come usare i blocchi di comando</p>
-                    <img src="../Immagini/CommandBlock.webp" alt="">
+                    <img src="../Immagini/ImmaginiWiki/CommandBlock.webp" alt="">
                 </a>
                 <a class="guidaCell" href="">
                     <p class="tipoGuida">GUIDA</p>
                     <p class="titoloGuida">Come coltivare</p>
-                    <img src="../Immagini/Zappa.webp" alt="">
+                    <img src="../Immagini/ImmaginiWiki/Zappa.webp" alt="">
                 </a>
                 <a class="guidaCell" href="">
                     <p class="tipoGuida">SFIDA</p>
                     <p class="titoloGuida">Uomo talpa</p>
-                    <img src="../Immagini/Fornace.webp" alt="">
+                    <img src="../Immagini/ImmaginiWiki/Fornace.webp" alt="">
                 </a>
                 <a class="guidaCell" href="">
                     <p class="tipoGuida">SFIDA</p>
                     <p class="titoloGuida">Vagabondo Challenge</p>
-                    <img src="../Immagini/Steve.png" alt="">
+                    <img src="../Immagini/ImmaginiWiki/Steve.png" alt="">
                 </a>
                 <a class="guidaCell" href="">
                     <p class="tipoGuida">SFIDA</p>
@@ -118,12 +118,12 @@
                 <a class="guidaCell" href="">
                     <p class="tipoGuida">CONSIGLI</p>
                     <p class="titoloGuida">le trappole piú efficaci da fare con la TNT</p>
-                    <img src="../Immagini/Tnt.webp" alt="">
+                    <img src="../Immagini/ImmaginiWiki/Tnt.webp" alt="">
                 </a>
                 <a class="guidaCell" href="PagineGuide/GuidaPVP.php">
                     <p class="tipoGuida">CONSIGLI</p>
                     <p class="titoloGuida">10 modi per migliorare nel PVP</p>
-                    <img src="../Immagini/Spada.webp" alt="">
+                    <img src="../Immagini/ImmaginiWiki/Spada.webp" alt="">
                 </a>
 
             </div>
