@@ -23,51 +23,34 @@
         </a>
         </div>
     </div>
-    <!-- <form class="box_icone" action="" method="post">
-        <div class="box_icona">
-            <div class="InputSide">
-                <input type="radio" name="Icon" value="Icona_Creeper.png" class="Checkbox">
-            </div>
-            <div class="IconSide">
-                <img class="IconaImgSel" src="../../Immagini/PhpImg/Icona_Creeper.png" alt="">
-            </div>
-        </div>
-        <div class="box_icona">
-            <div class="InputSide">
-                <input type="radio" name="Icon" value="Icona_Pecora.png" class="Checkbox">
-            </div>
-            <div class="IconSide">
-                <img class="IconaImgSel" src="../../Immagini/PhpImg/Icona_Pecora.png" alt="">
-            </div>
-        </div>
-        <div class="box_icona">
-            <div class="InputSide">
-                <input type="radio" name="Icon" value="Icona_Steve.jpg" class="Checkbox">
-            </div>
-            <div class="IconSide">
-                <img class="IconaImgSel" src="../../Immagini/PhpImg/Icona_Steve.jpg" alt="">
-            </div>
-        </div>
-        <div class="box_icona">
-            <div class="InputSide">
-                <input type="radio" name="Icon" value="Icona_Villager.png" class="Checkbox">
-            </div>
-            <div class="IconSide">
-                <img class="IconaImgSel" src="../../Immagini/PhpImg/Icona_Villager.png" alt="">
-            </div>
-        </div>
-        <input type="submit">
-    </form> -->
+
+        <h1 class="marginVh" >Scegli la tua icona!</h1>
     <form class="box_icone" action="" method="post" >
         <div class="box_icona">
-            <input type="radio" name="Icon" value="Icona_Creeper.png" id="rad1" class="HideInput">
-            <label for="rad1">
+            <input type="radio" name="Icon" value="Icona_Creeper.png" id="Icona1" class="HideInput">
+            <label for="Icona1">
                 <img class="IconaImgSel" src="../../Immagini/PhpImg/Icona_Creeper.png" alt="">
             </label>
         </div>
-
-
-        <input type="submit">
+        <div class="box_icona">
+            <input type="radio" name="Icon" value="Icona_Pecora.png" id="Icona2" class="HideInput">
+            <label for="Icona2">
+                <img class="IconaImgSel" src="../../Immagini/PhpImg/Icona_Pecora.png" alt="">
+            </label>
+        </div>
+        <div class="box_icona">
+            <input type="radio" name="Icon" value="Icona_Steve.jpg" id="Icona3" class="HideInput">
+            <label for="Icona3">
+                <img class="IconaImgSel" src="../../Immagini/PhpImg/Icona_Steve.jpg" alt="">
+            </label>
+        </div>
+        <div class="box_icona">
+            <input type="radio" name="Icon" value="Icona_Villager.png" id="Icona4" class="HideInput">
+            <label for="Icona4">
+                <img class="IconaImgSel" src="../../Immagini/PhpImg/Icona_Villager.png" alt="">
+            </label>
+        </div>
+        <input class="SubmitButtonIcone" type="submit">
     </form>
 <div style="" ></div>
     <?php 
@@ -83,9 +66,6 @@
             }
                 else{ echo "<h2>ERRORE NELLA REGISTRAZIONE</h2>";}
             }
-            else{ echo"NON FUNZIA"; }
-            $dato = $_POST["Icon"];
-            echo"$dato";
 
     ?>
     

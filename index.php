@@ -50,20 +50,20 @@
        
             </div>
             <div class="main-carousel--home" data-flickity='{"contain": false, "wrapAround":true,  "cellAlign":"left", "autoPlay":2000}'>
-                <div class="carousel-cell--home"><h2>Wiki</h2><p>Arco</p><a href="Pagine/PagineWiki/WikiArco.php"><img class="imgCarousel" src="immagini/Arco.webp" alt=""></a></div>
-                <div class="carousel-cell--home"><h2>Wiki</h2><p>Ender Dragon</p><a href="Pagine/PagineWiki/WikiEnderDragon.php"><img class="imgCarousel" src="immagini/Ender_Dragon.webp" alt=""></a></div>
-                <div class="carousel-cell--home"><h2>Wiki</h2><p>Fornace</p><a href="Pagine/PagineWiki/WikiFornace.php"><img class="imgCarousel" src="immagini/Fornace.webp" alt=""></a></div>
-                <div class="carousel-cell--home"><h2>Wiki</h2><p>Mela D'Oro</p><a href="Pagine/PagineWiki/WikiMelaDoro.php"><img class="imgCarousel" src="immagini/MelaOro.webp" alt=""></a></div>   
-                <div class="carousel-cell--home"><h2>Wiki</h2><p>Pistone</p><a href="Pagine/PagineWiki/WikiPistone.php"><img class="imgCarousel" src="immagini/Pistone.webp" alt=""></a></div>   
-                <div class="carousel-cell--home"><h2>Wiki</h2><p>TNT</p><a href="Pagine/PagineWiki/WikiTnt.php"><img class="imgCarousel" src="immagini/Tnt.webp" alt=""></a></div>   
-                <div class="carousel-cell--home"><h2>Guida</h2><p>Trovare i diamanti</p><a href="Pagine/PagineGuide/GuidaTrovareDiamanti.php"><img class="imgCarousel piccolaimg" src="immagini/Diamond.png" alt=""></a></div>   
-                <div class="carousel-cell--home"><h2>Guida</h2><p>Fuochi d'artificio</p><a href="Pagine/PagineGuide/GuidaFireworks.php"><img class="imgCarousel" src="immagini/Firework.webp" alt=""></a></div>   
-                <div class="carousel-cell--home"><h2>Guida</h2><p>Usare i command Blocks</p><a href="Pagine/PagineGuide/GuidaCommandBlock.php"><img class="imgCarousel" src="immagini/CommandBlock.webp" alt=""></a></div>   
-                <div class="carousel-cell--home"><h2>Guida</h2><p>10 consigli per il PVP</p><a href="Pagine/PagineGuide/GuidaPVP.php"><img class="imgCarousel" src="immagini/Spada.webp" alt=""></a></div>      
-                <div class="carousel-cell--home"><h2>News</h2><p>Shapshot 21w39a</p><a href="Pagine/PagineNews/21w39a.php"><img class="imgCarousel" src="immagini/Zucca.webp" alt=""></a></div>   
-                <div class="carousel-cell--home"><h2>News</h2><p>Shapshot 20w06a</p><a href="Pagine/PagineNews/20w06a.php"><img class="imgCarousel" src="immagini/Campana.webp" alt=""></a></div>   
-                <div class="carousel-cell--home"><h2>News</h2><p>Shapshot 21w37a</p><a href="Pagine/PagineNews/21w37a.php"><img class="imgCarousel" src="immagini/Corazza.webp" alt=""></a></div>   
-                <div class="carousel-cell--home"><h2>News</h2><p>Shapshot 22w11a</p><a href="Pagine/PagineNews/22w11a.php"><img class="imgCarousel" src="immagini/Rana.webp" alt=""></a></div>   
+                <div class="carousel-cell--home"><h2>Wiki</h2><p>Arco</p><a href="Pagine/PagineWiki/WikiArco.php"><img class="imgCarousel" src="immagini/ImmaginiWiki/Arco.webp" alt=""></a></div>
+                <div class="carousel-cell--home"><h2>Wiki</h2><p>Ender Dragon</p><a href="Pagine/PagineWiki/WikiEnderDragon.php"><img class="imgCarousel" src="immagini/ImmaginiWiki/Ender_Dragon.webp" alt=""></a></div>
+                <div class="carousel-cell--home"><h2>Wiki</h2><p>Fornace</p><a href="Pagine/PagineWiki/WikiFornace.php"><img class="imgCarousel" src="immagini/ImmaginiWiki/Fornace.webp" alt=""></a></div>
+                <div class="carousel-cell--home"><h2>Wiki</h2><p>Mela D'Oro</p><a href="Pagine/PagineWiki/WikiMelaDoro.php"><img class="imgCarousel" src="immagini/ImmaginiWiki/MelaOro.webp" alt=""></a></div>   
+                <div class="carousel-cell--home"><h2>Wiki</h2><p>Pistone</p><a href="Pagine/PagineWiki/WikiPistone.php"><img class="imgCarousel" src="immagini/ImmaginiWiki/Pistone.webp" alt=""></a></div>   
+                <div class="carousel-cell--home"><h2>Wiki</h2><p>TNT</p><a href="Pagine/PagineWiki/WikiTnt.php"><img class="imgCarousel" src="immagini/ImmaginiWiki/Tnt.webp" alt=""></a></div>   
+                <div class="carousel-cell--home"><h2>Guida</h2><p>Trovare i diamanti</p><a href="Pagine/PagineGuide/GuidaTrovareDiamanti.php"><img class="imgCarousel piccolaimg" src="immagini/ImmaginiWiki/Diamond.png" alt=""></a></div>   
+                <div class="carousel-cell--home"><h2>Guida</h2><p>Fuochi d'artificio</p><a href="Pagine/PagineGuide/GuidaFireworks.php"><img class="imgCarousel" src="immagini/ImmaginiWiki/Firework.webp" alt=""></a></div>   
+                <div class="carousel-cell--home"><h2>Guida</h2><p>Usare i command Blocks</p><a href="Pagine/PagineGuide/GuidaCommandBlock.php"><img class="imgCarousel" src="immagini/ImmaginiWiki/CommandBlock.webp" alt=""></a></div>   
+                <div class="carousel-cell--home"><h2>Guida</h2><p>10 consigli per il PVP</p><a href="Pagine/PagineGuide/GuidaPVP.php"><img class="imgCarousel" src="immagini/ImmaginiWiki/Spada.webp" alt=""></a></div>      
+                <div class="carousel-cell--home"><h2>News</h2><p>Shapshot 21w39a</p><a href="Pagine/PagineNews/21w39a.php"><img class="imgCarousel" src="immagini/ImmaginiWiki/Zucca.webp" alt=""></a></div>   
+                <div class="carousel-cell--home"><h2>News</h2><p>Shapshot 20w06a</p><a href="Pagine/PagineNews/20w06a.php"><img class="imgCarousel" src="immagini/ImmaginiWiki/Campana.webp" alt=""></a></div>   
+                <div class="carousel-cell--home"><h2>News</h2><p>Shapshot 21w37a</p><a href="Pagine/PagineNews/21w37a.php"><img class="imgCarousel" src="immagini/ImmaginiWiki/Corazza.webp" alt=""></a></div>   
+                <div class="carousel-cell--home"><h2>News</h2><p>Shapshot 22w11a</p><a href="Pagine/PagineNews/22w11a.php"><img class="imgCarousel" src="immagini/ImmaginiWiki/Rana.webp" alt=""></a></div>   
             </div>
 
             <div class="Informazioni">

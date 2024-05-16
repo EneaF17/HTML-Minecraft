@@ -37,7 +37,7 @@
             <div class="contenitoreWiki">
                 <h1 class="titolo">Diamante</h1>
                 <div class="ContenitoreTabella">
-                    <img src="../../Immagini/Diamond.png" alt="">
+                    <img src="../../Immagini/ImmaginiWiki/Diamond.png" alt="">
                     <table class="tabellaWiki">
                         <tr class="rigapari">
                             <th>Nome</th>
@@ -79,7 +79,7 @@
                     <h2 class="Sezione jumptarget" id="Estrazione">Estrazione</h2>
                     <p>Il diamante grezzo può essere trovato nei livelli 1-16, in piccole vene di 1-8 minerali, raramente doppie vene si incrociano permettendo 9-10 minerali, e può essere estratto solamente usando un piccone di ferro o superiore.</p>
                     <h2 class="Sezione jumptarget" id="Fabbricazione">Fabbricazione</h2>
-                    <img class="imgWikiCraft" src="../../Immagini/DiamondCraft.png" alt="">
+                    <img class="imgWikiCraft" src="../../Immagini/ImmaginiWiki/DiamondCraft.png" alt="">
                     <p>Il blocco di diamante puó essere fabbricato con 9 diamanti e poi puó essere riconvertito in diamanti posizionandolo in uno qualsiasi degli slot della griglia di crafting.</p>
                     <h2 class="Sezione jumptarget" id="Natura">Presenza in natura</h2>
                     <p>I diamanti possono essere trovati raramente in bauli generati naturalmente, come quelli trovati in un villaggio, un tempio del deserto, una miniera abbandonata, un tempio della giungla, o una fortezza del Nether.</p>

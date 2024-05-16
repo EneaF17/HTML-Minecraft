@@ -39,7 +39,7 @@
             <div class="contenitoreWiki">
                 <h1 class="titolo">TNT</h1>
                 <div class="ContenitoreTabella">
-                    <img src="../../Immagini/Tnt.webp" alt="">
+                    <img src="../../Immagini/ImmaginiWiki/Tnt.webp" alt="">
                     <table class="tabellaWiki">
                         <tr class="rigapari">
                             <th>Nome</th>
@@ -97,7 +97,7 @@
                         </ol>
                     </div>
                     <h2 class="Sezione jumptarget" id="Fabbricazione">Fabbricazione</h2>
-                    <img class="imgWikiCraft" src="../../Immagini/TntCrafting.png" alt="">
+                    <img class="imgWikiCraft" src="../../Immagini/ImmaginiWiki/TntCrafting.png" alt="">
                     <p>La TNT puó essere fabbricata con 5 pezzi di polvere da sparo e 4 pezzi di sabbia. La sabbia puó anche essere sabbia rossa o un misto tra sabbia normale e sabbia rossa.</p>
                     <h2 class="Sezione jumptarget" id="Proprietá">Proprietá delle esplosioni</h2>
                     <p>Dopo essere stata incendiata o energizzata con la redstone, la TNT comincia a fumare e a lampeggiare di bianco, diventando nel contempo soggetta alla gravità. Dopo 4 secondi esplode, danneggiando i blocchi adiacenti, i mob nelle vicinanze e il giocatore, se non è stato prudente. Quando la TNT è posta in un qualunque liquido, esplodendo non ne distruggerà i blocchi, anche se è ancora in grado di danneggiare mob e giocatore.</p>

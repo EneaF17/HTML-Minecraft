@@ -37,7 +37,7 @@
             <div class="contenitoreWiki">
                 <h1 class="titolo">Nome</h1>
                 <div class="ContenitoreTabellaWiki">
-                    <img src="../../Immagini/Arco.webp" alt="">
+                    <img src="../../Immagini/ImmaginiWiki/Arco.webp" alt="">
                     <table class="tabellaWiki">
                         <tr class="rigapari">
                             <th>Nome</th>

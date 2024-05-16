@@ -37,7 +37,7 @@
             <div class="contenitoreWiki">
                 <h1 class="titolo">Fornace</h1>
                 <div class="ContenitoreTabella">
-                    <img src="../../Immagini/Fornace.webp" alt="">
+                    <img src="../../Immagini/ImmaginiWiki/Fornace.webp" alt="">
                     <table class="tabellaWiki">
                         <tr class="rigapari">
                             <th>Nome</th>
@@ -106,12 +106,12 @@
                     <p>Una fornace può essere estratta usando qualsiasi piccone. Una fornace lascerà anche cadere tutto il suo contenuto quando viene rotta, inclusi XP dagli oggetti fusi che sono stati estratti dalle tramogge.</p>
                     <p>In Java Edition, una fornace estratta senza piccone non rilascia nulla. In Bedrock Edition, una fornace viene rilasciata quando viene estratta a mano o con qualsiasi strumento.</p>
                     <h2 class="Sezione jumptarget" id="Fabbricazione">Fabbricazione</h2>
-                    <img class="imgWikiCraft" src="../../Immagini/FornaceCrafting.png" alt="">
+                    <img class="imgWikiCraft" src="../../Immagini/ImmaginiWiki/FornaceCrafting.png" alt="">
                     <p>La fornace puó essere fabbricata usando pietrisco, ardesia profonda e pietranera in modo totalmente interscambiabile purché siano messi nel modo corretto come in figura.</p>
                     <h2 class="Sezione jumptarget" id="Carburanti">Carburanti</h2>
                     <p>L'interfaccia della fornace può essere aperta premendo il pulsante usa oggetto su di essa. Una fonte di carburante (fino a una pila di oggetti combustibili) viene posizionata nello slot inferiore a sinistra e gli oggetti (fino a una pila) da fondere vengono posizionati nello slot superiore a sinistra. Una fornace fonde oggetti alla velocità di un oggetto ogni 200 tick di gioco (10 secondi) o sei oggetti al minuto.</p>
                     <p>Il numero di elementi che una fonte di carburante può fondere dipende dal tipo di carburante. Non appena inizia la fusione, lo slot di carburante viene immediatamente decrementato e quell'unità di carburante inizia a bruciare. Il carburante continua a bruciare finché non viene consumato, indipendentemente dal fatto che lo slot superiore abbia ancora oggetti da fondere. Ad esempio, un pezzo di carbone brucia per 80 secondi e può fondere otto oggetti, ma se viene fuso solo un oggetto (o se l'oggetto viene estratto prima che la fusione sia completa), il carbone continua a bruciare per tutti gli 80 secondi, consumando sette oggetti degni di fusione. Dopo che si è esaurito, il carburante aggiuntivo non viene diminuito dallo slot del carburante se lo slot superiore è vuoto. Se lo slot del carburante è vuoto e il carburante in fiamme viene consumato prima che un oggetto completi la fusione, la fusione si interrompe, l'oggetto fuso rimane invariato e la fusione deve essere riavviata con nuovo carburante.</p>
-                    <img class="imgWikiCraft" src="../../Immagini/FornaceGui.png" alt="">
+                    <img class="imgWikiCraft" src="../../Immagini/ImmaginiWiki/FornaceGui.png" alt="">
                     <ul>
                         <li>Lava: 100 utilizzi</li>
                         <li>Carbone / Carbonella: 8 utilizzi</li>

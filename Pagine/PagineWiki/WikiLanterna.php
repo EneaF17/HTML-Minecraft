@@ -37,8 +37,8 @@
             <div class="contenitoreWiki">
                 <h1 class="titolo">Lanterna</h1>
                 <div class="ContenitoreTabella">
-                    <img src="../../Immagini/Lanterna.webp" alt="">
-                    <img src="../../Immagini/SoulFireLantern.webp" alt="">
+                    <img src="../../Immagini/ImmaginiWiki/Lanterna.webp" alt="">
+                    <img src="../../Immagini/ImmaginiWiki/SoulFireLantern.webp" alt="">
                     <table class="tabellaWiki">
                         <tr class="rigapari">
                             <th>Nome</th>
@@ -102,8 +102,8 @@
                         </ol>
                     </div>
                     <h2 class="Sezione jumptarget" id="Fabbricazione">Fabbricazione</h2>
-                    <img class="imgWikiCraft" src="../../Immagini/LanternaCrafting.png" alt="">
-                    <img class="imgWikiCraft" src="../../Immagini/SoulFireLanternCrafting.png" alt="">
+                    <img class="imgWikiCraft" src="../../Immagini/ImmaginiWiki/LanternaCrafting.png" alt="">
+                    <img class="imgWikiCraft" src="../../Immagini/ImmaginiWiki/SoulFireLanternCrafting.png" alt="">
                     <p>I crafting delle due tipologie di lanterna sono molto simili cambia solo la torcia che viene messa nel mezzo che é una torcia normale per la lanterna, é invece una torica delle anime per la lanterna delle anime</p>
                     <h2 class="Sezione jumptarget" id="RXX">Reperibilitá</h2>
                     <p>Le normali lanterne possono generarsi come lampade o lampioni sopra le fattorie e su alcuni edifici dei villaggi della tundra.</p>

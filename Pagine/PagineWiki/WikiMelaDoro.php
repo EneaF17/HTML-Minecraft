@@ -39,7 +39,7 @@
             <div class="contenitoreWiki">
                 <h1 class="titolo">Mela D'Oro</h1>
                 <div class="ContenitoreTabella">
-                    <img src="../../Immagini/MelaOro.webp" alt="">
+                    <img src="../../Immagini/ImmaginiWiki/MelaOro.webp" alt="">
                     <table class="tabellaWiki">
                         <tr class="rigapari">
                             <th>Nome</th>
@@ -90,7 +90,7 @@
                         </ol>
                     </div>
                     <h2 class="Sezione jumptarget" id="Fabbricazione">Fabbricazione</h2>
-                    <img class="imgWikiCraft" src="../../Immagini/MelaOroCrafting.png" alt="">
+                    <img class="imgWikiCraft" src="../../Immagini/ImmaginiWiki/MelaOroCrafting.png" alt="">
                     <p>8 <a href="WikiOro.php">lingotti d'oro</a> disposti attorno ad una mela</p>
                     <h2 class="Sezione jumptarget" id="Vantaggi">Vantaggi</h2>
                     <p>Le mele d'oro ristabiliscono l'intera salute.</p>

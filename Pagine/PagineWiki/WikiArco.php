@@ -41,7 +41,7 @@
             <div class="contenitoreWiki">
                 <h1 class="titolo">Arco</h1>
                 <div class="ContenitoreTabella">
-                    <img src="../../Immagini/Arco.webp" alt="">
+                    <img src="../../Immagini/ImmaginiWiki/Arco.webp" alt="">
                     <table class="tabella">
                         <tr class="rigapari">
                             <th>Nome</th>
@@ -87,7 +87,7 @@
                     <h2 class="Sezione jumptarget" id="Ottenimento">Ottenimento</h2>
                     <p>Gli archi possono essere fabbricati e sono un rilascio potenziale degli scheletri. Dagli snapshot della 1.8, la nuova carriera del villico arcaio può far vendere archi per 2-3 smeraldi a pezzo. Infine, gli archi possono essere presi pescando, come un "tesoro", perché l'arco che viene pescato può essere incantato ma è leggermente danneggiato.</p>
                     <h2 class="Sezione jumptarget" id="Fabbricazione">Fabbricazione</h2>
-                    <img class="imgWikiCraft" src="../../Immagini/ArcoCrafting.png" alt="">
+                    <img class="imgWikiCraft" src="../../Immagini/ImmaginiWiki/ArcoCrafting.png" alt="">
                     <p>3 bastoni e 3 stringhe come in figura</p>
                     <p>Il layout non é trascurabile ma é simmetrico</p>
                     <h2 class="Sezione jumptarget" id="Uso">Uso</h2>

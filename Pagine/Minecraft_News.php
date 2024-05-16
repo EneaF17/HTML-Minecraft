@@ -40,7 +40,7 @@
                     <div class="News">
                         <h2>Ultima versione</h2>
                         <div class="descNews">
-                            <img src="../immagini/1.20.jpg" alt="">
+                            <img src="../immagini/ImmaginiNews/1.20.jpg" alt="">
                             <h3>Minecraft Java edition 1.20.4</h3>
                             <p>1.20.4 è un'update minore alla Java Edition, rilasciata il 7 Dicembre 2023, che risolve un bug. Questa versione non è compatibile con i server 1.20.2</p>
                         </div>
@@ -49,7 +49,7 @@
                     <div class="News">
                         <h2>Ultimo snapshot</h2>
                         <div class="descNews">
-                            <img src="../immagini/24W09A.avif" alt="">
+                            <img src="../immagini/ImmaginiNews/24W09A.avif" alt="">
                             <h3>Minecraft snapshot 24W09A</h3>
                             <p>Ciao! Ecco uno snapshot leggermente più grande del solito con molte modifiche tecniche, interfaccia utente aggiornata, un'altra iterazione dell'armatura del lupo e modifiche alle nuove funzionalità.
                                 Sin dal rilascio iniziale dell'armatura del lupo, abbiamo lavorato per migliorarla per aumentarne la protezione, l'usabilità e aggiungere la personalizzazione.</p>
@@ -59,7 +59,7 @@
                     <div class="News">
                         <h2>Prossima versione</h2>
                         <div class="descNews">
-                            <img src="../immagini/1.21.jpg" alt="">
+                            <img src="../immagini/ImmaginiNews/1.21.jpg" alt="">
                             <h3>Minecraft Java edition 1.21</h3>
                             <p>1.21 è un futuro aggiornamento per Java Edition, il cui rilascio è previsto a metà 2024. Originariamente annunciato a Minecraft Live 2023 il 15 ottobre 2023, l'aggiornamento si concentrerà su "combattimento, avventure, e tinkering". Esso comprende anche il nuovo crafter, nuove varianti blocchi di tufo, e più nemici che depongono le uova nelle trial chamber.</p>
                         </div>
@@ -69,7 +69,7 @@
                 <div class="main-carousel--news" data-flickity='{"cellAlign": "left", "contain": false, "wrapAround":true }'>
                     <div class="carousel-cell--news">
                         <h1 class="titoloversione">1.20</h1>
-                        <img class="imgNews" src="../Immagini/1.20.jpg" alt="">
+                        <img class="imgNews" src="../Immagini/ImmaginiNews/1.20.jpg" alt="">
                         <div class="contenitoreSnapshot col-3">
                             <ul class="listasnapshot" style="list-style-type: none;">
                                 <h2 class="titolosottoversione">1.20.2</h2>
@@ -96,7 +96,7 @@
 
                     <div class="carousel-cell--news">
                         <h1 class="titoloversione">1.19</h1>
-                        <img class="imgNews" src="../Immagini/1.19.jpg" alt="">
+                        <img class="imgNews" src="../Immagini/ImmaginiNews/1.19.jpg" alt="">
                         <div class="contenitoreSnapshot col-6">
                             <ul class="listasnapshot col2" style="list-style-type: none;">
                                 <h2 class="titolosottoversione">1.19.4</h2>
@@ -138,7 +138,7 @@
 
                     <div class="carousel-cell--news">
                         <h1 class="titoloversione">1.18</h1>
-                        <img class="imgNews" src="../Immagini/1.18.jpg" alt="">
+                        <img class="imgNews" src="../Immagini/ImmaginiNews/1.18.jpg" alt="">
                         <div class="contenitoreSnapshot col-2">
                             <ul class="listasnapshot" style="list-style-type: none;">
                                 <h2 class="titolosottoversione">1.18.2</h2>
@@ -163,7 +163,7 @@
                      
                     <div class="carousel-cell--news">
                         <h1 class="titoloversione">1.17</h1>
-                        <img class="imgNews" src="../Immagini/1.17.jpg" alt="">
+                        <img class="imgNews" src="../Immagini/ImmaginiNews/1.17.jpg" alt="">
                         <div class="contenitoreSnapshot col-3">
                             <h2 class="titolosottoversione col3">1.17</h2>
                             <ul class="listasnapshot" style="list-style-type: none;">
@@ -199,7 +199,7 @@
                      
                     <div class="carousel-cell--news">
                         <h1 class="titoloversione">1.16</h1>
-                        <img class="imgNews" src="../Immagini/1.16.jpg" alt="">
+                        <img class="imgNews" src="../Immagini/ImmaginiNews/1.16.jpg" alt="">
                         <div class="contenitoreSnapshot col-3">
                             <ul class="listasnapshot col3" style="list-style-type: none;">
                                 <h2 class="titolosottoversione">1.16.2</h2>
@@ -239,7 +239,7 @@
                      
                     <div class="carousel-cell--news">
                         <h1 class="titoloversione">1.15</h1>
-                        <img class="imgNews" src="../Immagini/1.15.jpg" alt="">
+                        <img class="imgNews" src="../Immagini/ImmaginiNews/1.15.jpg" alt="">
                         <div class="contenitoreSnapshot col-2">
                             <h2 class="titolosottoversione col2">1.15</h2>
                             <ul class="listasnapshot" style="list-style-type: none;">
@@ -266,7 +266,7 @@
                      
                     <div class="carousel-cell--news">
                         <h1 class="titoloversione">1.14</h1>
-                        <img class="imgNews" src="../Immagini/1.14.jpg" alt="">
+                        <img class="imgNews" src="../Immagini/ImmaginiNews/1.14.jpg" alt="">
                         <div class="contenitoreSnapshot col-3">
                             <h2 class="titolosottoversione col3">1.14</h2>
                             <ul class="listasnapshot" style="list-style-type: none;">

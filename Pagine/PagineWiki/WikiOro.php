@@ -39,7 +39,7 @@
             <div class="contenitoreWiki">
                 <h1 class="titolo">Lingotto d'Oro</h1>
                 <div class="ContenitoreTabella">
-                    <img src="../../Immagini/Oro.webp" alt="">
+                    <img src="../../Immagini/ImmaginiWiki/Oro.webp" alt="">
                     <table class="tabellaWiki">
                         <tr class="rigapari">
                             <th>Nome</th>
@@ -72,8 +72,8 @@
                     <p>Gli attrezzi d'oro sono molto veloci ad estrarre blocchi rispetto a quelli di diamante; tuttavia, data la durabilità estremamente bassa degli attrezzi d'oro, essi si rivelano non pratici per l'uso, e sono utilizzati più per mettersi in mostra che per il loro valore come attrezzi. Gli attrezzi d'oro possono solo estrarre pietra, Pietrisco, carbone, netherrack e scalini; ma li estraggono più velocemente rispetto a qualsiasi altro attrezzo di materiale diverso, e potrebbero risultare utili se il giocatore ha fretta e possiede una buona quantità d'oro.</p>
                     <p>L'armatura d'oro è sconsigliata per l'uso, data la bassa durabilità e la rarità dell'oro. In origine l'oro aveva poco utilizzo, fino alla Beta 1.6, quando sono state aggiunte le rotaie alimentate (che richiedono 6 lingotti d'oro per essere fabbricate); il valore dei lingotti d'oro è aumentato notevolmente quando poi le rotaie alimentate sono diventate più potenti del Carrello da miniera con fornace (la cui potenza è stata ridotta).</p>
                     <h2 class="Sezione">Fabbricazione</h2>
-                    <img class="imgWikiCraft" src="../../Immagini/OroCrafting1.png" alt="">
-                    <img class="imgWikiCraft" src="../../Immagini/OroCrafting2.png" alt="">
+                    <img class="imgWikiCraft" src="../../Immagini/ImmaginiWiki/OroCrafting1.png" alt="">
+                    <img class="imgWikiCraft" src="../../Immagini/ImmaginiWiki/OroCrafting2.png" alt="">
                     <p>I lingotti d'oro possono essere ottenuti tramite crafting da due ricette differenti: Scomponendo un blocco d'oro e compattando 9 pepite d'oro</p>
                 </div>
             </div>

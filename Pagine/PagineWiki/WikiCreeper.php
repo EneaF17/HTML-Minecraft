@@ -37,7 +37,7 @@
             <div class="contenitoreWiki">
                 <h1 class="titolo">Creeper</h1>
                 <div class="ContenitoreTabella">
-                    <img src="../../Immagini/Creeper.png" alt="">
+                    <img src="../../Immagini/ImmaginiWiki/Creeper.png" alt="">
                     <table class="tabellaWiki">
                         <tr class="rigapari">
                             <th>Nome</th>

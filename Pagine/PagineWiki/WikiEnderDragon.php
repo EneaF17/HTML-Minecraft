@@ -37,7 +37,7 @@
             <div class="contenitoreWiki">
                 <h1 class="titolo">Ender Dragon</h1>
                 <div class="ContenitoreTabella">
-                    <img src="../../Immagini/Ender_Dragon.webp" alt="">
+                    <img src="../../Immagini/ImmaginiWiki/Ender_Dragon.webp" alt="">
                     <table class="tabellaWiki">
                         <tr class="rigapari">
                             <th>Nome</th>

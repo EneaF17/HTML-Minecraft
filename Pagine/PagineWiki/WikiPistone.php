@@ -38,8 +38,8 @@
             <div class="contenitoreWiki">
                 <h1 class="titolo">Pistone</h1>
                 <div class="ContenitoreTabella">
-                    <img src="../../Immagini/Pistone.webp" alt="">
-                    <img src="../../Immagini/PistoneAppiccicoso.webp" alt="">
+                    <img src="../../Immagini/ImmaginiWiki/Pistone.webp" alt="">
+                    <img src="../../Immagini/ImmaginiWiki/PistoneAppiccicoso.webp" alt="">
                     <table class="tabellaWiki">
                         <tr class="rigapari">
                             <th>Nome</th>
@@ -97,8 +97,8 @@
                         </ol>
                     </div>
                     <h2 class="Sezione jumptarget" id="Fabbricazione">Fabbricazione</h2>
-                    <img class="imgWikiCraft" src="../../Immagini/PistoneCrafting.png" alt="">
-                    <img class="imgWikiCraft" src="../../Immagini/PistoneAppiccicosoCrafting.png" alt="">
+                    <img class="imgWikiCraft" src="../../Immagini/ImmaginiWiki/PistoneCrafting.png" alt="">
+                    <img class="imgWikiCraft" src="../../Immagini/ImmaginiWiki/PistoneAppiccicosoCrafting.png" alt="">
                     <p>Il pistone si puó fabbricare solo con il pietrisco e non con altri tipi di pietra, tre assi di legno che possono essere di tutti i tipi e un pezzo di redstone centrale.</p>
                     <p>Il pistone appiccicoso si fabbrica con un pistone normale e una palla di slime. la disposizione non conta.</p>
                     <h2 class="Sezione jumptarget" id="Meccanismi">Principali meccanismi</h2>

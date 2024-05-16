@@ -37,7 +37,7 @@
             <div class="contenitoreWiki">
                 <h1 class="titolo">Herobrine</h1>
                 <div class="ContenitoreTabella">
-                    <img src="../../Immagini/Herobrine.webp" alt="">
+                    <img src="../../Immagini/ImmaginiWiki/Herobrine.webp" alt="">
                     <table class="tabellaWiki">
                         <tr class="rigapari">
                             <th>Nome</th>
@@ -81,14 +81,14 @@
                     <p>Non c'è nessuna possibilità che Herobrine sia mai esistito su client o server non modificati. Ogni rivendicazione su Herobrine è completamente falsa. Ogni apparizione è causata da mod che sono state installate.</p>
                     <p>La Minecraft Wiki e il Forum non parteciperanno mai alle bufale virali riguardo Herobrine. Ogni commento riguardo Herobrine che viene cancellato è puramente per il fatto che Herobrine non esiste, e le storie sono completa finzione, con l'intento di condurre gli altri in queste bufale, o il risultato di utenti che giocano con delle mod installate nel proprio gioco senza esserne a conoscenza.</p>
                     <h2 class="Sezione jumptarget" id="Origini">Origine e Popolaritá</h2>
-                    <img class="imgWiki" src="../../Immagini/HerobrineStory.webp" alt="">
+                    <img class="imgWiki" src="../../Immagini/ImmaginiWiki/HerobrineStory.webp" alt="">
                     <p>Dall'originale creepy pasta, Herobrine crea costruzioni casuali, come piramidi e lunghi tunnel alti 2 blocchi. Inoltre brucia o taglia le foglie degli alberi e crea complessi di ciottoli sotterranei, proprio come i sotterranei, illuminati con torce di pietra rossa.</p>
                     <p>Herobrine è apparso per la prima volta in una singola immagine che descriveva un incontro. È stato pubblicato su un thread nei forum e ha ottenuto pochissima attenzione. Dichiarava come Herobrine fosse apparso nel gioco per giocatore singolo di qualcuno, cospargendo la mappa con varie piramidi e tunnel. È il primo media a chiamarlo Herobrine.</p>
                     <p>Fu solo più tardi che Herobrine divenne popolare, quando lo staff di Brocast mise in scena una bufala in uno dei loro live-streaming.</p>
-                    <img class="imgWiki" src="../../Immagini/HerobrineFirst.webp" alt="">
+                    <img class="imgWiki" src="../../Immagini/ImmaginiWiki/HerobrineFirst.webp" alt="">
                     <p>Più tardi, c'era un altro video che mostrava Herobrine in un campo di lava creato dagli utenti. Il livestream è andato giù dopo che il giocatore ha corso e salvato, solo per riprendere dieci minuti dopo, dove Herobrine era scomparso.</p>
                     <p>Durante questo streaming, il giocatore può essere sentito parlare con sua moglie, affermando che stava trollando, il che ha inondato di indignazione la chat in streaming. Il giocatore ha quindi simulato un crash del gioco.</p>
-                    <img class="imgWiki" src="../../Immagini/HerobrineLooks.webp" alt="">
+                    <img class="imgWiki" src="../../Immagini/ImmaginiWiki/HerobrineLooks.webp" alt="">
                     <p>Durante questo incidente, tutti gli osservatori sono stati reindirizzati a un'altra pagina, con il volto di Steve, ma con occhi veri e freneticamente rotanti al posto dei suoi occhi di blocco, modificati per essere completamente neri.</p>
                     <p>Durante la visualizzazione della fonte della pagina, c'era un miscuglio di caratteri e lettere. dopo aver rimosso tutti i caratteri non alfabetici, è stato rivelato un messaggio.</p>
                     <p>Il messaggio continua a dire allo spettatore di "svegliarsi", implicando che stanno vivendo in un mondo fantastico, e questo testo nascosto nella pagina è la loro "nota".</p>
