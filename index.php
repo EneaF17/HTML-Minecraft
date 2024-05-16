@@ -41,7 +41,7 @@
      
             <div class="hero">
                 <div class="hero__content">
-                    <p class="intro-text">Tutto quello che vuoi sapere sull'universo di</p>
+                    <p class="intro-text">Tutto quello che vuoi sapere sull'universo di </p>
                     <h1 class="big-text">Minecraft</h1>
                     <div class="pulsanteBuy">
                         <a href="Pagine/LoginPage.php" class="intro-text">ottieni minecraft</a>
