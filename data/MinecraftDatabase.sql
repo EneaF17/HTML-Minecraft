@@ -1,8 +1,8 @@
 -- --------------------------------------------------------
 -- Host:                         127.0.0.1
--- Versione server:              10.4.28-MariaDB - mariadb.org binary distribution
+-- Versione server:              10.4.32-MariaDB - mariadb.org binary distribution
 -- S.O. server:                  Win64
--- HeidiSQL Versione:            12.5.0.6677
+-- HeidiSQL Versione:            12.6.0.6765
 -- --------------------------------------------------------
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
@@ -27,12 +27,17 @@ CREATE TABLE IF NOT EXISTS `giocatore` (
   `Cognome` char(50) DEFAULT NULL,
   `Email` char(50) DEFAULT NULL,
   `Telefono` char(50) DEFAULT NULL,
+  `Icona` char(50) DEFAULT 'Icona_Utente.png',
   PRIMARY KEY (`Username`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
--- Dump dei dati della tabella minecraftsito.giocatore: ~1 rows (circa)
-REPLACE INTO `giocatore` (`Username`, `Password`, `Nome`, `Cognome`, `Email`, `Telefono`) VALUES
-	('Enea_il_Figo', '1234', 'Enea', 'Fascilla', 'enea.fascilla@gmail.com', '0392050503');
+-- Dump dei dati della tabella minecraftsito.giocatore: ~5 rows (circa)
+INSERT INTO `giocatore` (`Username`, `Password`, `Nome`, `Cognome`, `Email`, `Telefono`, `Icona`) VALUES
+	('Abdul', 'asd', 'Abdul', 'Lahllah', '', '', 'Icona_Steve.jpg'),
+	('asd', 'asd', 'Ajeje', 'Brazorf', NULL, NULL, 'Icona_Creeper.png'),
+	('Enea_il_Figo', '1234', 'Enea', 'Fascilla', 'enea.fascilla@gmail.com', '0392050503', 'Icona_Creeper.png'),
+	('Fradre69', 'asd', 'Francesco', 'Vivenzio', '', '', 'Icona_Utente.png'),
+	('qwerty', 'qwerty', 'Qwerty', 'Tarantino', NULL, NULL, 'Icona_Villager.png');
 
 /*!40103 SET TIME_ZONE=IFNULL(@OLD_TIME_ZONE, 'system') */;
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
