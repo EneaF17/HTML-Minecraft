@@ -19,10 +19,10 @@
             $path = $_SERVER["PHP_SELF"] ;
             $pagina = dirname($path);
 
-        if ($pagina == "/HTML Minecraft/Pagine") {
+        if ($pagina == "/HTML-Minecraft/Pagine") {
             $LinkRelPag = "";
             $LinkRelImg = "../";
-        } elseif ($pagina == "/HTML Minecraft/Pagine/PagineGuide" or $pagina == "/HTML Minecraft/Pagine/PagineNews" or $pagina == "/HTML Minecraft/Pagine/PaginePHP" or $pagina == "/HTML Minecraft/Pagine/PagineWiki") {
+        } elseif ($pagina == "/HTML-Minecraft/Pagine/PagineGuide" or $pagina == "/HTML-Minecraft/Pagine/PagineNews" or $pagina == "/HTML-Minecraft/Pagine/PaginePHP" or $pagina == "/HTML Minecraft/Pagine/PagineWiki") {
             $LinkRelPag = "../";
             $LinkRelImg = "../../";
         } else{
