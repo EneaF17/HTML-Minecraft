@@ -32,13 +32,14 @@ CREATE TABLE IF NOT EXISTS `giocatore` (
   PRIMARY KEY (`Username`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
--- Dump dei dati della tabella minecraftsito.giocatore: ~5 rows (circa)
+-- Dump dei dati della tabella minecraftsito.giocatore: ~6 rows (circa)
 REPLACE INTO `giocatore` (`Username`, `Password`, `Nome`, `Cognome`, `Compleanno`, `Email`, `Telefono`, `Icona`) VALUES
-	('asd', 'asd', 'Ajeje', 'Brazorf', NULL, NULL, NULL, 'Icona_Pecora.png'),
-	('asdf', 'asdf', 'giovanni', 'Muchacha', NULL, '', '', 'Icona_Creeper.png'),
-	('Enea_il_Figo', '1234', 'Enea', 'Fascilla', '2005-08-17', 'enea.fascilla@gmail.com', '0392050503', 'Icona_Creeper.png'),
-	('gigio', 'asd', 'Giggio', 'Francy', NULL, '', '', 'Icona_Creeper.png'),
-	('Qwerty', 'qwerty', 'qwertin', 'Tarantino', NULL, NULL, NULL, 'Icona_Pecora.png');
+	('asd', 'asd', 'ASD', 'DSA', '2000-01-01', 'asd@gmail.com', '019292910', 'Icona_Steve.jpg'),
+	('asdf', 'asdf', 'AsdF', 'FdsA', '2008-06-25', '', '', 'Icona_Zombie.jpg'),
+	('Enea_il_Figo', '1234', 'Enea', 'Fascilla', '2005-08-17', 'Enea.fascilla@gmail.com', '039202020300', 'Icona_Creeper.png'),
+	('Fradre69', 'asd', 'Francesco', 'Vivenzio', '2006-12-23', '', '', 'Icona_Pecora.png'),
+	('qwerty', 'qwerty', 'Qwerty', 'Tarantino', '1997-05-12', '', '', 'Icona_Maiale.jpg'),
+	('Tormix', 'asd', 'Francesco', 'Tormene', '1986-04-09', '', '', 'Icona_Villager.png');
 
 /*!40103 SET TIME_ZONE=IFNULL(@OLD_TIME_ZONE, 'system') */;
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
