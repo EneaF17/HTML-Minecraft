@@ -127,8 +127,8 @@
                 </div>
             </div>
         </body>
-        <footer>
-            <p>Sito non ufficiale programmato al solo scopo didattico e dimostrativo</p>
-        </footer>
+        <?php 
+            require ("../../data/Footer.php")
+        ?>
     </div>
 </php>

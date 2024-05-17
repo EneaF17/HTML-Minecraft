@@ -66,8 +66,8 @@
                         <td><input type="text" id="Telefono" name="Telefono" value="<?php echo $Telefono?>"></td>
                     </tr>
                     <tr>
-                        <td colspan="2"><input type="submit"></td>
-                    </tr>
+                    <td colspan="2"><input class="SubmitButtonIcone" type="submit"></td>
+                </tr>
                 </table>
             </form>
         <?php 
@@ -84,18 +84,35 @@
                         echo"<h2>USERNAME GIA' IN USO</h2>";}
                     else {
 
-                        $QueryReg2 = "INSERT INTO giocatore (Username,Password,Nome,Cognome,Compleanno,Email,Telefono)
-                                    VALUES ('$Username','$Password','$Nome','$Cognome','$DataN','$Email','$Telefono')";
-                    if ($Connessione -> query($QueryReg2) === true) {
-                        session_start();
-                        $_SESSION["Username"] = $Username;
-                        echo "<h2>REGISTRAZIONE COMPLETATA</h2>";
-                        header('location:PaginePHP/IconaImmagine.php');}
-                    else{ echo "<h2>ERRORE NELLA REGISTRAZIONE</h2>";}
+                        $DataIns = new DateTime($DataN);
+                        $DataR   = new DateTime('today');
+                        $anno = $DataIns->diff($DataR)->y;
+                        $mese = $DataIns->diff($DataR)->m;
+                        $giorno = $DataIns->diff($DataR)->d;
+                        if ($anno<14){
+                            echo "<h2>DEVI AVERE ALMENO 14 ANNI PER REGISTRARTI</h2>";
+                        }
+                        else{
 
+                            $QueryReg2 = "INSERT INTO giocatore (Username,Password,Nome,Cognome,Compleanno,Email,Telefono)
+                                        VALUES ('$Username','$Password','$Nome','$Cognome','$DataN','$Email','$Telefono')";
+                            if ($Connessione -> query($QueryReg2) === true) {
+                                session_start();
+                                $_SESSION["Username"] = $Username;
+                                echo "<h2>REGISTRAZIONE COMPLETATA</h2>";
+                                header('location:PaginePHP/IconaImmagine.php');}
+                            else{ echo "<h2>ERRORE NELLA REGISTRAZIONE</h2>";
+                            }
+                        }
                     }
                 }
+            
             }
+            else{
+                echo"<h2>Compila i campi qua sopra...</h2>";
+                
+            }
+
         ?>
 
     </body>

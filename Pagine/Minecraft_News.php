@@ -312,8 +312,8 @@
                 </div>
             </div>
         </body>
-        <footer class="footer-down">
-            <p>Sito non ufficiale programmato al solo scopo didattico e dimostrativo</p>
-        </footer>
+        <?php 
+        require ("../data/Footer.php")
+        ?>
     </div>
 </php>

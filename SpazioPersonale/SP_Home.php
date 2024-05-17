@@ -41,6 +41,9 @@
     </main>
     
 
+    <?php 
+        require ("../data/Footer.php")
+    ?>
     
 
 </body>

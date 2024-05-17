@@ -50,6 +50,30 @@
                 <img class="IconaImgSel" src="../../Immagini/PhpImg/Icona_Villager.png" alt="">
             </label>
         </div>
+        <div class="box_icona">
+            <input type="radio" name="Icon" value="Icona_Alex.jpg" id="Icona5" class="HideInput">
+            <label class="labelIcon" for="Icona5">
+                <img class="IconaImgSel" src="../../Immagini/PhpImg/Icona_Alex.jpg" alt="">
+            </label>
+        </div>
+        <div class="box_icona">
+            <input type="radio" name="Icon" value="Icona_Enderman.jpg" id="Icona6" class="HideInput">
+            <label class="labelIcon" for="Icona6">
+                <img class="IconaImgSel" src="../../Immagini/PhpImg/Icona_Enderman.jpg" alt="">
+            </label>
+        </div>
+        <div class="box_icona">
+            <input type="radio" name="Icon" value="Icona_Maiale.jpg" id="Icona7" class="HideInput">
+            <label class="labelIcon" for="Icona7">
+                <img class="IconaImgSel" src="../../Immagini/PhpImg/Icona_Maiale.jpg" alt="">
+            </label>
+        </div>
+        <div class="box_icona">
+            <input type="radio" name="Icon" value="Icona_Zombie.jpg" id="Icona8" class="HideInput">
+            <label class="labelIcon" for="Icona8">
+                <img class="IconaImgSel" src="../../Immagini/PhpImg/Icona_Zombie.jpg" alt="">
+            </label>
+        </div>
         <input class="SubmitButtonIcone" type="submit">
     </form>
 <div style="" ></div>

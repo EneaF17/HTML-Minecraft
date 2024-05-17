@@ -50,7 +50,7 @@
                     <td><input type="password" required name="Password" id="Password" ></td>
                 </tr>
                 <tr>
-                    <td colspan="2"><input type="submit"></td>
+                    <td colspan="2"><input class="SubmitButtonIcone" type="submit"></td>
                 </tr>
             </table>
         </form>
@@ -78,4 +78,7 @@
         ?>  
     </div>
 </body>
+<?php 
+            require ("../data/Footer.php")
+        ?>
 </html>
