@@ -25,7 +25,7 @@
             <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
 
             <?php 
-            require("../../data/HeaderPagineVarie.php");
+            require("../../data/Header.php");
             ?>
 
 

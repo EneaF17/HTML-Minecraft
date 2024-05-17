@@ -22,7 +22,7 @@
         
         <div class="contenitore">
         <?php 
-            require("../../data/HeaderPagineVarie.php");
+            require("../../data/Header.php");
             ?>
             
             <div class="contenitorePulsanti">

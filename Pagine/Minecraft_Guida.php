@@ -31,7 +31,7 @@
 
 
             <?php 
-            require("../data/HeaderPaginePrincipali.php");
+            require("../data/Header.php");
             ?>
 
             <div class="contenitoreGuide">
@@ -125,8 +125,9 @@
                     <p class="titoloGuida">10 modi per migliorare nel PVP</p>
                     <img src="../Immagini/ImmaginiWiki/Spada.webp" alt="">
                 </a>
-
             </div>
+
+            
         </body>
 
         

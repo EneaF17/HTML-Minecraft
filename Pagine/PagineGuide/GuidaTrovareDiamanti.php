@@ -22,8 +22,8 @@
     </head>
     <div class="contenitore">
         <body>
-            <?php 
-            require("../../data/HeaderPagineVarie.php");
+        <?php 
+            require("../../data/Header.php");
             ?>
 
 

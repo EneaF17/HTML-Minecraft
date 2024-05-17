@@ -25,7 +25,7 @@
 
     <body>
     <?php 
-            require("../../data/HeaderPagineVarie.php");
+            require("../../data/Header.php");
             ?>
 
 

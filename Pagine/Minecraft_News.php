@@ -32,7 +32,7 @@
 
 
             <?php 
-            require("../data/HeaderPaginePrincipali.php");
+            require("../data/Header.php");
             ?>
 
             <div class="grid">

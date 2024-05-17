@@ -1,16 +1,4 @@
-<div class="header header--nocta">
-    <div class="logo">
-        <a href="index.php" class="logo-link">            
-            <img src="immagini/logo.png" alt="">
-        </a>
-    </div>
-    <ul class="menu" style="list-style-type: none;">
-        <li><a href="Pagine/Minecraft_Guida.php"><img src="immagini/IronPickaxe.png"alt=""></a></li>
-        <li><a href="Pagine/Minecraft_Wiki.php"><img src="immagini/Book.png"alt=""></a></li>
-        <li><a href="Pagine/Minecraft_News.php"><img src="immagini/Anvil.webp"alt=""></a></li>
-    </ul>
-
-    <?php 
+<?php 
         if ((session_status() == PHP_SESSION_NONE) or(!isset($_SESSION["Username"]))) {
             $UserIcon ="Icona_Utente.png";
             $Link = "Pagine/LoginPage.php";
@@ -28,12 +16,35 @@
             foreach($dati as $DatiItem) {
                 $UserIcon = $DatiItem["Icona"];}
         }
+            $path = $_SERVER["PHP_SELF"] ;
+            $pagina = dirname($path);
 
-
+        if ($pagina == "/HTML Minecraft/Pagine") {
+            $LinkRelPag = "";
+            $LinkRelImg = "../";
+        } elseif ($pagina == "/HTML Minecraft/Pagine/PagineGuide" or $pagina == "/HTML Minecraft/Pagine/PagineNews" or $pagina == "/HTML Minecraft/Pagine/PaginePHP" or $pagina == "/HTML Minecraft/Pagine/PagineWiki") {
+            $LinkRelPag = "../";
+            $LinkRelImg = "../../";
+        } else{
+            $LinkRelPag = "Pagine/";
+            $LinkRelImg = "";
+        }
     ?>
+    
+<div class="header header--nocta">
+    <div class="logo">
+        <a href="<?php echo $LinkRelImg?>index.php" class="logo-link">            
+            <img src="<?php echo $LinkRelImg?>immagini/logo.png" alt="">
+        </a>
+    </div>
+    <ul class="menu" style="list-style-type: none;">
+        <li><a href="<?php echo $LinkRelPag?>Minecraft_Guida.php"><img src="<?php echo $LinkRelImg?>immagini/IronPickaxe.png"alt=""></a></li>
+        <li><a href="<?php echo $LinkRelPag?>Minecraft_Wiki.php"><img src="<?php echo $LinkRelImg?>immagini/Book.png"alt=""></a></li>
+        <li><a href="<?php echo $LinkRelPag?>Minecraft_News.php"><img src="<?php echo $LinkRelImg?>immagini/Anvil.webp"alt=""></a></li>
+    </ul>
 
     <div class="Icona" >
-        <a href="<?php echo $Link?>"> <img class="IconaImg" src="Immagini/PhpImg/<?php echo $UserIcon?>" alt=""></a>
+        <a href="<?php echo $LinkRelImg?><?php echo $Link?>"> <img class="IconaImg" src="<?php echo $LinkRelImg?>Immagini/PhpImg/<?php echo $UserIcon?>" alt=""></a>
     </div>
 </div>
 
