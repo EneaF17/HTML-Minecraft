@@ -88,7 +88,7 @@
                 echo"AGGIORNATO";
                 header('location:SP_Home.php');
             }
-                else{ echo "<h2>ERRORE NELLA REGISTRAZIONE</h2>";}
+                else{ echo "<h2>ERRORE NELL' AGGIORNAMENTO ICONA'</h2>";}
             }
 
     ?>

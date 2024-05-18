@@ -21,21 +21,25 @@
     <main class="marginMain">
         <?php 
 
-            $DatiQuery = "SELECT Nome,Cognome FROM giocatore WHERE Username = '$Username'";
+            $DatiQuery = "SELECT Nome,Cognome,Saldo FROM giocatore WHERE Username = '$Username'";
 
             $Dati = $Connessione -> query($DatiQuery) or die("ERRORE QUERY". $Connessione->error);
 
             foreach($Dati as $DatiItem) {
                 $Nome = $DatiItem["Nome"];
                 $Cognome = $DatiItem["Cognome"];
+                $Saldo = $DatiItem["Saldo"];
                 }
 
             echo"<h1>Bentornato $Nome $Cognome</h1> ";
+            echo"<h2> Il tuo Saldo attuale é di $Saldo $ </h2>";
         ?>    
 
-        <div class="pulsanteBuy">
-            <a href="../../data/LogOut.php" class="intro-text">LOGOUT</a>
-        </div>
+        <a href="../../data/LogOut.php" class="intro-text">
+            <div class="pulsanteLogOut">
+                <h2>LOGOUT</h2>
+            </div>
+        </a>
 
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus quos nostrum omnis assumenda consequuntur, ex odit ipsum debitis laudantium corporis illo velit magni optio deserunt quae ad dignissimos aliquid nemo.</p>
     </main>
