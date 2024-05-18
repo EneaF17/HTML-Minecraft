@@ -1,5 +1,5 @@
 <?php 
-        if ((session_status() == PHP_SESSION_NONE) or(!isset($_SESSION["Username"]))) {
+        if (!isset($_SESSION["Username"])) {
             $UserIcon ="Icona_Utente.png";
             $Link = "Pagine/PaginePHP/LoginPage.php";
             
@@ -7,7 +7,7 @@
             
 
             $Username = $_SESSION["Username"];
-            $Link = "SpazioPersonale/SP_Home.php";
+            $Link = "Pagine/PaginePHP/SP_Home.php";
 
             $queryIcona = "SELECT Icona FROM giocatore WHERE Username = '$Username'";
 

@@ -1,6 +1,6 @@
 <?php
     session_start();
-    require("../data/connessioneDB.php");
+    require("../../data/connessioneDB.php");
     if (!isset($_SESSION["Username"])) { header("location: ../");}
 
     $Username = $_SESSION["Username"];
@@ -13,10 +13,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SP - HOME</title>
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../../style.css">
 </head>
 <body>
-    <?php require("../data/PSHeader.php");?>
+    <?php require("../../data/PSHeader.php");?>
 
     <main class="marginMain">
         <?php 
@@ -34,7 +34,7 @@
         ?>    
 
         <div class="pulsanteBuy">
-            <a href="../data/LogOut.php" class="intro-text">LOGOUT</a>
+            <a href="../../data/LogOut.php" class="intro-text">LOGOUT</a>
         </div>
 
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus quos nostrum omnis assumenda consequuntur, ex odit ipsum debitis laudantium corporis illo velit magni optio deserunt quae ad dignissimos aliquid nemo.</p>
@@ -42,7 +42,7 @@
     
 
     <?php 
-        require ("../data/Footer.php")
+        require ("../../data/Footer.php")
     ?>
     
 

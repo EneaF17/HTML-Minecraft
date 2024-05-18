@@ -5,15 +5,15 @@
         $LinkJava = "LoginPage.php";
         $LinkDungeons = "LoginPage.php";
         $LinkLegends = "LoginPage.php";
+        $_SESSION["Reindirizza"] = "Negozio.php";
     }
     else
     {
-        $LinkJava = "RegisterPage.php";
-        $LinkDungeons = "RegisterPage.php";
-        $LinkLegends = "RegisterPage.php";  
+        $LinkJava = "JavaEdition.php";
+        $LinkDungeons = "Dungeons.php";
+        $LinkLegends = "Legends.php";  
     }
 
-    // $Username = $_SESSION["Username"];
 ?>
 
 

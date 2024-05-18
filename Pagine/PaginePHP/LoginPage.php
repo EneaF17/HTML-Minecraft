@@ -3,6 +3,13 @@
     require("../../data/connessioneDB.php");
 
     if (isset($_POST["Username"])) {$Username = $_POST ["Username"];} else {$Username = "";}
+
+    if(isset($_SESSION["Reindirizza"])) {
+        $LinkUscita = $_SESSION["Reindirizza"];
+    }
+    else {
+        $LinkUscita = "SP_Home.php";
+    }
 ?>
 
 
@@ -70,7 +77,7 @@
                     $_SESSION["Username"] = $Username;
                     $Connessione -> close();
 
-                    header("location: ../../SpazioPersonale/SP_Home.php");
+                    header("location:$LinkUscita");
                     // echo"CONNESSIONE ESEGUITA";
                 }
             }

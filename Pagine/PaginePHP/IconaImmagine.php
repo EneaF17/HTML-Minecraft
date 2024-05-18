@@ -86,7 +86,7 @@
         
             if($Connessione -> query("$UpdateIcon") === true) {
                 echo"AGGIORNATO";
-                header('location:../../SpazioPersonale/SP_Home.php');
+                header('location:SP_Home.php');
             }
                 else{ echo "<h2>ERRORE NELLA REGISTRAZIONE</h2>";}
             }
