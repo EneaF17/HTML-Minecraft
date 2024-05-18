@@ -1,6 +1,6 @@
 <?php 
     session_start();
-    require("../data/connessioneDB.php");
+    require("../../data/connessioneDB.php");
 
     if (isset($_POST["Username"])) {$Username = $_POST ["Username"];} else {$Username = "";}
 ?>
@@ -15,7 +15,7 @@
         <link rel="icon" type="image/x-icon" href="../Immagini/SfondoHeader.jpg">
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-        <link rel="stylesheet" href="../style.css">
+        <link rel="stylesheet" href="../../style.css">
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flickity/3.0.0/flickity.min.css" integrity="sha512-fJcFDOQo2+/Ke365m0NMCZt5uGYEWSxth3wg2i0dXu7A1jQfz9T4hdzz6nkzwmJdOdkcS8jmy2lWGaRXl+nFMQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
@@ -28,8 +28,8 @@
 <body>
     <div class="header">
         <div class="logo">
-            <a href="../" class="logo-link">            
-                <img src="../immagini/logo.png" alt="">
+            <a href="../../" class="logo-link">            
+                <img src="../../immagini/logo.png" alt="">
            </a>
         </div>
         <div class="cta">
@@ -70,15 +70,16 @@
                     $_SESSION["Username"] = $Username;
                     $Connessione -> close();
 
-                    header("location: ../SpazioPersonale/SP_Home.php");
+                    header("location: ../../SpazioPersonale/SP_Home.php");
                     // echo"CONNESSIONE ESEGUITA";
                 }
             }
 
         ?>  
     </div>
+    <footer class="footerLogin">
+    <p class="small-text">Sito non ufficiale programmato al solo scopo didattico e dimostrativo</p>
+</footer>
 </body>
-<?php 
-            require ("../data/Footer.php")
-        ?>
+
 </html>

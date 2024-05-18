@@ -53,6 +53,15 @@ h1,h2,h3,h4,h5,p{color: black}
 
 .marginVh{margin-top: 2vh;}
 
+.fullImg{
+    width: 100%;
+    height: 100%;
+}
+
+.TxLe{text-align: left;}
+.Gr{color: lime;}
+
+
 img{
     max-width: 100%;
     height: auto;
@@ -182,6 +191,91 @@ html{
     margin-left: 40%;
     /* border: 1px solid red; */
 }
+
+
+/* NEGOZIO */
+
+.Box_Negozio{
+    /* border: 1px solid white; */
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 5%;
+}
+
+.LinkShop{
+    /* border: 1px solid red; */
+    margin-left: 5%;
+    width: 90%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.BoxJava{
+    /* border: 1px solid green; */
+    height: 45vh;
+    width: 100%;
+    background-image: url(Immagini/Negozio/Terra.jpg);
+    background-repeat:repeat;
+    display: flex;
+}
+
+
+.BoxDungeons{
+    /* border: 1px solid red; */
+    height: 45vh;
+    width: 100%;
+    background-image: url(Immagini/Negozio/Cobblestone.png);
+    background-repeat:repeat;
+    display: flex;
+}
+
+.BoxLegends{
+    /* border: 1px solid red; */
+    height: 45vh;
+    width: 100%;
+    background-image: url(Immagini/Negozio/Netherrack.png);
+    background-repeat:repeat;
+    display: flex;
+}
+
+.ImgSide_Shop{
+    /* border: 1px solid black; */
+    width: 25%;
+    height: 100%;
+    padding: 2px;
+}
+
+.TextSide_Shop{
+    /* border: 1px solid Black; */
+    position: relative;
+    background-color: rgba(96, 96, 96, 0.9);
+    width: auto;
+    margin-left: 2%;
+    height: 90%;
+    top: 5%;
+    padding-top: 5%;
+    padding: 2px;
+    border-radius: 20px;
+}
+
+
+.TextSide_Shop p{
+    width: 90%;
+    margin-left: 5%;
+}
+
+.lisaSistemi_Shop{
+    position: relative;
+    margin-top: 5%;
+    border-top: 3px solid gray;
+    display: flex;
+    justify-content: space-evenly;
+    height: 20%;
+    width: 100%;
+    padding-top: 5px;
+}
+
 
 
 /* HEADER */
@@ -1536,6 +1630,10 @@ footer{
     z-index: 100;
 }
 
+.footerLogin{
+    position: absolute;
+    bottom: 0;
+}
 
 footer p{
     color: white;

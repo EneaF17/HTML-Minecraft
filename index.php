@@ -44,7 +44,7 @@
                     <p class="intro-text">Tutto quello che vuoi sapere sull'universo di </p>
                     <h1 class="big-text">Minecraft</h1>
                     <div class="pulsanteBuy">
-                        <a href="Pagine/LoginPage.php" class="intro-text">ottieni minecraft</a>
+                        <a href="Pagine/PaginePHP/Negozio.php" class="intro-text">ottieni minecraft</a>
                     </div>
                 </div>
        

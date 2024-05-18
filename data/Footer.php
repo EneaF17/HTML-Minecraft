@@ -1,3 +1,3 @@
-<footer class="footer-home">
+<footer>
     <p class="small-text">Sito non ufficiale programmato al solo scopo didattico e dimostrativo</p>
 </footer>

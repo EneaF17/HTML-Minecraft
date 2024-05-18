@@ -1,7 +1,7 @@
 <?php 
         if ((session_status() == PHP_SESSION_NONE) or(!isset($_SESSION["Username"]))) {
             $UserIcon ="Icona_Utente.png";
-            $Link = "Pagine/LoginPage.php";
+            $Link = "Pagine/PaginePHP/LoginPage.php";
             
             } else {
             

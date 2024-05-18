@@ -17,14 +17,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registrazione - Minecraft</title>
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../../style.css">
 </head>
 <body>
     
     <div class="header">
             <div class="logo">
-                <a href="../" class="logo-link">            
-                    <img src="../immagini/logo.png" alt="">
+                <a href="../../" class="logo-link">            
+                    <img src="../../immagini/logo.png" alt="">
             </a>
             </div>
         </div>
@@ -74,7 +74,7 @@
             if (isset($_POST["Username"]) and isset($_POST["Password"]) and isset($_POST["PasswordConf"])) {
                 if($_POST["Password"] != $_POST["PasswordConf"]) { echo"<h2>LE PASSWORD NON COINCIDONO</h2>";}
                 else{
-                    require("../data/connessioneDB.php");
+                    require("../../data/connessioneDB.php");
 
                     $QueryReg = "SELECT username FROM giocatore WHERE username = '$Username'";
 
@@ -100,7 +100,7 @@
                                 session_start();
                                 $_SESSION["Username"] = $Username;
                                 echo "<h2>REGISTRAZIONE COMPLETATA</h2>";
-                                header('location:PaginePHP/IconaImmagine.php');}
+                                header('location:IconaImmagine.php');}
                             else{ echo "<h2>ERRORE NELLA REGISTRAZIONE</h2>";
                             }
                         }
@@ -112,8 +112,8 @@
                 echo"<h2>Compila i campi qua sopra...</h2>";
                 
             }
-
+            echo "</div>";
+            require ("../../data/Footer.php");
         ?>
-
     </body>
 </php>
