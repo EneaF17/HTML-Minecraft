@@ -4,6 +4,16 @@
     if (!isset($_SESSION["Username"])) { header("location: ../");}
 
     $Username = $_SESSION["Username"];
+    
+    $DatiQuery = "SELECT Nome,Cognome,Saldo FROM giocatore WHERE Username = '$Username'";
+
+    $Dati = $Connessione -> query($DatiQuery) or die("ERRORE QUERY". $Connessione->error);
+
+    foreach($Dati as $DatiItem) {
+        $Nome = $DatiItem["Nome"];
+        $Cognome = $DatiItem["Cognome"];
+        $Saldo = $DatiItem["Saldo"];
+        }
 ?>
 
 
@@ -19,36 +29,84 @@
     <?php require("../../data/PSHeader.php");?>
 
     <main class="marginMain">
-        <?php 
-
-            $DatiQuery = "SELECT Nome,Cognome,Saldo FROM giocatore WHERE Username = '$Username'";
-
-            $Dati = $Connessione -> query($DatiQuery) or die("ERRORE QUERY". $Connessione->error);
-
-            foreach($Dati as $DatiItem) {
-                $Nome = $DatiItem["Nome"];
-                $Cognome = $DatiItem["Cognome"];
-                $Saldo = $DatiItem["Saldo"];
-                }
-
-            echo"<h1>Bentornato $Nome $Cognome</h1> ";
-            echo"<h2> Il tuo Saldo attuale é di $Saldo $ </h2>";
-        ?>    
-
-        <a href="../../data/LogOut.php" class="intro-text">
-            <div class="pulsanteLogOut">
-                <h2>LOGOUT</h2>
+    <div class="sidenavSP">
+        <div class="IconaSP" >
+            <a href="../../Pagine/PaginePHP/IconaImmagine.php"> <img class="IconaImg" src="../../Immagini/PhpImg/<?php echo $UserIcon?>" alt=""></a>
+        </div>
+        <?php echo "<h1>$Nome $Cognome</h1> ";?>
+        <a href="">
+            <div class="sideNavSPBox">
+                <img src="../../Immagini/PhpImg/SPChest.png" class="iconaSPNav" alt="">
+                <h3>I miei giochi</h3>
             </div>
         </a>
-
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus quos nostrum omnis assumenda consequuntur, ex odit ipsum debitis laudantium corporis illo velit magni optio deserunt quae ad dignissimos aliquid nemo.</p>
+        <a href="">
+            <div class="sideNavSPBox">
+                <img src="../../Immagini/PhpImg/SPAllay.png" class="iconaSPNav" alt="">
+                <h3>Il mio Account</h3>
+            </div>
+        </a>
+        <a href="">
+            <div class="sideNavSPBox">
+                <img src="../../Immagini/PhpImg/SPCuore.png" class="iconaSPNav" alt="">
+                <h3>Preferiti</h3>
+            </div>
+        </a>
+        <a href="../../data/LogOut.php">
+            <div class="sideNavSPBox">
+                <img src="../../Immagini/PhpImg/SPLock.png" class="iconaSPNav" alt="">
+                <h3>LogOut</h3>
+            </div>
+        </a>
+    </div>    
+    
+    <div class="ContentBoxSP">
+        <div class="BenevenutoTXT">
+            <?php echo"<h1>Bentornato $Nome $Cognome</h1> ";?>
+        </div>
+            <div class="SPboxSaldo">
+                <h3>IL TUO SALDO É DI : <?php echo "$Saldo" ?> $</h3>
+            </div>
+        <a href="" class="LinkBoxSP">
+            <div class="SPboxLinks">
+                    <img src="../../Immagini/PhpImg/SPChest.png" class="iconaSPHome" alt="">
+                    <div class="SPboxLinksTXT">
+                        <h3>I miei giochi</h3>
+                        <p>Visualizza i tuoi giochi e quelli disponibili nel negozio.</p>
+                    </div>
+            </div>
+        </a>
+        <a href="" class="LinkBoxSP">
+            <div class="SPboxLinks">
+                    <div class="SPboxLinksTXT">
+                        <h3>Il mio account</h3>
+                        <p>Visualizza i tuoi dati per modificarli o aggiornarli</p>
+                    </div>
+                    <img src="../../Immagini/PhpImg/SPAllay.png" class="iconaSPHome" alt="">
+            </div>
+        </a>
+        <a href="" class="LinkBoxSP">
+            <div class="SPboxLinks">
+                    <img src="../../Immagini/PhpImg/SPCuore.png" class="iconaSPHome" alt="">
+                    <div class="SPboxLinksTXT">
+                        <h3>Preferiti</h3>
+                        <p>Visualizza le pagine salvate nei preferiti</p>
+                    </div>
+            </div>
+        </a>
+        <a href="../../data/LogOut.php" class="LinkBoxSP">
+            <div class="SPboxLinks">
+                    <div class="SPboxLinksTXT">
+                        <h3>LOGOUT</h3>
+                        <p>Esci dal tuo account e torna al menú principale</p>
+                    </div>
+                    <img src="../../Immagini/PhpImg/SPLock.png" class="iconaSPHome" alt="">
+            </div>
+        </a>
+    </div>
+    <footer class="NoMargin">
+        <p class="small-text NoMargin">Sito non ufficiale programmato al solo scopo didattico e dimostrativo</p>
+    </footer>
     </main>
-    
-
-    <?php 
-        require ("../../data/Footer.php")
-    ?>
-    
-
 </body>
 </php>

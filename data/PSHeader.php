@@ -21,6 +21,7 @@
 
             foreach($dati as $DatiItem) {
                 $UserIcon = $DatiItem["Icona"];}
+            
         }
 
 

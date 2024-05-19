@@ -61,7 +61,7 @@ h1,h2,h3,h4,h5,p{color: black}
 .TxLe{text-align: left;}
 .Gr{color: lime;}
 .ital{font-style: italic;}
-
+.NoMargin{margin: 0;}
 
 img{
     max-width: 100%;
@@ -167,23 +167,31 @@ label img {
     margin-left: 10%;
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-evenly;
 }
 
 .box_icona{
     /* border: 1px solid blue; */
-    width: 24%;
+    /* width: 24%; */
     margin-left: 0.5%;
     margin-right: 0.5%;
     margin-top: 5px;
     margin-bottom: 5px;
-    height: 200px;
+    /* height: 200px; */
     display: flex;
+    align-items: center;
+    align-self: center;
+    height: 200px;
+    width: max-content;
 }
 
 .IconaImgSel{
-    width: 100%;
+    /* width: 100%;
     height: 100%;
-    border-radius: 100%;
+    border-radius: 100%; */
+    width: fit-content;
+    height: 100%;
+    border-radius: 50%;
 }
 
 .Checkbox{
@@ -201,6 +209,115 @@ label img {
     height: 100%;
 }
 
+.ContentBoxSP{
+    position: relative;
+    width: 80%;
+    margin-left: 20%;
+    padding-bottom: 10px;
+    background-image: url(Immagini/PhpImg/PSSfondo.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right;
+    background-attachment: fixed;
+}
+
+.BenevenutoTXT{
+    position: relative;
+    width: 100%;
+    padding-top: 10px;
+    background-color: hsla(0, 0%, 66%, 0.804);
+}
+
+.SPboxSaldo{
+    background-color: hsla(120, 100%, 53%, 0.804);
+    width: 80%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 10%;
+    border: 3px solid greenyellow;
+}
+
+.LinkBoxSP{
+    /* border: 1px solid red; */
+    margin-left: 10%;
+    width: 80%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.SPboxLinks{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: 100%;
+    height: 150px;
+    background-color: #a8a8a8cd;
+    display: flex;
+    position: relative;
+    border: 3px solid gray;
+}
+
+.SPboxLinksTXT{
+    width: 80%;
+    font-size: larger;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+}
+
+
+.IconaSPHome{
+    position: relative;
+    height: auto;
+    padding: 10px;
+    width: 20%;
+}
+
+.sidenavSP{
+    width: 20%;
+    height: 100%;
+    background-color: antiquewhite;
+    border-right: 3px solid gray;
+    position: fixed;
+    top: 16vh;
+}
+
+.sidenavSP h1{
+    text-align: center;
+    padding: 2px;
+    font-size: calc(1.2vw + 1.2vh);
+}
+
+.sideNavSPBox{
+    position: relative;
+    width: 100%;
+    background-color: gray;
+    height: 10%;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    border-top: 2px solid antiquewhite;
+    border-bottom: 2px solid antiquewhite;
+}
+
+.IconaSP{
+    align-items: center;
+    align-self: center;
+    height: 100px;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    width: max-content;
+}
+
+.IconaSPNav{
+    position: relative;
+    height: auto;
+    padding: 10px;
+    width: 20%;
+}
+
 .PulsanteLogOut{
     width: 40%;
     height: auto;
@@ -216,6 +333,7 @@ label img {
     
     
 }
+
 
 
 /* NEGOZIO */
@@ -466,9 +584,7 @@ label img {
     align-items: center;
     align-self: center;
     height: 75%;
-    /* margin-top: 12.5%; */
     width: max-content;
-    /* margin: 1px solid red; */
 }
 
 .IconaImg{
