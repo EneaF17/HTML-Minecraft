@@ -29,36 +29,8 @@
     <?php require("../../data/PSHeader.php");?>
 
     <main class="marginMain">
-    <div class="sidenavSP">
-        <div class="IconaSP" >
-            <a href="../../Pagine/PaginePHP/IconaImmagine.php"> <img class="IconaImg" src="../../Immagini/PhpImg/<?php echo $UserIcon?>" alt=""></a>
-        </div>
-        <?php echo "<h1>$Nome $Cognome</h1> ";?>
-        <a href="">
-            <div class="sideNavSPBox">
-                <img src="../../Immagini/PhpImg/SPChest.png" class="iconaSPNav" alt="">
-                <h3>I miei giochi</h3>
-            </div>
-        </a>
-        <a href="">
-            <div class="sideNavSPBox">
-                <img src="../../Immagini/PhpImg/SPAllay.png" class="iconaSPNav" alt="">
-                <h3>Il mio Account</h3>
-            </div>
-        </a>
-        <a href="">
-            <div class="sideNavSPBox">
-                <img src="../../Immagini/PhpImg/SPCuore.png" class="iconaSPNav" alt="">
-                <h3>Preferiti</h3>
-            </div>
-        </a>
-        <a href="../../data/LogOut.php">
-            <div class="sideNavSPBox">
-                <img src="../../Immagini/PhpImg/SPLock.png" class="iconaSPNav" alt="">
-                <h3>LogOut</h3>
-            </div>
-        </a>
-    </div>    
+    
+    <?php require("../../data/sideNav.php")?>
     
     <div class="ContentBoxSP">
         <div class="BenevenutoTXT">
@@ -76,7 +48,7 @@
                     </div>
             </div>
         </a>
-        <a href="" class="LinkBoxSP">
+        <a href="IlMioAccount.php" class="LinkBoxSP">
             <div class="SPboxLinks">
                     <div class="SPboxLinksTXT">
                         <h3>Il mio account</h3>

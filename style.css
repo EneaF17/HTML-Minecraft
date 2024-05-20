@@ -334,7 +334,27 @@ label img {
     
 }
 
+/* IL MIO ACCOUNT */
 
+.ContentBoxAccount{
+    margin-top: 12vh;
+    position: relative;
+    width: 80%;
+    margin-left: 20%;
+    padding-bottom: 10px;
+    border: 1px solid red;
+}
+
+.DatiAccountBox{
+    position: relative;
+    width: 90%;
+    margin-left: 5%;
+    background-image: url(Immagini/Pergamena.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    border: 1px solid red;
+
+}
 
 /* NEGOZIO */
 
