@@ -13,8 +13,12 @@
 
             $dati = $Connessione -> query($queryIcona) or die("ERRORE". $Connessione->error);
 
-            foreach($dati as $DatiItem) {
-                $UserIcon = $DatiItem["Icona"];}
+            $DatiItem=$dati->fetch_assoc();
+            $UserIcon=$DatiItem["Icona"];
+
+
+            // foreach($dati as $DatiItem) {
+            //     $UserIcon = $DatiItem["Icona"];}
         }
             $path = $_SERVER["PHP_SELF"] ;
             $pagina = dirname($path);
