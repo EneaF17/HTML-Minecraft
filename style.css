@@ -356,6 +356,24 @@ label img {
 
 }
 
+.UpdateDataButton{
+    margin-top: 10px;
+    margin-bottom: 5px;
+    width: 100%;
+    height: 10vh;
+    /* margin-left: 25%; */
+    background-color: lightgray;
+    cursor: pointer;
+    font-size: x-large;
+    font-weight: bold;
+    transition: 0.4s;
+}
+
+.UpdateDataButton:hover {
+    background-color: rgb(156, 156, 156);
+    transform: scale(1.05);
+}
+
 /* NEGOZIO */
 
 .Box_Negozio{

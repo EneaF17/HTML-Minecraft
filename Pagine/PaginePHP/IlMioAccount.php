@@ -4,7 +4,11 @@
     if (!isset($_SESSION["Username"])) { header("location: ../");}
 
     $Username = $_SESSION["Username"];
-    $Disable = "disabled";
+    if (isset($_POST["Pulsante"])) {
+        if ($_POST["Pulsante"] == "Modifica") {
+        }
+    }
+    $Disable = "Disabled";
     
     $DatiQuery = "SELECT Password,Nome,Cognome,Compleanno,Email,Telefono 
                 FROM giocatore WHERE Username = '$Username'";
@@ -41,7 +45,7 @@
     <div class="ContentBoxAccount">
         <div class="DatiAccountBox">
             <h2>DATI ACCOUNT</h2>
-            <form action="" method="post">
+            <form action="../../data/disabilita.php" method="post">
             <table class="LoginTable" >
                     <tr>
                         <td><label for="Username">Username</label></td>
@@ -72,7 +76,7 @@
                         <td><input type="text" <?php echo $Disable?> id="Telefono" name="Telefono" value="<?php echo $Telefono?>"></td>
                     </tr>
                     <tr>
-                    <td colspan="2"><input class="SubmitButtonIcone" type="submit"></td>
+                    <td colspan="2"><input name="Pulsante" class="UpdateDataButton" type="submit" value="MODIFICA I DATI"></td>
                 </tr>
                 </table>
             </form>
