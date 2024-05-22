@@ -7,6 +7,7 @@
     if (isset($_POST["Cognome"])) {$Cognome = $_POST ["Cognome"];} else {$Cognome = "";}
     if (isset($_POST["Email"])) {$Email = $_POST ["Email"];} else {$Email = "";}
     if (isset($_POST["Telefono"])) {$Telefono = $_POST ["Telefono"];} else {$Telefono = "";}
+    $random = rand(1,6);
 ?>
 
 
@@ -81,7 +82,10 @@
                     $ris = $Connessione -> query($QueryReg) or die("ERRORE NELLA QUERY". $Connessione->error);
 
                     if ($ris -> num_rows > 0) {
-                        echo"<h2>USERNAME GIA' IN USO</h2>";}
+                        echo"<h2>USERNAME GIA' IN USO</h2>";
+                        $loading = true;
+                        header("Refresh: $random;");
+                    }
                     else {
 
                         $DataIns = new DateTime($DataN);
@@ -91,6 +95,8 @@
                         $giorno = $DataIns->diff($DataR)->d;
                         if ($anno<14){
                             echo "<h2>DEVI AVERE ALMENO 14 ANNI PER REGISTRARTI</h2>";
+                            $loading = true;
+                            header("Refresh: $random;");
                         }
                         else{
 
@@ -100,8 +106,9 @@
                                 session_start();
                                 $_SESSION["Username"] = $Username;
                                 echo "<h2>REGISTRAZIONE COMPLETATA</h2>";
-                                header('location:IconaImmagine.php');}
-                            else{ echo "<h2>ERRORE NELLA REGISTRAZIONE</h2>";
+                                $loading = true;
+                                header("Refresh: $random; IconaImmagine.php");}
+                            else{ echo "<h2>ERRORE NELLA REGISTRAZIONE</h2>"; $loading = false;;
                             }
                         }
                     }
@@ -110,10 +117,18 @@
             }
             else{
                 echo"<h2>Compila i campi qua sopra...</h2>";
+                $loading = false;
                 
             }
             echo "</div>";
             require ("../../data/Footer.php");
+            if ($loading) {
+                echo <<<EOD
+                <div class="CopriTutto">
+                    <div class="loaderGen1"></div>
+                    <div class="loaderGen2"></div>
+                </div>
+                EOD;}
         ?>
     </body>
 </php>

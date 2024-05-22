@@ -10,6 +10,8 @@
     else {
         $LinkUscita = "SP_Home.php";
     }
+    $loading = false;
+    $random = rand(1,6);
 ?>
 
 
@@ -44,6 +46,8 @@
         </div>
     </div>
 
+    
+
     <div class="loginBox">
         <h1>LOGIN</h1>
         <form action="" method="post">
@@ -65,6 +69,7 @@
             if (isset($_POST["Username"]) and isset($_POST["Password"])) {
                 $Username = $_POST["Username"] ;
                 $Password = $_POST["Password"] ;
+                
 
                 $LoginQuery = "SELECT Username, password FROM giocatore WHERE Username='$Username' AND password='$Password' ";
                 
@@ -72,17 +77,28 @@
 
                 if($ris ->num_rows == 0) {
                     echo "<p> Nome utente o password errati </p>";
-                    $Connessione ->close(); }
+                    header("Refresh: $random;");
+                    $loading = true;
+                }
                 else {
                     $_SESSION["Username"] = $Username;
-                    $Connessione -> close();
 
-                    header("location:$LinkUscita");
+                    $loading = true;
+                    header("Refresh: $random; $LinkUscita");
                     // echo"CONNESSIONE ESEGUITA";
                 }
             }
-
-        ?>  
+            if ($loading) {
+                echo <<<EOD
+                <div class="CopriTutto">
+                    <div class="loaderGen1"></div>
+                    <div class="loaderGen2"></div>
+                </div>
+                EOD;
+                $loading =false;
+            }
+            
+        ?>
     </div>
     <footer class="footerLogin">
     <p class="small-text">Sito non ufficiale programmato al solo scopo didattico e dimostrativo</p>

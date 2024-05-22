@@ -44,7 +44,8 @@
                                     WHERE Username = '$Username'";
 
                     $Connessione -> query($UpdateQuery) or die("ERRORE QUERY". $Connessione->error);
-                    header("Refresh: 2;");
+                    $random = rand(1,6);
+                    header("Refresh: $random;");
                     $loading = true;
             }
         }
