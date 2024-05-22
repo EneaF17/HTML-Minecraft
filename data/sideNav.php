@@ -15,7 +15,7 @@
                 <h3>Il mio Account</h3>
             </div>
         </a>
-        <a href="">
+        <a href="Preferiti.php">
             <div class="sideNavSPBox">
                 <img src="../../Immagini/PhpImg/SPCuore.png" class="iconaSPNav" alt="">
                 <h3>Preferiti</h3>

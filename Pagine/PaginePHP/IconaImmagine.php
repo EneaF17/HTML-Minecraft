@@ -76,7 +76,7 @@
         </div>
         <input class="SubmitButtonIcone" type="submit">
     </form>
-<div style="" ></div>
+<div ></div>
     <?php 
         if (isset($_POST["Icon"])) {
 
