@@ -27,9 +27,9 @@
             <?php 
             require("../../data/Header.php");
             ?>
-            
-            <div class="cuore">
 
+            <div class="cuore">
+                <a href=""><img src="../../Immagini/PhpImg/SPCuore.png" alt=""></a>
             </div>
             
             <div class="contenitorePulsanti">
