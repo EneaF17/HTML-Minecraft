@@ -1,6 +1,18 @@
 <?php 
     session_start();
     require ("../../data/connessioneDB.php");
+
+    $Username=$_SESSION["Username"];
+    $NomePag=basename($_SERVER["PHP_SELF"]);
+
+
+    $query="SELECT Pagina FROM giocatore 
+    JOIN preferiti ON giocatore.Username=preferiti.Username 
+    JOIN pagpref ON preferiti.IdPag=pagpref.IdPag
+    WHERE giocatore.Username='$Username' AND Pagina='$NomePag'";
+
+    $dati = $Connessione -> query($query) or die("ERRORE". $Connessione->error);
+    
 ?>
 
 <!DOCTYPE php>
