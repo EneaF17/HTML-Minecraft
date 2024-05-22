@@ -4,7 +4,7 @@ require ("../../data/connessioneDB.php");
 if (!isset($_SESSION["Username"])) {
     header("location: ../../");
 }
-
+$random = rand(1,6);
 $Username = $_SESSION["Username"];
 
 if (isset($_POST["Versione"])) {
@@ -58,8 +58,13 @@ if (isset($_POST["Versione"])) {
             }
         }
     }
+    $random = rand(1,6);
+    header("Refresh: $random;");
+    $loading = true;
 } else {
     $Esito = "ESITO ACQUISTO...";
+    $loading = false;
+    $random = rand(1,6);
 }
 ?>
 
@@ -78,6 +83,13 @@ if (isset($_POST["Versione"])) {
     <body>
         <?php
         require ("../../data/Header.php");
+        if ($loading) {
+            echo <<<EOD
+            <div class="CopriTutto">
+                <div class="loaderGen1"></div>
+                <div class="loaderGen2"></div>
+            </div>
+            EOD;}
         ?>
         <main>
             <img src="../../Immagini/Negozio/SfondoJava.avif" alt="">

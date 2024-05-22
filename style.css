@@ -88,21 +88,20 @@ html{
     align-items: center;
     justify-content: center;
     z-index: 1000;
-    position: absolute;
+    position: fixed;
     top: 0;
+    left: 0;
 }
 
 
 .loaderGen1 {
-    /* border: 16px solid #f3f3f3;
-    border-top: 16px solid #3498db; */
     width: 120px;
     height: 120px;
     z-index: 1001;
     animation: traslaCubo1 3s infinite ease;
     background-image: url(Immagini/SfondoHeader.jpg);
     background-size: cover;
-    position: absolute;
+    position: fixed;
 }
 .loaderGen2 {
     /* border: 16px solid #f3f3f3;
