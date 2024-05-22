@@ -57,7 +57,7 @@
                     <img src="../../Immagini/PhpImg/SPAllay.png" class="iconaSPHome" alt="">
             </div>
         </a>
-        <a href="" class="LinkBoxSP">
+        <a href="Preferiti.php" class="LinkBoxSP">
             <div class="SPboxLinks">
                     <img src="../../Immagini/PhpImg/SPCuore.png" class="iconaSPHome" alt="">
                     <div class="SPboxLinksTXT">
