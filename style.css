@@ -1421,6 +1421,16 @@ label img {
 }
 
 
+/* CUORE */
+.cuore{
+    width:10%;
+    height:10%;
+    display: block;
+    border: 1px solid red;
+    margin-top: 20vh;
+}
+
+
 
 /* PULSANTI WIKI */
 
