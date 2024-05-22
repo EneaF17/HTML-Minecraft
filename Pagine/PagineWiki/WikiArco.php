@@ -28,7 +28,9 @@
             require("../../data/Header.php");
             ?>
 
-
+            <div class="cuore">
+                <a href=""><img src="../../Immagini/PhpImg/SPCuore.png" alt=""></a>
+            </div>
             
             <div class="contenitorePulsanti">
                 <ul class="Pulsanti" style="list-style-type: none;">
@@ -36,7 +38,6 @@
                     <li><a href="../Minecraft_Wiki.php"><img src="../../immagini/FrecciaSu.png"alt=""></a></li>
                     <li><a href="WikiCreeper.php"><img src="../../immagini/FrecciaDx.png"alt=""></a></li>
                 </ul>
-
             </div>
             <div class="contenitoreWiki">
                 <h1 class="titolo">Arco</h1>
