@@ -34,7 +34,7 @@ CREATE TABLE IF NOT EXISTS `giocatore` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- Dump dei dati della tabella minecraftsito.giocatore: ~9 rows (circa)
-REPLACE INTO `giocatore` (`Username`, `Password`, `Nome`, `Cognome`, `Compleanno`, `Email`, `Telefono`, `Icona`, `Saldo`) VALUES
+INSERT INTO `giocatore` (`Username`, `Password`, `Nome`, `Cognome`, `Compleanno`, `Email`, `Telefono`, `Icona`, `Saldo`) VALUES
 	('asd', 'asd', 'ASD', 'DSA', '2000-01-01', 'asd@gmail.com', '019292910', 'Icona_Maiale.jpg', 1000),
 	('asd1234', 'asd', 'asdr', 'asde', '2000-10-11', '', '', 'Icona_Enderman.jpg', 0),
 	('asd23', 'asd', 'asd', 'asd', '2050-08-15', '', '', 'Icona_Alex.jpg', 0),
@@ -52,9 +52,27 @@ CREATE TABLE IF NOT EXISTS `pagpref` (
   PRIMARY KEY (`IdPag`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
--- Dump dei dati della tabella minecraftsito.pagpref: ~1 rows (circa)
-REPLACE INTO `pagpref` (`IdPag`, `Pagina`) VALUES
-	(0, 'WikiArco.php');
+-- Dump dei dati della tabella minecraftsito.pagpref: ~19 rows (circa)
+INSERT INTO `pagpref` (`IdPag`, `Pagina`) VALUES
+	(0, 'WikiArco.php'),
+	(1, 'WikiCreeper.php'),
+	(2, 'WikiDiamante.php'),
+	(3, 'WikiEnderDragon.php'),
+	(4, 'WikiFornace.php'),
+	(5, 'WikiHerobrine.php'),
+	(6, 'WikiLanterna.php'),
+	(7, 'WikiMelaDoro.php'),
+	(8, 'WikiOro.php'),
+	(9, 'WikiPistone.php'),
+	(10, 'WikiTnt.php'),
+	(11, 'GuidaCommandBlock.php'),
+	(12, 'GuidaFireworks.php'),
+	(13, 'GuidaPVP.php'),
+	(14, 'GuidaTrovareDiamanti.php'),
+	(15, '20w06a.php'),
+	(16, '21w37a.php'),
+	(17, '21w39a.php'),
+	(18, '22w11a.php');
 
 -- Dump della struttura di tabella minecraftsito.preferiti
 CREATE TABLE IF NOT EXISTS `preferiti` (
@@ -67,7 +85,7 @@ CREATE TABLE IF NOT EXISTS `preferiti` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- Dump dei dati della tabella minecraftsito.preferiti: ~1 rows (circa)
-REPLACE INTO `preferiti` (`Username`, `IdPag`) VALUES
+INSERT INTO `preferiti` (`Username`, `IdPag`) VALUES
 	('asd', 0);
 
 /*!40103 SET TIME_ZONE=IFNULL(@OLD_TIME_ZONE, 'system') */;
