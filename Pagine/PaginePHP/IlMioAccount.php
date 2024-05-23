@@ -5,6 +5,7 @@
 
     $Username = $_SESSION["Username"];
     $loading = false;
+    $random = rand(1,4);
     
     $DatiQuery = "SELECT Password,Nome,Cognome,Compleanno,Email,Telefono 
                 FROM giocatore WHERE Username = '$Username'";
@@ -44,7 +45,6 @@
                                     WHERE Username = '$Username'";
 
                     $Connessione -> query($UpdateQuery) or die("ERRORE QUERY". $Connessione->error);
-                    $random = rand(1,6);
                     header("Refresh: $random;");
                     $loading = true;
             }

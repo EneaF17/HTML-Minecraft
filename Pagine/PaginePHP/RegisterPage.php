@@ -1,13 +1,20 @@
-<?php 
-    if (isset($_POST["Username"])) {$Username = $_POST ["Username"];} else {$Username = "";}
-    if (isset($_POST["Password"])) {$Password = $_POST ["Password"];} else {$Password = "";}
-    if (isset($_POST["PasswordConf"])) {$PasswordConf = $_POST ["PasswordConf"];} else {$PasswordConf = "";}
-    if (isset($_POST["DataN"])) {$DataN = $_POST ["DataN"];} else {$DataN = "";}
-    if (isset($_POST["Nome"])) {$Nome = $_POST ["Nome"];} else {$Nome = "";}
-    if (isset($_POST["Cognome"])) {$Cognome = $_POST ["Cognome"];} else {$Cognome = "";}
-    if (isset($_POST["Email"])) {$Email = $_POST ["Email"];} else {$Email = "";}
-    if (isset($_POST["Telefono"])) {$Telefono = $_POST ["Telefono"];} else {$Telefono = "";}
-    $random = rand(1,6);
+<?php
+    session_start();
+    require("../../data/connessioneDB.php");
+    $_SESSION['previous'] = basename($_SERVER['PHP_SELF']);
+    
+    
+    if (isset($_SESSION["UsernameReg"])) {$Username = $_SESSION["UsernameReg"];} else {$Username = "";}
+    if (isset($_SESSION["PasswordReg"])) {$Password = $_SESSION["PasswordReg"];} else {$Password = "";}
+    if (isset($_SESSION["PasswordConfReg"])) {$PasswordConf = $_SESSION["PasswordConfReg"];} else {$PasswordConf = "";}
+    if (isset($_SESSION["DataNReg"])) {$DataN = $_SESSION["DataNReg"];} else {$DataN = "";}
+    if (isset($_SESSION["NomeReg"])) {$Nome = $_SESSION["NomeReg"];} else {$Nome = "";}
+    if (isset($_SESSION["CognomeReg"])) {$Cognome = $_SESSION["CognomeReg"];} else {$Cognome = "";}
+    if (isset($_SESSION["EmailReg"])) {$Email = $_SESSION["EmailReg"];} else {$Email = "";}
+    if (isset($_SESSION["TelefonoReg"])) {$Telefono = $_SESSION["TelefonoReg"];} else {$Telefono = "";}
+    $random = rand(1,4);
+    
+    if (isset($_SESSION["PostReg"])) {$dati = $_SESSION["PostReg"];} else {$dati = "LOL";}
 ?>
 
 
@@ -73,9 +80,22 @@
             </form>
         <?php 
             if (isset($_POST["Username"]) and isset($_POST["Password"]) and isset($_POST["PasswordConf"])) {
-                if($_POST["Password"] != $_POST["PasswordConf"]) { echo"<h2>LE PASSWORD NON COINCIDONO</h2>";}
+                $_SESSION["PostReg"] = $_POST;
+
+                if (isset($_POST["Username"])) {$_SESSION["UsernameReg"] = $_POST ["Username"];} else {$_SESSION["UsernameReg"] = "";}
+                if (isset($_POST["Password"])) {$_SESSION["PasswordReg"] = $_POST ["Password"];} else {$_SESSION["PasswordReg"] = "";}
+                if (isset($_POST["PasswordConf"])) {$_SESSION["PasswordConfReg"] = $_POST ["PasswordConf"];} else {$_SESSION["PasswordConfReg"] = "";}
+                if (isset($_POST["DataN"])) {$_SESSION["DataNReg"] = $_POST ["DataN"];} else {$_SESSION["DataNReg"] = "";}
+                if (isset($_POST["Nome"])) {$_SESSION["NomeReg"] = $_POST ["Nome"];} else {$_SESSION["Nome"] = "";}
+                if (isset($_POST["Cognome"])) {$_SESSION["CognomeReg"] = $_POST ["Cognome"];} else {$_SESSION["CognomeReg"] = "";}
+                if (isset($_POST["Email"])) {$_SESSION["EmailReg"] = $_POST ["Email"];} else {$_SESSION["EmailReg"] = "";}
+                if (isset($_POST["Telefono"])) {$_SESSION["TelefonoReg"] = $_POST ["Telefono"];} else {$_SESSION["TelefonoReg"] = "";}
+                if($_POST["Password"] != $_POST["PasswordConf"]) { 
+                    echo"<h2>LE PASSWORD NON COINCIDONO</h2>";
+                    $loading = true;
+                    header("Refresh: $random;");
+                }
                 else{
-                    require("../../data/connessioneDB.php");
 
                     $QueryReg = "SELECT username FROM giocatore WHERE username = '$Username'";
 
@@ -103,7 +123,6 @@
                             $QueryReg2 = "INSERT INTO giocatore (Username,Password,Nome,Cognome,Compleanno,Email,Telefono)
                                         VALUES ('$Username','$Password','$Nome','$Cognome','$DataN','$Email','$Telefono')";
                             if ($Connessione -> query($QueryReg2) === true) {
-                                session_start();
                                 $_SESSION["Username"] = $Username;
                                 echo "<h2>REGISTRAZIONE COMPLETATA</h2>";
                                 $loading = true;

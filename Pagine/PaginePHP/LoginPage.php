@@ -2,8 +2,15 @@
     session_start();
     require("../../data/connessioneDB.php");
 
-    if (isset($_POST["Username"])) {$Username = $_POST ["Username"];} else {$Username = "";}
+    if (isset($_SESSION['previous'])) {
+        if (basename($_SERVER['PHP_SELF']) != $_SESSION['previous']) {
+             session_destroy();
+        }
+     }
 
+    // if (isset($_POST["Username"])) {$_SESSION["UsernameLog"] = $_POST ["UsernameLog"];} else {$_SESSION["UsernameLog"] = "";}
+    if (isset($_SESSION["UsernameLog"])) {$Username = $_SESSION["UsernameLog"];} else {$Username = "";}
+    
     if(isset($_SESSION["Reindirizza"])) {
         $LinkUscita = $_SESSION["Reindirizza"];
     }
@@ -11,7 +18,7 @@
         $LinkUscita = "SP_Home.php";
     }
     $loading = false;
-    $random = rand(1,6);
+    $random = rand(1,4);
 ?>
 
 
@@ -69,6 +76,7 @@
             if (isset($_POST["Username"]) and isset($_POST["Password"])) {
                 $Username = $_POST["Username"] ;
                 $Password = $_POST["Password"] ;
+                $_SESSION["UsernameLog"] = $_POST["Username"];
                 
 
                 $LoginQuery = "SELECT Username, password FROM giocatore WHERE Username='$Username' AND password='$Password' ";
