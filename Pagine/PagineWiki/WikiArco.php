@@ -2,22 +2,28 @@
     session_start();
     require ("../../data/connessioneDB.php");
 
-    $Username=$_SESSION["Username"];
+    $PagCompleta=$_SERVER["PHP_SELF"];
     $NomePag=basename($_SERVER["PHP_SELF"]);
-    
-    
-    $query="SELECT Pagina FROM giocatore 
-    JOIN preferiti ON giocatore.Username=preferiti.Username 
-    JOIN pagpref ON preferiti.IdPag=pagpref.IdPag
-    WHERE giocatore.Username='$Username' AND Pagina='$NomePag'";
-
-    $dati = $Connessione -> query($query) or die("ERRORE". $Connessione->error);
-    if ($dati->num_rows == 0){
+     
+    if(!isset($_SESSION["Username"])){
         $Pref=false;
     }
     else{
-        $Pref=true;
+        $Username=$_SESSION["Username"];
+        $query="SELECT Pagina FROM giocatore 
+        JOIN preferiti ON giocatore.Username=preferiti.Username 
+        JOIN pagpref ON preferiti.IdPag=pagpref.IdPag
+        WHERE giocatore.Username='$Username' AND Pagina='$NomePag'";
+    
+        $dati = $Connessione -> query($query) or die("ERRORE". $Connessione->error);
+        if ($dati->num_rows == 0){
+            $Pref=false;
+        }
+        else{
+            $Pref=true;
+        }
     }
+    
 ?>
 
 <!DOCTYPE php>
@@ -48,11 +54,11 @@
             <div class="cuore">
                 <?php
                     if($Pref==false) {echo <<<EOD
-                        <a href=""><img src="../../Immagini/PhpImg/SPCuore.png" alt=""></a>
+                        <a href="../PaginePHP/Cuore.php?preferita=$Pref&nomepag=$PagCompleta"><img src="../../Immagini/PhpImg/SPCuore.png" alt=""></a>
                         EOD;
                     }
                     else{echo <<<EOD
-                        <a href=""><img src="../../Immagini/PhpImg/SPCuoreRosso.png" alt=""></a>
+                        <a href="../PaginePHP/Cuore.php?preferita=$Pref&nomepag=$PagCompleta"><img src="../../Immagini/PhpImg/SPCuoreRosso.png" alt=""></a>
                         EOD;
                     }
                 ?>
