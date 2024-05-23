@@ -6,6 +6,13 @@ if (!isset($_SESSION["Username"])) {
 }
 
 $Username = $_SESSION["Username"];
+$query="SELECT Pagina, Tipo, Foto
+    FROM giocatore JOIN preferiti ON giocatore.Username=preferiti.Username
+        JOIN pagpref ON pagpref.IdPag=preferiti.IdPag
+    WHERE giocatore.Username='$Username'";
+
+$Pagine=$Connessione -> query($query) or die("ERRORE". $Connessione->error);
+
 ?>
 <!DOCTYPE php>
 <php lang="it">
@@ -19,8 +26,24 @@ $Username = $_SESSION["Username"];
     <?php require("../../data/PSHeader.php");?>
 
     <main class="marginMain">
-    
+        <!-- <?php foreach($Pagine as $Pagina)?>
+            <?php
+                $NomePag=$Pagina["Pagina"];
+                $Tipo=$Pagina["Tipo"];
+                $NomeFoto=$Pagina["Foto"];
+                $link="../Pagine".$Tipo."/".$NomePag;
+            ?>
+            <div class="pagPref">
+                <?php echo <<<EOD
+                    <a href=$link>No</a>
+                    EOD;
+                ?>
+            </div>
+        <?php endforeach?> -->
+        
+        
         <?php require("../../data/footer.php");?>
     </main>
+
 </body>
 </php>

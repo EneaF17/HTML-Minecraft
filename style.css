@@ -1435,6 +1435,13 @@ label img {
     transform: scale(1.1);
 }
 
+/* PAGINE PREF */
+.pagPref{
+    width:50%;
+    margin-left: 25%;
+    border: 1px solid red;
+}
+
 
 
 /* PULSANTI WIKI */
