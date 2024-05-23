@@ -4,7 +4,7 @@ require ("../../data/connessioneDB.php");
 if (!isset($_SESSION["Username"])) {
     header("location: ../../");
 }
-$random = rand(1,6);
+$random = rand(1,4);
 $Username = $_SESSION["Username"];
 
 if (isset($_POST["Versione"])) {
@@ -58,13 +58,11 @@ if (isset($_POST["Versione"])) {
             }
         }
     }
-    $random = rand(1,6);
     header("Refresh: $random;");
     $loading = true;
 } else {
     $Esito = "ESITO ACQUISTO...";
     $loading = false;
-    $random = rand(1,6);
 }
 ?>
 

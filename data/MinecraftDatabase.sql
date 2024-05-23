@@ -1,6 +1,6 @@
 -- --------------------------------------------------------
 -- Host:                         127.0.0.1
--- Versione server:              10.4.28-MariaDB - mariadb.org binary distribution
+-- Versione server:              10.4.32-MariaDB - mariadb.org binary distribution
 -- S.O. server:                  Win64
 -- HeidiSQL Versione:            12.5.0.6677
 -- --------------------------------------------------------
@@ -44,6 +44,31 @@ REPLACE INTO `giocatore` (`Username`, `Password`, `Nome`, `Cognome`, `Compleanno
 	('qw', 'asd', 'asdf', 'asdf', '2000-01-11', '', '', 'Icona_Steve.jpg', 0),
 	('qwerty', 'qwerty', 'Qwerty', 'Tarantino', '1997-05-12', '', '', 'Icona_Zombie.jpg', 0),
 	('Tormix', 'asd', 'Francesco', 'Tormene', '1986-04-09', '', '', 'Icona_Villager.png', 0);
+
+-- Dump della struttura di tabella minecraftsito.pagpref
+CREATE TABLE IF NOT EXISTS `pagpref` (
+  `IdPag` int(11) NOT NULL DEFAULT 0,
+  `Pagina` char(50) NOT NULL DEFAULT '',
+  PRIMARY KEY (`IdPag`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- Dump dei dati della tabella minecraftsito.pagpref: ~1 rows (circa)
+REPLACE INTO `pagpref` (`IdPag`, `Pagina`) VALUES
+	(0, 'WikiArco.php');
+
+-- Dump della struttura di tabella minecraftsito.preferiti
+CREATE TABLE IF NOT EXISTS `preferiti` (
+  `Username` char(50) NOT NULL DEFAULT '',
+  `IdPag` int(11) NOT NULL DEFAULT 0,
+  PRIMARY KEY (`IdPag`,`Username`) USING BTREE,
+  KEY `FK_preferiti_giocatore` (`Username`),
+  CONSTRAINT `FK_preferiti_giocatore` FOREIGN KEY (`Username`) REFERENCES `giocatore` (`Username`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `FK_preferiti_pagpref` FOREIGN KEY (`IdPag`) REFERENCES `pagpref` (`IdPag`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- Dump dei dati della tabella minecraftsito.preferiti: ~1 rows (circa)
+REPLACE INTO `preferiti` (`Username`, `IdPag`) VALUES
+	('asd', 0);
 
 /*!40103 SET TIME_ZONE=IFNULL(@OLD_TIME_ZONE, 'system') */;
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
