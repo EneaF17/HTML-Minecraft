@@ -22,20 +22,22 @@ $Pagine=$Connessione -> query($query) or die("ERRORE". $Connessione->error);
     <title>SP - HOME</title>
     <link rel="stylesheet" href="../../style.css">
 </head>
+<?php require("../../data/PSHeader.php");?>
 <body>
-    <?php require("../../data/PSHeader.php");?>
+    
 
 
     <main class="marginMain">
+    <?php require("../../data/sideNav.php")?>
         <h1 class="prefTitle">Le tue pagine preferite</h1>
 
         <?php 
         if($Pagine->num_rows==0)
         {
-            echo "<p>Non hai pagine preferite</p>";
+            echo "<h2 class='LinkPagPref'>Non hai pagine preferite</h2>";
         }
-        else{        
-            foreach($Pagine as $Pagina)
+        else{    
+            foreach($Pagine as $Pagina){
                 $NomePag=$Pagina["Pagina"];
                 $Tipo=$Pagina["Tipo"];
                 $NomeFoto=$Pagina["Foto"];
@@ -43,19 +45,20 @@ $Pagine=$Connessione -> query($query) or die("ERRORE". $Connessione->error);
                 $Titolo=basename($NomePag, ".php");
                 $linkImg="../../Immagini/Immagini".$Tipo."/".$NomeFoto;
                 echo <<<EOD
-                <a class="linkpagPref"href=$link>
+
+                <a class="linkpagPref" href=$link>
                 <div class="pagPref">
                     <img class="imgPagPref" src="$linkImg" alt="">
-                    <p class="LinkPreftxt">$Titolo</p>
+                    <h2 class="LinkPreftxt">$Titolo</h2>
                 </div>
                 </a>
-                EOD;
+                EOD;}
         }
         ?>
         
         
-        <?php require("../../data/footer.php");?>
     </main>
+    <?php require("../../data/footer.php");?>
 
 </body>
 </php>

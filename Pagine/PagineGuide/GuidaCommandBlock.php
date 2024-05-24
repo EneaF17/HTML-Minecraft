@@ -1,6 +1,7 @@
 <?php 
     session_start();
     require ("../../data/connessioneDB.php");
+    require ("../../data/CuoreScript.php");
 ?>
 
 
@@ -25,6 +26,7 @@
         <body>
             <?php 
             require("../../data/Header.php");
+            require("../../data/Cuore.php");
             ?>
 
 

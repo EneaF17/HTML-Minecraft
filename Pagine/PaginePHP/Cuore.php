@@ -13,7 +13,9 @@
     if ($pref==true){
         $query1="SELECT IdPag FROM pagpref WHERE Pagina='$Pag'";
         $ris=$Connessione->query($query1) or die("ERRORE". $Connessione->error);
-        $Id=$ris->fetch_assoc();
+
+        foreach($ris as $dato)
+            $Id=$dato["IdPag"];
 
         $query2="DELETE FROM preferiti WHERE IdPag='$Id' AND Username='$Username'";
         $ris=$Connessione->query($query2) or die("ERRORE". $Connessione->error);
@@ -21,13 +23,13 @@
     else{
         $query1="SELECT IdPag FROM pagpref WHERE Pagina='$Pag'";
         $ris=$Connessione->query($query1) or die("ERRORE". $Connessione->error);
-        $Id=$ris->fetch_assoc();
 
-        $query2="INSERT INTO preferiti (Username,IdPag)
-                VALUES ('$Username', '$Id')";
+        foreach($ris as $dato)
+            $Id=$dato["IdPag"];
+
+        $query2="INSERT INTO preferiti (Username,IdPag) VALUES ('$Username', '$Id')";
         $ris=$Connessione->query($query2) or die("ERRORE". $Connessione->error);
     }
 
 
-    header("location:$nomepag")
-?>
+    header("location:$nomepag");

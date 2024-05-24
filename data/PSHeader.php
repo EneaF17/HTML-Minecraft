@@ -1,4 +1,4 @@
-<div class="header header--nocta">
+<div class="headerPS header--nocta">
     <div class="logo">
         <a href="../../" class="logo-link">            
             <img src="../../immagini/logo.png" alt="">

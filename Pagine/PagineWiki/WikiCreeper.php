@@ -2,6 +2,7 @@
     session_start();
     require ("../../data/connessioneDB.php");
     require ("../../data/CuoreScript.php");
+
 ?>
 
 <!DOCTYPE php>
@@ -27,7 +28,7 @@
 
             <?php 
             require("../../data/Header.php");
-            require("../../data/Cuore.php")
+            require("../../data/Cuore.php");
             ?>
             <div class="contenitorePulsanti">
                 <ul class="Pulsanti" style="list-style-type: none;">

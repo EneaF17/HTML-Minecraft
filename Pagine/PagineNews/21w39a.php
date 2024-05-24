@@ -1,7 +1,8 @@
 <?php 
     session_start();
     require ("../../data/connessioneDB.php");
-?>
+    require ("../../data/CuoreScript.php");
+    ?>
 
 <!DOCTYPE php>
 <php lang="en">
@@ -12,8 +13,8 @@
         <link rel="icon" type="image/x-icon" href="../../Immagini/SfondoHeader.jpg">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
         <link rel="stylesheet" href="../../style.css">
-
-
+        
+        
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
@@ -21,8 +22,9 @@
     <body>
         
         <div class="contenitore">
-        <?php 
+            <?php 
             require("../../data/Header.php");
+            require("../../data/Cuore.php");
             ?>
             
             <div class="contenitorePulsanti">
