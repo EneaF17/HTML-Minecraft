@@ -35,7 +35,7 @@ CREATE TABLE IF NOT EXISTS `giocatore` (
 
 -- Dump dei dati della tabella minecraftsito.giocatore: ~9 rows (circa)
 REPLACE INTO `giocatore` (`Username`, `Password`, `Nome`, `Cognome`, `Compleanno`, `Email`, `Telefono`, `Icona`, `Saldo`) VALUES
-	('asd', 'asd', 'ASD', 'DSA', '2000-01-01', 'asd@gmail.com', '019292910', 'Icona_Maiale.jpg', 1000),
+	('asd', 'asd', 'ASD', 'DSA', '2000-01-01', 'asd@gmail.com', '019292910', 'Icona_Enderman.jpg', 1000),
 	('asd1234', 'asd', 'asdr', 'asde', '2000-10-11', '', '', 'Icona_Enderman.jpg', 0),
 	('asd23', 'asd', 'asd', 'asd', '2050-08-15', '', '', 'Icona_Alex.jpg', 0),
 	('asdf', 'asdf', 'AsdF', 'FdsA', '2008-06-25', '', '', 'Icona_Zombie.jpg', 0),
@@ -43,7 +43,7 @@ REPLACE INTO `giocatore` (`Username`, `Password`, `Nome`, `Cognome`, `Compleanno
 	('Fradre69', 'asd', 'Francesco', 'Vivenzio', '2006-12-23', '', '', 'Icona_Pecora.png', 0),
 	('qw', 'asd', 'asdf', 'asdf', '2000-01-11', '', '', 'Icona_Steve.jpg', 0),
 	('qwerty', 'qwerty', 'Qwerty', 'Tarantino', '1997-05-12', '', '', 'Icona_Zombie.jpg', 0),
-	('Tormix', 'asd', 'Francesco', 'Tormene', '1986-04-09', '', '', 'Icona_Villager.png', 0);
+	('Tormix', 'asd', 'Francesco', 'Tormene', '1986-04-09', '', '', 'Icona_Creeper.png', 0);
 
 -- Dump della struttura di tabella minecraftsito.pagpref
 CREATE TABLE IF NOT EXISTS `pagpref` (
@@ -67,10 +67,10 @@ REPLACE INTO `pagpref` (`IdPag`, `Pagina`, `Tipo`, `Foto`) VALUES
 	(8, 'WikiOro.php', 'Wiki', 'Oro.webp'),
 	(9, 'WikiPistone.php', 'Wiki', 'Pistone.webp'),
 	(10, 'WikiTnt.php', 'Wiki', 'Tnt.webp'),
-	(11, 'GuidaCommandBlock.php', 'Guide', 'CommandBlock16.jpeg'),
-	(12, 'GuidaFireworks.php', 'Guide', 'Razzetti15.jpeg'),
-	(13, 'GuidaPVP.php', 'Guide', 'PVP5.jpeg'),
-	(14, 'GuidaTrovareDiamanti.php', 'Guide', 'Diamanti16.jpeg'),
+	(11, 'GuidaCommandBlock.php', 'Guide', 'CommandBlock.webp'),
+	(12, 'GuidaFireworks.php', 'Guide', 'Firework.webp'),
+	(13, 'GuidaPVP.php', 'Guide', 'Spada.webp'),
+	(14, 'GuidaTrovareDiamanti.php', 'Guide', 'Diamond.png'),
 	(15, '20w06a.php', 'News', '20w06a.webp'),
 	(16, '21w37a.php', 'News', '21w37a.webp'),
 	(17, '21w39a.php', 'News', '21w39a.webp'),
@@ -86,9 +86,32 @@ CREATE TABLE IF NOT EXISTS `preferiti` (
   CONSTRAINT `FK_preferiti_pagpref` FOREIGN KEY (`IdPag`) REFERENCES `pagpref` (`IdPag`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
--- Dump dei dati della tabella minecraftsito.preferiti: ~1 rows (circa)
+-- Dump dei dati della tabella minecraftsito.preferiti: ~3 rows (circa)
 REPLACE INTO `preferiti` (`Username`, `IdPag`) VALUES
-	('asd', 0);
+	('asd', 0),
+	('qwerty', 0),
+	('asd', 1),
+	('asd', 2),
+	('asd', 3),
+	('qwerty', 3),
+	('asd', 4),
+	('asd', 5),
+	('asd', 6),
+	('asd', 7),
+	('asd', 8),
+	('qwerty', 8),
+	('asd', 9),
+	('asd', 10),
+	('asd', 11),
+	('asd', 12),
+	('asd', 13),
+	('qwerty', 13),
+	('asd', 14),
+	('asd', 15),
+	('asd', 16),
+	('qwerty', 16),
+	('asd', 17),
+	('asd', 18);
 
 /*!40103 SET TIME_ZONE=IFNULL(@OLD_TIME_ZONE, 'system') */;
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
