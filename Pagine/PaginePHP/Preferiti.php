@@ -25,20 +25,30 @@ $Pagine=$Connessione -> query($query) or die("ERRORE". $Connessione->error);
 <body>
     <?php require("../../data/PSHeader.php");?>
 
+
     <main class="marginMain">
-        <?php foreach($Pagine as $Pagina)
-            $NomePag=$Pagina["Pagina"];
-            $Tipo=$Pagina["Tipo"];
-            $NomeFoto=$Pagina["Foto"];
-            $link="../Pagine".$Tipo."/".$NomePag;
-            $Titolo=basename($NomePag, ".php");
-            $linkImg="../../Immagini/Immagini".$Tipo."/".$NomeFoto;
-            echo <<<EOD
-            <div class="pagPref">
-                <a class="imgpagPref"href=$link><img src="$linkImg" alt=""></a>
-                <a class="linkpagPref" href=$link>$Titolo</a>
-            </div>
-            EOD;
+        <h1 class="prefTitle">Le tue pagine preferite</h1>
+
+        <?php 
+        if($Pagine->num_rows==0)
+        {
+            echo "<p>Non hai pagine preferite</p>";
+        }
+        else{        
+            foreach($Pagine as $Pagina)
+                $NomePag=$Pagina["Pagina"];
+                $Tipo=$Pagina["Tipo"];
+                $NomeFoto=$Pagina["Foto"];
+                $link="../Pagine".$Tipo."/".$NomePag;
+                $Titolo=basename($NomePag, ".php");
+                $linkImg="../../Immagini/Immagini".$Tipo."/".$NomeFoto;
+                echo <<<EOD
+                <div class="pagPref">
+                    <a class="imgpagPref"href=$link><img src="$linkImg" alt=""></a>
+                    <a class="linkpagPref" href=$link>$Titolo</a>
+                </div>
+                EOD;
+        }
         ?>
         
         

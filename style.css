@@ -1436,23 +1436,30 @@ label img {
 }
 
 /* PAGINE PREF */
+
+.prefTitle{margin-top:20px; margin-bottom: 20px;}
 .pagPref{
     width:50%;
     margin-left: 25%;
-    border: 1px solid red;
+    /* border: 1px solid red; */
+    background: burlywood;
+    border-radius: 20px;
     display: flex;
     margin-top: 20px;
+    align-items: center;
 }
 
 .imgpagPref{
     width: 20%;
     height: auto;
+    padding: 5px;
 }
 
 .linkpagPref{
     width: 80%;
     text-align: center;
-    
+    height: min-content;
+    border: 1px solid red;
 }
 
 
