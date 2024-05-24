@@ -31,11 +31,13 @@ $Pagine=$Connessione -> query($query) or die("ERRORE". $Connessione->error);
             $Tipo=$Pagina["Tipo"];
             $NomeFoto=$Pagina["Foto"];
             $link="../Pagine".$Tipo."/".$NomePag;
-            $linkImg="../../Immagini";
+            $Titolo=basename($NomePag, ".php");
+            $linkImg="../../Immagini/Immagini".$Tipo."/".$NomeFoto;
             echo <<<EOD
             <div class="pagPref">
-                <a href=$link>No</a>
-                </div>
+                <a class="imgpagPref"href=$link><img src="$linkImg" alt=""></a>
+                <a class="linkpagPref" href=$link>$Titolo</a>
+            </div>
             EOD;
         ?>
         
