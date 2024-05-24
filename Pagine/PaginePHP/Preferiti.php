@@ -26,20 +26,17 @@ $Pagine=$Connessione -> query($query) or die("ERRORE". $Connessione->error);
     <?php require("../../data/PSHeader.php");?>
 
     <main class="marginMain">
-        <!-- <?php foreach($Pagine as $Pagina)?>
-            <?php
-                $NomePag=$Pagina["Pagina"];
-                $Tipo=$Pagina["Tipo"];
-                $NomeFoto=$Pagina["Foto"];
-                $link="../Pagine".$Tipo."/".$NomePag;
-            ?>
+        <?php foreach($Pagine as $Pagina)
+            $NomePag=$Pagina["Pagina"];
+            $Tipo=$Pagina["Tipo"];
+            $NomeFoto=$Pagina["Foto"];
+            $link="../Pagine".$Tipo."/".$NomePag;
+            echo <<<EOD
             <div class="pagPref">
-                <?php echo <<<EOD
-                    <a href=$link>No</a>
-                    EOD;
-                ?>
-            </div>
-        <?php endforeach?> -->
+                <a href=$link>No</a>
+                </div>
+            EOD;
+        ?>
         
         
         <?php require("../../data/footer.php");?>
