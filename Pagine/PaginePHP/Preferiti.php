@@ -31,6 +31,7 @@ $Pagine=$Connessione -> query($query) or die("ERRORE". $Connessione->error);
             $Tipo=$Pagina["Tipo"];
             $NomeFoto=$Pagina["Foto"];
             $link="../Pagine".$Tipo."/".$NomePag;
+            $linkImg="../../Immagini";
             echo <<<EOD
             <div class="pagPref">
                 <a href=$link>No</a>

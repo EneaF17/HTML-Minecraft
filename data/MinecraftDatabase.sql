@@ -54,27 +54,27 @@ CREATE TABLE IF NOT EXISTS `pagpref` (
   PRIMARY KEY (`IdPag`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
--- Dump dei dati della tabella minecraftsito.pagpref: ~17 rows (circa)
+-- Dump dei dati della tabella minecraftsito.pagpref: ~19 rows (circa)
 REPLACE INTO `pagpref` (`IdPag`, `Pagina`, `Tipo`, `Foto`) VALUES
-	(0, 'WikiArco.php', NULL, NULL),
-	(1, 'WikiCreeper.php', NULL, NULL),
-	(2, 'WikiDiamante.php', NULL, NULL),
-	(3, 'WikiEnderDragon.php', NULL, NULL),
-	(4, 'WikiFornace.php', NULL, NULL),
-	(5, 'WikiHerobrine.php', NULL, NULL),
-	(6, 'WikiLanterna.php', NULL, NULL),
-	(7, 'WikiMelaDoro.php', NULL, NULL),
-	(8, 'WikiOro.php', NULL, NULL),
-	(9, 'WikiPistone.php', NULL, NULL),
-	(10, 'WikiTnt.php', NULL, NULL),
-	(11, 'GuidaCommandBlock.php', NULL, NULL),
-	(12, 'GuidaFireworks.php', NULL, NULL),
-	(13, 'GuidaPVP.php', NULL, NULL),
-	(14, 'GuidaTrovareDiamanti.php', NULL, NULL),
-	(15, '20w06a.php', NULL, NULL),
-	(16, '21w37a.php', NULL, NULL),
-	(17, '21w39a.php', NULL, NULL),
-	(18, '22w11a.php', NULL, NULL);
+	(0, 'WikiArco.php', 'Wiki', 'Arco.webp'),
+	(1, 'WikiCreeper.php', 'Wiki', 'Creeper.png'),
+	(2, 'WikiDiamante.php', 'Wiki', 'Diamond.png'),
+	(3, 'WikiEnderDragon.php', 'Wiki', 'Ender_Dragon.webp'),
+	(4, 'WikiFornace.php', 'Wiki', 'Fornace.webp'),
+	(5, 'WikiHerobrine.php', 'Wiki', 'Herobrine.webp'),
+	(6, 'WikiLanterna.php', 'Wiki', 'Lanterna.webp'),
+	(7, 'WikiMelaDoro.php', 'Wiki', 'MelaOro.webp'),
+	(8, 'WikiOro.php', 'Wiki', 'Oro.webp'),
+	(9, 'WikiPistone.php', 'Wiki', 'Pistone.webp'),
+	(10, 'WikiTnt.php', 'Wiki', 'Tnt.webp'),
+	(11, 'GuidaCommandBlock.php', 'Guide', 'CommandBlock16.jpeg'),
+	(12, 'GuidaFireworks.php', 'Guide', 'Razzetti15.jpeg'),
+	(13, 'GuidaPVP.php', 'Guide', 'PVP5.jpeg'),
+	(14, 'GuidaTrovareDiamanti.php', 'Guide', 'Diamanti16.jpeg'),
+	(15, '20w06a.php', 'News', '20w06a.webp'),
+	(16, '21w37a.php', 'News', '21w37a.webp'),
+	(17, '21w39a.php', 'News', '21w39a.webp'),
+	(18, '22w11a.php', 'News', '22w11a.webp');
 
 -- Dump della struttura di tabella minecraftsito.preferiti
 CREATE TABLE IF NOT EXISTS `preferiti` (
