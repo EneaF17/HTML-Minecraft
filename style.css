@@ -1449,13 +1449,13 @@ label img {
     align-items: center;
 }
 
-.imgpagPref{
+.imgPagPref img{
     width: 20%;
     height: auto;
     padding: 5px;
 }
 
-.linkpagPref{
+.LinkPreftxt{
     width: 80%;
     text-align: center;
     height: min-content;

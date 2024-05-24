@@ -23,8 +23,8 @@
         $ris=$Connessione->query($query1) or die("ERRORE". $Connessione->error);
         $Id=$ris->fetch_assoc();
 
-        $query2="INSERT INTO preferiti
-        VALUES ('$Username', '$Id')";
+        $query2="INSERT INTO preferiti (Username,IdPag)
+                VALUES ('$Username', '$Id')";
         $ris=$Connessione->query($query2) or die("ERRORE". $Connessione->error);
     }
 

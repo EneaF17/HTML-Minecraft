@@ -1,28 +1,8 @@
 <?php 
     session_start();
     require ("../../data/connessioneDB.php");
+    require ("../../data/CuoreScript.php");
 
-    $PagCompleta=$_SERVER["PHP_SELF"];
-    $NomePag=basename($_SERVER["PHP_SELF"]);
-     
-    if(!isset($_SESSION["Username"])){
-        $Pref=false;
-    }
-    else{
-        $Username=$_SESSION["Username"];
-        $query="SELECT Pagina FROM giocatore 
-        JOIN preferiti ON giocatore.Username=preferiti.Username 
-        JOIN pagpref ON preferiti.IdPag=pagpref.IdPag
-        WHERE giocatore.Username='$Username' AND Pagina='$NomePag'";
-    
-        $dati = $Connessione -> query($query) or die("ERRORE". $Connessione->error);
-        if ($dati->num_rows == 0){
-            $Pref=false;
-        }
-        else{
-            $Pref=true;
-        }
-    }
     
 ?>
 
@@ -49,21 +29,8 @@
 
             <?php 
             require("../../data/Header.php");
+            require("../../data/Cuore.php")
             ?>
-
-            <div class="cuore">
-                <?php
-                    if($Pref==false) {echo <<<EOD
-                        <a href="../PaginePHP/Cuore.php?preferita=$Pref&nomepag=$PagCompleta"><img src="../../Immagini/PhpImg/SPCuore.png" alt=""></a>
-                        EOD;
-                    }
-                    else{echo <<<EOD
-                        <a href="../PaginePHP/Cuore.php?preferita=$Pref&nomepag=$PagCompleta"><img src="../../Immagini/PhpImg/SPCuoreRosso.png" alt=""></a>
-                        EOD;
-                    }
-                ?>
-                
-            </div>
             
             <div class="contenitorePulsanti">
                 <ul class="Pulsanti" style="list-style-type: none;">

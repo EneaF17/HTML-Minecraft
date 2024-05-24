@@ -43,10 +43,12 @@ $Pagine=$Connessione -> query($query) or die("ERRORE". $Connessione->error);
                 $Titolo=basename($NomePag, ".php");
                 $linkImg="../../Immagini/Immagini".$Tipo."/".$NomeFoto;
                 echo <<<EOD
+                <a class="linkpagPref"href=$link>
                 <div class="pagPref">
-                    <a class="imgpagPref"href=$link><img src="$linkImg" alt=""></a>
-                    <a class="linkpagPref" href=$link>$Titolo</a>
+                    <img class="imgPagPref" src="$linkImg" alt="">
+                    <p class="LinkPreftxt">$Titolo</p>
                 </div>
+                </a>
                 EOD;
         }
         ?>
