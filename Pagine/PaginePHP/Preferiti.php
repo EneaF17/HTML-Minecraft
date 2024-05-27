@@ -52,6 +52,9 @@ $Pagine=$Connessione -> query($query) or die("ERRORE". $Connessione->error);
                     <h2 class="LinkPreftxt">$Titolo</h2>
                 </div>
                 </a>
+                <a href="" class="linkCestino">
+                    <img class="imgPagPref" src="../../Immagini/PhpImg/SPCestino.avif" alt="">
+                </a>
                 EOD;}
         }
         ?>

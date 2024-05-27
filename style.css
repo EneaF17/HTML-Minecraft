@@ -1495,6 +1495,11 @@ label img {
     display: block;
     width: 70%;
     margin-left: 25%;
+    transition: 400ms;
+}
+
+.linkpagPref:hover{
+    transform: scale(1.10);
 }
 
 .imgPagPref{
@@ -1503,8 +1508,13 @@ label img {
     padding: 10px;
 }
 
+.linkCestino{
+    width: 20%;
+    border-radius: 50%;
+}
+
 .LinkPreftxt{
-    width: 80%;
+    width: 60%;
     text-align: center;
     height: min-content;
     /* border: 1px solid red; */
