@@ -45,23 +45,25 @@ $Pagine=$Connessione -> query($query) or die("ERRORE". $Connessione->error);
                 $Titolo=basename($NomePag, ".php");
                 $linkImg="../../Immagini/Immagini".$Tipo."/".$NomeFoto;
                 echo <<<EOD
-
-                <a class="linkpagPref" href=$link>
-                <div class="pagPref">
-                    <img class="imgPagPref" src="$linkImg" alt="">
-                    <h2 class="LinkPreftxt">$Titolo</h2>
+                <div class="divPreferito">
+                    <a class="linkpagPref" href=$link>
+                    <div class="pagPref">
+                        <img class="imgPagPref" src="$linkImg" alt="">
+                        <h2 class="LinkPreftxt">$Titolo</h2>
+                    </div>
+                    </a>
+                    <a href="../../data/CancellaPrefScript.php?nome=$NomePag" class="linkCestino">
+                        <img class="ImgCestino" src="../../Immagini/PhpImg/SPCestino.png" alt="">
+                    </a>
                 </div>
-                </a>
-                <a href="" class="linkCestino">
-                    <img class="imgPagPref" src="../../Immagini/PhpImg/SPCestino.avif" alt="">
-                </a>
                 EOD;}
         }
         ?>
         
         
+
     </main>
-    <?php require("../../data/footer.php");?>
+    <?php require ("../../data/Footer.php")?>
 
 </body>
 </php>

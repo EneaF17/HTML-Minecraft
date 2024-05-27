@@ -36,6 +36,7 @@
                     <li><a href="GuidaFireworks.php"><img src="../../immagini/FrecciaDx.png"alt=""></a></li>
                 </ul>
             </div>
+            <?php require("../../data/Bookmark.php"); ?>
             <div class="boxGuida">
                 <div class="boxTitolo">
                     <p>Come trovare i diamanti</p>

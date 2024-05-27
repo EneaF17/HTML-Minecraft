@@ -255,7 +255,8 @@ label img {
     /* border: 1px solid red; */
     margin-top: 18vh;
     width: 100%;
-    height: 100%;
+    min-height: 100%;
+    /* height: 100%; */
 }
 
 .ContentBoxSP{
@@ -1472,6 +1473,17 @@ label img {
     transform: scale(1.1);
 }
 
+.Bookmark{
+    position: relative;
+    margin-left: 2%;
+    width:6%;
+    height:10%;
+    display: inline;
+    /* border: 1px solid red; */
+    margin-top:30px;
+    transition: 0.5s;
+}
+
 /* PAGINE PREF */
 
 .prefTitle{
@@ -1480,10 +1492,19 @@ label img {
     width: 70%;
     margin-left: 25%;
 }
+
+.divPreferito{
+    width: 100%;
+    /* border: 1px solid red; */
+    display: flex;
+    flex-wrap: nowrap;
+    justify-items: center;
+}
+
 .pagPref{
     width:100%;
     /* margin-left: 25%; */
-    /* border: 1px solid red; */
+    /* border: 1px solid green; */
     background: burlywood;
     border-radius: 20px;
     display: flex;
@@ -1508,13 +1529,25 @@ label img {
     padding: 10px;
 }
 
+
 .linkCestino{
+    margin: 20px;
     width: 20%;
-    border-radius: 50%;
+    max-height: 150px;
+    transition: 500ms;
+}
+
+.linkCestino:hover{
+    transform: scale(1.10);
+}
+
+.ImgCestino{
+    width: 100%;
+    max-height: 150px;
 }
 
 .LinkPreftxt{
-    width: 60%;
+    width: 80%;
     text-align: center;
     height: min-content;
     /* border: 1px solid red; */

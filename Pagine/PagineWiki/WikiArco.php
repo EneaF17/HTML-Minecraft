@@ -29,7 +29,7 @@
 
             <?php 
             require("../../data/Header.php");
-            require("../../data/Cuore.php")
+            require("../../data/Cuore.php");
             ?>
             
             <div class="contenitorePulsanti">
@@ -39,6 +39,8 @@
                     <li><a href="WikiCreeper.php"><img src="../../immagini/FrecciaDx.png"alt=""></a></li>
                 </ul>
             </div>
+            <?php require("../../data/Bookmark.php"); ?>
+            
             <div class="contenitoreWiki">
                 <h1 class="titolo">Arco</h1>
                 <div class="ContenitoreTabella">

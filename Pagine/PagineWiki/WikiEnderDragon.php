@@ -36,6 +36,7 @@
                     <li><a href="WikiFornace.php"><img src="../../immagini/FrecciaDx.png"alt=""></a></li>
                 </ul>
             </div>
+            <?php require("../../data/Bookmark.php"); ?>
             <div class="contenitoreWiki">
                 <h1 class="titolo">Ender Dragon</h1>
                 <div class="ContenitoreTabella">

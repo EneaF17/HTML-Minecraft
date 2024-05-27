@@ -38,6 +38,7 @@
                     <li><a href="WikiPistone.php"><img src="../../immagini/FrecciaDx.png"alt=""></a></li>
                 </ul>
             </div>
+            <?php require("../../data/Bookmark.php"); ?>
             <div class="contenitoreWiki">
                 <h1 class="titolo">Lingotto d'Oro</h1>
                 <div class="ContenitoreTabella">

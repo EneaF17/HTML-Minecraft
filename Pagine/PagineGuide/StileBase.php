@@ -24,6 +24,7 @@
         <body>
         <?php 
             require("../../data/Header.php");
+            require("../../data/Cuore.php");
             ?>
 
 
@@ -34,6 +35,7 @@
                     <li><a href="Guida"><img src="../../immagini/FrecciaDx.png"alt=""></a></li>
                 </ul>
             </div>
+            <?php require("../../data/Bookmark.php"); ?>
             <div class="boxGuida">
                 <div class="boxTitolo">
                     <p>Titolo della guida</p>

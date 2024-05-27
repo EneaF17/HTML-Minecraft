@@ -36,7 +36,7 @@
                     <li><a href="20w06a.php"><img src="../../immagini/FrecciaDx.png"alt=""></a></li>
                 </ul>
             </div>
-            
+            <?php require("../../data/Bookmark.php"); ?>
             <div class="contenitorePaginaSnapshot">
                 <h1 class="titolo">Java Edition 22w11a</h1>
                 <div class="ContenitoreTabella">

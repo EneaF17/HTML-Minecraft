@@ -38,6 +38,7 @@
                 <li><a href="GuidaTrovareDiamanti.php"><img src="../../immagini/FrecciaDx.png" alt=""></a></li>
             </ul>
         </div>
+        <?php require("../../data/Bookmark.php"); ?>
         <div class="boxGuida">
             <div class="boxTitolo">
                 <p>10 modi per migliorare nel PVP</p>
