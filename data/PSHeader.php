@@ -28,7 +28,7 @@
     ?>
 
     <div class="Icona" >
-        <a href="../../Pagine/PaginePHP/IconaImmagine.php"> <img class="IconaImg" src="../../Immagini/PhpImg/<?php echo $UserIcon?>" alt=""></a>
+        <img class="IconaImg" src="../../Immagini/PhpImg/<?php echo $UserIcon?>" alt="">
     </div>
 
 </div>

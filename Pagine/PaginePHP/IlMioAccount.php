@@ -78,7 +78,7 @@
             EOD;}
     ?>
 
-    <main class="marginMain">
+<main class="marginMain">
 
     <?php require("../../data/sideNav.php")?>
     
@@ -115,11 +115,20 @@
                         <td><label for="Telefono">Telefono</label></td>
                         <td><input type="text" <?php echo $Disable?> id="Telefono" name="Telefono" value="<?php echo $Telefono?>"></td>
                     </tr>
-                    <tr>
-                    <td colspan="2"><input name="Pulsante" class="UpdateDataButton" type="submit" value="<?php echo $TestoPuls?>"></td>
-                </tr>
-                </table>
+                    </table>
+                <input name="Pulsante" class="UpdateDataButton" type="submit" value="<?php echo $TestoPuls?>">
             </form>
+            
+            <a href="../../Pagine/PaginePHP/CambiaPassword.php">
+                <div class="PulsanteIconaCambio">
+                    <p>Cambia Password</p>
+                </div>
+            </a>
+            <a href="../../Pagine/PaginePHP/IconaImmagine.php">
+                <div class="PulsanteIconaCambio">
+                    <p>Cambia Icona</p>
+                </div>
+            </a>
         </div>
     </div>
 
