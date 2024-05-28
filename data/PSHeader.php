@@ -26,7 +26,9 @@
 
 
     ?>
-
+    <div class="Cerca">
+        <a href="Cerca.php"><img class="CercaImg" src="../../Immagini/PhpImg/SPLente.png"> </a>
+    </div>
     <div class="Icona" >
         <img class="IconaImg" src="../../Immagini/PhpImg/<?php echo $UserIcon?>" alt="">
     </div>

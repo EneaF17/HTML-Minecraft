@@ -53,6 +53,10 @@
         <li><a href="<?php echo $LinkRelPag?>Minecraft_News.php"><img src="<?php echo $LinkRelImg?>immagini/Anvil.webp"alt=""></a></li>
     </ul>
 
+    <div class="Cerca">
+        <a href="<?php echo $LinkRelImg?>Pagine/PaginePHP/Cerca.php"><img class="CercaImg" src="<?php echo $LinkRelImg?>Immagini/PhpImg/SPLente.png"> </a>
+    </div>
+
     <div class="Icona" >
         <a href="<?php echo $LinkRelImg?><?php echo $Link?>"> <img class="IconaImg" src="<?php echo $LinkRelImg?>Immagini/PhpImg/<?php echo $UserIcon?>" alt=""></a>
     </div>
