@@ -20,9 +20,9 @@ require("../../data/connessioneDB.php");
     <?php require("../../data/Header.php");?>
     <div class="CercaBox">
         <form action="" method="post">
-                <table class="LoginTable" >
+                <table class="CercaTable" >
                     <tr>
-                        <td> <label for="Ricerca">Ricerca:</label></td>
+                        <td> <label for="Ricerca">Ricerca pagine nel sito:</label></td>
                         <td><input type="text" name="Ricerca" id="Ricerca"></td>
                     </tr>
                     <tr>
@@ -40,7 +40,7 @@ require("../../data/connessioneDB.php");
         $CercaRis = $Connessione->query($CercaQuery) or die("E' SUCCESSO UN CASINO");
 
         if ($CercaRis->num_rows == 0) {
-            echo"<h1> NESSUNA PAGINA TROVATA </h1>";
+            echo"<h1> NESSUNA PAGINA TROVATA</h1>";
         } else {
             foreach($CercaRis as $Pagina){
                 $NomePag=$Pagina["Pagina"];

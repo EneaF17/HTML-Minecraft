@@ -733,6 +733,17 @@ label img {
     border: 3px solid black;
 }
 
+.CercaTable{
+    width: 60%;
+    margin-left: 20%;
+    text-align: center;
+    /* background-color: antiquewhite; */
+}
+.CercaTable input{
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
 .Icona{
     align-items: center;
     align-self: center;
