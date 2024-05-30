@@ -45,6 +45,24 @@ REPLACE INTO `giocatore` (`Username`, `Password`, `Nome`, `Cognome`, `Compleanno
 	('qwerty', 'qwerty', 'Qwerty', 'Tarantino', '1997-05-12', '', '', 'Icona_Zombie.jpg', 0),
 	('Tormix', 'asd', 'Francesco', 'Tormene', '1986-04-09', '', '', 'Icona_Creeper.png', 0);
 
+-- Dump della struttura di tabella minecraftsito.giochi
+CREATE TABLE IF NOT EXISTS `giochi` (
+  `Id_gioco` int(11) NOT NULL DEFAULT 0,
+  `Nome` char(50) DEFAULT '',
+  `Costo` float DEFAULT NULL,
+  `Deluxe` char(50) DEFAULT NULL,
+  PRIMARY KEY (`Id_gioco`) USING BTREE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- Dump dei dati della tabella minecraftsito.giochi: ~6 rows (circa)
+REPLACE INTO `giochi` (`Id_gioco`, `Nome`, `Costo`, `Deluxe`) VALUES
+	(0, 'Minecraft', 14.99, 'No'),
+	(1, 'Minecraft', 19.99, 'Si'),
+	(2, 'Dungeons', 9.99, 'No'),
+	(3, 'Dungeons', 19.99, 'Si'),
+	(4, 'Legends', 19.84, 'No'),
+	(5, 'Legends', 24.99, 'Si');
+
 -- Dump della struttura di tabella minecraftsito.pagpref
 CREATE TABLE IF NOT EXISTS `pagpref` (
   `IdPag` int(11) NOT NULL DEFAULT 0,
@@ -76,6 +94,18 @@ REPLACE INTO `pagpref` (`IdPag`, `Pagina`, `Tipo`, `Foto`) VALUES
 	(17, '21w39a.php', 'News', '21w39a.webp'),
 	(18, '22w11a.php', 'News', '22w11a.webp');
 
+-- Dump della struttura di tabella minecraftsito.posseduti
+CREATE TABLE IF NOT EXISTS `posseduti` (
+  `Id_gioco` int(11) NOT NULL DEFAULT 0,
+  `Username` char(50) NOT NULL DEFAULT '',
+  PRIMARY KEY (`Id_gioco`,`Username`),
+  KEY `FK_posseduti_giocatore` (`Username`),
+  CONSTRAINT `FK_posseduti_giocatore` FOREIGN KEY (`Username`) REFERENCES `giocatore` (`Username`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `FK_posseduti_giochi` FOREIGN KEY (`Id_gioco`) REFERENCES `giochi` (`id_gioco`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- Dump dei dati della tabella minecraftsito.posseduti: ~0 rows (circa)
+
 -- Dump della struttura di tabella minecraftsito.preferiti
 CREATE TABLE IF NOT EXISTS `preferiti` (
   `Username` char(50) NOT NULL DEFAULT '',
@@ -86,7 +116,7 @@ CREATE TABLE IF NOT EXISTS `preferiti` (
   CONSTRAINT `FK_preferiti_pagpref` FOREIGN KEY (`IdPag`) REFERENCES `pagpref` (`IdPag`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
--- Dump dei dati della tabella minecraftsito.preferiti: ~3 rows (circa)
+-- Dump dei dati della tabella minecraftsito.preferiti: ~21 rows (circa)
 REPLACE INTO `preferiti` (`Username`, `IdPag`) VALUES
 	('asd', 0),
 	('qwerty', 0),
@@ -95,8 +125,6 @@ REPLACE INTO `preferiti` (`Username`, `IdPag`) VALUES
 	('asd', 3),
 	('qwerty', 3),
 	('asd', 4),
-	('asd', 5),
-	('asd', 6),
 	('asd', 7),
 	('asd', 8),
 	('qwerty', 8),
