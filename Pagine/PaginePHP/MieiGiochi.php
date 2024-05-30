@@ -5,15 +5,10 @@
 
     $Username = $_SESSION["Username"];
     
-    $DatiQuery = "SELECT Nome,Cognome,Saldo FROM giocatore WHERE Username = '$Username'";
-
+    $Miei = "SELECT Nome,Cognome,Saldo FROM giocatore WHERE Username = '$Username'";
+    $Altri=
     $Dati = $Connessione -> query($DatiQuery) or die("ERRORE QUERY". $Connessione->error);
 
-    foreach($Dati as $DatiItem) {
-        $Nome = $DatiItem["Nome"];
-        $Cognome = $DatiItem["Cognome"];
-        $Saldo = $DatiItem["Saldo"];
-        }
 ?>
 
 

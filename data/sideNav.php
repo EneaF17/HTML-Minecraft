@@ -19,7 +19,7 @@
         
         echo "<h1>$Nome $Cognome</h1> ";
         ?>
-        <a href="">
+        <a href="MieiGiochi.php">
             <div class="sideNavSPBox">
                 <img src="../../Immagini/PhpImg/SPChest.png" class="iconaSPNav" alt="">
                 <h3>I miei giochi</h3>
