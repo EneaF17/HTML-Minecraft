@@ -2,7 +2,7 @@
     session_start();
     require ("../../data/connessioneDB.php");
     require ("../../data/CuoreScript.php");
-    ?>
+?>
 
 
 <!DOCTYPE php>

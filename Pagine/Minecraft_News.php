@@ -89,7 +89,7 @@
                                 <li><a href="">23w16a</a></li>
                                 <li><a href="">23w14a</a></li>
                                 <li><a href="">23w13a</a></li>
-                                <li><a href="">23w12a</a></li>
+                                <li><a href="PagineNews/PagineNewsPhp.php?IdPag=23w12a">23w12a</a></li>
                             </ul>
                         </div>
                     </div>

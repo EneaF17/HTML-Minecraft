@@ -1758,6 +1758,7 @@ label img {
 .TestoNews h3, .TestoNews h4{
     text-align: left;
     margin: 10px 0;
+    color: black;
 }
 
 table{
