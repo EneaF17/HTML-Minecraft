@@ -38,6 +38,15 @@ if (isset($_POST["Deluxe"])) {
             $UpdateSaldo = "UPDATE giocatore SET Saldo='$resto' WHERE Username = '$Username'";
 
             if ($Connessione->query("$UpdateSaldo") === true) {
+                $Query="SELECT Id_gioco FROM giochi WHERE Nome='$nomegioco' AND Deluxe='Si'";
+                $ris=$Connessione->query($Query) or die("ERRORE NELLA QUERY" . $Connessione->error);
+                foreach($ris as $dati){
+                    $Idgioco=$dati["Id_gioco"];
+                }
+                $Queryaggiungi="INSERT INTO posseduti(Id_gioco, Username)
+                VALUES ('$Idgioco', '$Username')";
+                if($Connessione->query("$Queryaggiungi") === true){}else{echo $Connessione->error;}
+
                 $Esito = "ACQUISTO ANDATO A BUON FINE";
             } else {
                 $Esito = "ERRORE NELL' ACQUISTO";
@@ -67,6 +76,14 @@ if (isset($_POST["Deluxe"])) {
 
             if ($Connessione->query("$UpdateSaldo") === true) {
                 $Esito = "ACQUISTO ANDATO A BUON FINE";
+                $Query="SELECT Id_gioco FROM giochi WHERE Nome='$nomegioco' AND Deluxe='No'";
+                $ris=$Connessione->query($Query) or die("ERRORE NELLA QUERY" . $Connessione->error);
+                foreach($ris as $dati){
+                    $Idgioco=$dati["Id_gioco"];
+                }
+                $Queryaggiungi="INSERT INTO posseduti(Id_gioco, Username)
+                VALUES ('$Idgioco', '$Username')";
+                if($Connessione->query("$Queryaggiungi") === true){}else{echo $Connessione->error;}
             } else {
                 $Esito = "ERRORE NELL' ACQUISTO";
             }
