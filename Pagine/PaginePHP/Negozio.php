@@ -31,7 +31,7 @@
         require("../../data/Header.php");
     ?>
     <main>
-        <h1>Compra i giochi:</h1>
+        <h1 style="margin-top: 10px;">Compra i giochi:</h1>
         <div class="Box_Negozio">
             <a class="LinkShop" href="<?php echo "$LinkJava" ?>">
                 <div class="BoxJava">
