@@ -588,9 +588,15 @@ label img {
 .hideInputAcq{
     display: none;
 }
+.hideInputNoAcq{
+    display: none;
+}
 
 .hideInputAcq:checked + label {
     border: 5px solid green;
+}
+.hideInputNoAcq:checked + label {
+    border: 5px solid red;
 }
 
 .labelAcq {
@@ -613,6 +619,19 @@ label img {
 }
 
 .SubmitButtonAcq{
+    margin-top: 10px;
+    margin-bottom: 5px;
+    width: 90%;
+    height: 10vh;
+    /* margin-left: 25%; */
+    background-color: green;
+    cursor: pointer;
+    font-size: x-large;
+    font-weight: bold;
+    transition: 0.4s;
+}
+
+.SubmitButtonNoAcq{
     margin-top: 10px;
     margin-bottom: 5px;
     width: 90%;
