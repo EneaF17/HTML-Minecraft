@@ -2,16 +2,7 @@
     session_start();
     require("../../data/connessioneDB.php");
     if (!isset($_SESSION["Username"])) {
-        $LinkJava = "LoginPage.php";
-        $LinkDungeons = "LoginPage.php";
-        $LinkLegends = "LoginPage.php";
         $_SESSION["Reindirizza"] = "Negozio.php";
-    }
-    else
-    {
-        $LinkJava = "JavaEdition.php";
-        $LinkDungeons = "Dungeons.php";
-        $LinkLegends = "Legends.php";  
     }
 ?>
 
@@ -33,7 +24,7 @@
     <main>
         <h1 style="margin-top: 10px;">Compra i giochi:</h1>
         <div class="Box_Negozio">
-            <a class="LinkShop" href="<?php echo "$LinkJava" ?>">
+            <a class="LinkShop" href="<?php echo isset($_SESSION["Username"])?'Gioco.php?nome_gioco=Minecraft':'LoginPage.php' ?>">
                 <div class="BoxJava">
                     <div class="ImgSide_Shop">
                         <img class="fullImg" src="../../Immagini/Negozio/JavaEdition.png" alt="">
@@ -55,7 +46,7 @@
                     </div>
                 </div>
             </a>
-            <a class="LinkShop" href="<?php echo "$LinkDungeons" ?>">
+            <a class="LinkShop" href="<?php echo isset($_SESSION["Username"])?'Gioco.php?nome_gioco=Dungeons':'LoginPage.php' ?>">
                 <div class="BoxDungeons">
                 <div class="ImgSide_Shop">
                         <img class="fullImg" src="../../Immagini/Negozio/Dungeons.avif" alt="">
@@ -74,7 +65,7 @@
                     </div>
                 </div>
             </a>
-            <a class="LinkShop" href="<?php echo "$LinkLegends" ?>">
+            <a class="LinkShop" href="<?php echo isset($_SESSION["Username"])?'Gioco.php?nome_gioco=Legends':'LoginPage.php' ?>">
                 <div class="BoxLegends">
                 <div class="ImgSide_Shop">
                         <img class="fullImg" src="../../Immagini/Negozio/Legends.png" alt="">

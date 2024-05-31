@@ -4,21 +4,32 @@ require ("../../data/connessioneDB.php");
 if (!isset($_SESSION["Username"])) {
     header("location: ../../");
 }
+if (!isset($_GET["nome_gioco"])) {
+    header("location: Negozio.php");
+}
+$nomegioco=$_GET["nome_gioco"];
+
 $random = rand(1,4);
 $Username = $_SESSION["Username"];
+
+
 
 if (isset($_POST["Deluxe"])) {
     if ($_POST["Deluxe"] == "Si") {
 
         $QuerySaldo = "SELECT Saldo FROM giocatore WHERE Username = '$Username'";
-
+        $QueryCosto="SELECT Costo FROM giochi WHERE Nome='$nomegioco' AND Deluxe='Si'";
         $ris = $Connessione->query($QuerySaldo) or die("ERRORE NELLA QUERY" . $Connessione->error);
+        $riscosto=$Connessione->query($QueryCosto) or die("ERRORE NELLA QUERY" . $Connessione->error);
 
         foreach ($ris as $Dati) {
             $Saldo = $Dati["Saldo"];
         }
+        foreach($riscosto as $Daticosto){
+            $Costo=$Daticosto["Costo"];
+        }
 
-        $resto = $Saldo - 19.99;
+        $resto = $Saldo - $Costo;
 
         if ($resto < 0) {
             $Esito = "SOLDI INSUFFICIENTI";
@@ -36,14 +47,17 @@ if (isset($_POST["Deluxe"])) {
     if ($_POST["Deluxe"] == "No") {
 
         $QuerySaldo = "SELECT Saldo FROM giocatore WHERE Username = '$Username'";
-
+        $QueryCosto="SELECT Costo FROM giochi WHERE Nome='$nomegioco' AND Deluxe='No'";
         $ris = $Connessione->query($QuerySaldo) or die("ERRORE NELLA QUERY" . $Connessione->error);
-
+        $riscosto=$Connessione->query($QueryCosto) or die("ERRORE NELLA QUERY" . $Connessione->error);
         foreach ($ris as $Dati) {
             $Saldo = $Dati["Saldo"];
         }
+        foreach($riscosto as $Daticosto){
+            $Costo=$Daticosto["Costo"];
+        }
 
-        $resto = $Saldo - 14.99;
+        $resto = $Saldo - $Costo;
 
         if ($resto < 0) {
             $Esito = "SOLDI INSUFFICIENTI";
@@ -90,40 +104,68 @@ if (isset($_POST["Deluxe"])) {
             EOD;}
         ?>
         <main>
-            <img src="../../Immagini/Negozio/SfondoJava.avif" alt="">
+            <?php
+                $QueryN="SELECT Nome, Costo, Deluxe, Versione, Titolo, Descrizione, Foto, Copertina, Elementi
+                FROM giochi
+                WHERE Nome='$nomegioco' AND Deluxe='No'";
+                $QueryS="SELECT Costo, Deluxe, Versione, Elementi
+                FROM giochi
+                WHERE Nome='$nomegioco' AND Deluxe='Si'";
+
+                $risN = $Connessione->query($QueryN) or die("ERRORE NELLA QUERY" . $Connessione->error);
+                $risS = $Connessione->query($QueryS) or die("ERRORE NELLA QUERY" . $Connessione->error);
+
+                foreach($risN as $DatiN){
+                    $titolo=$DatiN["Titolo"];
+                    $desc=$DatiN["Descrizione"];
+                    $foto=$DatiN["Foto"];
+                    $copertina=$DatiN["Copertina"];
+                    $costoN=$DatiN["Costo"];
+                    $versioneN=$DatiN["Versione"];
+                    $elementiN=$DatiN["Elementi"];
+                }
+                foreach($risS as $DatiS){
+                    $costoS=$DatiS["Costo"];
+                    $versioneS=$DatiS["Versione"];
+                    $elementiS=$DatiS["Elementi"];
+                }
+            ?>
+            <img src="../../Immagini/Negozio/<?php echo $foto?>" alt="">
             <div class="Box_Acquisto">
-                <img src="../../Immagini/Negozio/LogoJava.avif" alt="">
+                <img src="../../Immagini/Negozio/<?php echo $copertina?>" alt="">
                 <h3>Seleziona la Versione</h3>
                 <form action="" method="post">
                     <input type="radio" name="Deluxe" value="Si" id="Ver1" class="HideInputAcq">
                     <label class="labelAcq" for="Ver1">
                         <div class="Box_VersioneAcquisto">
-                            <h3>Deluxe Collection</h3>
-                            <h4 class="Gr TxLe">19,99$</h4>
+                            <h3><?php echo $versioneS?></h3>
+                            <h4 class="Gr TxLe"><?php echo $costoS."$"?></h4>
                             <h4>Cosa é incluso:</h4>
                             <ul class="listaAcquisto">
-                                <li>Minecraft: Java Edition</li>
-                                <li>Minecraft: Bedrock Edition</li>
-                                <li>Launcher di Minecraft</li>
-                                <li>1600 minecoins</li>
-                                <li>5 mappe</li>
-                                <li>5 oggetti persona</li>
-                                <li>3 emote</li>
-                                <li>3 pacchetti skin</li>
-                                <li>1 pacchetto texture</li>
+                                <?php
+                                    $lista=explode("\n", $elementiS);
+                                    foreach($lista as $el)
+                                    {
+                                        echo "<li>$el</li>";
+                                    }
+                                ?>
                             </ul>
                         </div>
                     </label>
                     <input type="radio" name="Deluxe" value="No" id="Ver2" class="HideInputAcq">
                     <label class="labelAcq" for="Ver2">
                         <div class="Box_VersioneAcquisto">
-                            <h3>Minecraft</h3>
-                            <h4 class="Gr TxLe">14,99$</h4>
+                            <h3><?php echo $versioneN?></h3>
+                            <h4 class="Gr TxLe"><?php echo $costoN."$"?></h4>
                             <h4>Cosa é incluso:</h4>
                             <ul class="listaAcquisto">
-                                <li>Minecraft: Java Edition</li>
-                                <li>Minecraft: Bedrock Edition</li>
-                                <li>Launcher di Minecraft</li>
+                                <?php
+                                    $lista=explode("\n", $elementiN);
+                                    foreach($lista as $el)
+                                    {
+                                        echo "<li>$el</li>";
+                                    }
+                                ?>
                             </ul>
                         </div>
                     </label>
@@ -134,11 +176,14 @@ if (isset($_POST["Deluxe"])) {
 
             </div>
             <div class="TextAcquisto">
-                <h1>Minecraft: Java E Bedrock Edition Deluxe Collection</h1>
-                <p>Scopri tutti i diversi modi di esplorare, sopravvivere e costruire in Minecraft con Minecraft: Deluxe Collection per PC, che include sia le edizioni Java e Bedrock che il launcher di Minecraft! Gioca alla Bedrock Edition su un PC per esplorare gli infiniti contenuti creati dalla community nel Minecraft Marketplace, scoprire nuovi stili di gioco attraverso mappe diverse ed esprimere te stesso con le emote e gli oggetti per Creatore del personaggio.</p>
-                <p class="ital">*Minecraft: Java Edition funziona su Windows, Mac e Linux; Minecraft: Bedrock Edition
-                    funziona su Windows. I contenuti della Deluxe Collection funzionano solo in Minecraft: Bedrock
-                    Edition su Windows.</p>
+                <h1><?php echo $titolo?></h1>
+                <?php
+                    $lista=explode("\n", $desc);
+                    foreach($lista as $p)
+                    {
+                        echo "<p>$p</p>";
+                    }
+                ?>
 
             </div>
         </main>
@@ -147,4 +192,4 @@ if (isset($_POST["Deluxe"])) {
         require ("../../data/Footer.php")
             ?>
     </body>
-    </ph>
+    </php>
