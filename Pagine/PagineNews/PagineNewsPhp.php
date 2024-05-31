@@ -7,6 +7,13 @@
 
     $IdPag=$_GET["IdPag"];
 
+    $QueryAll = "SELECT * FROM snapshotnews 
+                JOIN paginahacapitoli ON snapshotnews.IdSnapshot=paginahacapitoli.IdSnapshot
+                JOIN capitoli ON paginahacapitoli.IdCapitolo=capitoli.IdCapitolo
+                WHERE snapshotnews.IdSnapshot = '$IdPag'";
+
+    $All = $Connessione->query($QueryAll);
+
     $QueryInfo = "SELECT * FROM snapshotnews WHERE IdSnapshot = '$IdPag'";
 
     $Info = $Connessione->query($QueryInfo);
@@ -34,7 +41,7 @@
     $Intro= $Connessione->query($QueryIntro);
 
     if ($Intro->num_rows == 0){
-        $Intro = "";
+        $Intro = "Niente";
     }
 
     $QueryAggiunte = "SELECT * FROM snapshotnews 
@@ -45,9 +52,30 @@
     $Aggiunte= $Connessione->query($QueryAggiunte);
 
     if ($Aggiunte->num_rows == 0){
-        $Aggiunte = "";
+        $Aggiunte = "Niente";
     }
 
+    $QueryCambiamenti = "SELECT * FROM snapshotnews 
+                JOIN paginahacapitoli ON snapshotnews.IdSnapshot=paginahacapitoli.IdSnapshot
+                JOIN capitoli ON paginahacapitoli.IdCapitolo=capitoli.IdCapitolo
+                WHERE snapshotnews.IdSnapshot = '$IdPag' AND tipo = 'Cambiamenti'";
+    
+    $Cambiamenti= $Connessione->query($QueryCambiamenti);
+
+    if ($Cambiamenti->num_rows == 0){
+        $Cambiamenti = "Niente";
+    }
+
+    $QueryRimozioni = "SELECT * FROM snapshotnews 
+                    JOIN paginahacapitoli ON snapshotnews.IdSnapshot=paginahacapitoli.IdSnapshot
+                    JOIN capitoli ON paginahacapitoli.IdCapitolo=capitoli.IdCapitolo
+                    WHERE snapshotnews.IdSnapshot = '$IdPag' AND tipo = 'Rimozioni'";
+
+    $Rimozioni= $Connessione->query($QueryRimozioni);
+
+    if ($Rimozioni->num_rows == 0){
+    $Rimozioni = "Niente";
+    }
 
 
 
@@ -85,9 +113,9 @@
                             <li><a href="$Succ.php"><img src="../../immagini/FrecciaDx.png"alt=""></a></li>
                         </ul>
                     </div>
-                    <?php
+                    EOD;
                     require("../../data/Bookmark.php");
-                    ?>
+                echo <<<EOD
                     <div class="contenitorePaginaSnapshot">
                         <h1 class="titolo">Java Edition $titolo</h1>
                         <div class="ContenitoreTabella">
@@ -112,36 +140,103 @@
                             </table>
                         </div>
                     EOD;
-                foreach($Intro as $datiIntro){
-                    $txtIntro= $datiIntro["TestoCap"];
-                echo <<<EOD
-                <div class="TestoNews">
-                    <p>$txtIntro</p>
-                EOD;}
+                if ($Intro == "Niente") {echo"Nessuna introduzione";}
+                else{
+                    foreach($Intro as $datiIntro){
+                        $txtIntro= $datiIntro["TestoCap"];
+                        echo <<<EOD
+                    <div class="TestoNews">
+                        <p>$txtIntro</p>
+                    EOD;}}
+                    
                 echo <<<EOD
                     <div class="ContenitoreIndice">
                         <h2>Indice</h2>
                         <ol>
                             <h3><a href="#Agg">Aggiunte</a></h3>
-                            <li><a href="#Blocchi">Blocchi</a></li>
-                            <li><a href="#Oggetti">Oggetti</a></li>
-                            <li><a href="#Mob">Mob</a></li>   
+                    EOD;
+                    foreach($All as $dati){
+                        if ($dati["Tipo"] == "Aggiunte") {
+                            $titoloLista = $dati["NomeCap"];
+                            $idCap = $dati["IdCapitolo"];
+                            echo '<li><a href="#'."$idCap".'">'."$titoloLista".'</a></li>';
+                        }}
+                        echo '<h3><a href="#Camb">Cambiamenti</a></h3>';
+                    foreach($All as $dati){
+                        if ($dati["Tipo"] == "Cambiamenti"){
+                            $titoloLista = $dati["NomeCap"];
+                            $idCap = $dati["IdCapitolo"];
+                            echo '<li><a href="#'."$idCap".'">'."$titoloLista".'</a></li>';
+                        }}
+                        echo '<h3><a href="#Rim">Rimozioni</a></h3>';
+                    foreach($All as $dati){
+                        if ($dati["Tipo"] == "Rimozioni"){
+                            $titoloLista = $dati["NomeCap"];
+                            $idCap = $dati["IdCapitolo"];
+                            echo '<li><a href="#'."$idCap".'">'."$titoloLista".'</a></li>';
+                        }}
+                        echo <<<EOD
                         </ol>
                     </div>
-                    <h2 class="Sezione jumptarget" id="Agg">Aggiunte</h2>
-                    <h3 class="jumptarget" id="Blocchi">Blocchi</h3>
-
-                    <h4>Basalto</h4>
-                    <p>Formano i pilastri di basalto.
-                        Si genera nelle valli di sabbia delle anime.
-                        Possono essere rivolti verso ogni direzione, come i tronchi.</p>
                     
-                </div>
-            </div>
+                    <h2 class="Sezione jumptarget" id="Agg">Aggiunte</h2>
             EOD;
 
+
+            if ($QueryAggiunte== "Niente") {echo "Nessuna Aggiunta in questo Sanpshot";} else{
+            foreach ($Aggiunte as $dati) {
+                $Titoletto = $dati["NomeCap"];
+                $TestoCap = $dati["TestoCap"];
+                $idCap = $dati["IdCapitolo"];
+                echo <<<EOD
+                <h3 class="jumptarget" id=$idCap>$Titoletto</h3>
+                EOD;
+                $TestoCap = explode('\n',$TestoCap);
+                    foreach ($TestoCap as $pezzo) {
+                        echo "<p>$pezzo</p>";
+                    }}
+                echo <<<EOD
+                    
+                
+                EOD;}
+            echo <<<EOD
+            <h2 class="Sezione jumptarget" id="Camb">Cambiamenti</h2>
+            EOD;
+            if ($Cambiamenti == "Niente") {echo "Nessun Cambiamento in questo Sanpshot";} else{
+                    foreach ($Cambiamenti as $dati) {
+                        $Titoletto = $dati["NomeCap"];
+                        $TestoCap = $dati["TestoCap"];
+                        $idCap = $dati["IdCapitolo"];
+                        echo <<<EOD
+                        <h3 class="jumptarget" id=$idCap>$Titoletto</h3>
+                        EOD;
+                        $TestoCap = explode('\n',$TestoCap);
+                            foreach ($TestoCap as $pezzo) {
+                                echo "<p>$pezzo</p>";
+                            }}
+            }
+            echo <<<EOD
+            <h2 class="Sezione jumptarget" id="Rim">Rimozioni</h2>
+            EOD;
+            if ($Rimozioni == "Niente") {echo "Nessuna Rimozione in questo Sanpshot";} else{
+                    foreach ($Rimozioni as $dati) {
+                        $Titoletto = $dati["NomeCap"];
+                        $TestoCap = $dati["TestoCap"];
+                        $idCap = $dati["IdCapitolo"];
+                        echo <<<EOD
+                        <h3 class="jumptarget" id=$idCap>$Titoletto</h3>
+                        EOD;
+                        $TestoCap = explode('\n',$TestoCap);
+                            foreach ($TestoCap as $pezzo) {
+                                echo "<p>$pezzo</p>";
+                            }}
+                        echo <<<EOD
+                            </div>
+                        </div>
+                        EOD;}
             require ("../../data/Footer.php")
         ?>
+        
         </div>
     </body>
 </php>
