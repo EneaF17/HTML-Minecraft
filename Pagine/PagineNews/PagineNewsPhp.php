@@ -55,6 +55,27 @@
         $Aggiunte = "Niente";
     }
 
+    $QueryCambiamenti = "SELECT * FROM snapshotnews 
+                JOIN paginahacapitoli ON snapshotnews.IdSnapshot=paginahacapitoli.IdSnapshot
+                JOIN capitoli ON paginahacapitoli.IdCapitolo=capitoli.IdCapitolo
+                WHERE snapshotnews.IdSnapshot = '$IdPag' AND tipo = 'Cambiamenti'";
+    
+    $Cambiamenti= $Connessione->query($QueryCambiamenti);
+
+    if ($Cambiamenti->num_rows == 0){
+        $Cambiamenti = "Niente";
+    }
+
+    $QueryRimozioni = "SELECT * FROM snapshotnews 
+                    JOIN paginahacapitoli ON snapshotnews.IdSnapshot=paginahacapitoli.IdSnapshot
+                    JOIN capitoli ON paginahacapitoli.IdCapitolo=capitoli.IdCapitolo
+                    WHERE snapshotnews.IdSnapshot = '$IdPag' AND tipo = 'Rimozioni'";
+
+    $Rimozioni= $Connessione->query($QueryRimozioni);
+
+    if ($Rimozioni->num_rows == 0){
+    $Rimozioni = "Niente";
+    }
 
 
 
@@ -92,9 +113,9 @@
                             <li><a href="$Succ.php"><img src="../../immagini/FrecciaDx.png"alt=""></a></li>
                         </ul>
                     </div>
-                    <?php
+                    EOD;
                     require("../../data/Bookmark.php");
-                    ?>
+                echo <<<EOD
                     <div class="contenitorePaginaSnapshot">
                         <h1 class="titolo">Java Edition $titolo</h1>
                         <div class="ContenitoreTabella">
@@ -149,7 +170,7 @@
                         }}
                         echo '<h3><a href="#Rim">Rimozioni</a></h3>';
                     foreach($All as $dati){
-                        if ($dati["Tipo"] == "Cambiamenti"){
+                        if ($dati["Tipo"] == "Rimozioni"){
                             $titoloLista = $dati["NomeCap"];
                             $idCap = $dati["IdCapitolo"];
                             echo '<li><a href="#'."$idCap".'">'."$titoloLista".'</a></li>';
@@ -157,11 +178,12 @@
                         echo <<<EOD
                         </ol>
                     </div>
+                    
                     <h2 class="Sezione jumptarget" id="Agg">Aggiunte</h2>
             EOD;
 
 
-            if ($Aggiunte == "Niente") {echo "NEssuna Aggiunta in questo Sanpshot";} else{
+            if ($QueryAggiunte== "Niente") {echo "Nessuna Aggiunta in questo Sanpshot";} else{
             foreach ($Aggiunte as $dati) {
                 $Titoletto = $dati["NomeCap"];
                 $TestoCap = $dati["TestoCap"];
@@ -174,12 +196,30 @@
                         echo "<p>$pezzo</p>";
                     }}
                 echo <<<EOD
-                    </div>
-                </div>
+                    
+                
                 EOD;}
-            echo '<h2 class="Sezione jumptarget" id="Agg">Aggiunte</h2>';
-                if ($Aggiunte == "Niente") {echo "NEssuna Aggiunta in questo Sanpshot";} else{
-                    foreach ($Aggiunte as $dati) {
+            echo <<<EOD
+            <h2 class="Sezione jumptarget" id="Camb">Cambiamenti</h2>
+            EOD;
+            if ($Cambiamenti == "Niente") {echo "Nessun Cambiamento in questo Sanpshot";} else{
+                    foreach ($Cambiamenti as $dati) {
+                        $Titoletto = $dati["NomeCap"];
+                        $TestoCap = $dati["TestoCap"];
+                        $idCap = $dati["IdCapitolo"];
+                        echo <<<EOD
+                        <h3 class="jumptarget" id=$idCap>$Titoletto</h3>
+                        EOD;
+                        $TestoCap = explode('\n',$TestoCap);
+                            foreach ($TestoCap as $pezzo) {
+                                echo "<p>$pezzo</p>";
+                            }}
+            }
+            echo <<<EOD
+            <h2 class="Sezione jumptarget" id="Rim">Rimozioni</h2>
+            EOD;
+            if ($Rimozioni == "Niente") {echo "Nessuna Rimozione in questo Sanpshot";} else{
+                    foreach ($Rimozioni as $dati) {
                         $Titoletto = $dati["NomeCap"];
                         $TestoCap = $dati["TestoCap"];
                         $idCap = $dati["IdCapitolo"];
