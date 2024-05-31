@@ -13,7 +13,6 @@
         $LinkDungeons = "Dungeons.php";
         $LinkLegends = "Legends.php";  
     }
-
 ?>
 
 

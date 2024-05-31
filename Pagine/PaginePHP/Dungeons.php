@@ -8,8 +8,8 @@ $random = rand(1,4);
 $loading = false;
 $Username = $_SESSION["Username"];
 
-if (isset($_POST["Versione"])) {
-    if ($_POST["Versione"] == "Versione1") {
+if (isset($_POST["Deluxe"])) {
+    if ($_POST["Deluxe"] == "Si") {
 
         $QuerySaldo = "SELECT Saldo FROM giocatore WHERE Username = '$Username'";
 
@@ -34,7 +34,7 @@ if (isset($_POST["Versione"])) {
             }
         }
     }
-    if ($_POST["Versione"] == "Versione2") {
+    if ($_POST["Deluxe"] == "No") {
 
         $QuerySaldo = "SELECT Saldo FROM giocatore WHERE Username = '$Username'";
 
@@ -96,7 +96,7 @@ if (isset($_POST["Versione"])) {
                 <img src="../../Immagini/Negozio/LogoDungeons.avif" alt="">
                 <h3>Seleziona la Versione</h3>
                 <form action="" method="post">
-                    <input type="radio" name="Versione" value="Versione1" id="Ver1" class="HideInputAcq">
+                    <input type="radio" name="Deluxe" value="Si" id="Ver1" class="HideInputAcq">
                     <label class="labelAcq" for="Ver1">
                         <div class="Box_VersioneAcquisto">
                             <h3>Ultimate Edition</h3>
@@ -110,7 +110,7 @@ if (isset($_POST["Versione"])) {
                             </ul>
                         </div>
                     </label>
-                    <input type="radio" name="Versione" value="Versione2" id="Ver2" class="HideInputAcq">
+                    <input type="radio" name="Deluxe" value="No" id="Ver2" class="HideInputAcq">
                     <label class="labelAcq" for="Ver2">
                         <div class="Box_VersioneAcquisto">
                             <h3>Standard Edition</h3>

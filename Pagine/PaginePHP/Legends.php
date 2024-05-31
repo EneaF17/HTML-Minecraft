@@ -8,8 +8,8 @@ $random = rand(1,4);
 $loading = false;
 $Username = $_SESSION["Username"];
 
-if (isset($_POST["Versione"])) {
-    if ($_POST["Versione"] == "Versione1") {
+if (isset($_POST["Deluxe"])) {
+    if ($_POST["Deluxe"] == "Si") {
 
         $QuerySaldo = "SELECT Saldo FROM giocatore WHERE Username = '$Username'";
 
@@ -34,7 +34,7 @@ if (isset($_POST["Versione"])) {
             }
         }
     }
-    if ($_POST["Versione"] == "Versione2") {
+    if ($_POST["Deluxe"] == "No") {
 
         $QuerySaldo = "SELECT Saldo FROM giocatore WHERE Username = '$Username'";
 
