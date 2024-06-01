@@ -492,6 +492,13 @@ label img {
     display: flex;
 }
 
+.BoxGioco{
+    height: 45vh;
+    width: 100%;
+    background-repeat:repeat;
+    display: flex;
+}
+
 .ImgSide_Shop{
     /* border: 1px solid black; */
     width: 25%;
