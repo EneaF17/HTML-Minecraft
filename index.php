@@ -68,7 +68,7 @@
 
             <div class="Informazioni">
                 <div class="boxInfo">
-                    <a href="pagine/Minecraft_Guida.php"><img src="immagini/IronPickaxe.png"alt=""></a>
+                    <a href="Pagine/Minecraft_Guida.php"><img src="immagini/IronPickaxe.png"alt=""></a>
                     <div class="textInfo">
                         <h2>GUIDA</h2>
                             <p class="small-text">Impara le basi per giocare</p>
@@ -88,11 +88,11 @@
                             <p class="small-text">Tutte le versioni del gioco</p>
                             <p class="small-text">Nelle oltre 1600 pagine potrai trovare tutto cio che ti serve!</p>
                     </div>
-                    <a href="pagine/Minecraft_Wiki.php"><img src="immagini/Book.png"alt=""></a>
+                    <a href="Pagine/Minecraft_Wiki.php"><img src="immagini/Book.png"alt=""></a>
                 </div>
         
                 <div class="boxInfo">
-                    <a href="pagine/Minecraft_News.php"><img src="immagini/Anvil.webp"alt=""></a>
+                    <a href="Pagine/Minecraft_News.php"><img src="immagini/Anvil.webp"alt=""></a>
                     <div class="textInfo">
                         <h2>NEWS</h2>
                             <p class="small-text">Tutte le notizie sul gioco</p>

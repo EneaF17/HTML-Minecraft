@@ -229,13 +229,13 @@
                         $TestoCap = explode('\n',$TestoCap);
                             foreach ($TestoCap as $pezzo) {
                                 echo "<p>$pezzo</p>";
-                            }}
+                            }}}
                         echo <<<EOD
                             </div>
                         </div>
                         </div>
                         </body>
-                        EOD;}
+                        EOD;
                         require ("../../data/Footer.php")
         ?>
         
