@@ -459,6 +459,7 @@ label img {
 
 .LinkShop{
     /* border: 1px solid red; */
+    height: fit-content;
     margin-left: 5%;
     width: 90%;
     margin-top: 10px;
@@ -494,7 +495,8 @@ label img {
 }
 
 .BoxGioco{
-    height: 45vh;
+    padding: 5px;
+    height: fit-content;
     width: 100%;
     background-repeat:repeat;
     display: flex;
