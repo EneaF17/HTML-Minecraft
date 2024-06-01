@@ -45,6 +45,56 @@ REPLACE INTO `giocatore` (`Username`, `Password`, `Nome`, `Cognome`, `Compleanno
 	('qwerty', 'qwerty', 'Qwerty', 'Tarantino', '1997-05-12', '', '', 'Icona_Zombie.jpg', 0),
 	('Tormix', 'asd', 'Francesco', 'Tormene', '1986-04-09', '', '', 'Icona_Creeper.png', 0);
 
+-- Dump della struttura di tabella minecraftsito.paginahacapitoli
+CREATE TABLE IF NOT EXISTS `paginahacapitoli` (
+  `IdSnapshot` char(50) NOT NULL,
+  `IdCapitolo` int(11) NOT NULL,
+  PRIMARY KEY (`IdSnapshot`,`IdCapitolo`),
+  KEY `FK__capitoli` (`IdCapitolo`),
+  CONSTRAINT `FK__capitoli` FOREIGN KEY (`IdCapitolo`) REFERENCES `capitoli` (`IdCapitolo`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `FK__snapshotnews` FOREIGN KEY (`IdSnapshot`) REFERENCES `snapshotnews` (`IdSnapshot`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- Dump dei dati della tabella minecraftsito.paginahacapitoli: ~12 rows (circa)
+REPLACE INTO `paginahacapitoli` (`IdSnapshot`, `IdCapitolo`) VALUES
+	('23w12a', 1),
+	('23w12a', 2),
+	('23w12a', 3),
+	('23w12a', 4),
+	('23w12a', 5),
+	('23w12a', 6),
+	('23w12a', 7),
+	('23w12a', 8),
+	('23w12a', 9),
+	('23w12a', 10),
+	('23w12a', 11),
+	('23w12a', 12);
+
+-- Dump della struttura di tabella minecraftsito.capitoli
+CREATE TABLE IF NOT EXISTS `capitoli` (
+  `IdCapitolo` int(11) NOT NULL AUTO_INCREMENT,
+  `Tipo` enum('Introduzione','Aggiunte','Cambiamenti','Rimozioni') DEFAULT 'Introduzione',
+  `NomeCap` longtext DEFAULT NULL,
+  `TestoCap` longtext DEFAULT NULL,
+  PRIMARY KEY (`IdCapitolo`)
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- Dump dei dati della tabella minecraftsito.capitoli: ~12 rows (circa)
+REPLACE INTO `capitoli` (`IdCapitolo`, `Tipo`, `NomeCap`, `TestoCap`) VALUES
+	(1, 'Introduzione', 'Un\'istantanea Java di Minecraft', 'Bene, ciao amici amanti di Minecraft! È giunto il momento della prima istantanea per la versione 1.20. Sappiamo che non avevamo promesso ulteriori funzionalità importanti, quindi come siamo arrivati ​​ad avere una istantanea così grande? Pensavi che le tracce fossero finite? NO! Nello snapshot 23w12a abbiamo ancora più storie da raccontare! Apparentemente i nostri sviluppatori non hanno potuto resistere all\'aggiunta di qualche aggiunta extra. Godere!'),
+	(2, 'Aggiunte', 'RISONANZA DELLE VIBRAZIONI', 'I blocchi di ametista hanno un nuovo comportamento quando vengono posizionati adiacenti ai sensori Sculk\\n\r\nSe il Sensore Sculk riceve una vibrazione, il Blocco di Ametista riemetterà la sua frequenza come vibrazione separata nella sua posizione\\n\r\nQuesto comportamento è chiamato Risonanza delle vibrazioni e consente ai giocatori di spostare le frequenze di vibrazione su lunghe distanze senza dover ricreare la vibrazione in modo naturale\\n'),
+	(3, 'Aggiunte', 'SENSORI SCULK CALIBRATI', 'Una nuova variante di Sculk Sensors che consente di filtrare le vibrazioni in base al loro livello di frequenza\\n\r\nNon si trovano in natura e possono essere realizzati solo con 1 sensore Sculk e 3 frammenti di ametista nel tavolo di creazione\\n\r\nUn lato del sensore Sculk calibrato può ricevere un segnale di pietra rossa come input\\n\r\nLa forza del segnale della pietra rossa è l\'unica frequenza di vibrazione che il sensore Sculk ascolterà\\n'),
+	(4, 'Aggiunte', 'ARCHEOLOGIA', 'Aggiunto il blocco Ghiaia sospetta\\n\r\nHa le stesse caratteristiche della Sabbia Sospetta\\n\r\nAggiunta ghiaia sospetta alle Rovine dell\'Oceano Freddo\\n\r\nAggiunta sabbia sospetta alle calde rovine dell\'oceano\\n\r\nLe uova da annusare possono essere trovate qui\\n\r\nAggiunte le Rovine del Sentiero, una struttura sepolta di una cultura perduta\\n\r\nQui è possibile trovare quattro finiture dell\'armatura\\n\r\nAggiunti 16 frammenti di ceramica (quindi ora ci sono 20 frammenti di ceramica in totale)\\n\r\nQuesti sono stati distribuiti tra i 5 siti archeologici: Desert Wells, Desert Temples, Cold Ocean Ruins, Warm Ocean Ruins e Trail Ruins\\n'),
+	(5, 'Aggiunte', 'FINITURE PER ARMATURE', 'Nuovi modelli di forgiatura per finiture di armature sono stati aggiunti alle seguenti strutture:\\n\r\nRovine del sentiero\\n\r\nFiniture per armatura Wayfinder\\n\r\nAssetto dell\'armatura dell\'innalzatore\\n\r\nFiniture per armatura del Plasmatore\\n\r\nFinitura dell\'armatura dell\'ospite\\n\r\nCittà antica\\n\r\nFinitura dell\'armatura del silenzio\\n'),
+	(6, 'Aggiunte', 'SEGNI', 'Il testo del segno ora può essere modificato dopo essere stato posizionato nel mondo\\n\r\nQuesto può essere fatto interagendo con il Segno\\n\r\nEntrambi i lati del cartello ora possono avere testo e colori separati, consentendo ulteriori opzioni di personalizzazione\\n\r\nPer impostazione predefinita, un segno ti chiederà di inserire il testo del lato anteriore una volta posizionato\\n\r\nPer applicare il testo sul retro, devi camminare sull\'altro lato e interagire con quella faccia per modificarla\\n\r\nOra i cartelli possono anche essere cerati con Honeycomb, impedendo ulteriori modifiche al testo\\n\r\nI comandi clic sui cartelli possono essere richiamati solo quando il cartello è cerato\\n\r\nSe un cartello con un comando clic non viene cerato, interagendo con esso non verrà richiamato il comando e si aprirà invece la schermata di modifica come al solito\\n'),
+	(7, 'Aggiunte', 'UOVO DA ANNUSARE', 'Può essere trovato nella sabbia sospetta delle calde rovine dell\'oceano\\n\r\nQuando due Sniffer si riproducono non generano immediatamente uno Snifflet; invece, viene rilasciato un Uovo da Sniffer\\n\r\nCova\\n\r\nQuando posizionato sul muschio, l\'uovo si schiuderà dopo circa 10 minuti\\n\r\nSu tutti gli altri blocchi si schiuderà in circa 20 minuti\\n'),
+	(8, 'Aggiunte', 'PIANTA CARNIVORA', 'Lo Sniffer ora può occasionalmente annusare un oggetto Pitcher Pod\\n\r\nQuesto baccello, quando piantato in un terreno agricolo, diventa un raccolto lanciatore, che ha cinque fasi di crescita\\n\r\nUna volta completamente cresciuto, il raccolto di brocca può essere raccolto, producendo una pianta brocca alta due blocchi\\n'),
+	(9, 'Cambiamenti', 'CAMBIAMENTI', 'Le frequenze di vibrazione di molte azioni nel gioco sono state modificate\\n\r\nIl colore delle particelle dell\'effetto Wither è stato modificato per renderlo più distinguibile\\n\r\nIl colore della Pozione a caduta lenta è stato modificato per renderla più distinguibile\\n\r\nI suoni dei passi ora possono combinarsi per i blocchi attraversati e calpestati\\n'),
+	(10, 'Cambiamenti', 'FREQUENZE DI VIBRAZIONE', 'In preparazione al sensore Sculk calibrato, le frequenze di vibrazione sono state notevolmente semplificate per prevenire interferenze indesiderate. Di seguito sono riportate le descrizioni delle categorie per ciascuna frequenza e gli eventi attesi a cui corrispondono:\\n\r\nMovimento in qualsiasi mezzo (terra, acqua e aria)\\n\r\nAtterraggio su qualsiasi superficie (terra o acqua)\\n\r\nInterazioni con gli articoli\\n\r\nScivolare con un\'elitre o azioni mob uniche (ruggito del devastatore, scuotimento del lupo, ecc.)\\n\r\nSmontare un mob o equipaggiare l\'attrezzatura\\n\r\nMontare un mob o interagire con un mob\\n\r\nMob e giocatori vengono danneggiati\\n\r\nConsumare oggetti (bere e mangiare)\\n\r\nBlocchi di "disattivazione" (chiusura della porta, chiusura del baule, pressione del pulsante, ecc.)\\n\r\nBlocchi di "attivazione" (porta aperta, baule aperto, pressione di pulsanti, ecc.)\\n\r\nModifica dei blocchi (aumento del livello dell\'acqua nel calderone, aggiunta di cibo al fuoco, ecc.)\\n\r\nBlocchi distrutti\\n\r\nBlocchi in fase di posizionamento\\n\r\nMob e giocatori si teletrasportano o si generano\\n\r\nMob e giocatori muoiono o un\'esplosione\\n'),
+	(11, 'Cambiamenti', 'SUONI DI PASSI COMBINATI', 'Combina due diversi suoni di passo\\n\r\nSi verifica su tappeti, neve, germogli inferiori e radici deformate e cremisi\\n\r\nIl blocco più in alto su cui stai camminando viene giocato normalmente\\n\r\nIl blocco sottostante viene riprodotto a un volume e un tono più bassi\\n'),
+	(12, 'Cambiamenti', 'FINITURE PER ARMATURE', 'Il rivestimento dell\'armatura Dune ora ha un modello nuovo di zecca e un\'icona del modello di forgiatura\\n\r\nIl vecchio modello del rivestimento dell\'armatura della duna è ora utilizzato dal rivestimento dell\'armatura della sentinella\\n\r\nÈ stata creata una nuova icona per il modello di forgiatura dell\'armatura della sentinella per adattarla a questo modello\\n\r\nIl vecchio modello dell\'armatura della sentinella è ora utilizzato dal nuovo rivestimento dell\'armatura del modellatore\\n');
+
+
 -- Dump della struttura di tabella minecraftsito.giochi
 CREATE TABLE IF NOT EXISTS `giochi` (
   `Id_gioco` int(11) NOT NULL DEFAULT 0,
@@ -146,6 +196,23 @@ REPLACE INTO `preferiti` (`Username`, `IdPag`) VALUES
 	('qwerty', 16),
 	('asd', 17),
 	('asd', 18);
+	
+-- Dump della struttura di tabella minecraftsito.snapshotnews
+CREATE TABLE IF NOT EXISTS `snapshotnews` (
+  `IdSnapshot` char(50) NOT NULL,
+  `Immagine` char(50) NOT NULL,
+  `Edizione` char(50) NOT NULL DEFAULT 'Java Edition',
+  `Tipologia` char(50) NOT NULL DEFAULT 'Snapshot',
+  `DataRilascio` date NOT NULL,
+  `Versione` char(50) NOT NULL DEFAULT '1.20',
+  `Prec` char(50) DEFAULT NULL,
+  `Succ` char(50) DEFAULT NULL,
+  PRIMARY KEY (`IdSnapshot`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- Dump dei dati della tabella minecraftsito.snapshotnews: ~1 rows (circa)
+REPLACE INTO `snapshotnews` (`IdSnapshot`, `Immagine`, `Edizione`, `Tipologia`, `DataRilascio`, `Versione`, `Prec`, `Succ`) VALUES
+	('23w12a', '23w12a.avif', 'Java Edition', 'Snapshot', '2023-03-22', '1.20', '20w06a', '21w37a');
 
 /*!40103 SET TIME_ZONE=IFNULL(@OLD_TIME_ZONE, 'system') */;
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;

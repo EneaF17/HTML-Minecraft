@@ -233,10 +233,12 @@
                         echo <<<EOD
                             </div>
                         </div>
+                        </div>
+                        </body>
                         EOD;}
-            require ("../../data/Footer.php")
+                        require ("../../data/Footer.php")
         ?>
         
-        </div>
-    </body>
+        
+    
 </php>
