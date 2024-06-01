@@ -42,7 +42,7 @@
         <div class="SPboxSaldo">
             <h3>IL TUO SALDO É DI : <?php echo "$Saldo" ?> $</h3>
         </div>
-        <p>
+        <p class="med-text" style="position: relative;width: 80%;margin-left:10%;padding-top: 10px;background-color: hsla(0, 0%, 66%, 0.804);">
             <?php  echo $DatiMiei->num_rows>0?"I tuoi giochi:":"Non hai acquistato nessun gioco" ?>
         </p>
         <div class="Box_negozio">
@@ -63,14 +63,29 @@
                     elseif($Nomegioco=="Dungeons") $sfondo="../../Immagini/Negozio/Cobblestone.png";
                     elseif($Nomegioco=="Legends") $sfondo="../../Immagini/Negozio/Netherrack.png";
                     echo <<<EOD
-                    <a class="LinkShop" href="Gioco.php?nome_gioco='$Nomegioco'">
+                    <a class="LinkShop" href="Gioco.php?nome_gioco=$Nomegioco">
                         <div class="BoxGioco" style="background-image: url($sfondo);">
-                            <div class="ImgSide_Shop">
+                            <div class="ImgSide_Giochi">
                                 <img class="fullImg" src="../../Immagini/Negozio/$Foto" alt="">
                             </div>
-                            <div class="TextSide_Shop">
-                                <h2>$Nomegioco</h2>
+                            <div class="TextSide_Giochi">
+                                <h2 style="width:60%; text-align:center">$Nomegioco</h2>
+                                <img style="float:right; width:40%" src="../../Immagini/Negozio/$Copertina" alt="">
                                 <h2 class="Gr">$Costo</h2>
+                                <h3 class="TxLe" style="margin-left:5px">Versione : $Versione</h3>
+                                <h3 class="TxLe" style="margin-left:5px">Deluxe : $Deluxe</h3>
+                                <h3 class="TxLe">Contenuti:</h3>
+                                <ul style="border: 1px solid red;">
+                    EOD;
+                    $El=explode('\n', $Elementi);
+                    foreach($El as $Elemento){
+                                echo <<<EOD
+                                    <li style="color:black">$Elemento</li>
+                                EOD;
+                    }
+
+                    echo <<<EOD
+                                </ul>
                             </div>
                         </div>
                     </a>
