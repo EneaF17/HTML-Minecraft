@@ -9,17 +9,33 @@ if (!isset($_GET["nome_gioco"])) {
 }
 $nomegioco = $_GET["nome_gioco"];
 
+if(isset($_GET["Regala"])){
+    $Regala=$_GET["Regala"];
+}
+
+
+
 $acquistato=false;
 $random = rand(1, 4);
 $Username = $_SESSION["Username"];
 
 $Query = "SELECT Id_gioco FROM giochi WHERE Nome='$nomegioco'";
 $ris = $Connessione->query($Query) or die("ERRORE NELLA QUERY" . $Connessione->error);
-foreach ($ris as $dati) {
-    $Idgioco = $dati["Id_gioco"];
-    $Query2="SELECT Id_gioco, Username FROM posseduti WHERE Id_gioco='$Idgioco' AND Username='$Username'";
-    $ris2 = $Connessione->query($Query2) or die("ERRORE NELLA QUERY" . $Connessione->error);
-    if($ris2->num_rows>0){$acquistato=true;}
+if(isset($_GET["Regala"])){
+    foreach ($ris as $dati) {
+        $Idgioco = $dati["Id_gioco"];
+        $Query2="SELECT Id_gioco, Username FROM posseduti WHERE Id_gioco='$Idgioco' AND Username='$Regala'";
+        $ris2 = $Connessione->query($Query2) or die("ERRORE NELLA QUERY" . $Connessione->error);
+        if($ris2->num_rows>0){$acquistato=true;}
+    }
+}
+else{
+    foreach ($ris as $dati) {
+        $Idgioco = $dati["Id_gioco"];
+        $Query2="SELECT Id_gioco, Username FROM posseduti WHERE Id_gioco='$Idgioco' AND Username='$Username'";
+        $ris2 = $Connessione->query($Query2) or die("ERRORE NELLA QUERY" . $Connessione->error);
+        if($ris2->num_rows>0){$acquistato=true;}
+    }
 }
 
 // if ($acquistato) echo "SI"; else echo "No";
@@ -27,8 +43,9 @@ foreach ($ris as $dati) {
 
 if (isset($_POST["Deluxe"])) {
     if ($_POST["Deluxe"] == "Si") {
-
+        
         $QuerySaldo = "SELECT Saldo FROM giocatore WHERE Username = '$Username'";
+
         $QueryCosto = "SELECT Costo FROM giochi WHERE Nome='$nomegioco' AND Deluxe='Si'";
         $ris = $Connessione->query($QuerySaldo) or die("ERRORE NELLA QUERY" . $Connessione->error);
         $riscosto = $Connessione->query($QueryCosto) or die("ERRORE NELLA QUERY" . $Connessione->error);
@@ -45,7 +62,6 @@ if (isset($_POST["Deluxe"])) {
         if ($resto < 0) {
             $Esito = "SOLDI INSUFFICIENTI";
         } else {
-
             $UpdateSaldo = "UPDATE giocatore SET Saldo='$resto' WHERE Username = '$Username'";
 
             if ($Connessione->query("$UpdateSaldo") === true) {
@@ -54,8 +70,16 @@ if (isset($_POST["Deluxe"])) {
                 foreach ($ris as $dati) {
                     $Idgioco = $dati["Id_gioco"];
                 }
-                $Queryaggiungi = "INSERT INTO posseduti(Id_gioco, Username)
-                VALUES ('$Idgioco', '$Username')";
+
+
+                if(isset($_GET["Regala"])) 
+                {
+                    $Queryaggiungi = "INSERT INTO posseduti(Id_gioco, Username)
+                    VALUES ('$Idgioco', '$Regala')";
+                }else{
+                    $Queryaggiungi = "INSERT INTO posseduti(Id_gioco, Username)
+                    VALUES ('$Idgioco', '$Username')";
+                }
                 if ($Connessione->query("$Queryaggiungi") === true) {
                 } else {
                     echo $Connessione->error;
@@ -68,7 +92,7 @@ if (isset($_POST["Deluxe"])) {
         }
     }
     if ($_POST["Deluxe"] == "No") {
-
+        
         $QuerySaldo = "SELECT Saldo FROM giocatore WHERE Username = '$Username'";
         $QueryCosto = "SELECT Costo FROM giochi WHERE Nome='$nomegioco' AND Deluxe='No'";
         $ris = $Connessione->query($QuerySaldo) or die("ERRORE NELLA QUERY" . $Connessione->error);
@@ -87,7 +111,7 @@ if (isset($_POST["Deluxe"])) {
         } else {
 
             $UpdateSaldo = "UPDATE giocatore SET Saldo='$resto' WHERE Username = '$Username'";
-
+        
             if ($Connessione->query("$UpdateSaldo") === true) {
                 $Esito = "ACQUISTO ANDATO A BUON FINE";
                 $Query = "SELECT Id_gioco FROM giochi WHERE Nome='$nomegioco' AND Deluxe='No'";
@@ -95,8 +119,18 @@ if (isset($_POST["Deluxe"])) {
                 foreach ($ris as $dati) {
                     $Idgioco = $dati["Id_gioco"];
                 }
-                $Queryaggiungi = "INSERT INTO posseduti(Id_gioco, Username)
-                VALUES ('$Idgioco', '$Username')";
+
+
+                if(isset($_GET["Regala"])) 
+                {
+                    $Queryaggiungi = "INSERT INTO posseduti(Id_gioco, Username)
+                    VALUES ('$Idgioco', '$Regala')";
+                }else{
+                    $Queryaggiungi = "INSERT INTO posseduti(Id_gioco, Username)
+                    VALUES ('$Idgioco', '$Username')";
+                }
+
+
                 if ($Connessione->query("$Queryaggiungi") === true) {
                 } else {
                     echo $Connessione->error;
@@ -121,7 +155,7 @@ if (isset($_POST["Deluxe"])) {
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>JavaEdition - Negozio</title>
+        <title><?php echo $nomegioco?> - Negozio</title>
         <link rel="stylesheet" href="../../style.css">
 
     </head>
@@ -168,7 +202,38 @@ if (isset($_POST["Deluxe"])) {
             <img src="../../Immagini/Negozio/<?php echo $foto ?>" alt="">
             <div class="Box_Acquisto">
                 <img src="../../Immagini/Negozio/<?php echo $copertina ?>" alt="">
-                <h3><?php echo $acquistato?"Hai già acquistato questo gioco":"Seleziona la versione"?></h3>
+                <?php 
+                // echo "<p>$Regala</p>
+                //     <p>".$_SESSION['Regala']."</p>";
+                if(!isset($_GET["Regala"])) 
+                        if($acquistato){
+                            echo "<h3>Hai già acquistato questo gioco</h3>";
+                        }
+                        else
+                        {
+                            echo "<h3>Seleziona la versione</h3>";
+                        }
+                    else{
+                        if($acquistato){
+                            echo "<h3>$Regala ha già acquistato questo gioco</h3>";
+                        }
+                        else
+                        {
+                            echo "<h3>Seleziona la versione</h3>";
+                        }
+                    }
+                ?>
+
+
+                <?php if(!isset($_GET["Regala"])) 
+                        echo <<<EOD
+                            <a href="Regala.php?nome_gioco=$nomegioco" style="text-decoration:none; color:black"><div class="cta">Regala $nomegioco</div></a>
+                            EOD;
+                    else{
+                        echo "<h3>Stai regalando a $Regala</h3>";
+                    }
+                ?>
+                
                 <form action="" method="post">
                     <input type="radio" name="Deluxe" value="Si" id="Ver1" <?php echo $acquistato?"class='HideInputNoAcq'":"class='HideInputAcq'"?> >
                     <label class="labelAcq" for="Ver1">
@@ -223,5 +288,7 @@ if (isset($_POST["Deluxe"])) {
         <?php
         require("../../data/Footer.php")
         ?>
+    
     </body>
+    <?php unset($_GET["Regala"]);?>
 </php>
