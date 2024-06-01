@@ -454,7 +454,7 @@ label img {
     display: flex;
     flex-wrap: wrap;
     margin-left: 5%;
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 
 .LinkShop{
