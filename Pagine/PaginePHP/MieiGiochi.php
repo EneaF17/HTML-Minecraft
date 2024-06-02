@@ -84,7 +84,7 @@
                     $El=explode('\n', $Elementi);
                     foreach($El as $Elemento){
                                 echo <<<EOD
-                                    <li class="liInside" style="color:black">$Elemento</li>
+                                    <li class="liInside" style="color:black; display:inline">$Elemento</li>
                                 EOD;
                     }
 
