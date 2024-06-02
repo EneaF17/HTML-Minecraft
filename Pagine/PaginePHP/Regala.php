@@ -19,6 +19,11 @@
         header("location: Negozio.php");
     }
     $LinkUscita="Gioco.php?nome_gioco=".$_GET['nome_gioco'];
+    $_SESSION["redirect"] = "";
+    if (!isset($_SESSION["Risultato"])) {$risultato=false;} else {$risultato = $_SESSION["Risultato"];}
+    if (!isset($_SESSION["risultatoTXT"])) {$risultatoTXT="ERRORE CRITICO";} else {$risultatoTXT = $_SESSION["risultatoTXT"];}
+    if (!isset($_SESSION["redirect"])) {$redirect="";} else {$redirect = $_SESSION["redirect"];}
+
     $loading = false;
     $random = rand(1,4);
 ?>
@@ -75,12 +80,12 @@
                 $ris = $Connessione->query($RegalaQuery) or die("ERRORE NELLA QUERY". $Connessione->error);
 
                 if($ris ->num_rows == 0) {
-                    echo "<p> Nome utente errato </p>";
+                    $_SESSION["risultatoTXT"] = "<p> Nome utente errato </p>";
                     header("Refresh: $random;");
                     $loading = true;
                 }
                 elseif($Regala==$Username){
-                    echo "<p> Non puoi regalare a te stesso!</p>";
+                    $_SESSION["risultatoTXT"] = "<p> Non puoi regalare a te stesso!</p>";
                     header("Refresh: $random;");
                     $loading = true;
                 }
@@ -88,10 +93,19 @@
                     $Regala = $_POST["Regala"];
                     $LinkUscita=$LinkUscita."&Regala=$Regala";
                     $loading = true;
-                    header("Refresh: $random; $LinkUscita");
-                    // echo"CONNESSIONE ESEGUITA";
+                    $_SESSION["redirect"] = $LinkUscita;
+                    header("Refresh: $random;");
+                    $_SESSION["risultatoTXT"] = "Utente Trovato";
                 }
             }
+            if ($risultato) {
+                echo <<<EOD
+                <div class="CopriTutto">
+                    <h1>$risultatoTXT</h1>
+                </div>
+                EOD;
+                $_SESSION["Risultato"] = false;
+                header("refresh:2; $redirect");}
             if ($loading) {
                 echo <<<EOD
                 <div class="CopriTutto">
@@ -99,8 +113,7 @@
                     <div class="loaderGen2"></div>
                 </div>
                 EOD;
-                $loading =false;
-            }
+                $_SESSION["Risultato"] = true;}
             
         ?>
     </div>

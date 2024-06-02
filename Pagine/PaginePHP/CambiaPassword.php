@@ -5,9 +5,26 @@
     if (!isset($_SESSION["Username"])) { header("location: ../");}
 
     $Username = $_SESSION["Username"];
+
+    if (!isset($_SESSION["Risultato"])) {$risultato=false;} else {$risultato = $_SESSION["Risultato"];}
+    if (!isset($_SESSION["risultatoTXT"])) {$risultatoTXT="ERRORE CRITICO";} else {$risultatoTXT = $_SESSION["risultatoTXT"];}
+    if (!isset($_SESSION["redirect"])) {$redirect="";} else {$redirect = $_SESSION["redirect"];}
     
     
    $random = rand(1,4);
+
+   if (session_status() == PHP_SESSION_NONE) { $UserIcon ="Icona_Utente";} else {
+            
+    $Username = $_SESSION["Username"];
+
+    $queryIcona = "SELECT Icona FROM giocatore WHERE Username = '$Username'";
+
+    $dati = $Connessione -> query($queryIcona) or die("ERRORE". $Connessione->error);
+
+    foreach($dati as $DatiItem) {
+        $UserIcon = $DatiItem["Icona"];}
+    
+}
 
 
 ?>
@@ -30,6 +47,11 @@
                     <img src="../../immagini/logo.png" alt="">
             </a>
             </div>
+            
+            <div class="Icona" >
+                <a href="IlMioAccount.php"><img class="IconaImg" src="../../Immagini/PhpImg/<?php echo $UserIcon?>" alt=""></a>
+            </div>
+            
         </div>
 
     <div class="loginBox">
@@ -68,14 +90,16 @@
                 }
 
                 if ($passwordOld != $VecchiaPsw){
-                    echo"<h2>PASSWORD VECCHIA SBAGLIATA</h2>";
+                    $_SESSION["risultatoTXT"] = "PASSWORD VECCHIA SBAGLIATA";
+                    $_SESSION["redirect"] = "";
                     $loading = true;
                     header("Refresh: $random;");
                 }
                 else {
 
-                    if($_POST["PasswordNew"] != $_POST["PasswordConf"]) { 
-                        echo"<h2>LE PASSWORD NON COINCIDONO</h2>";
+                    if($_POST["PasswordNew"] != $_POST["PasswordConf"]) {
+                        $_SESSION["risultatoTXT"] = "LE PASSWORD NON COINCIDONO";
+                        $_SESSION["redirect"] = "";
                         $loading = true;
                         header("Refresh: $random;");
                     }
@@ -84,10 +108,16 @@
                         $QueryReg2 = "UPDATE giocatore SET Password = '$Password' WHERE Username = '$Username'";
                         if ($Connessione -> query($QueryReg2) === true) {
                             $_SESSION["Username"] = $Username;
-                            echo "<h2>REGISTRAZIONE COMPLETATA</h2>";
+                            $_SESSION["risultatoTXT"] = "password modificata con successo";
+                            $_SESSION["redirect"] = "IlMioAccount.php";
                             $loading = true;
-                            header("Refresh: $random; IlMioAccount.php");}
-                        else{ echo "<h2>ERRORE NELLA REGISTRAZIONE</h2>"; $loading = false;;
+                            header("Refresh: $random;");
+                        }
+                        else{ 
+                            $_SESSION["risultatoTXT"] = "ERRORE NELLA REGISTRAZIONE";
+                            $_SESSION["redirect"] = "";
+                            $loading = true;
+                            header("Refresh: $random;");
                         }
                     }
 
@@ -95,19 +125,26 @@
             
             }
             else{
-                echo"<h2>Compila i campi qua sopra...</h2>";
                 $loading = false;
-                
             }
             echo "</div>";
             require ("../../data/Footer.php");
+            if ($risultato) {
+                echo <<<EOD
+                <div class="CopriTutto">
+                    <h1>$risultatoTXT</h1>
+                </div>
+                EOD;
+                $_SESSION["Risultato"] = false;
+                header("refresh:2,$redirect");}
             if ($loading) {
                 echo <<<EOD
                 <div class="CopriTutto">
                     <div class="loaderGen1"></div>
                     <div class="loaderGen2"></div>
                 </div>
-                EOD;}
+                EOD;
+                $_SESSION["Risultato"] = true;}
         ?>
     </body>
 </php>

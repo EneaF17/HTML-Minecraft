@@ -14,7 +14,12 @@
     if (isset($_SESSION["TelefonoReg"])) {$Telefono = $_SESSION["TelefonoReg"];} else {$Telefono = "";}
     $random = rand(1,4);
     
-    if (isset($_SESSION["PostReg"])) {$dati = $_SESSION["PostReg"];} else {$dati = "LOL";}
+    if (isset($_SESSION["PostReg"])) {$dati = $_SESSION["PostReg"];} else {$dati = "";}
+
+    if (!isset($_SESSION["Risultato"])) {$risultato=false;} else {$risultato = $_SESSION["Risultato"];}
+    if (!isset($_SESSION["risultatoTXT"])) {$risultatoTXT="ERRORE CRITICO";} else {$risultatoTXT = $_SESSION["risultatoTXT"];}
+    if (!isset($_SESSION["redirect"])) {$redirect="";} else {$redirect = $_SESSION["redirect"];}
+    
 ?>
 
 
@@ -91,7 +96,7 @@
                 if (isset($_POST["Email"])) {$_SESSION["EmailReg"] = $_POST ["Email"];} else {$_SESSION["EmailReg"] = "";}
                 if (isset($_POST["Telefono"])) {$_SESSION["TelefonoReg"] = $_POST ["Telefono"];} else {$_SESSION["TelefonoReg"] = "";}
                 if($_POST["Password"] != $_POST["PasswordConf"]) { 
-                    echo"<h2>LE PASSWORD NON COINCIDONO</h2>";
+                    $_SESSION["risultatoTXT"] = "LE PASSWORD NON COINCIDONO";
                     $loading = true;
                     header("Refresh: $random;");
                 }
@@ -102,7 +107,7 @@
                     $ris = $Connessione -> query($QueryReg) or die("ERRORE NELLA QUERY". $Connessione->error);
 
                     if ($ris -> num_rows > 0) {
-                        echo"<h2>USERNAME GIA' IN USO</h2>";
+                        $_SESSION["risultatoTXT"] = "USERNAME GIA' IN USO";
                         $loading = true;
                         header("Refresh: $random;");
                     }
@@ -114,7 +119,7 @@
                         $mese = $DataIns->diff($DataR)->m;
                         $giorno = $DataIns->diff($DataR)->d;
                         if ($anno<14){
-                            echo "<h2>DEVI AVERE ALMENO 14 ANNI PER REGISTRARTI</h2>";
+                            $_SESSION["risultatoTXT"] = "DEVI AVERE ALMENO 14 ANNI PER REGISTRARTI";
                             $loading = true;
                             header("Refresh: $random;");
                         }
@@ -124,10 +129,13 @@
                                         VALUES ('$Username','$Password','$Nome','$Cognome','$DataN','$Email','$Telefono')";
                             if ($Connessione -> query($QueryReg2) === true) {
                                 $_SESSION["Username"] = $Username;
-                                echo "<h2>REGISTRAZIONE COMPLETATA</h2>";
+                                $_SESSION["risultatoTXT"] = "REGISTRAZIONE COMPLETATA";
                                 $loading = true;
-                                header("Refresh: $random; IconaImmagine.php");}
-                            else{ echo "<h2>ERRORE NELLA REGISTRAZIONE</h2>"; $loading = false;;
+                                $_SESSION["redirect"] ="IconaImmagine.php";
+                                header("Refresh: $random;");}
+                            else{ 
+                                $_SESSION["risultatoTXT"] = "ERRORE NELLA REGISTRAZIONE";
+                                $loading = false;;
                             }
                         }
                     }
@@ -135,19 +143,27 @@
             
             }
             else{
-                echo"<h2>Compila i campi qua sopra...</h2>";
                 $loading = false;
                 
             }
             echo "</div>";
             require ("../../data/Footer.php");
+            if ($risultato) {
+                echo <<<EOD
+                <div class="CopriTutto">
+                    <h1>$risultatoTXT</h1>
+                </div>
+                EOD;
+                $_SESSION["Risultato"] = false;
+                header("refresh:2; $redirect");}
             if ($loading) {
                 echo <<<EOD
                 <div class="CopriTutto">
                     <div class="loaderGen1"></div>
                     <div class="loaderGen2"></div>
                 </div>
-                EOD;}
+                EOD;
+                $_SESSION["Risultato"] = true;}
         ?>
     </body>
 </php>

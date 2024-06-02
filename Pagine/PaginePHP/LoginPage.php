@@ -17,6 +17,10 @@
     else {
         $LinkUscita = "SP_Home.php";
     }
+    if (!isset($_SESSION["Risultato"])) {$risultato=false;} else {$risultato = $_SESSION["Risultato"];}
+    if (!isset($_SESSION["risultatoTXT"])) {$risultatoTXT="ERRORE CRITICO";} else {$risultatoTXT = $_SESSION["risultatoTXT"];}
+    if (!isset($_SESSION["redirect"])) {$redirect="";} else {$redirect = $_SESSION["redirect"];}
+    
     $loading = false;
     $random = rand(1,4);
 ?>
@@ -84,18 +88,27 @@
                 $ris = $Connessione->query($LoginQuery) or die("ERRORE NELLA QUERY". $Connessione->error);
 
                 if($ris ->num_rows == 0) {
-                    echo "<p> Nome utente o password errati </p>";
+                    $_SESSION["risultatoTXT"] = "Nome utente o password errati";
                     header("Refresh: $random;");
                     $loading = true;
                 }
                 else {
                     $_SESSION["Username"] = $Username;
-
+                    $_SESSION["risultatoTXT"] = "Login Effettuato";
                     $loading = true;
-                    header("Refresh: $random; $LinkUscita");
+                    $_SESSION["redirect"]=$LinkUscita;
+                    header("Refresh: $random;");
                     // echo"CONNESSIONE ESEGUITA";
                 }
             }
+            if ($risultato) {
+                echo <<<EOD
+                <div class="CopriTutto">
+                    <h1>$risultatoTXT</h1>
+                </div>
+                EOD;
+                $_SESSION["Risultato"] = false;
+                header("refresh:2; $redirect");}
             if ($loading) {
                 echo <<<EOD
                 <div class="CopriTutto">
@@ -104,6 +117,7 @@
                 </div>
                 EOD;
                 $loading =false;
+                $_SESSION["Risultato"] = true;
             }
             
         ?>

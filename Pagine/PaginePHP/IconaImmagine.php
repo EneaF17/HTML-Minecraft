@@ -4,6 +4,22 @@
     if (!isset($_SESSION["Username"])) { header("location: ../../");}
 
     $Username = $_SESSION["Username"];
+
+    if (session_status() == PHP_SESSION_NONE) { $UserIcon ="Icona_Utente";} else {
+            
+        $Username = $_SESSION["Username"];
+    
+        $queryIcona = "SELECT Icona FROM giocatore WHERE Username = '$Username'";
+    
+        $dati = $Connessione -> query($queryIcona) or die("ERRORE". $Connessione->error);
+    
+        foreach($dati as $DatiItem) {
+            $UserIcon = $DatiItem["Icona"];}
+        
+    }
+    if (!isset($_SESSION["Risultato"])) {$risultato=false;} else {$risultato = $_SESSION["Risultato"];}
+    $random = rand(1,4);
+    $loading = false;
 ?>
 
 <!DOCTYPE php>
@@ -21,6 +37,9 @@
             <a href="../../" class="logo-link">            
                 <img src="../../immagini/logo.png" alt="">
         </a>
+        </div>
+        <div class="Icona" >
+            <a href="IlMioAccount.php"><img class="IconaImg" src="../../Immagini/PhpImg/<?php echo $UserIcon?>" alt=""></a>
         </div>
     </div>
 
@@ -85,12 +104,27 @@
             $UpdateIcon = "UPDATE giocatore SET Icona='$LinkIcona' WHERE Username = '$Username'";
         
             if($Connessione -> query("$UpdateIcon") === true) {
-                echo"AGGIORNATO";
-                header('location:SP_Home.php');
+                $loading = true;
+                header("refresh:$random;");
             }
                 else{ echo "<h2>ERRORE NELL' AGGIORNAMENTO ICONA'</h2>";}
             }
-
+        if ($risultato) {
+            echo <<<EOD
+            <div class="CopriTutto">
+                <h1>Icona Aggiornata</h1>
+            </div>
+            EOD;
+            $_SESSION["Risultato"] = false;
+            header("refresh:2,IlMioAccount.php");}
+        if ($loading) {
+            echo <<<EOD
+            <div class="CopriTutto">
+                <div class="loaderGen1"></div>
+                <div class="loaderGen2"></div>
+            </div>
+            EOD;
+            $_SESSION["Risultato"] = true;}
     ?>
     
 

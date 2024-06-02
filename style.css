@@ -131,6 +131,19 @@ html{
     100% {margin-top: 120px; margin-left: 120px;}
   }
 
+.LogOut1{
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    top: 10%;
+}
+.LogOut2{
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    bottom: 10%;
+}
+
 /* LOGIN PAGE */
 
 .loginBox{

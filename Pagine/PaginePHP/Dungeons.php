@@ -4,6 +4,10 @@ require ("../../data/connessioneDB.php");
 if (!isset($_SESSION["Username"])) {
     header("location: ../../");
 }
+if (!isset($_SESSION["Risultato"])) {$risultato=false;} else {$risultato = $_SESSION["Risultato"];}
+if (!isset($_SESSION["risultatoTXT"])) {$risultatoTXT="ERRORE CRITICO";} else {$risultatoTXT = $_SESSION["risultatoTXT"];}
+if (!isset($_SESSION["redirect"])) {$redirect="";} else {$redirect = $_SESSION["redirect"];}
+    
 $random = rand(1,4);
 $loading = false;
 $Username = $_SESSION["Username"];
@@ -22,15 +26,15 @@ if (isset($_POST["Deluxe"])) {
         $resto = $Saldo - 19.99;
 
         if ($resto < 0) {
-            $Esito = "SOLDI INSUFFICIENTI";
+            $_SESSION["risultatoTXT"] = "SOLDI INSUFFICIENTI";
         } else {
 
             $UpdateSaldo = "UPDATE giocatore SET Saldo='$resto' WHERE Username = '$Username'";
 
             if ($Connessione->query("$UpdateSaldo") === true) {
-                $Esito = "ACQUISTO ANDATO A BUON FINE";
+                $_SESSION["risultatoTXT"] = "ACQUISTO ANDATO A BUON FINE";
             } else {
-                $Esito = "ERRORE NELL' ACQUISTO";
+                $_SESSION["risultatoTXT"] = "ERRORE NELL' ACQUISTO";
             }
         }
     }
@@ -47,22 +51,21 @@ if (isset($_POST["Deluxe"])) {
         $resto = $Saldo - 9.99;
 
         if ($resto < 0) {
-            $Esito = "SOLDI INSUFFICIENTI";
+            $_SESSION["risultatoTXT"] = "SOLDI INSUFFICIENTI";
         } else {
 
             $UpdateSaldo = "UPDATE giocatore SET Saldo='$resto' WHERE Username = '$Username'";
 
             if ($Connessione->query("$UpdateSaldo") === true) {
-                $Esito = "ACQUISTO ANDATO A BUON FINE";
+                $_SESSION["risultatoTXT"] = "ACQUISTO ANDATO A BUON FINE";
             } else {
-                $Esito = "ERRORE NELL' ACQUISTO";
+                $_SESSION["risultatoTXT"] = "ERRORE NELL' ACQUISTO";
             }
         }
     }
     header("Refresh: $random;");
     $loading = true;
 } else {
-    $Esito = "ESITO ACQUISTO...";
     $loading = false;
 }
 ?>
@@ -82,13 +85,22 @@ if (isset($_POST["Deluxe"])) {
     <body>
         <?php
         require ("../../data/Header.php");
+        if ($risultato) {
+            echo <<<EOD
+            <div class="CopriTutto">
+                <h1>$risultatoTXT</h1>
+            </div>
+            EOD;
+            $_SESSION["Risultato"] = false;
+            header("refresh:2; $redirect");}
         if ($loading) {
             echo <<<EOD
             <div class="CopriTutto">
                 <div class="loaderGen1"></div>
                 <div class="loaderGen2"></div>
             </div>
-            EOD;}
+            EOD;
+            $_SESSION["Risultato"] = true;}
         ?>
         <main>
             <img src="../../Immagini/Negozio/SfondoDungeons.jpg" alt="">

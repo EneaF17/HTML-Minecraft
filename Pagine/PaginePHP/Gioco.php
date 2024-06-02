@@ -13,6 +13,10 @@ if(isset($_GET["Regala"])){
     $Regala=$_GET["Regala"];
 }
 
+if (!isset($_SESSION["Risultato"])) {$risultato=false;} else {$risultato = $_SESSION["Risultato"];}
+if (!isset($_SESSION["risultatoTXT"])) {$risultatoTXT="ERRORE CRITICO";} else {$risultatoTXT = $_SESSION["risultatoTXT"];}
+if (!isset($_SESSION["redirect"])) {$redirect="";} else {$redirect = $_SESSION["redirect"];}
+
 
 
 $acquistato=false;
@@ -60,7 +64,7 @@ if (isset($_POST["Deluxe"])) {
         $resto = $Saldo - $Costo;
 
         if ($resto < 0) {
-            $Esito = "SOLDI INSUFFICIENTI";
+            $_SESSION["risultatoTXT"] = "SOLDI INSUFFICIENTI";
         } else {
             $UpdateSaldo = "UPDATE giocatore SET Saldo='$resto' WHERE Username = '$Username'";
 
@@ -85,9 +89,9 @@ if (isset($_POST["Deluxe"])) {
                     echo $Connessione->error;
                 }
 
-                $Esito = "ACQUISTO ANDATO A BUON FINE";
+                $_SESSION["risultatoTXT"] = "ACQUISTO ANDATO A BUON FINE";
             } else {
-                $Esito = "ERRORE NELL' ACQUISTO";
+                $_SESSION["risultatoTXT"] = "ERRORE NELL' ACQUISTO";
             }
         }
     }
@@ -107,13 +111,13 @@ if (isset($_POST["Deluxe"])) {
         $resto = $Saldo - $Costo;
 
         if ($resto < 0) {
-            $Esito = "SOLDI INSUFFICIENTI";
+            $_SESSION["risultatoTXT"] = "SOLDI INSUFFICIENTI";
         } else {
 
             $UpdateSaldo = "UPDATE giocatore SET Saldo='$resto' WHERE Username = '$Username'";
         
             if ($Connessione->query("$UpdateSaldo") === true) {
-                $Esito = "ACQUISTO ANDATO A BUON FINE";
+                $_SESSION["risultatoTXT"] = "ACQUISTO ANDATO A BUON FINE";
                 $Query = "SELECT Id_gioco FROM giochi WHERE Nome='$nomegioco' AND Deluxe='No'";
                 $ris = $Connessione->query($Query) or die("ERRORE NELLA QUERY" . $Connessione->error);
                 foreach ($ris as $dati) {
@@ -136,14 +140,13 @@ if (isset($_POST["Deluxe"])) {
                     echo $Connessione->error;
                 }
             } else {
-                $Esito = "ERRORE NELL' ACQUISTO";
+                $_SESSION["risultatoTXT"] = "ERRORE NELL' ACQUISTO";
             }
         }
     }
     header("Refresh: $random;");
     $loading = true;
 } else {
-    $Esito = "ESITO ACQUISTO...";
     $loading = false;
 }
 ?>
@@ -163,6 +166,14 @@ if (isset($_POST["Deluxe"])) {
     <body>
         <?php
         require("../../data/Header.php");
+        if ($risultato) {
+            echo <<<EOD
+            <div class="CopriTutto">
+                <h1>$risultatoTXT</h1>
+            </div>
+            EOD;
+            $_SESSION["Risultato"] = false;
+            header("refresh:2; $redirect");}
         if ($loading) {
             echo <<<EOD
             <div class="CopriTutto">
@@ -170,7 +181,7 @@ if (isset($_POST["Deluxe"])) {
                 <div class="loaderGen2"></div>
             </div>
             EOD;
-        }
+            $_SESSION["Risultato"] = true;}
         ?>
         <main>
             <?php
@@ -270,7 +281,7 @@ if (isset($_POST["Deluxe"])) {
                     <input type="submit" <?php echo $acquistato?"class='SubmitButtonNoAcq'":"class='SubmitButtonAcq'"?> value="CHECKOUT >" <?php echo $acquistato?"disabled='disabled'":'' ?>>
                 </form>
 
-                <h3> <?php echo "$Esito"; ?> </h3>
+                <!-- <h3> <?php echo "$Esito"; ?> </h3> -->
 
             </div>
             <div class="TextAcquisto">

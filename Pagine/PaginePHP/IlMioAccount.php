@@ -2,10 +2,12 @@
     session_start();
     require("../../data/connessioneDB.php");
     if (!isset($_SESSION["Username"])) { header("location: ../");}
+    if (!isset($_SESSION["Risultato"])) {$risultato=false;} else {$risultato = $_SESSION["Risultato"];}
 
     $Username = $_SESSION["Username"];
     $loading = false;
     $random = rand(1,4);
+    $risultatoTXT = "Dati Aggiornati con successo!";
     
     $DatiQuery = "SELECT Password,Nome,Cognome,Compleanno,Email,Telefono 
                 FROM giocatore WHERE Username = '$Username'";
@@ -69,15 +71,24 @@
 </head>
 <body>
     <?php require("../../data/PSHeader.php");
+        if ($risultato) {
+            echo <<<EOD
+            <div class="CopriTutto">
+                <h1>$risultatoTXT</h1>
+            </div>
+            EOD;
+            $_SESSION["Risultato"] = false;
+            header("refresh:2,$redirect");}
         if ($loading) {
             echo <<<EOD
             <div class="CopriTutto">
                 <div class="loaderGen1"></div>
                 <div class="loaderGen2"></div>
             </div>
-            EOD;}
+            EOD;
+            $_SESSION["Risultato"] = true;}
+        
     ?>
-
 <main class="marginMain">
 
     <?php require("../../data/sideNav.php")?>
