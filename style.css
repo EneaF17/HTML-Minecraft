@@ -642,6 +642,11 @@ label img {
     border: 5px solid red;
 }
 
+.liInside{
+    list-style-position: inside;
+    text-align: left;
+}
+
 .labelAcq {
     background-color: rgb(37, 37, 37);
     width: 90%;
