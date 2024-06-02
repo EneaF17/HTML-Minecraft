@@ -312,7 +312,7 @@ label img {
 }
 
 .LinkBoxSP{
-    border: 1px solid red;
+    /* border: 1px solid red; */
     margin-left: 10%;
     width: 80%;
     margin-top: 10px;
@@ -443,6 +443,23 @@ label img {
     
 }
 
+
+.testogioco{
+    font-size: 25px;
+    position: relative;
+    width: 80%;
+    margin: 10px 10%;
+    padding-top: 10px;
+    background-color: hsla(0, 0%, 66%, 0.804);
+}
+
+@media (max-width: 768px) {
+    .testogioco{
+        font-size:15px
+    }
+}
+
+
 .PulsanteLogOut{
     width: 40%;
     height: auto;
@@ -533,8 +550,8 @@ label img {
 .LinkShop{
     /* border: 1px solid red; */
     height: fit-content;
-    margin-left: 5%;
-    width: 90%;
+    margin-left: 2%;
+    width: 96%;
     margin-top: 10px;
     margin-bottom: 10px;
 }
@@ -573,6 +590,7 @@ label img {
     width: 100%;
     background-repeat:repeat;
     display: flex;
+    flex-wrap: wrap;
 }
 
 .ImgSide_Shop{
@@ -611,6 +629,21 @@ label img {
     padding: 10px;
     padding-top: 1%;
     border-radius: 20px;
+}
+.copertinagioco{
+    float:right; width:40%;
+}
+
+@media (max-width: 768px) {
+    .ImgSide_Giochi{
+        width: 100%;
+    }
+    .TextSide_Giochi h3{
+        font-size: 15px;
+    }
+    .TextSide_Giochi{
+        width: 100%;
+    }
 }
 
 
@@ -1069,7 +1102,6 @@ label img {
 @media (max-width: 768px) {
     .hero{
         height: 68vh;
-        top: 32vh;
     }
     .hero__content{
         position: relative;
@@ -1194,7 +1226,6 @@ label img {
 
 @media (max-width: 768px) {
     .Informazioni{
-        top:32vh;
         width: 90%;
         left: 5%;
         height: 160vh;
@@ -1510,7 +1541,7 @@ label img {
 
 @media (max-width: 768px) {
     .main-carousel--home{
-        top:32vh; height: 40vh;
+        height: 40vh;
     }
     .carousel-cell--home{width: 100%;}
 }
@@ -2298,14 +2329,6 @@ footer p{
     color: white;
 }
 
-@media (max-width: 768px) {
-    footer{
-        top:22vh
-    }
-    .footer-home{
-        top:32vh
-    }
-}
 
 @media (max-height: 450px) and (orientation:landscape){
     footer{
