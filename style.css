@@ -285,6 +285,15 @@ label img {
     background-position: right;
     background-attachment: fixed;
 }
+@media (max-width: 768px) {
+    .marginMain{
+        margin-top: 23vh;
+    }
+    .ContentBoxSP{
+        width: 70%;
+        margin-left: 30%;
+    }
+}
 
 .BenevenutoTXT{
     position: relative;
@@ -303,14 +312,13 @@ label img {
 }
 
 .LinkBoxSP{
-    /* border: 1px solid red; */
+    border: 1px solid red;
     margin-left: 10%;
     width: 80%;
     margin-top: 10px;
     margin-bottom: 10px;
     display: block;
 }
-
 .SPboxLinks{
     margin-top: 5px;
     margin-bottom: 5px;
@@ -331,20 +339,35 @@ label img {
     padding: 5px;
 }
 
+@media (max-width: 768px) {
+    .LinkBoxSP{
+        height: fit-content;
+    }
+
+    .SPboxLinks{
+        margin:0;
+        height: fit-content;
+    }
+
+    .SPboxLinksTXT h3{
+        font-size: 20px;
+    }
+    .SPboxLinksTXT p{
+        font-size: 10px;
+    }
+}
 
 .IconaSPHome{
     position: relative;
-    height: auto;
+    height: min-content;
     padding: 10px;
-    width: 20%;
+    width: 30%;
+    align-self: center;
 }
 
 @media (max-width: 768px) {
-    .IconaSPHome{
-        display: none;
-    }
     .SPboxLinksTXT{
-        width: 100%;
+        width: 70%;
     }
 }
 
@@ -376,17 +399,6 @@ label img {
     border-top: 2px solid antiquewhite;
     border-bottom: 2px solid antiquewhite;
 }
-
-@media (max-width: 768px) {
-    .sidenavSP{
-        width: 30%;
-        top: 22vh;
-    }
-    .IconaSPNav{
-        display: none;
-    }
-    
-}
 .IconaSP{
     align-items: center;
     align-self: center;
@@ -404,6 +416,33 @@ label img {
     width: 20%;
 }
 
+@media (max-width: 768px) {
+    .sidenavSP{
+        width: 30%;
+        top: 22vh;
+    }
+    .IconaSPNav{
+        display: none;
+    }
+
+    /* .sidenavSP.IconaSP{
+        width: 80%;
+        height: auto;
+        border: 1px solid red;
+    } */
+    .sideNavSPBox{
+        padding: 3px;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    }
+    .sideNavSPBox h3{
+        font-size: 15px;
+        text-align: center;
+    }
+    
+}
+
 .PulsanteLogOut{
     width: 40%;
     height: auto;
@@ -415,9 +454,7 @@ label img {
 }
 .PulsanteLogOut:hover{
     background-color: rgb(78, 78, 78);
-    transform: scale(1.05);
-    
-    
+    transform: scale(1.05);   
 }
 
 /* IL MIO ACCOUNT */
@@ -733,7 +770,7 @@ label img {
     background-size:contain;
     background-repeat:repeat;
     box-shadow: 5px 5px 10px 5px #000000;
-    z-index: 100;
+    z-index: 1000;
 }
 
 .headerPS{
@@ -750,7 +787,7 @@ label img {
     background-size:contain;
     background-repeat:repeat;
     box-shadow: 5px 5px 10px 5px #000000;
-    z-index: 100;
+    z-index: 1000;
 }
 
 .logo{
