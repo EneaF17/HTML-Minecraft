@@ -89,7 +89,7 @@
             $_SESSION["Risultato"] = true;}
         
     ?>
-<main class="marginMain">
+<main class="marginMain marginMainSP">
 
     <?php require("../../data/sideNav.php")?>
     

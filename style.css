@@ -289,6 +289,9 @@ label img {
     .marginMain{
         margin-top: 23vh;
     }
+    .marginMainSP{
+        margin-top: 32vh;
+    }
     .ContentBoxSP{
         width: 70%;
         margin-left: 30%;
@@ -497,6 +500,7 @@ label img {
 
 }
 
+
 .UpdateDataButton{
     position: relative;
     margin-top: 10px;
@@ -535,6 +539,26 @@ label img {
     background-color: rgb(156, 156, 156);
     transform: scale(1.05);
 }
+
+@media (max-width: 768px) {
+    .ContentBoxAccount{
+        /* border: 1px solid red; */
+        width: max-content;
+        margin-left: 40%;
+    }
+    .DatiAccountBox{
+        width: 100%;
+    }
+    .UpdateDataButton{
+        height: fit-content;
+    }
+    .PulsanteIconaCambio{
+        height: fit-content;
+    }
+}
+
+
+
 
 /* NEGOZIO */
 
@@ -962,8 +986,11 @@ label img {
     .header{
         height:32vh;
     }
-    .header--nocta{
+    .header--nocta {
         height: 22vh;
+    }
+    .headerPS{
+        height: 32vh;
     }
     .logo{
         width: 70%;
