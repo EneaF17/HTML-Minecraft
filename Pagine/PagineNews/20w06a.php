@@ -30,9 +30,9 @@
             
             <div class="contenitorePulsanti">
                 <ul class="Pulsanti" style="list-style-type: none;">
-                    <li><a href="22w11a.php"><img src="../../immagini/FrecciaSx.png"alt=""></a></li>
+                    <li><a href="PagineNewsPhp.php?IdPag=24w09a"><img src="../../immagini/FrecciaSx.png"alt=""></a></li>
                     <li><a href="../Minecraft_News.php"><img src="../../immagini/FrecciaSu.png"alt=""></a></li>
-                    <li><a href="21w37a.php"><img src="../../immagini/FrecciaDx.png"alt=""></a></li>
+                    <li><a href="PagineNewsPhp.php?IdPag=20w45a"><img src="../../immagini/FrecciaDx.png"alt=""></a></li>
                 </ul>
             </div>
             <?php require("../../data/Bookmark.php"); ?>
