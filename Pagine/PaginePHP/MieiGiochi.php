@@ -46,7 +46,7 @@
         <div class="SPboxSaldo">
             <h3>IL TUO SALDO É DI : <?php echo "$Saldo" ?> $</h3>
         </div>
-        <p class="med-text" style="position: relative;width: 80%;margin-left:10%;padding-top: 10px;background-color: hsla(0, 0%, 66%, 0.804);">
+        <p class="med1-text" style="position: relative;width: 80%;margin: 10px 10%;padding-top: 10px;background-color: hsla(0, 0%, 66%, 0.804);">
             <?php  echo $DatiMiei->num_rows>0?"I tuoi giochi:":"Non hai acquistato nessun gioco" ?>
         </p>
         <div class="Box_negozio">
@@ -98,7 +98,7 @@
             }
         ?>
         </div>
-        <p class="med-text" style="position: relative;width: 80%;margin-left:10%;padding-top: 10px;background-color: hsla(0, 0%, 66%, 0.804);">
+        <p class="med1-text" style="position: relative;width: 80%;margin: 10px 10%;padding-top: 10px;background-color: hsla(0, 0%, 66%, 0.804);">
             <?php  echo $DatiAltri->num_rows>0?"Scopri gli altri giochi:":"Hai già tutti i giochi" ?>
         </p>
         <div class="Box_negozio">

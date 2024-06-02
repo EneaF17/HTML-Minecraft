@@ -36,7 +36,7 @@ $Pagine=$Connessione -> query($query) or die("ERRORE". $Connessione->error);
         {
             echo "<h2 class='LinkPagPref'>Non hai pagine preferite</h2>";
         }
-        else{    
+        else{
             foreach($Pagine as $Pagina){
                 $NomePag=$Pagina["Pagina"];
                 $Tipo=$Pagina["Tipo"];

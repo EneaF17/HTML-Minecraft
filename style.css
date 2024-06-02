@@ -262,6 +262,8 @@ label img {
     margin-top: 25%;
     margin-bottom: 25%;
 }
+
+
 /* HOME PERSONALE */
 
 .marginMain{
@@ -1594,35 +1596,13 @@ label img {
     width: 100%;
     /* border: 1px solid red; */
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     justify-items: center;
 }
-
-.pagPref{
-    width:100%;
-    /* margin-left: 25%; */
-    /* border: 1px solid green; */
-    background: burlywood;
-    border-radius: 20px;
-    display: flex;
-    margin-top: 20px;
-    align-items: center;
-}
-
-.LinkpagCerca{
-    display: block;
-    width: 90%;
-    margin-left: 5%;
-    transition: 400ms;
-}
-
-.LinkpagCerca:hover{
-    transform: scale(1.10);
-}
-
 .linkpagPref{
+    /* border: 1px solid red; */
     display: block;
-    width: 70%;
+    width: 56%;
     margin-left: 25%;
     transition: 400ms;
 }
@@ -1631,16 +1611,27 @@ label img {
     transform: scale(1.10);
 }
 
+.pagPref{
+    width:100%;
+    /* margin-left: 25%; */
+    /* border: 5px solid green; */
+    background: burlywood;
+    border-radius: 20px;
+    display: flex;
+    margin-top: 20px;
+    align-items: center;
+}
+
+
 .imgPagPref{
     width: 20%;
     height: 150px;
     padding: 10px;
 }
 
-
 .linkCestino{
-    margin: 20px;
-    width: 20%;
+    margin: 2%;
+    width: 15%;
     max-height: 150px;
     transition: 500ms;
 }
@@ -1660,6 +1651,23 @@ label img {
     height: min-content;
     /* border: 1px solid red; */
 }
+
+
+
+
+
+.LinkpagCerca{
+    border: 1px solid red;
+    display: block;
+    width: 90%;
+    margin-left: 5%;
+    transition: 400ms;
+}
+
+.LinkpagCerca:hover{
+    transform: scale(1.10);
+}
+
 
 
 
