@@ -35,7 +35,7 @@ require("../../data/connessioneDB.php");
 <?php 
     if (isset($_POST["Ricerca"])) {
         $Ricerca = $_POST["Ricerca"];
-        $CercaQuery = "SELECT Pagina, Tipo, Foto FROM pagpref WHERE Pagina LIKE '%$Ricerca%'";
+        $CercaQuery = "SELECT Pagina, Tipo, Foto ,Titolo FROM pagpref WHERE Pagina LIKE '%$Ricerca%'";
 
         $CercaRis = $Connessione->query($CercaQuery) or die("E' SUCCESSO UN CASINO");
 
@@ -48,6 +48,7 @@ require("../../data/connessioneDB.php");
                 $NomeFoto=$Pagina["Foto"];
                 $link="../Pagine".$Tipo."/".$NomePag;
                 $Titolo=basename($NomePag, ".php");
+                if (isset($Pagina["Titolo"])) {$Titolo = $Pagina["Titolo"];}
                 $linkImg="../../Immagini/Immagini".$Tipo."/".$NomeFoto;
                 echo <<<EOD
                 <div class="divPreferito">

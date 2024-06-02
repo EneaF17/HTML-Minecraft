@@ -8,8 +8,7 @@
     $IdPag=$_GET["IdPag"];
 
     $QueryAll = "SELECT * FROM snapshotnews 
-                JOIN paginahacapitoli ON snapshotnews.IdSnapshot=paginahacapitoli.IdSnapshot
-                JOIN capitoli ON paginahacapitoli.IdCapitolo=capitoli.IdCapitolo
+                JOIN capitoli ON snapshotnews.IdSnapshot=capitoli.IdSnapshotAssoc
                 WHERE snapshotnews.IdSnapshot = '$IdPag'";
 
     $All = $Connessione->query($QueryAll);
@@ -34,8 +33,7 @@
     }
 
     $QueryIntro = "SELECT * FROM snapshotnews 
-                JOIN paginahacapitoli ON snapshotnews.IdSnapshot=paginahacapitoli.IdSnapshot
-                JOIN capitoli ON paginahacapitoli.IdCapitolo=capitoli.IdCapitolo
+                JOIN capitoli ON snapshotnews.IdSnapshot=capitoli.IdSnapshotAssoc
                 WHERE snapshotnews.IdSnapshot = '$IdPag' AND tipo = 'Introduzione'";
 
     $Intro= $Connessione->query($QueryIntro);
@@ -45,8 +43,7 @@
     }
 
     $QueryAggiunte = "SELECT * FROM snapshotnews 
-                JOIN paginahacapitoli ON snapshotnews.IdSnapshot=paginahacapitoli.IdSnapshot
-                JOIN capitoli ON paginahacapitoli.IdCapitolo=capitoli.IdCapitolo
+                JOIN capitoli ON snapshotnews.IdSnapshot=capitoli.IdSnapshotAssoc
                 WHERE snapshotnews.IdSnapshot = '$IdPag' AND tipo = 'Aggiunte'";
     
     $Aggiunte= $Connessione->query($QueryAggiunte);
@@ -56,8 +53,7 @@
     }
 
     $QueryCambiamenti = "SELECT * FROM snapshotnews 
-                JOIN paginahacapitoli ON snapshotnews.IdSnapshot=paginahacapitoli.IdSnapshot
-                JOIN capitoli ON paginahacapitoli.IdCapitolo=capitoli.IdCapitolo
+                JOIN capitoli ON snapshotnews.IdSnapshot=capitoli.IdSnapshotAssoc
                 WHERE snapshotnews.IdSnapshot = '$IdPag' AND tipo = 'Cambiamenti'";
     
     $Cambiamenti= $Connessione->query($QueryCambiamenti);
@@ -67,8 +63,7 @@
     }
 
     $QueryRimozioni = "SELECT * FROM snapshotnews 
-                    JOIN paginahacapitoli ON snapshotnews.IdSnapshot=paginahacapitoli.IdSnapshot
-                    JOIN capitoli ON paginahacapitoli.IdCapitolo=capitoli.IdCapitolo
+                    JOIN capitoli ON snapshotnews.IdSnapshot=capitoli.IdSnapshotAssoc
                     WHERE snapshotnews.IdSnapshot = '$IdPag' AND tipo = 'Rimozioni'";
 
     $Rimozioni= $Connessione->query($QueryRimozioni);
@@ -89,7 +84,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>20w06a snapshot</title>
+        <title><?php echo "$titolo"; ?> - snapshot</title>
         <link rel="icon" type="image/x-icon" href="../../Immagini/SfondoHeader.jpg">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
         <link rel="stylesheet" href="../../style.css">
@@ -108,9 +103,9 @@
                 echo <<<EOD
                     <div class="contenitorePulsanti">
                         <ul class="Pulsanti" style="list-style-type: none;">
-                            <li><a href="$Prec.php"><img src="../../immagini/FrecciaSx.png"alt=""></a></li>
+                            <li><a href="$Prec"><img src="../../immagini/FrecciaSx.png"alt=""></a></li>
                             <li><a href="../Minecraft_News.php"><img src="../../immagini/FrecciaSu.png"alt=""></a></li>
-                            <li><a href="$Succ.php"><img src="../../immagini/FrecciaDx.png"alt=""></a></li>
+                            <li><a href="$Succ"><img src="../../immagini/FrecciaDx.png"alt=""></a></li>
                         </ul>
                     </div>
                     EOD;
@@ -183,7 +178,7 @@
             EOD;
 
 
-            if ($QueryAggiunte== "Niente") {echo "Nessuna Aggiunta in questo Sanpshot";} else{
+            if ($Aggiunte== "Niente") {echo "Nessuna Aggiunta in questo Sanpshot";} else{
             foreach ($Aggiunte as $dati) {
                 $Titoletto = $dati["NomeCap"];
                 $TestoCap = $dati["TestoCap"];

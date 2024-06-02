@@ -6,7 +6,7 @@ if (!isset($_SESSION["Username"])) {
 }
 
 $Username = $_SESSION["Username"];
-$query="SELECT Pagina, Tipo, Foto
+$query="SELECT Pagina, Tipo, Foto, Titolo
     FROM giocatore JOIN preferiti ON giocatore.Username=preferiti.Username
         JOIN pagpref ON pagpref.IdPag=preferiti.IdPag
     WHERE giocatore.Username='$Username'";
@@ -43,6 +43,7 @@ $Pagine=$Connessione -> query($query) or die("ERRORE". $Connessione->error);
                 $NomeFoto=$Pagina["Foto"];
                 $link="../Pagine".$Tipo."/".$NomePag;
                 $Titolo=basename($NomePag, ".php");
+                if (isset($Pagina["Titolo"])) {$Titolo = $Pagina["Titolo"];}
                 $linkImg="../../Immagini/Immagini".$Tipo."/".$NomeFoto;
                 echo <<<EOD
                 <div class="divPreferito">

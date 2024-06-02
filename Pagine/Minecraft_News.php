@@ -47,6 +47,7 @@
                     </div>
     
                     <div class="News">
+                        <a href="PagineNews/PagineNewsPhp.php?IdPag=24w09a">
                         <h2>Ultimo snapshot</h2>
                         <div class="descNews">
                             <img src="../immagini/ImmaginiNews/24W09A.avif" alt="">
@@ -54,6 +55,7 @@
                             <p>Ciao! Ecco uno snapshot leggermente più grande del solito con molte modifiche tecniche, interfaccia utente aggiornata, un'altra iterazione dell'armatura del lupo e modifiche alle nuove funzionalità.
                                 Sin dal rilascio iniziale dell'armatura del lupo, abbiamo lavorato per migliorarla per aumentarne la protezione, l'usabilità e aggiungere la personalizzazione.</p>
                         </div>
+                        </a>
                     </div>
     
                     <div class="News">
@@ -89,7 +91,7 @@
                                 <li><a href="">23w16a</a></li>
                                 <li><a href="">23w14a</a></li>
                                 <li><a href="">23w13a</a></li>
-                                <li><a href="PagineNews/PagineNewsPhp.php?IdPag=23w12a">23w12a</a></li>
+                                <li><a style="color: red;" href="PagineNews/PagineNewsPhp.php?IdPag=23w12a">23w12a</a></li>
                             </ul>
                         </div>
                     </div>
@@ -109,7 +111,7 @@
                             <ul class="listasnapshot col2" style="list-style-type: none;">
                                 <h2 class="titolosottoversione">1.19.3</h2>
                                 <li><a href="">22w46a</a></li>
-                                <li><a href="">22w45a</a></li>
+                                <li><a style="color: red;" href="../Pagine/PagineNews/21w39a.php">22w45a</a></li>
                                 <li><a href="">22w44a</a></li>
                                 <li><a href="">22w43a</a></li>
                                 <li><a href="">22w42a</a></li>
@@ -154,9 +156,9 @@
                                 <li><a href="">21w42a</a></li>
                                 <li><a href="">21w41a</a></li>
                                 <li><a href="">21w40a</a></li>
-                                <li><a href="../Pagine/PagineNews/21w39a.php">21w39a</a></li>
+                                <li><a style="color: red;" href="../Pagine/PagineNews/21w39a.php">21w39a</a></li>
                                 <li><a href="">21w38a</a></li>
-                                <li><a href="../Pagine/PagineNews/21w37a.php">21w37a</a></li>
+                                <li><a style="color: red;" href="../Pagine/PagineNews/21w37a.php">21w37a</a></li>
                             </ul>
                         </div>
                     </div>
@@ -168,7 +170,7 @@
                             <h2 class="titolosottoversione col3">1.17</h2>
                             <ul class="listasnapshot" style="list-style-type: none;">
                                 <li><a href="">21w20a</a></li>
-                                <li><a href="">21w19a</a></li>
+                                <li><a style="color: red;" href="PagineNewsPhp.php?IdPag=21w19a">21w19a</a></li>
                                 <li><a href="">21w18a</a></li>
                                 <li><a href="">21w17a</a></li>
                                 <li><a href="">21w16a</a></li>
@@ -187,12 +189,12 @@
                             <ul class="listasnapshot" style="list-style-type: none;">
                                 <li><a href="">21w05a</a></li>
                                 <li><a href="">21w05b</a></li>
-                                <li><a href="">21w03a</a></li>
+                                <li><a style="color: red;" href="PagineNewsPhp.php?IdPag=21w03a">21w03a</a></li>
                                 <li><a href="">20w51a</a></li>
                                 <li><a href="">20w49a</a></li>
                                 <li><a href="">20w48a</a></li>
                                 <li><a href="">20w46a</a></li>
-                                <li><a href="">20w45a</a></li>
+                                <li><a style="color: red;" href="PagineNewsPhp.php?IdPag=20w45a">20w45a</a></li>
                             </ul>
                         </div>
                     </div>
@@ -232,7 +234,7 @@
                                 <li><a href="">20w09a</a></li>
                                 <li><a href="">20w08a</a></li>
                                 <li><a href="">20w07a</a></li>
-                                <li><a href="../Pagine/PagineNews/20w06a.php">20w06a</a></li>
+                                <li><a style="color: red;" href="../Pagine/PagineNews/20w06a.php">20w06a</a></li>
                             </ul>
                         </div>
                     </div>

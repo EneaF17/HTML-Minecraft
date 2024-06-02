@@ -29,7 +29,7 @@
             
             <div class="contenitorePulsanti">
                 <ul class="Pulsanti" style="list-style-type: none;">
-                    <li><a href="20w06a.php"><img src="../../immagini/FrecciaSx.png"alt=""></a></li>
+                    <li><a href="PagineNewsPhp.php?IdPag=21w19a"><img src="../../immagini/FrecciaSx.png"alt=""></a></li>
                     <li><a href="../Minecraft_News.php"><img src="../../immagini/FrecciaSu.png"alt=""></a></li>
                     <li><a href="21w39a.php"><img src="../../immagini/FrecciaDx.png"alt=""></a></li>
                 </ul>
