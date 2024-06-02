@@ -262,6 +262,8 @@ label img {
     margin-top: 25%;
     margin-bottom: 25%;
 }
+
+
 /* HOME PERSONALE */
 
 .marginMain{
@@ -282,6 +284,15 @@ label img {
     background-size: cover;
     background-position: right;
     background-attachment: fixed;
+}
+@media (max-width: 768px) {
+    .marginMain{
+        margin-top: 23vh;
+    }
+    .ContentBoxSP{
+        width: 70%;
+        margin-left: 30%;
+    }
 }
 
 .BenevenutoTXT{
@@ -308,7 +319,6 @@ label img {
     margin-bottom: 10px;
     display: block;
 }
-
 .SPboxLinks{
     margin-top: 5px;
     margin-bottom: 5px;
@@ -329,12 +339,36 @@ label img {
     padding: 5px;
 }
 
+@media (max-width: 768px) {
+    .LinkBoxSP{
+        height: fit-content;
+    }
+
+    .SPboxLinks{
+        margin:0;
+        height: fit-content;
+    }
+
+    .SPboxLinksTXT h3{
+        font-size: 20px;
+    }
+    .SPboxLinksTXT p{
+        font-size: 10px;
+    }
+}
 
 .IconaSPHome{
     position: relative;
-    height: auto;
+    height: min-content;
     padding: 10px;
-    width: 20%;
+    width: 30%;
+    align-self: center;
+}
+
+@media (max-width: 768px) {
+    .SPboxLinksTXT{
+        width: 70%;
+    }
 }
 
 .sidenavSP{
@@ -344,7 +378,9 @@ label img {
     border-right: 3px solid gray;
     position: fixed;
     top: 16vh;
+    z-index: 100;
 }
+
 
 .sidenavSP h1{
     text-align: center;
@@ -363,7 +399,6 @@ label img {
     border-top: 2px solid antiquewhite;
     border-bottom: 2px solid antiquewhite;
 }
-
 .IconaSP{
     align-items: center;
     align-self: center;
@@ -381,6 +416,50 @@ label img {
     width: 20%;
 }
 
+@media (max-width: 768px) {
+    .sidenavSP{
+        width: 30%;
+        top: 22vh;
+    }
+    .IconaSPNav{
+        display: none;
+    }
+
+    /* .sidenavSP.IconaSP{
+        width: 80%;
+        height: auto;
+        border: 1px solid red;
+    } */
+    .sideNavSPBox{
+        padding: 3px;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    }
+    .sideNavSPBox h3{
+        font-size: 15px;
+        text-align: center;
+    }
+    
+}
+
+
+.testogioco{
+    font-size: 25px;
+    position: relative;
+    width: 80%;
+    margin: 10px 10%;
+    padding-top: 10px;
+    background-color: hsla(0, 0%, 66%, 0.804);
+}
+
+@media (max-width: 768px) {
+    .testogioco{
+        font-size:15px
+    }
+}
+
+
 .PulsanteLogOut{
     width: 40%;
     height: auto;
@@ -392,9 +471,7 @@ label img {
 }
 .PulsanteLogOut:hover{
     background-color: rgb(78, 78, 78);
-    transform: scale(1.05);
-    
-    
+    transform: scale(1.05);   
 }
 
 /* IL MIO ACCOUNT */
@@ -473,8 +550,8 @@ label img {
 .LinkShop{
     /* border: 1px solid red; */
     height: fit-content;
-    margin-left: 5%;
-    width: 90%;
+    margin-left: 2%;
+    width: 96%;
     margin-top: 10px;
     margin-bottom: 10px;
 }
@@ -513,6 +590,7 @@ label img {
     width: 100%;
     background-repeat:repeat;
     display: flex;
+    flex-wrap: wrap;
 }
 
 .ImgSide_Shop{
@@ -551,6 +629,21 @@ label img {
     padding: 10px;
     padding-top: 1%;
     border-radius: 20px;
+}
+.copertinagioco{
+    float:right; width:40%;
+}
+
+@media (max-width: 768px) {
+    .ImgSide_Giochi{
+        width: 100%;
+    }
+    .TextSide_Giochi h3{
+        font-size: 15px;
+    }
+    .TextSide_Giochi{
+        width: 100%;
+    }
 }
 
 
@@ -710,7 +803,7 @@ label img {
     background-size:contain;
     background-repeat:repeat;
     box-shadow: 5px 5px 10px 5px #000000;
-    z-index: 100;
+    z-index: 1000;
 }
 
 .headerPS{
@@ -727,7 +820,7 @@ label img {
     background-size:contain;
     background-repeat:repeat;
     box-shadow: 5px 5px 10px 5px #000000;
-    z-index: 100;
+    z-index: 1000;
 }
 
 .logo{
@@ -779,6 +872,12 @@ label img {
     width: max-content;
     transition: 400ms;
 }
+@media (max-width: 768px) {
+    .Cerca{
+        height: 25%;
+        width: auto;
+    }
+}
 
 .Cerca:hover{
     transform: scale(1.1);
@@ -815,8 +914,15 @@ label img {
     height: 75%;
     width: max-content;
 }
+@media (max-width: 768px) {
+    .Icona{
+        width:15%;
+        height: fit-content;
+    }
+}
 
 .IconaImg{
+    border: black 3px solid;
     width: fit-content;
     height: 100%;
     border-radius: 50%;
@@ -873,7 +979,7 @@ label img {
         width: 100%
     }
 
-    .menu li img{max-width: 60%; height: auto;}
+    .menu li img{max-width: 30%; height: auto;}
 
     .cta{
         width: 50%;
@@ -996,7 +1102,6 @@ label img {
 @media (max-width: 768px) {
     .hero{
         height: 68vh;
-        top: 32vh;
     }
     .hero__content{
         position: relative;
@@ -1121,7 +1226,6 @@ label img {
 
 @media (max-width: 768px) {
     .Informazioni{
-        top:32vh;
         width: 90%;
         left: 5%;
         height: 160vh;
@@ -1437,7 +1541,7 @@ label img {
 
 @media (max-width: 768px) {
     .main-carousel--home{
-        top:32vh; height: 40vh;
+        height: 40vh;
     }
     .carousel-cell--home{width: 100%;}
 }
@@ -1599,35 +1703,13 @@ label img {
     width: 100%;
     /* border: 1px solid red; */
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     justify-items: center;
 }
-
-.pagPref{
-    width:100%;
-    /* margin-left: 25%; */
-    /* border: 1px solid green; */
-    background: burlywood;
-    border-radius: 20px;
-    display: flex;
-    margin-top: 20px;
-    align-items: center;
-}
-
-.LinkpagCerca{
-    display: block;
-    width: 90%;
-    margin-left: 5%;
-    transition: 400ms;
-}
-
-.LinkpagCerca:hover{
-    transform: scale(1.10);
-}
-
 .linkpagPref{
+    /* border: 1px solid red; */
     display: block;
-    width: 70%;
+    width: 56%;
     margin-left: 25%;
     transition: 400ms;
 }
@@ -1636,16 +1718,27 @@ label img {
     transform: scale(1.10);
 }
 
+.pagPref{
+    width:100%;
+    /* margin-left: 25%; */
+    /* border: 5px solid green; */
+    background: burlywood;
+    border-radius: 20px;
+    display: flex;
+    margin-top: 20px;
+    align-items: center;
+}
+
+
 .imgPagPref{
     width: 20%;
     height: 150px;
     padding: 10px;
 }
 
-
 .linkCestino{
-    margin: 20px;
-    width: 20%;
+    margin: 2%;
+    width: 15%;
     max-height: 150px;
     transition: 500ms;
 }
@@ -1665,6 +1758,23 @@ label img {
     height: min-content;
     /* border: 1px solid red; */
 }
+
+
+
+
+
+.LinkpagCerca{
+    border: 1px solid red;
+    display: block;
+    width: 90%;
+    margin-left: 5%;
+    transition: 400ms;
+}
+
+.LinkpagCerca:hover{
+    transform: scale(1.10);
+}
+
 
 
 
@@ -2206,7 +2316,7 @@ footer{
     background-color: black;
     /* border: 2px solid green; */
     text-align: center;
-    z-index: 100;
+    z-index: 1000000;
     bottom: 0;
 }
 
@@ -2219,14 +2329,6 @@ footer p{
     color: white;
 }
 
-@media (max-width: 768px) {
-    footer{
-        top:22vh
-    }
-    .footer-home{
-        top:32vh
-    }
-}
 
 @media (max-height: 450px) and (orientation:landscape){
     footer{
