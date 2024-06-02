@@ -79,12 +79,12 @@
                                 <h3 class="TxLe" style="margin-left:5px">Versione : $Versione</h3>
                                 <h3 class="TxLe" style="margin-left:5px">Deluxe : $Deluxe</h3>
                                 <h3 class="TxLe">Contenuti:</h3>
-                                <ul>
+                                <ul class="liInside">
                     EOD;
                     $El=explode('\n', $Elementi);
                     foreach($El as $Elemento){
                                 echo <<<EOD
-                                    <li style="color:black">$Elemento</li>
+                                    <li class="liInside" style="color:black">$Elemento</li>
                                 EOD;
                     }
 
@@ -131,12 +131,12 @@
                                 <h3 class="TxLe" style="margin-left:5px">Versione : $Versione</h3>
                                 <h3 class="TxLe" style="margin-left:5px">Deluxe : $Deluxe</h3>
                                 <h3 class="TxLe">Contenuti:</h3>
-                                <ul>
+                                <ul class="liInside">
                     EOD;
                     $El=explode('\n', $Elementi);
                     foreach($El as $Elemento){
                                 echo <<<EOD
-                                    <li style="color:black">$Elemento</li>
+                                    <li class="liInside"style="color:black">$Elemento</li>
                                 EOD;
                     }
 
