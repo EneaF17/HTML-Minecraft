@@ -6,7 +6,7 @@ if (!isset($_SESSION["Username"])) {
 }
 
 $Username = $_SESSION["Username"];
-$query="SELECT Pagina, Tipo, Foto, Titolo
+$query="SELECT Pagina, Tipo, Foto
     FROM giocatore JOIN preferiti ON giocatore.Username=preferiti.Username
         JOIN pagpref ON pagpref.IdPag=preferiti.IdPag
     WHERE giocatore.Username='$Username'";
@@ -25,10 +25,8 @@ $Pagine=$Connessione -> query($query) or die("ERRORE". $Connessione->error);
 <?php require("../../data/PSHeader.php");?>
 <body>
     
-
-
-    <main class="marginMain">
-    <?php require("../../data/sideNav.php")?>
+    <main class="marginMain marginMainSP">
+        <?php require("../../data/sideNav.php")?>
         <h1 class="prefTitle">Le tue pagine preferite</h1>
 
         <?php 
@@ -48,10 +46,10 @@ $Pagine=$Connessione -> query($query) or die("ERRORE". $Connessione->error);
                 echo <<<EOD
                 <div class="divPreferito">
                     <a class="linkpagPref" href=$link>
-                    <div class="pagPref">
-                        <img class="imgPagPref" src="$linkImg" alt="">
-                        <h2 class="LinkPreftxt">$Titolo</h2>
-                    </div>
+                        <div class="pagPref">
+                            <img class="imgPagPref" src="$linkImg" alt="">
+                            <h2 class="LinkPreftxt">$Titolo</h2>
+                        </div>
                     </a>
                     <a href="../../data/CancellaPrefScript.php?nome=$NomePag" class="linkCestino">
                         <img class="ImgCestino" src="../../Immagini/PhpImg/SPCestino.png" alt="">
@@ -64,7 +62,7 @@ $Pagine=$Connessione -> query($query) or die("ERRORE". $Connessione->error);
         
 
     </main>
+    
     <?php require ("../../data/Footer.php")?>
-
 </body>
 </php>

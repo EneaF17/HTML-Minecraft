@@ -2,6 +2,7 @@
 a{display: inline; text-decoration: none;}
 
 body{
+    width: 100%;
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
@@ -270,7 +271,7 @@ label img {
     /* border: 1px solid red; */
     margin-top: 18vh;
     width: 100%;
-    min-height: 100%;
+    min-height: 100vh;
     /* height: 100%; */
 }
 
@@ -290,6 +291,7 @@ label img {
         margin-top: 23vh;
     }
     .marginMainSP{
+        width: 110%;
         margin-top: 32vh;
     }
     .ContentBoxSP{
@@ -334,7 +336,7 @@ label img {
 }
 
 .SPboxLinksTXT{
-    width: 80%;
+    width: 70%;
     font-size: larger;
     text-align: center;
     justify-content: center;
@@ -362,9 +364,9 @@ label img {
 
 .IconaSPHome{
     position: relative;
-    height: min-content;
+    height: 100%;
     padding: 10px;
-    width: 30%;
+    width: 20%;
     align-self: center;
 }
 
@@ -422,7 +424,7 @@ label img {
 @media (max-width: 768px) {
     .sidenavSP{
         width: 30%;
-        top: 22vh;
+        top: 32vh;
     }
     .IconaSPNav{
         display: none;
@@ -1726,6 +1728,12 @@ label img {
     margin-left: 25%;
 }
 
+@media (max-width: 768px) {
+    .prefTitle{
+        margin-left:50%
+    }
+}
+
 .divPreferito{
     width: 100%;
     /* border: 1px solid red; */
@@ -1787,7 +1795,30 @@ label img {
 }
 
 
+@media (max-width: 768px) {
+    .divPreferito{
+        margin: 0;
+        width: 100%;
+        margin-left: 40%;
+        border: 1px solid red;
+    }
+    .linkpagPref{
+        width: 74%;
+        margin: 2%;
+    }
+    .linkCestino{
+        width: 20%;
+        margin: 1%;
+    }
 
+    .imgPagPref{
+        width:40%;
+        margin-left: 5%;
+    }
+    .LinkPreftxt{
+        width:40%;
+    }
+}
 
 
 .LinkpagCerca{
@@ -2359,7 +2390,7 @@ footer p{
 
 @media (max-height: 450px) and (orientation:landscape){
     footer{
-        top:22vh
+        top:22vh;
     }
 }
 
