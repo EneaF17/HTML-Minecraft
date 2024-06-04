@@ -19,7 +19,6 @@
         header("location: Negozio.php");
     }
     $LinkUscita="Gioco.php?nome_gioco=".$_GET['nome_gioco'];
-    $_SESSION["redirect"] = "";
     if (!isset($_SESSION["Risultato"])) {$risultato=false;} else {$risultato = $_SESSION["Risultato"];}
     if (!isset($_SESSION["risultatoTXT"])) {$risultatoTXT="ERRORE CRITICO";} else {$risultatoTXT = $_SESSION["risultatoTXT"];}
     if (!isset($_SESSION["redirect"])) {$redirect="";} else {$redirect = $_SESSION["redirect"];}

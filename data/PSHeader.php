@@ -30,7 +30,9 @@
         <a href="Cerca.php"><img class="CercaImg" src="../../Immagini/PhpImg/SPLente.png"> </a>
     </div>
     <div class="Icona" >
+        <a href="SP_Home.php">
         <img class="IconaImg" src="../../Immagini/PhpImg/<?php echo $UserIcon?>" alt="">
+        </a>
     </div>
 
 </div>

@@ -246,6 +246,7 @@ if (isset($_POST["Deluxe"])) {
                 ?>
                 
                 <form action="" method="post">
+                    <div class="NegozioDiv">
                     <input type="radio" name="Deluxe" value="Si" id="Ver1" <?php echo $acquistato?"class='HideInputNoAcq'":"class='HideInputAcq'"?> >
                     <label class="labelAcq" for="Ver1">
                         <div class="Box_VersioneAcquisto">
@@ -278,6 +279,7 @@ if (isset($_POST["Deluxe"])) {
                             </ul>
                         </div>
                     </label>
+                    </div>
                     <input type="submit" <?php echo $acquistato?"class='SubmitButtonNoAcq'":"class='SubmitButtonAcq'"?> value="CHECKOUT >" <?php echo $acquistato?"disabled='disabled'":'' ?>>
                 </form>
 

@@ -61,7 +61,7 @@
 
     <div class="loginBox">
         <h1>LOGIN</h1>
-        <form action="" method="post">
+        <form action="" method="post" class="formstyle">
             <table class="LoginTable" >
                 <tr>
                     <td> <label for="Username">Username </label></td>

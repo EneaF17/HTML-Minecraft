@@ -19,7 +19,7 @@ $Pagine=$Connessione -> query($query) or die("ERRORE". $Connessione->error);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SP - HOME</title>
+    <title>Preferiti - Minecraft</title>
     <link rel="stylesheet" href="../../style.css">
 </head>
 <?php require("../../data/PSHeader.php");?>

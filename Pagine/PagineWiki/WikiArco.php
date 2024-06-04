@@ -29,18 +29,19 @@
 
             <?php 
             require("../../data/Header.php");
-            require("../../data/Cuore.php");
             ?>
-            
-            <div class="contenitorePulsanti">
-                <ul class="Pulsanti" style="list-style-type: none;">
-                    <li><a href="WikiTnt.php"><img src="../../immagini/FrecciaSx.png"alt=""></a></li>
-                    <li><a href="../Minecraft_Wiki.php"><img src="../../immagini/FrecciaSu.png"alt=""></a></li>
-                    <li><a href="WikiCreeper.php"><img src="../../immagini/FrecciaDx.png"alt=""></a></li>
-                </ul>
+                <?php 
+                require("../../data/Cuore.php");
+                ?>
+                
+                <div class="contenitorePulsanti">
+                    <ul class="Pulsanti" style="list-style-type: none;">
+                        <li><a href="WikiTnt.php"><img src="../../immagini/FrecciaSx.png"alt=""></a></li>
+                        <li><a href="../Minecraft_Wiki.php"><img src="../../immagini/FrecciaSu.png"alt=""></a></li>
+                        <li><a href="WikiCreeper.php"><img src="../../immagini/FrecciaDx.png"alt=""></a></li>
+                    </ul>
+                <?php require("../../data/Bookmark.php"); ?>
             </div>
-            <?php require("../../data/Bookmark.php"); ?>
-            
             <div class="contenitoreWiki">
                 <h1 class="titolo">Arco</h1>
                 <div class="ContenitoreTabella">

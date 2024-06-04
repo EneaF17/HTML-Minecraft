@@ -54,8 +54,8 @@ require("../../data/connessioneDB.php");
                 <div class="divPreferito">
                     <a class="linkpagCerca" href=$link>
                     <div class="pagPref">
-                        <img class="imgPagPref" src="$linkImg" alt="">
-                        <h2 class="LinkPreftxt">$Titolo</h2>
+                        <img class="imgPagPrefCerca" src="$linkImg" alt="">
+                        <h2 class="LinkPreftxtCerca">$Titolo</h2>
                     </div>
                     </a>
                 </div>
