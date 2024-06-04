@@ -2052,9 +2052,6 @@ label img {
 .Pulsanti li a img:hover{transform: scale(1.10)}
 
 @media (max-width: 768px) {
-    .contenitorePulsanti{
-        /* top: 22vh; */
-    }
 
     .Pulsanti li {width:35%;display: inline;}
     .Pulsanti li a img{width: 70%; height: auto; transition: 0.5s;}
