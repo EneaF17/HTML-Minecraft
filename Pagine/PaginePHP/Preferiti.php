@@ -6,7 +6,7 @@ if (!isset($_SESSION["Username"])) {
 }
 
 $Username = $_SESSION["Username"];
-$query="SELECT Pagina, Tipo, Foto
+$query="SELECT Pagina, Tipo, Foto, Titolo
     FROM giocatore JOIN preferiti ON giocatore.Username=preferiti.Username
         JOIN pagpref ON pagpref.IdPag=preferiti.IdPag
     WHERE giocatore.Username='$Username'";

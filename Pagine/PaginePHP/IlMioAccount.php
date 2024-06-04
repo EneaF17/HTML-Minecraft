@@ -140,6 +140,11 @@
                     <p>Cambia Icona</p>
                 </div>
             </a>
+            <a href="../../Pagine/PaginePHP/CaricaSoldi.php">
+                <div class="PulsanteIconaCambio">
+                    <p>Carica Soldi</p>
+                </div>
+            </a>
         </div>
     </div>
 
