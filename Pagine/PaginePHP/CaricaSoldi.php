@@ -4,7 +4,11 @@
     $_SESSION['previous'] = basename($_SERVER['PHP_SELF']);
     if (!isset($_SESSION["Username"])) { header("location: ../");}
     if (!isset($_SESSION["Risultato"])) {$risultato=false;} else {$risultato = $_SESSION["Risultato"];}
+    if (!isset($_SESSION["risultatoTXT"])) {$risultatoTXT="ERRORE CRITICO";} else {$risultatoTXT = $_SESSION["risultatoTXT"];}
+    if (!isset($_SESSION["redirect"])) {$redirect="";} else {$redirect = $_SESSION["redirect"];}
+    
 
+    $Username = $_SESSION["Username"];
 
     if (session_status() == PHP_SESSION_NONE) { $UserIcon ="Icona_Utente";} else {
             
@@ -22,7 +26,6 @@
     $Username = $_SESSION["Username"];
     $loading = false;
     $random = rand(1,4);
-    $risultatoTXT = "Dati Aggiornati con successo!";
 ?>
 
 <!DOCTYPE html>
@@ -60,7 +63,7 @@
                 </tr>
                 <tr>
                     <td> <label for="Quantità">Carica sul sito $:</label></td>
-                    <td><input type="number" required name="Quantità" id="Quantità" placeholder="45" min="5" max="100"></td>
+                    <td><input type="number" required name="Quantita" id="Quantita" placeholder="45" min="5" max="100"></td>
                 </tr>
                 <tr>
                     <td colspan="2"><input class="SubmitButtonIcone" type="submit"></td>
@@ -68,7 +71,42 @@
             </table>
         </form>
 </div>
-    <?php 
+    <?php
+
+    if(isset($_POST["Password"]) and isset($_POST["NumeroCarta"]) and isset($_POST["Quantita"])){
+        $Password = $_POST["Password"];
+        $NumeroCarta = $_POST["NumeroCarta"];
+        $Quantita = $_POST["Quantita"];
+        $checkQ = "SELECT Username FROM giocatore WHERE Username='$Username' AND password='$Password' ";
+                
+        $ris1 = $Connessione->query($checkQ) or die("ERRORE NELLA QUERY". $Connessione->error);
+        if ($ris1->num_rows == 0){
+            $_SESSION["risultatoTXT"] = "Password Errata";
+            $loading = true;
+            $_SESSION["redirect"]="";
+            header("Refresh: $random;");
+        }
+        else{
+            $numSoldiQ="SELECT Saldo FROM giocatore WHERE Username='$Username'";
+            $ris = $Connessione->query($numSoldiQ);
+            $soldiA=$ris->fetch_assoc();
+            $soldi=$soldiA["Saldo"];
+            $SoldiTot=$soldi+$Quantita;
+
+            $caricaQuery="UPDATE giocatore SET
+                        Saldo = $SoldiTot
+                        WHERE Username='$Username'";
+
+            $Connessione->query($caricaQuery);
+            $_SESSION["risultatoTXT"] = "Saldo Aggiornato con Successo";
+            $loading = true;
+            header("Refresh: $random;");
+            $_SESSION["redirect"]="IlMioAccount.php";
+
+        }
+    }
+
+
     require ("../../data/Footer.php");
     if ($risultato) {
         echo <<<EOD
