@@ -2,7 +2,7 @@
 -- Host:                         127.0.0.1
 -- Versione server:              10.4.32-MariaDB - mariadb.org binary distribution
 -- S.O. server:                  Win64
--- HeidiSQL Versione:            12.5.0.6677
+-- HeidiSQL Versione:            12.6.0.6765
 -- --------------------------------------------------------
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
@@ -89,16 +89,15 @@ CREATE TABLE IF NOT EXISTS `giocatore` (
 
 -- Dump dei dati della tabella minecraftsito.giocatore: ~11 rows (circa)
 REPLACE INTO `giocatore` (`Username`, `Password`, `Nome`, `Cognome`, `Compleanno`, `Email`, `Telefono`, `Icona`, `Saldo`) VALUES
-	('asd', 'asd', 'ASD', 'DSA', '2000-01-01', 'asd@gmail.com', '019292910', 'Icona_Steve.jpg', 100),
+	('asd', 'asd', 'ASD', 'DSA', '2000-01-01', 'asd@gmail.com', '019292910', 'Icona_Steve.jpg', 835.09),
 	('asd1234', 'asd', 'asdr', 'asde', '2000-10-11', '', '', 'Icona_Enderman.jpg', 0),
 	('asd23', 'asd', 'asd', 'asd', '2050-08-15', '', '', 'Icona_Alex.jpg', 0),
 	('asdf', 'asdf', 'AsdF', 'FdsA', '2008-06-25', '', '', 'Icona_Zombie.jpg', 0),
 	('asdfgh', 'asd', 'asdfg', 'asdgr', '1111-11-11', 's@s', '', 'Icona_Villager.png', 0),
 	('asdfghjsdwafr', 'asad', 'asd', 'sadaf', '2000-11-18', '', '', 'Icona_Steve.jpg', 0),
-	('Enea_il_Figo', '1234', 'Enea', 'Fascilla', '2005-08-17', 'Enea.fascilla@gmail.com', '039202020300', 'Icona_Creeper.png', 80.01),
+	('Enea_il_Figo', '1234', 'Enea', 'Fascilla', '2005-08-17', 'Enea.fascilla@gmail.com', '039202020300', 'Icona_Creeper.png', 0),
 	('Fradre69', 'asd', 'Francesco', 'Vivenzio', '2006-12-23', '', '', 'Icona_Pecora.png', 0),
 	('qw', 'asd', 'asdf', 'asdf', '2000-01-11', '', '', 'Icona_Steve.jpg', 0),
-	('qwe', 'asd', 'asdfqwe', 'rrtead', '1994-12-31', '', '', 'Icona_Creeper.png', 34),
 	('qwerty', 'qwerty', 'Qwerty', 'Tarantino', '1997-05-12', '', '', 'Icona_Zombie.jpg', 0),
 	('Tormix', 'asd', 'Francesco', 'Tormene', '1986-04-09', '', '', 'Icona_Creeper.png', 0);
 
@@ -119,12 +118,12 @@ CREATE TABLE IF NOT EXISTS `giochi` (
 
 -- Dump dei dati della tabella minecraftsito.giochi: ~6 rows (circa)
 REPLACE INTO `giochi` (`Id_gioco`, `Nome`, `Costo`, `Deluxe`, `Versione`, `Titolo`, `Descrizione`, `Foto`, `Copertina`, `Elementi`) VALUES
-	(0, 'Minecraft', 14.99, 'No', 'Minecraft', 'Minecraft: Java E Bedrock Edition Deluxe Collection', 'Scopri tutti i diversi modi di esplorare, sopravvivere e costruire in Minecraft con Minecraft: Deluxe Collection per PC, che include sia le edizioni Java e Bedrock che il launcher di Minecraft! Gioca alla Bedrock Edition su un PC per esplorare gli infiniti contenuti creati dalla community nel Minecraft Marketplace, scoprire nuovi stili di gioco attraverso mappe diverse ed esprimere te stesso con le emote e gli oggetti per Creatore del personaggio.\r\n*Minecraft: Java Edition funziona su Windows, Mac e Linux; Minecraft: Bedrock Edition funziona su Windows. I contenuti della Deluxe Collection funzionano solo in Minecraft: Bedrock Edition su Windows.', 'SfondoJava.avif', 'LogoJava.avif', 'Minecraft: Java Edition\r\nMinecraft: Bedrock Edition\r\nLauncher di Minecraft'),
-	(1, 'Minecraft', 19.99, 'Si', 'Deluxe Collection', 'Minecraft: Java E Bedrock Edition Deluxe Collection', 'Scopri tutti i diversi modi di esplorare, sopravvivere e costruire in Minecraft con Minecraft: Deluxe Collection per PC, che include sia le edizioni Java e Bedrock che il launcher di Minecraft! Gioca alla Bedrock Edition su un PC per esplorare gli infiniti contenuti creati dalla community nel Minecraft Marketplace, scoprire nuovi stili di gioco attraverso mappe diverse ed esprimere te stesso con le emote e gli oggetti per Creatore del personaggio.\r\n*Minecraft: Java Edition funziona su Windows, Mac e Linux; Minecraft: Bedrock Edition funziona su Windows. I contenuti della Deluxe Collection funzionano solo in Minecraft: Bedrock Edition su Windows.', 'SfondoJava.avif', 'LogoJava.avif', 'Minecraft: Java Edition\r\nMinecraft: Bedrock Edition\r\nLauncher di Minecraft\r\n1600 minecoins\r\n5 mappe\r\n5 oggetti persona\r\n3 emote\r\n3 pacchetti skin\r\n1 pacchetto texture'),
-	(2, 'Dungeons', 9.99, 'No', 'Standard Edition', 'Minecraft Dungeons Ultimate Edition', 'Vivi la storia completa di Minecraft Dungeons dall\'inizio all\'End! Prova Minecraft Dungeons: Ultimate Edition, che include il gioco base e tutti e sei i contenuti scaricabili. Acquistando la Ultimate Edition, puoi ottenere l\'esperienza completa a un prezzo inferiore rispetto all\'acquisto dei singoli elementi. Ottieni subito la tua copia!', 'SfondoDungeons.jpg', 'LogoDungeons.avif', 'Gioco base\r\nLauncher'),
-	(3, 'Dungeons', 19.99, 'Si', 'Ultimate Edition', 'Minecraft Dungeons Ultimate Edition', 'Vivi la storia completa di Minecraft Dungeons dall\'inizio all\'End! Prova Minecraft Dungeons: Ultimate Edition, che include il gioco base e tutti e sei i contenuti scaricabili. Acquistando la Ultimate Edition, puoi ottenere l\'esperienza completa a un prezzo inferiore rispetto all\'acquisto dei singoli elementi. Ottieni subito la tua copia!', 'SfondoDungeons.jpg', 'LogoDungeons.avif', 'Gioco base piú tutti e sei i contenuti scaricabili\r\nmantello da Eroe\r\nDue skin per i giocatori\r\nPollo'),
-	(4, 'Legends', 19.84, 'No', 'Standard Edition', 'Minecraft Legends Standard Edition', 'I Piglin minacciano di esaurire il Sopramondo. Sei tu l\'eroe di cui questa pacifica terra ha bisogno? Esplora biomi lussureggianti per stringere alleanze con nuovi amici e creature familiari, quindi affronta i Piglin in epiche battaglie. Ma fai attenzione: reagiscono sempre.\r\nGioca al più grande aggiornamento gratuito dei contenuti di Minecraft Legends! Entra in azione con l\'impavida rana e unisciti alle streghe armate di pozioni, quindi costruisci calderoni per aumentare i danni dei tuoi alleati. Affronta il Clanger, un Piglin così rumoroso da stordire, ma avvicinati con cautela all\'Air Chopper in modo che i tuoi amici non vengano spazzati via!', 'SfondoLegends.jpeg', 'LogoLegends.avif', 'Gioco base\r\nLauncher'),
-	(5, 'Legends', 24.99, 'Si', 'Deluxe Edition', 'Minecraft Legends Standard Edition', 'I Piglin minacciano di esaurire il Sopramondo. Sei tu l\'eroe di cui questa pacifica terra ha bisogno? Esplora biomi lussureggianti per stringere alleanze con nuovi amici e creature familiari, quindi affronta i Piglin in epiche battaglie. Ma fai attenzione: reagiscono sempre.\r\nGioca al più grande aggiornamento gratuito dei contenuti di Minecraft Legends! Entra in azione con l\'impavida rana e unisciti alle streghe armate di pozioni, quindi costruisci calderoni per aumentare i danni dei tuoi alleati. Affronta il Clanger, un Piglin così rumoroso da stordire, ma avvicinati con cautela all\'Air Chopper in modo che i tuoi amici non vengano spazzati via!', 'SfondoLegends.jpeg', 'LogoLegends.avif', 'Gioco base\r\nLauncher\r\nPacchetto skin Deluxe');
+	(0, 'Minecraft', 14.99, 'No', 'Minecraft', 'Minecraft: Java E Bedrock Edition Deluxe Collection', 'Scopri tutti i diversi modi di esplorare, sopravvivere e costruire in Minecraft con Minecraft: Deluxe Collection per PC, che include sia le edizioni Java e Bedrock che il launcher di Minecraft! Gioca alla Bedrock Edition su un PC per esplorare gli infiniti contenuti creati dalla community nel Minecraft Marketplace, scoprire nuovi stili di gioco attraverso mappe diverse ed esprimere te stesso con le emote e gli oggetti per Creatore del personaggio.\r\n*Minecraft: Java Edition funziona su Windows, Mac e Linux; Minecraft: Bedrock Edition funziona su Windows. I contenuti della Deluxe Collection funzionano solo in Minecraft: Bedrock Edition su Windows.', 'SfondoJava.avif', 'LogoJava.avif', 'Minecraft: Java Edition \\n\r\nMinecraft: Bedrock Edition\\n\r\nLauncher di Minecraft'),
+	(1, 'Minecraft', 19.99, 'Si', 'Deluxe Collection', 'Minecraft: Java E Bedrock Edition Deluxe Collection', 'Scopri tutti i diversi modi di esplorare, sopravvivere e costruire in Minecraft con Minecraft: Deluxe Collection per PC, che include sia le edizioni Java e Bedrock che il launcher di Minecraft! Gioca alla Bedrock Edition su un PC per esplorare gli infiniti contenuti creati dalla community nel Minecraft Marketplace, scoprire nuovi stili di gioco attraverso mappe diverse ed esprimere te stesso con le emote e gli oggetti per Creatore del personaggio.\r\n*Minecraft: Java Edition funziona su Windows, Mac e Linux; Minecraft: Bedrock Edition funziona su Windows. I contenuti della Deluxe Collection funzionano solo in Minecraft: Bedrock Edition su Windows.', 'SfondoJava.avif', 'LogoJava.avif', 'Minecraft: Java Edition\\n\r\nMinecraft: Bedrock Edition\\n\r\nLauncher di Minecraft\\n\r\n1600 minecoins\\n\r\n5 mappe\\n\r\n5 oggetti persona\\n\r\n3 emote\\n\r\n3 pacchetti skin\\n\r\n1 pacchetto texture'),
+	(2, 'Dungeons', 9.99, 'No', 'Standard Edition', 'Minecraft Dungeons Ultimate Edition', 'Vivi la storia completa di Minecraft Dungeons dall\'inizio all\'End! Prova Minecraft Dungeons: Ultimate Edition, che include il gioco base e tutti e sei i contenuti scaricabili. Acquistando la Ultimate Edition, puoi ottenere l\'esperienza completa a un prezzo inferiore rispetto all\'acquisto dei singoli elementi. Ottieni subito la tua copia!', 'SfondoDungeons.jpg', 'LogoDungeons.avif', 'Gioco base\\n\r\nLauncher'),
+	(3, 'Dungeons', 19.99, 'Si', 'Ultimate Edition', 'Minecraft Dungeons Ultimate Edition', 'Vivi la storia completa di Minecraft Dungeons dall\'inizio all\'End! Prova Minecraft Dungeons: Ultimate Edition, che include il gioco base e tutti e sei i contenuti scaricabili. Acquistando la Ultimate Edition, puoi ottenere l\'esperienza completa a un prezzo inferiore rispetto all\'acquisto dei singoli elementi. Ottieni subito la tua copia!', 'SfondoDungeons.jpg', 'LogoDungeons.avif', 'Gioco base piú tutti e sei i contenuti scaricabili\\n\r\nmantello da Eroe\\n\r\nDue skin per i giocatori\\n\r\nPollo'),
+	(4, 'Legends', 19.84, 'No', 'Standard Edition', 'Minecraft Legends Standard Edition', 'I Piglin minacciano di esaurire il Sopramondo. Sei tu l\'eroe di cui questa pacifica terra ha bisogno? Esplora biomi lussureggianti per stringere alleanze con nuovi amici e creature familiari, quindi affronta i Piglin in epiche battaglie. Ma fai attenzione: reagiscono sempre.\r\nGioca al più grande aggiornamento gratuito dei contenuti di Minecraft Legends! Entra in azione con l\'impavida rana e unisciti alle streghe armate di pozioni, quindi costruisci calderoni per aumentare i danni dei tuoi alleati. Affronta il Clanger, un Piglin così rumoroso da stordire, ma avvicinati con cautela all\'Air Chopper in modo che i tuoi amici non vengano spazzati via!', 'SfondoLegends.jpeg', 'LogoLegends.avif', 'Gioco base\\n\r\nLauncher'),
+	(5, 'Legends', 24.99, 'Si', 'Deluxe Edition', 'Minecraft Legends Standard Edition', 'I Piglin minacciano di esaurire il Sopramondo. Sei tu l\'eroe di cui questa pacifica terra ha bisogno? Esplora biomi lussureggianti per stringere alleanze con nuovi amici e creature familiari, quindi affronta i Piglin in epiche battaglie. Ma fai attenzione: reagiscono sempre.\r\nGioca al più grande aggiornamento gratuito dei contenuti di Minecraft Legends! Entra in azione con l\'impavida rana e unisciti alle streghe armate di pozioni, quindi costruisci calderoni per aumentare i danni dei tuoi alleati. Affronta il Clanger, un Piglin così rumoroso da stordire, ma avvicinati con cautela all\'Air Chopper in modo che i tuoi amici non vengano spazzati via!', 'SfondoLegends.jpeg', 'LogoLegends.avif', 'Gioco base\\n\r\nLauncher\\n\r\nPacchetto skin Deluxe');
 
 -- Dump della struttura di tabella minecraftsito.pagpref
 CREATE TABLE IF NOT EXISTS `pagpref` (
@@ -136,12 +135,12 @@ CREATE TABLE IF NOT EXISTS `pagpref` (
   PRIMARY KEY (`IdPag`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
--- Dump dei dati della tabella minecraftsito.pagpref: ~23 rows (circa)
+-- Dump dei dati della tabella minecraftsito.pagpref: ~25 rows (circa)
 REPLACE INTO `pagpref` (`IdPag`, `Pagina`, `Tipo`, `Foto`, `Titolo`) VALUES
 	(0, 'WikiArco.php', 'Wiki', 'Arco.webp', NULL),
 	(1, 'WikiCreeper.php', 'Wiki', 'Creeper.png', NULL),
 	(2, 'WikiDiamante.php', 'Wiki', 'Diamond.png', NULL),
-	(3, 'WikiEnderDragon.php', 'Wiki', 'Ender_Dragon.webp', NULL),
+	(3, 'WikiEnderDragon.php', 'Wiki', 'Ender_Dragon.webp', 'EnderDrago'),
 	(4, 'WikiFornace.php', 'Wiki', 'Fornace.webp', NULL),
 	(5, 'WikiHerobrine.php', 'Wiki', 'Herobrine.webp', NULL),
 	(6, 'WikiLanterna.php', 'Wiki', 'Lanterna.webp', NULL),
@@ -149,7 +148,7 @@ REPLACE INTO `pagpref` (`IdPag`, `Pagina`, `Tipo`, `Foto`, `Titolo`) VALUES
 	(8, 'WikiOro.php', 'Wiki', 'Oro.webp', NULL),
 	(9, 'WikiPistone.php', 'Wiki', 'Pistone.webp', NULL),
 	(10, 'WikiTnt.php', 'Wiki', 'Tnt.webp', NULL),
-	(11, 'GuidaCommandBlock.php', 'Guide', 'CommandBlock.webp', NULL),
+	(11, 'GuidaCommandBlock.php', 'Guide', 'CommandBlock.webp', 'BlocchiComando'),
 	(12, 'GuidaFireworks.php', 'Guide', 'Firework.webp', NULL),
 	(13, 'GuidaPVP.php', 'Guide', 'Spada.webp', NULL),
 	(14, 'GuidaTrovareDiamanti.php', 'Guide', 'Diamond.png', NULL),
@@ -177,7 +176,6 @@ CREATE TABLE IF NOT EXISTS `posseduti` (
 -- Dump dei dati della tabella minecraftsito.posseduti: ~5 rows (circa)
 REPLACE INTO `posseduti` (`Id_gioco`, `Username`) VALUES
 	(0, 'asd'),
-	(1, 'Enea_Il_Figo'),
 	(1, 'qwerty'),
 	(2, 'qwerty'),
 	(3, 'asd'),
@@ -193,16 +191,14 @@ CREATE TABLE IF NOT EXISTS `preferiti` (
   CONSTRAINT `FK_preferiti_pagpref` FOREIGN KEY (`IdPag`) REFERENCES `pagpref` (`IdPag`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
--- Dump dei dati della tabella minecraftsito.preferiti: ~28 rows (circa)
+-- Dump dei dati della tabella minecraftsito.preferiti: ~30 rows (circa)
 REPLACE INTO `preferiti` (`Username`, `IdPag`) VALUES
 	('asd', 0),
-	('qwe', 0),
+	('asdf', 0),
 	('qwerty', 0),
 	('asd', 1),
-	('qwe', 1),
 	('asd', 2),
-	('qwe', 2),
-	('asd', 3),
+	('asdf', 3),
 	('qwerty', 3),
 	('asd', 4),
 	('asd', 7),
@@ -214,7 +210,6 @@ REPLACE INTO `preferiti` (`Username`, `IdPag`) VALUES
 	('asd', 12),
 	('asd', 13),
 	('qwerty', 13),
-	('asd', 14),
 	('asd', 15),
 	('asd', 16),
 	('qwerty', 16),
@@ -224,9 +219,10 @@ REPLACE INTO `preferiti` (`Username`, `IdPag`) VALUES
 	('asd', 20),
 	('asd', 21),
 	('asd', 22),
+	('asdf', 22),
 	('asd', 23),
-	('asd', 24),
-	('qwe', 24);
+	('asdf', 23),
+	('asd', 24);
 
 -- Dump della struttura di tabella minecraftsito.snapshotnews
 CREATE TABLE IF NOT EXISTS `snapshotnews` (
