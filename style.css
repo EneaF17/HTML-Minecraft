@@ -914,6 +914,15 @@ label img {
         font-size: 40px;
     }
 
+    .lisaSistemi_Shop{
+        flex-wrap: wrap;
+        height: auto;
+    }
+
+    .lisaSistemi_Shop img{
+        max-width: 30px;
+    }
+
 }
 @media (max-width: 500px){
     .labelAcq{
