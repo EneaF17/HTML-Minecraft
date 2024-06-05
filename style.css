@@ -942,6 +942,8 @@ label img {
         display: none;
     }
 
+   
+
 }
 @media (max-width: 400px){
     .CercaTable td,th,input{
@@ -1163,6 +1165,7 @@ label img {
     }
     .headerPS{
         height: 32vh;
+        max-width: 100%;
     }
     .logo{
         width: 70%;
@@ -2593,6 +2596,16 @@ footer p{
         padding: 1px;
         height: 40px;
         width: 100%;
+    }
+
+    .LinkPreftxt{
+        font-size: large;
+    }
+    .imgPagPref{
+        width:30%;
+        margin: 3px;
+        height: 100px;
+        padding: 1px;
     }
 }
 
