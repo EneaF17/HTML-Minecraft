@@ -1,4 +1,10 @@
-<?php
+<?php 
+        // if (isset($_SESSION['previous'])) {
+        //     if (basename($_SERVER['PHP_SELF']) != $_SESSION['previous']) {
+        //          session_destroy();
+        //     }
+        // }
+        
         if (!isset($_SESSION["Username"])) {
             $UserIcon ="Icona_Utente.png";
             $Link = "Pagine/PaginePHP/LoginPage.php";
@@ -16,10 +22,23 @@
             $DatiItem=$dati->fetch_assoc();
             $UserIcon=$DatiItem["Icona"];
 
-        }
 
+            // foreach($dati as $DatiItem) {
+            //     $UserIcon = $DatiItem["Icona"];}
+        }
+            $path = $_SERVER["PHP_SELF"] ;
+            $pagina = dirname($path);
+
+        if ($pagina == "/HTML-Minecraft/Pagine") {
+            $LinkRelPag = "";
+            $LinkRelImg = "../";
+        } elseif ($pagina == "/HTML-Minecraft/Pagine/PagineGuide" or $pagina == "/HTML-Minecraft/Pagine/PagineNews" or $pagina == "/HTML-Minecraft/Pagine/PaginePHP" or $pagina == "/HTML-Minecraft/Pagine/PagineWiki") {
             $LinkRelPag = "../";
             $LinkRelImg = "../../";
+        } else{
+            $LinkRelPag = "Pagine/";
+            $LinkRelImg = "";
+        }
     ?>
     
 <div class="header header--nocta">

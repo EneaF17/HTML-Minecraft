@@ -18,8 +18,8 @@
 
         }
 
-            $LinkRelPag = "../";
-            $LinkRelImg = "../../";
+            $LinkRelPag = "Pagine/";
+            $LinkRelImg = "";
     ?>
     
 <div class="header header--nocta">

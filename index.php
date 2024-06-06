@@ -34,7 +34,7 @@
 
 
             <?php 
-            require("data/Header.php");
+            require("data/HeaderIndex.php");
             ?>
             
             

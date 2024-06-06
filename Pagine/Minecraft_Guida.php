@@ -31,7 +31,7 @@
 
 
             <?php 
-            require("../data/Header.php");
+            require("../data/HeaderHome.php");
             ?>
 
             <div class="contenitoreGuide">
